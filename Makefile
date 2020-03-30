@@ -19,6 +19,12 @@ install-vimdeck:
 		imagemagick libmagickwand-dev
 	gem install vimdeck
 
+.PHONY: mono-vs-multirepos
+#: Compile and launch presentation
+mono-vs-multirepos:
+	@echo Making $@…
+	$(MAKE) -C $@ $@
+
 .PHONY: install
 #: Install everything
 install: \
