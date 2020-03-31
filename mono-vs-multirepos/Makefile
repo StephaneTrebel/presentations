@@ -9,8 +9,13 @@ help:
      | sed -n 's/^#: \(.*\)###\(.*\):.*/\2###\1/p' \
      | column -t  -s '###'
 
-.PHONY: mono-vs-multirepos
-#: Compile and launch presentation
-mono-vs-multirepos:
+#: Clean built artifacts
+.PHONY: clean
+clean:
 	@echo Making $@…
-	vimdeck -m -M 3 ./main.md
+	rm -rf presentation
+
+#: Compile and launch presentation
+presentation: README.md
+	@echo Making $@…
+	vimdeck -m -M 3 ./README.md
