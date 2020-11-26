@@ -13,17 +13,9 @@ help:
 #: Install vimdeck (and its dependencies)
 install-vimdeck:
 	@echo Making $@…
-	sudo apt install -y \
-		# Install ruby dev libraries for your current environment
-		ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev \
-		imagemagick libmagickwand-dev
+	sudo apt update
+	sudo apt install -y ruby2.5 ruby2.5-dev imagemagick libmagickwand-dev
 	gem install vimdeck
-
-.PHONY: mono-vs-multirepos
-#: Compile and launch presentation
-mono-vs-multirepos:
-	@echo Making $@…
-	$(MAKE) -C $@ $@
 
 .PHONY: install
 #: Install everything
