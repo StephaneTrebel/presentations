@@ -1,11 +1,3 @@
-# TODO
-
-- [ ] Mentionner `git add --patch`
-- [ ] Mentionner les _caveats_ autours de la terminologie (upstream, différence fetch/pull/rebase)
-- [ ] Mentionner la configuration (.gitconfig)
-- [ ] Mentionner les styleguides de commit comme https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
-
-
 # KT - GIT
 
 _All your (re)base are belong to us_
@@ -28,7 +20,7 @@ _All your (re)base are belong to us_
 
 ## A Propos
 
-Cette présentation a pour objectif de servir de support à un Knowledge Transfer
+Cette présentation a pour objectif de servir de support à un transfert de connaissance
 autour de Git, de ses raisons d’exister, et de la façon de s’en servir le plus
 efficacement possible dans vos projets.
 
@@ -62,44 +54,30 @@ Si vous ne voyez pas les avantages de Git, à quoi bon s’en servir ?
 
 ## Et donc ?
 
-Fondamentalement Git sert à savoir *qui* a fait *quoi*, et *quand*
+Fondamentalement Git sert à savoir *qui* a fait *quoi*, et *quand*.
+
+Le *quoi* est un «changement» -> Notion importante et hautement philosophique !
 
 
 ## Level 1
 
-- Qui: `git blame`
-- Quoi: `git show`
-- Quand: `git log`
+- L'espace de travail courant (`git status`, `git diff`)
+- L'index (`git add`)
+- Le changement (`git commit`)
+- La branche (`git branch`)
 
 
-## Next level
+## Level 2
 
-- Arrêter de jouer a WipWip et le Coyote ? -> `git commit --amend`
-- Mettre de coté vos modifs ? -> `git stash`
-- Besoin d’un seul commit qui est rattaché à une autre branche ? -> `git cherry-pick`
-- Trouver les bugs pour vous ? -> `git bisect`
-- Ajouter des infos à un commit qui est sur une branche protégée ? -> `git notes`
-- Résoudre à nouveau les conflits de merge ? -> `git rerere`
-- Ne plus dépendre des Gitlab et compagnie ? -> `git format-patch/send-email/am`
-- etc…
+- Voir le dernier commit qui a touché à une ligne de code (`git blame`)
+- Voir le détail d'un commit (`git show`)
+- Voir les changements (commits) dans le temps (`git log`)
+- `git checkout`, et ses nombreux usages (restaurer un fichier, changer de branche, se mettre sur un commit particulier)
+- Les tags (`git tag`)
+- Les remotes (`git remote`)
 
 
-## Monde de Merge
-
-Une hygiène de commit permet également de faciliter la maintenance du code:
-
-- Les MR deviennent compréhensibles (surtout quand elles sont petites !)
-- On peut `revert` un commit problématique sans pour autant avoir à faire un hotfix (moche) qui pourra, lui aussi, déclencher des regressions...
-
-
-## Donc ?
-
-Ok donc y a plus qu’à ?
-
-Hélas non ! Car tout ça à besoin d’un pré-requis: _Bien_ committer
-
-
-# RTFM
+# Savoir committer
 
 La [doc de git](https://git-scm.com/docs/gitworkflows) est claire:
 
@@ -107,63 +85,66 @@ La [doc de git](https://git-scm.com/docs/gitworkflows) est claire:
 and commit each of them. They should be consistent, working independently of any
 later commits, pass the test suite, etc. »
 
-
-## Dans la vraie vie
-
-Quelques conseils pour y arriver sans (trop) se forcer:
-
-
-## Dans la vraie vie
-
 Quelques conseils pour y arriver sans se forcer:
 
-- Avant d'ajouter du code pensez à faire un commit de nettoyage (formattage, fautes d’orthographe, jsdoc manquant, etc.)
+
+## Committer comme un pro
+
+- Avant d'ajouter du code pensez à faire un commit de nettoyage (formattage, fautes d’orthographe, doc manquante, etc.)
+- Les MRs deviennent compréhensibles (surtout quand elles sont petites !)
+- On peut `revert` un commit problématique sans pour autant avoir à faire un hotfix (moche) qui pourra, lui aussi, déclencher des régressions...
+
+
+## Le message de commit
+
+Les messages de commit expliquent _pourquoi_ vous avez fait une modification, profitez-en !
+
 - Penser _Single Responsibility Principle_: Un commit === une « modification »
-- Protip: Le TDD vous met dans cet état d’esprit par défaut ;)
-
-
-## Dans la vraie vie
-
-Quelques conseils pour y arriver sans se forcer:
-
-Dans vos branches:
-
-- Rebasez régulièrement vos commits (edit squash reword fixup)
-- Rebasez votre branche par rapport à develop, merger develop régulièrement est inutile et pollue les merges.
-- Plus vous utilisez git, plus vous en profiterez
-
-
-## Dans la vraie vie
-
-Quelques conseils pour y arriver sans se forcer:
-
-Les commits expliquent _pourquoi_ vous avez fait une modification, profitez-en !
-
 - Un message qui indique le ticket en cours ce qui le relie à sa raison d’être
 - Un corps de message qui précise pourquoi votre modification va faire avancer le code vers ce qu’il devrait être.
 - Les _smells_ : «et» «,» «plus» «multiple» etc…
 
 
-## Dans la vraie vie
+## Dans vos branches
 
-Quelques conseils pour y arriver sans se forcer:
-
+- Rebasez régulièrement vos commits entre eux (edit squash reword fixup)
+- Rebasez votre branche par rapport à la branche cible plutôt que de fusionner la branche cible. Fusionner est inutile et pollue la lecture des commits.
 - Ne pas toucher l’historique partagé avec les autres: Immutabilité avant tout.
-- Par contre dans vos branches, défoulez-vous: `git push --force` est là pour ça
+- Par contre dans vos branches, défoulez-vous: `git push --force-with-lease` est là pour ça
 - Il est donc important d'avoir des branches petites, à courte durée de vie
 - Et tout ça a des conséquences sur le découpage du travail en amont
 
 
-## Problem, officer ?
+## Next level
 
-La quasi-totalité des commandes git peuvent être rattrapées.
-N’hésitez pas à alerter «ceux qui savent», ils sont là pour ça :)
+- Arrêter de jouer a WipWip et le Coyote ? -> `git commit --amend` / `git rebase -i`
+- Ajouter seulement une partie des modifications à l'index ? -> `git add --patch`
+- Mettre de coté vos modifs ? -> `git stash {,list,pop}`
+- Besoin d’un seul commit qui est rattaché à une autre branche ? -> `git cherry-pick`
+- .gitconfig -> Le git dont VOUS êtes le héros !
+- La différence entre `git fetch`/`git pull`/`git rebase`)
+- Les styleguides de commit comme https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
+
+
+## Next next level
+
+- Trouver les bugs pour vous ? -> `git bisect`
+- Ajouter des infos à un commit qui est sur une branche protégée ? -> `git notes`
+- Résoudre à nouveau les conflits de merge ? -> `git rerere`
+- Ne plus dépendre des Gitlab et compagnie ? -> `git format-patch/send-email/am`
+
+
+## No problemo
+
+- La quasi-totalité des commandes git peuvent être rattrapées (`git reflog`)
+- N’hésitez pas à alerter «ceux qui savent», ils sont là pour ça !
+- Ça va sans dire mais plus vous utiliserez git, plus vous serez à l'aise avec :)
 
 
 # FIN
 
 « Git good, scrub »
-						- Vous, ~2020 après JC
+						- Vous, ~2021 après JC
 						
 Retrouvez cette présentation sur mon dépot de KTs:
 	_https://github.com/StephaneTrebel/presentations_
