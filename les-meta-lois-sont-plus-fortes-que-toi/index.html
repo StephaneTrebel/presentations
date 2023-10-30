@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Présentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+    <link rel="stylesheet" href="presentation.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+					Bienvenue !
+				</section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Des remarques déjà entendues…
+
+            « Impossible de regrouper le back et le front, finalement ! »<!--.element: class="fragment"-->
+
+            « On refond tout, mais il y a toutes ces règles métier cachées ! »<!--.element: class="fragment"-->
+
+            « Le framework était sensé nous faciliter la vie, mais on galère ! »<!--.element: class="fragment"-->
+
+            ---
+
+            ## Quelque chose qui gratte...
+            Ça nous est tous arrivés au moins une fois <!--.element: class="fragment"-->
+
+            Une réunion de trop, un ensemble de tickets qui n'ont pas de sens <!--.element: class="fragment"-->
+
+            La sensation qu'un truc ne colle pas et on ne sait pas pourquoi<!--.element: class="fragment"-->
+
+            ---
+
+            C'est parce que vous n'avez pas conscience de leur influence<!--.element: class="fragment"-->
+
+            Elles sont là, que vous le vouliez ou non, car...<!--.element: class="fragment"-->
+
+            ---
+
+            # Les Méta-Lois sont plus fortes que toi
+
+            (mais ça va bien se passer, tu verras !)
+          </script>
+        </section>
+
+        <section>
+          <img src="profil-steph.png" alt="Ma photo de profil" />
+          <p>À propos de moi...</p>
+          <ul class="fragment" style="list-style-type: none">
+            <li class="profile">
+              <img src="ferris.png" alt="Ferris, le logo de Rust" /><span
+                >Rust</span
+              >
+            </li>
+            <li class="profile">
+              <img src="typescript.png" alt="Logo Typescript" />Typescript
+            </li>
+            <li class="profile">
+              <img src="tux.png" alt="Tux Logo" />Linux
+            </li>
+          </ul>
+          <ul class="fragment" style="list-style-type: none">
+            <li class="profile">
+              <img src="twitter.png" alt="X (ex-Twitter) logo" /><span
+                >@StephaneTrebel</span
+              >
+            </li>
+            <li class="profile">
+              <img src="github.png" alt="Github Logo" />@StephaneTrebel
+            </li>
+            <li class="profile">
+              <img
+                src="bluesky.png"
+                alt="Bluesky Logo"
+              />@stephanetrebel.bsky.social
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <img
+            style="max-height: 25 rem"
+            src="wescale.png"
+            alt="Logo Wescale"
+          />
+          <ul class="fragment">
+            <li>ESN française 🇫🇷</li>
+            <li>+60 passionné(e)s de technologie 🤩</li>
+            <li>Cloud, Orchestration, et passage à l'échelle 🚀</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>
+            Retrouvez la liste abordée dans cette présentation, ainsi que
+            d'autres méta-lois, sur mon dépôt Github:
+          </p>
+          <a href="https://github.com/StephaneTrebel/meta-laws-collection"
+            ><img
+              src="github.svg"
+              alt="QR Code pointant vers mon dépôt Github sur les méta-lois"
+          /></a>
+        </section>
+        <section>Fin !</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
