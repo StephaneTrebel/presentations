@@ -1,0 +1,537 @@
+<p class="fragment"></p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Présentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+    <link rel="stylesheet" href="presentation.css" />
+
+    <p class="fragment"></p>
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          Bienvenue !
+
+          <aside class="notes">
+            <ul>
+              <li>
+                Dire bonjour, mais ne pas en dire trop, la suite est là pour ça
+                😉
+              </li>
+              <li>On attend encore du monde ?</li>
+              <li>Lancement de l'enregistrement</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <p>⚠️ Attention ⚠️</p>
+          <p>Cette présentation suit un nouveau format…expérimental 😅</p>
+
+          <aside class="notes">
+            Expliquer RevealJs et pourquoi j'en suis arrivé là
+            <ul>
+              <li>je profite de ce format court pour expérimenter</li>
+              <li>j'aime pas les slides</li>
+              <li>inspiration des autres conférenciers</li>
+              <li>mieux vendre les confs Wescale</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section
+          data-background-image="assets/stackman.jpg"
+          data-background-size="80%"
+        >
+          <aside class="notes">Biiiip bop pop polop pop !</aside>
+        </section>
+
+        <section>
+          <aside class="notes">
+            Ne pas parler de Wescale tout de suite, se concentrer sur moi ❤
+          </aside>
+          <img data-src="assets/profil-steph.png" alt="Ma photo de profil" />
+          <p>À propos de moi...</p>
+          <ul class="fragment" style="list-style-type: none">
+            <li class="profile">
+              <img
+                data-src="assets/ferris.png"
+                alt="Ferris, le logo de Rust"
+              /><span>Rust</span>
+            </li>
+            <li class="profile">
+              <img
+                data-src="assets/typescript.png"
+                alt="Logo Typescript"
+              />Typescript
+            </li>
+            <li class="profile">
+              <img data-src="assets/tux.png" alt="Tux Logo" />Linux
+            </li>
+          </ul>
+          <ul class="fragment" style="list-style-type: none">
+            <li class="profile">
+              <img
+                data-src="assets/twitter.png"
+                alt="X (ex-Twitter) logo"
+              /><span>@StephaneTrebel</span>
+            </li>
+            <li class="profile">
+              <img
+                data-src="assets/github.png"
+                alt="Github Logo"
+              />@StephaneTrebel
+            </li>
+            <li class="profile">
+              <img
+                data-src="assets/bluesky.png"
+                alt="Bluesky Logo"
+              />@stephanetrebel.bsky.social
+            </li>
+          </ul>
+        </section>
+
+        <section data-background-color="white">
+          <aside class="notes">
+            Consultant Technique chez Wescale depuis le début de l'année
+          </aside>
+          <img
+            style="max-height: 25 rem"
+            data-src="assets/wescale.png"
+            alt="Logo Wescale"
+          />
+        </section>
+
+        <section data-background-color="white" data-transition="fade">
+          <section
+            data-background-image="assets/wescale-cloud-advisor.png"
+            data-background-size="contain"
+          >
+            <p class="stroke">Une ESN française de la Tech 🇫🇷</p>
+            <aside class="notes">
+              Une ESN française de la Tech, dont les missions sont
+              principalement le conseil sur les sujets de Cloud, d'Orchestration
+              et de passage à l'échelle
+            </aside>
+          </section>
+
+          <section
+            data-background-image="assets/wescale-nous-rejoindre.png"
+            data-background-size="contain"
+          >
+            <p class="stroke">+ de 60 expert(e)s dans ces domaines</p>
+            <aside class="notes">
+              Nous sommes + de 60 expert(e)s dans ces domaines, et nous
+              cultivons régulièrement notre expertise avec des contributions
+              interne comme le Weshare mensuel, notre journée de partage, ou
+              encore notre blog et notre podcast, WeSpeakCloud, dont je suis —en
+              passant— devenu récemment l'animateur 😉
+            </aside>
+          </section>
+
+          <section
+            data-background-image="assets/wescale-nous-contacter.png"
+            data-background-size="contain"
+          >
+            <p class="stroke">N'hésitez pas à nous contacter 😉</p>
+            <aside class="notes">
+              N'hésitez pas à nous contacter sur les résals socials si ça vous
+              intéresse, on se fera un plaisir de vous rediriger vers la
+              personne appropriée
+            </aside>
+          </section>
+        </section>
+
+        <section
+          data-background-image="assets/maitriser-ses-stack.jpeg"
+          data-background-size="contain"
+        >
+          <h2 class="stroke">Des devs, et des stacks…</h2>
+
+          <p class="fragment stroke">C'est quoi une «stack»&nbsp;?</p>
+
+          <p class="fragment stroke">
+            Pourquoi y a-t-il plusieurs stacks&nbsp;?
+          </p>
+
+          <p class="fragment stroke">
+            Regrouper les stacks, bonne ou mauvaise idée&nbsp;?
+          </p>
+        </section>
+        <section>
+          <h2>Les stacks, quésaco ?</h2>
+
+          <p class="fragment">
+            C'est un ensemble de technologies utilisées dans le cadre d'une
+            activité de développment.
+          </p>
+
+          <aside class="notes">Mentionner la Loi de Conway</aside>
+          <p class="fragment">
+            Les stacks suivent historiquement le découpage des équipes...et
+            réciproquement&nbsp;!
+          </p>
+
+          <p class="fragment">
+            Elles permettent de produire des fonctionnalités qui traversent
+            plusieurs couches techniques.
+          </p>
+        </section>
+
+        <section
+          data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
+        >
+          <section>
+            <h2>Exemple</h2>
+            <p>Le developpement «Front» contemporain a pour but de créer:</p>
+          </section>
+
+          <section>
+            <ul style="list-style-type: none">
+              <li>Des applications utilisables par tout le monde 🌍</li>
+              <li>de plein de manières différentes 💻, 📱 , etc.</li>
+              <li>qui doivent être jolies 🎨</li>
+              <li>et réactives ! 🤩</li>
+            </ul>
+          </section>
+
+          <section>
+            <aside class="notes">Rappeler que le Front, c'est large !</aside>
+            <p>Sont donc apparues les stacks «Front»:</p>
+
+            <ul class="fragment">
+              <li class="profile">
+                Des languages pour l'affichage:
+                <img data-src="assets/javascript.png" alt="Logo Javascript" />,
+                <img data-src="assets/swift.png" alt="Logo Swift" />,
+                <img data-src="assets/php.png" alt="Logo PHP" />, etc.
+              </li>
+              <li class="profile">
+                Des frameworks associés:
+                <img data-src="assets/angular.gif" alt="Logo Angular" />,
+                <img data-src="assets/react.png" alt="Logo React" />,
+                <img
+                  data-src="assets/ruby-on-rails-logo.png"
+                  alt="Logo Ruby on Rails"
+                />, etc.
+              </li>
+              <li class="profile">
+                Des concepts à maîtriser: DOM, CSS, Events, etc.
+              </li>
+              <li class="profile">
+                Des méthodes à intégrer: Accessibilité, SEO (pour le web), etc.
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section
+          data-background-gradient="linear-gradient(to bottom, #17b2c3, #283b95)"
+        >
+          <section>
+            <h2>Autre exemple</h2>
+            <p>Le developpement «Back» a pour but de créer:</p>
+          </section>
+
+          <section>
+            <ul>
+              <li>Des services traitant de la logique métier 🔧</li>
+              <li>Traitant beaucoup de données 🚚</li>
+              <li>Qui doivent être performantes 🐎</li>
+              <li>Et résilantes ! 💪</li>
+            </ul>
+          </section>
+
+          <section>
+            <aside class="notes">
+              Rappeler que le Back, c'est tout aussi large !
+            </aside>
+            <p>Donc sont apparues les stacks «Back»:</p>
+
+            <ul class="fragment">
+              <li class="profile">
+                Des langages "backend":
+                <img
+                  style="background-color: white"
+                  data-src="assets/java.png"
+                  alt="Logo Java"
+                />, <img data-src="assets/go.png" alt="Logo Go" />,
+                <img
+                  style="max-height: 2rem"
+                  data-src="assets/rust.png"
+                  alt="Logo Rust"
+                />, etc.
+              </li>
+              <li class="profile">
+                Des concepts à maîtriser: SQL, HTTP, Réseaux
+              </li>
+              <li class="profile">Des méthodes à intégrer: BDD, REST, etc.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
+          <section>
+            <p>
+              À noter qu'une technologie peut servir à plusieurs types de stack
+              ! Par exemple:
+            </p>
+            <ul class="fragment" style="list-style-type: none">
+              <li class="profile">
+                <span style="margin: 10px">Front & Back:</span>
+                <img data-src="assets/symfony.png" alt="Logo Symfony" /> est écrit en
+                <img data-src="assets/php.png" alt="Logo PHP" />,
+                <img
+                  data-src="assets/ruby-on-rails-logo.png"
+                  alt="Logo Ruby on Rails"
+                />
+                est écrit en <img data-src="assets/ruby.png" alt="Logo Ruby" />
+              </li>
+              <li class="profile">
+                <span style="margin: 10px">Front & Back:</span>
+                <img
+                  style="background-color: white"
+                  data-src="assets/java.png"
+                  alt="Logo Java"
+                />
+                est utilisé sur toutes les stacks !
+              </li>
+              <li>
+                <span style="margin: 10px">Front, Back, et Ops:</span>
+                <img data-src="assets/go.png" alt="Logo Go" />
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>
+              D'où la naissance, inévitable, de profils ainsi dénommés
+              «full-stack»
+            </p>
+
+            <p class="fragment">
+              C'est à dire capables, avec des technologies touchant à diverses
+              couches, de prendre en charge des développments sur plusieurs
+              stacks à la fois 💪
+            </p>
+          </section>
+
+          <section>
+            <div>
+              <p>Par exemple:</p>
+              <ul>
+                <li class="fragment profile">
+                  Les fullstack Front/Back Typescript:&nbsp;
+                  <img data-src="assets/angular.gif" alt="Logo Angular" /> et
+                  <img data-src="assets/nest-js.jpeg" alt="Logo NestJs" />.
+                </li>
+                <li class="fragment profile">
+                  Les fullstack Web/Mobile React:&nbsp;
+                  <img data-src="assets/react.png" alt="Logo React" /> et
+                  <img
+                    data-src="assets/react-native-firebase.png"
+                    alt="Logo ReactNativeFirebase"
+                  />.
+                </li>
+                <li class="fragment profile">
+                  Les fullstack «globaux» :&nbsp;
+                  <img
+                    style="background: white"
+                    data-src="assets/jee.webp"
+                    alt="Logo Java Enterprise Edition"
+                  />
+                  et
+                  <img data-src="assets/dotnet.png" alt="Logo .Net" />
+                </li>
+              </ul>
+
+              <p class="fragment">
+                Mais il faut garder en tête le volume global: Un fullstack ne
+                pourra que très difficilement avoir la même profondeur/expertise
+                😉
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <p>
+              Bref, une stack contient suffisament de «matière» pour qu'un dev
+              puisse s'exprimer
+            </p>
+          </section>
+
+          <section>
+            <img
+              class="r-stretch"
+              data-src="assets/trop-de-stacks.jpeg"
+              alt="Une image DALL-E montrant un dev angoissé, entouré de 'stacks' qui sont des caisses"
+            />
+            <p>Et ça peut faire beaucoup !</p>
+          </section>
+
+          <section
+            data-background-image="assets/state-of-js-2022.png"
+            data-background-size="contain"
+          >
+            <p class="stroke">Et en outre le monde n'attend pas !</p>
+          </section>
+
+          <section>
+            <ul>
+              D'où des spécialisations possibles dans des stacks plus fines:
+              <li class="fragment">
+                Côté Front: Spécialisation dans le développement applicatif
+                seulement web 🌍 , purement mobile 📱 , etc.
+              </li>
+              <li class="fragment">
+                Côté Back: Spécialisation dans les APIs 🔧 , dans les BDDs 🚚 ,
+                la sécurité 👮 , etc.
+              </li>
+              <li class="fragment">
+                Côté Ops: Spécialisation dans les CI/CD 🤖 , dans le Cloud ☁ ,
+                dans l'orchestration 📦 , etc.
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-background-color="#EEEEEE">
+          <section>Parcourons donc un peu quelques exemple de stacks:</section>
+          <section data-transition="none">
+            <h3>Cartographie de base</h3>
+            <img
+              data-src="assets/cartographie-base.png"
+              alt="La cartographie qui va nous servir de base pour les exemples"
+            />
+          </section>
+          <section data-transition="none">
+            <h3>Une stack Front Web</h3>
+            <img
+              data-src="assets/cartographie-web.png"
+              alt="Une cartographie Front Web"
+            />
+          </section>
+          <section data-transition="none">
+            <h3>Une stack Front+Back (Fullstack) Web</h3>
+            <img
+              data-src="assets/cartographie-web-fullstack.png"
+              alt="Une stack Web FullStack"
+            />
+          </section>
+          <section data-transition="none">
+            <h3>Une stack Back DevOps</h3>
+            <img
+              data-src="assets/cartographie-back-devops.png"
+              alt="Une stack Back DevOps"
+            />
+          </section>
+          <section data-transition="none">
+            <h3>Une stack Cloud DevOps</h3>
+            <img
+              data-src="assets/cartographie-cloud-devops.png"
+              alt="Une stack Cloud DevOps"
+            />
+          </section>
+          <section data-transition="none">
+            <h3>Une stack Dev Mobile</h3>
+            <img
+              data-src="assets/cartographie-full-mobile.png"
+              alt="Une stack Dev Moblie"
+            />
+          </section>
+          <section data-transition="none">
+            <h3>La perle rare...</h3>
+            <img
+              data-src="assets/cartographie-everything.png"
+              alt="Le mouton à cinq pattes"
+            />
+          </section>
+        </section>
+
+        <section data-background-image="assets/ancienne_stack.jpeg">
+          <p class="stroke">
+            Naturellement, tout le monde évolue, et il peut arriver qu'on change
+            de stack au cours de sa carrière
+          </p>
+        </section>
+
+        <section
+          data-background-image="assets/spongebob.jpeg"
+          data-background-size="contain"
+        >
+          <p class="stroke">
+            C'est même souhaitable, afin de pouvoir proposer la solution la plus
+            adaptée
+          </p>
+        </section>
+
+        <section
+          data-background-image="assets/les-stacks-du-client.jpg"
+          data-background-size="contain"
+          data-background-opacity="0.2"
+        >
+          <div style="margin-top: 40vh">
+            <p>Et d'éviter ainsi le problème du marteau:</p>
+            <blockquote class="fragment">
+              « Quand on n'a qu'un marteau, tout problème ressemble à un clou. »
+            </blockquote>
+          </div>
+        </section>
+
+        <section>
+          <img
+            data-src="assets/revealjs.png"
+            alt="Exemple d'utilisation de RevealJs"
+          />
+          <img
+            class="r-stretch"
+            data-src="assets/revealjs-logo.png"
+            alt="Logo RevealJs"
+          />
+        </section>
+
+        <section>
+          <p>Retrouvez cette présentation sur mon Github:</p>
+          <a
+            href="https://github.com/StephaneTrebel/presentations/tree/main/i-m-a-stackman"
+            ><img
+              style="max-height: 45vh"
+              data-src="assets/qr-code.png"
+              alt="QR Code pointant vers mon le dépôt Github de cette présentation"
+          /></a>
+        </section>
+
+        <section data-background-image="assets/that's-all-folks.gif"></section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        slideNumber: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
