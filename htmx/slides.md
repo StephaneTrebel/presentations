@@ -262,34 +262,6 @@ Cela dit, j'insiste #OnlyAddWhenNecessary
 
 
 
-
-## Ne plus penser en Front/Back mais en Front+Back
-
-
-Vous êtes des devs, vous apportez une solution
-Notes: Vous n'êtes pas juste là pour "clore du ticket JIRA"
-
-
-L'approche Produit est forcément globale
-Notes: Des fois il y aura un peu de Front, d'autre fois beaucoup
-
-Pareil côté Back
-
-
-« Front+Back y a trop de choses à savoir ! »
-Notes: Spoiler alert -> Non.
-
-S'il y a trop c'est qu'il y a beaucoup à dégager, justement.
-
-Revenir à quelque chose de simple, fonctionnel, "MVP"
-
-
-> “Il ne faut toucher à l'architecture que d'une main tremblante.”
->
-> *Montesquieu contemporain*
-
-
-
 ## Un ch'ti PoC
 <img class="r-stretch" data-src="assets/backend-dev.jpeg" >
 
@@ -338,6 +310,33 @@ Donc faut ouvrir ses chakras car…
 
 <img class="r-stretch" data-src="assets/boring-is-good.jpg" >
 Notes: Lindy Effect
+
+
+
+## Ne plus penser en Front/Back mais en Front+Back
+
+
+Vous êtes des devs, vous apportez une solution
+Notes: Vous n'êtes pas juste là pour "clore du ticket JIRA"
+
+
+L'approche Produit est forcément globale
+Notes: Des fois il y aura un peu de Front, d'autre fois beaucoup
+
+Pareil côté Back
+
+
+« Front+Back y a trop de choses à savoir ! »
+Notes: Spoiler alert -> Non.
+
+S'il y a trop c'est qu'il y a beaucoup à dégager, justement.
+
+Revenir à quelque chose de simple, fonctionnel, "MVP"
+
+
+> “Il ne faut toucher à l'architecture que d'une main tremblante.”
+>
+> *Montesquieu contemporain*
 
 
 
