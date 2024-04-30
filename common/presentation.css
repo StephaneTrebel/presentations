@@ -1,0 +1,24 @@
+.debug {
+	border: 2px solid red;
+}
+
+li.profile {
+	display: flex;
+	align-items: center;
+}
+
+li.profile > .image {
+	height: 50px;
+	width: 50px;
+	margin: 0.5rem;
+}
+
+.stroke {
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+	text-shadow: 3px 3px 0 #000,
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+}
