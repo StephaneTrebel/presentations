@@ -1,26 +1,26 @@
-<img src="assets/profil-steph.png" alt="Ma photo de profil" />
+<img src="common/assets/profil-steph.png" alt="Ma photo de profil" />
 <p>Salut, moi c'est Stéphane TRÉBEL 👋</p>
 <ul class="fragment" style="list-style-type: none">
     <li class="profile">
-        <img class="image" src="assets/ferris.png" alt="Ferris, la mascotte de Rust" />
+        <img class="image" src="common/assets/ferris.png" alt="Ferris, la mascotte de Rust" />
     </li>
     <li class="profile">
         <img class="image"
             style="background-color: #eee"
-            src="assets/typescript.png"
+            src="common/assets/typescript.png"
             alt="Logo de Typescript"
         />
     </li>
     <li class="profile">
-        <img class="image" src="assets/tux.png" alt="Tux, la mascotte de Linux" />
+        <img class="image" src="common/assets/tux.png" alt="Tux, la mascotte de Linux" />
     </li>
 </ul>
 <ul class="fragment" style="list-style-type: none">
     <li class="profile">
-        <img class="image" src="assets/twitter.png" alt="Le logo du réseau X" />
+        <img class="image" src="common/assets/twitter.png" alt="Le logo du réseau X" />
     </li>
     <li class="profile">
-        <img class="image" src="assets/github.png" alt="Le logo de Github" />
+        <img class="image" src="common/assets/github.png" alt="Le logo de Github" />
     </li>
     <li class="profile">
         <svg class="image"
