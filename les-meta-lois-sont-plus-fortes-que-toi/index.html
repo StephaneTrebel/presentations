@@ -9,130 +9,49 @@
 
     <title>Présentation</title>
 
-    <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/black.css" />
-    <link rel="stylesheet" href="presentation.css" />
+    <link rel="stylesheet" href="common/dist/reset.css" />
+    <link rel="stylesheet" href="common/dist/reveal.css" />
+    <link rel="stylesheet" href="common/dist/theme/black.css" />
+    <link rel="stylesheet" href="common/presentation.css" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="common/plugin/highlight/monokai.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section>Bienvenue !</section>
 
-        <section>
-          <img src="profil-steph.png" alt="Ma photo de profil" />
-          <p>À propos de moi...</p>
-          <ul class="fragment" style="list-style-type: none">
-            <li class="profile">
-              <img src="assets/ferris.png" alt="Ferris, le logo de Rust" /><span
-                >Rust</span
-              >
-            </li>
-            <li class="profile">
-              <img src="assets/typescript.png" alt="Logo Typescript" />Typescript
-            </li>
-            <li class="profile"><img src="assets/tux.png" alt="Tux Logo" />Linux</li>
-          </ul>
-          <ul class="fragment" style="list-style-type: none">
-            <li class="profile">
-              <img src="assets/twitter.png" alt="X (ex-Twitter) logo" /><span
-                >@StephaneTrebel</span
-              >
-            </li>
-            <li class="profile">
-              <img src="assets/github.png" alt="Github Logo" />@StephaneTrebel
-            </li>
-            <li class="profile">
-              <img
-                src="assets/bluesky.png"
-                alt="Bluesky Logo"
-              />@stephanetrebel.bsky.social
-            </li>
-          </ul>
-        </section>
-
-        <section data-background-color="white">
-          <aside class="notes">
-            Consultant Technique chez Wescale depuis le début de l'année
-          </aside>
-          <img
-            style="max-height: 25 rem"
-            data-src="assets/wescale.png"
-            alt="Logo Wescale"
-          />
-        </section>
-
-        <section data-background-color="white" data-transition="fade">
-          <section
-            data-background-image="assets/wescale-cloud-advisor.png"
-            data-background-size="contain"
-          >
-            <p class="stroke">Une ESN française de la Tech 🇫🇷</p>
-            <aside class="notes">
-              Une ESN française de la Tech, dont les missions sont
-              principalement le conseil sur les sujets de Cloud, d'Orchestration
-              et de passage à l'échelle
-            </aside>
-          </section>
-
-          <section
-            data-background-image="assets/wescale-nous-rejoindre.png"
-            data-background-size="contain"
-          >
-            <p class="stroke">+ de 60 expert(e)s dans ces domaines</p>
-            <aside class="notes">
-              Nous sommes + de 60 expert(e)s dans ces domaines, et nous
-              cultivons régulièrement notre expertise avec des contributions
-              interne comme le Weshare mensuel, notre journée de partage, ou
-              encore notre blog et notre podcast, WeSpeakCloud, dont je suis —en
-              passant— devenu récemment l'animateur 😉
-            </aside>
-          </section>
-
-          <section
-            data-background-image="assets/wescale-nous-contacter.png"
-            data-background-size="contain"
-          >
-            <p class="stroke">N'hésitez pas à nous contacter 😉</p>
-            <aside class="notes">
-              N'hésitez pas à nous contacter sur les résals socials si ça vous
-              intéresse, on se fera un plaisir de vous rediriger vers la
-              personne appropriée
-            </aside>
-          </section>
-        </section>
-
         <section
-          data-markdown="./input.md"
+          data-markdown="common/moi.md"
           data-separator="^\n\n\n"
           data-separator-vertical="^\n\n"
-          data-separator-notes="^Note:"
-        >
-        </section>
+          data-separator-notes="^Notes:"
+        ></section>
 
-        <section>
-          <p>
-            Retrouvez la liste abordée dans cette présentation, ainsi que
-            d'autres méta-lois, sur mon dépôt Github:
-          </p>
-          <a href="https://github.com/StephaneTrebel/meta-laws-collection"
-            ><img
-              src="github.svg"
-              alt="QR Code pointant vers mon dépôt Github sur les méta-lois"
-          /></a>
-        </section>
+        <section
+          data-markdown="common/wescale.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
+
+        <section
+          data-markdown="slides.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
 
         <section>Fin !</section>
       </div>
     </div>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
+    <script src="common/dist/reveal.js"></script>
+    <script src="common/plugin/notes/notes.js"></script>
+    <script src="common/plugin/markdown/markdown.js"></script>
+    <script src="common/plugin/highlight/highlight.js"></script>
+    <script src="common/plugin/pdfexport/pdfexport.js"></script>
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/
@@ -141,7 +60,7 @@
         hash: true,
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, PdfExport],
       });
     </script>
   </body>
