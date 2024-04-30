@@ -22,99 +22,22 @@
       <div class="slides">
         <section>Bienvenue !</section>
 
-        <section>
-          <img src="assets/profil-steph.png" alt="Ma photo de profil" />
-          <p>Salut, moi c'est Stéphane TRÉBEL 👋</p>
-          <ul class="fragment" style="list-style-type: none">
-            <li class="profile">
-              <img class="image" src="assets/ferris.png" alt="Ferris, la mascotte de Rust" />
-            </li>
-            <li class="profile">
-              <img class="image"
-								style="background-color: #eee"
-                src="assets/typescript.png"
-                alt="Logo de Typescript"
-              />
-            </li>
-            <li class="profile">
-              <img class="image" src="assets/tux.png" alt="Tux, la mascotte de Linux" />
-            </li>
-          </ul>
-          <ul class="fragment" style="list-style-type: none">
-            <li class="profile">
-              <img class="image" src="assets/twitter.png" alt="Le logo du réseau X" />
-            </li>
-            <li class="profile">
-              <img class="image" src="assets/github.png" alt="Le logo de Github" />
-            </li>
-            <li class="profile">
-              <svg class="image"
-                xmlns="http://www.w3.org/2000/svg"
-                style="background-color: #eee"
-                viewBox="1 1 22 22"
-                fill="rgb(10, 102, 194)"
-                focusable="false"
-              >
-                <path
-                  d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
-                ></path>
-              </svg>
-            </li>
-          </ul>
-        </section>
-
-        <section data-background-color="white">
-          <aside class="notes">
-            Consultant Technique chez Wescale depuis début 2023
-          </aside>
-          <img
-            style="max-height: 25 rem"
-            data-src="assets/wescale.png"
-            alt="Logo Wescale"
-          />
-        </section>
-
-        <section data-background-color="white" data-transition="fade">
-          <section
-            data-background-image="assets/wescale-cloud-advisor.png"
-            data-background-size="contain"
-          >
-            <p class="stroke">Une ESN française de la Tech</p>
-            <aside class="notes">
-              Une ESN française de la Tech, dont les missions sont
-              principalement le conseil sur les sujets de Cloud, d'Orchestration
-              de DevOps et de passage à l'échelle
-            </aside>
-          </section>
-
-          <section
-            data-background-image="assets/wescale-nous-rejoindre.png"
-            data-background-size="contain"
-          >
-            <p class="stroke">+ de 70 expert(e)s dans ces domaines</p>
-            <aside class="notes">
-              Nous sommes + de 70 expert(e)s dans ces domaines, et nous
-              cultivons régulièrement notre expertise avec des contributions
-              internes comme le Weshare mensuel, qui est notre journée de partage, ou
-              encore notre blog et notre podcast, WeSpeakCloud, auquel je participe 😉
-            </aside>
-          </section>
-
-          <section
-            data-background-image="assets/wescale-nous-contacter.png"
-            data-background-size="contain"
-          >
-            <p class="stroke">N'hésitez pas à nous contacter</p>
-            <aside class="notes">
-              N'hésitez pas à nous contacter sur les résals socials si ça vous
-              intéresse, on se fera un plaisir de vous rediriger vers la
-              personne appropriée
-            </aside>
-          </section>
-        </section>
+        <section
+          data-markdown="common/moi.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
 
         <section
-          data-markdown="./slides.md"
+          data-markdown="common/wescale.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
+
+        <section
+          data-markdown="slides.md"
           data-separator="^\n\n\n"
           data-separator-vertical="^\n\n"
           data-separator-notes="^Notes:"
