@@ -29,7 +29,7 @@ mais rien pour ORCHESTRER tout ça.
 
 
 <img class="r-stretch" data-src="assets/drowning-in-js.png" >
-Réinventer la roue, constamment.
+Réinventer la roue en JS, constamment.
 Notes: Comment simplement gérer un État applicatif front alors que la session
 de l'utilisateur doit également être gérée côté Back (authentification,
 d'autorisation, etc.).
@@ -46,29 +46,13 @@ CSS ? Non, JS++
 
 
 <img class="r-stretch" data-src="assets/goldblum-quote.jpeg" >
-De la soupe de JSON.
+Au milieu ? De la soupe de JSON.
 Notes: "View as a function of State" promulgué par React, bonne idée ! Mais
 dans les faits c'est surtout "as a function of JSON"
 
 Une industrie entière basée sur un format parce qu'on a voulu séparer les Fronteux des Backeux (OpenAPI, GraphQL, zod, et pareil côté Backend)
 
 Perversion des principes du Web pour certaines raisons (cf chapitre dédié)
-
-
-<img class="r-stretch" data-src="assets/never-full-react.jpeg" >
-
-Javascript fatigue...
-Notes: Maintenir tout ça
-
-Passer sur la nouvelle version du framework, des dépendances
-
-Gérer les vulnérabilités, faire de la veille, appréhender la suite
-
-Passer sur un nouveau framework...pour quel ROI ? Pour le fun ? Le CV ?
-
-Réinventer la roue c'est cher: on prend celle des voisins (left-pad, isEven, etc.)
-
-Rocher de Sisyphe, quoi.
 
 
 <img src="assets/lazy-loading-lol.png"/>
@@ -104,7 +88,7 @@ Le vendor lock-in limité à ce que vous y mettez
 Notes: C'est quoi donc ?
 
 
-Une librairie.
+C'est (juste) une librairie.
 
 <img class="r-stretch" data-src="assets/no-bundler.jpg" >
 Notes: Juste une librairie, car le reste existe déjà
@@ -116,14 +100,14 @@ Principe Unix: "Do one thing and do it well"
 Mais dont le pitch est simple: vous avez déjà un framework pour faire du Web (HTTP, HTML, CSS et JS)
 
 
-HATEOAS et AJAX
+Basée sur HATEOAS et AJAX
 
 <img class="r-stretch" data-src="assets/htmx-club.jpg" >
 
 (non ce ne sont pas des héros grecs)
 Notes: Hypermedia As The Engine Of Application State
 
-Asynchronous Javascript and XML, le très mal nommé
+Asynchronous JavaScript and XML, le très mal nommé
 
 HATEOAS: C'est l'Hypermedia (HTML) qui porte l'application.
 HTML est structuré, accessible, compressible, découvrable, etc.
@@ -194,7 +178,7 @@ Oh vous voulez plus complexe ? Ok !
 <form hx-post="/contacts"> ... </form>
 ```
 
-> “Lorsqu'on soumet le formulaire, envoie une requête POST vers `/contacts`. La réponse aura un en-tête `HX-Trigger:newContact` qui déclenchera une requête GET vers `/contacts/table`, ce qui rafraîchira la table.
+> “Lorsque le formulaire est soumis, envoie un POST vers `/contacts`. La réponse aura un en-tête `HX-Trigger` qui déclenchera un GET vers `/contacts/table`, qui rafraîchira la table.
 Notes: Yep, c'est de la programmation évènementielle.
 
 Sans observable, sans signaux, sans hooks.
@@ -220,7 +204,7 @@ Pas de minification ou d'obfuscation abusive, la compression et mise en cache se
 C'est trop simple pour être vrai, hein ?
 
 
-HTMX est ce que le HTML aurait dû devenir avant qu'on bascule dans le «tout Javascript»
+HTMX est ce que le HTML aurait dû devenir avant qu'on bascule dans le «tout JavaScript»
 Notes: Mais tout n'est pas perdu !
 
 
@@ -247,7 +231,7 @@ Sauf que là on est dans un esprit plutôt #NoBuild
 Ou, du moins, #OnlyAddWhenNecessary
 
 
-Parce que Javascript a également évolué
+Parce que JavaScript a également évolué
 Notes: Les classes ont permis l'émergence des WebComponents
 
 Les futures évolutions (private fields) permettront davantage d'isolation
@@ -309,44 +293,17 @@ Notes: Lindy Effect
 
 
 
-## Ne plus penser en Front/Back mais en Front+Back
-
-
-Vous êtes des devs, vous apportez une solution
-Notes: Vous n'êtes pas juste là pour "clore du ticket JIRA"
-
-
-L'approche Produit est forcément globale
-Notes: Des fois il y aura un peu de Front, d'autre fois beaucoup
-
-Pareil côté Back
-
-
-« Front+Back y a trop de choses à savoir ! »
-Notes: Spoiler alert -> Non.
-
-S'il y a trop c'est qu'il y a beaucoup à dégager, justement.
-
-Revenir à quelque chose de simple, fonctionnel, "MVP"
-
-
-> “Il ne faut toucher à l'architecture que d'une main tremblante.”
->
-> *Montesquieu contemporain*
-
-
-
 ## En conclusion ?
 
 - Une critique assez forte du «Resume Driven Development»
-- Revenons à la simplicité: traitons du métier avant de se faire plaisir avec de la technique
+- Revenons à la simplicité: traitons le Métier avant de se faire plaisir avec de la technique
 - L'importance des abstractions: HTML, CSS, JS, à chaque couche son objectif
 
 
 Vous n'êtes pas Dev X/Y/Z.
 <img class="r-stretch"  src="assets/you-are-not-your-web-framework.jpeg" >
 
-Vous êtes un Dev —tout court— <!-- .element: class="fragment" -->
+Vous êtes des Devs —tout court— <!-- .element: class="fragment" -->
 Notes: Être un dev ne suffirait apparemment pas, il faut être un Dev "React", "Java", etc.
 
 Et donc croître, croître, et justifier cette croissance.
