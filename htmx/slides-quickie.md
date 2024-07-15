@@ -1,19 +1,20 @@
-## Sommaire
-
-- Un constat sur le dev Web "moderne"
-- HTMX, un retour aux sources
-- Alors, Révolution ou pas Révolution ?
-
+<img class="r-stretch" data-src="assets/south-park-intro.jpg" >
 Notes: On va préfacer tout de suite: cette présentation est très "opiniated".
 Elle se base sur ce que j'ai pu vivre au cours de ma désormais dizaine d'années
 d'expérience dans le domaine, et de ce que j'ai pu lire et voir autour du
 sujet. Ce n'est donc ni impartial ni objectif, mais je vais tenter d'être le
 plus équitable possible (même si j'ai mon opinion, donc).
 
+
+## Sommaire
+
+- Un constat sur le dev Web "moderne"
+- HTMX, un retour aux sources
+- Alors, Révolution ou pas Révolution ?
+
+
 ## Les limites du «Toujours plus de JS !!!»
 
-
-<img class="r-stretch" data-src="assets/im-the-captain.jpeg" >
 
 À la base, ça n'existe pas, une "application Web".
 Notes: Web est avant tout une plateforme de distribution.
@@ -25,7 +26,9 @@ Le CSS et le JS sont là pour rendre le tout un peu plus sympa à utiliser
 
 Mais tout ça ne fait pas une application. Il y a du "routage" (historique, URLs),
 il y a du "state" (cookies, localstorage), des API (caméra, micro, crypto),
-mais rien pour ORCHESTRER tout ça.
+mais rien pour ORCHESTRER tout ça, d'où l'importance de nos choix en tant que DEVS
+
+Sauf que les devs ont eu tendance à tout voir sous le prisme du JS
 
 
 <img class="r-stretch" data-src="assets/drowning-in-js.png" >
@@ -178,7 +181,7 @@ Oh vous voulez plus complexe ? Ok !
 <form hx-post="/contacts"> ... </form>
 ```
 
-> “Lorsque le formulaire est soumis, envoie un POST vers `/contacts`. La réponse aura un en-tête `HX-Trigger` qui déclenchera un GET vers `/contacts/table`, qui rafraîchira la table.
+> “Lorsque le formulaire est soumis, envoie un POST vers `/contacts`. La réponse aura un `HX-Trigger` qui déclenchera un GET `/contacts/table`, qui rafraîchira la table”
 Notes: Yep, c'est de la programmation évènementielle.
 
 Sans observable, sans signaux, sans hooks.
@@ -192,10 +195,8 @@ Résumé
 - CSS pour décorer
 - JS *uniquement* quand c'est nécessaire
 
-C'est tout. <!-- .element: class="fragment" -->
-
-Le reste, c'est votre boulot. <!-- .element: class="fragment" -->
-Notes: On s'impose ni SPA, ni MPA (ça peut même être hybride, osef)
+Notes: On s'impose ni SPA, ni MPA (ça peut même être hybride, osef).
+On ne s'impose pas CSS non plus, si Tailwind vous convient go for it.
 
 WYSIWYG, et c'est ça, finalement la révolution
 
@@ -206,39 +207,6 @@ C'est trop simple pour être vrai, hein ?
 
 HTMX est ce que le HTML aurait dû devenir avant qu'on bascule dans le «tout JavaScript»
 Notes: Mais tout n'est pas perdu !
-
-
-
-## Pourquoi HTMX en 2024 ?
-
-
-Parce que les WebComponents sont (enfin) matures
-Notes: Énormément de chemin parcouru
-
-La moitié de la proposition de valeur des frameworks web part en fumée
-
-Encore des choses à voir (Shadow DOM) mais ça progresse
-
-
-Parce que CSS a beaucoup évolué
-Notes: et s'embarque très bien dans les WebComponents
-
-Variables, règles, display, etc.
-
-Mais vous pouvez coller du Tailwind si vous vous voulez, hein !
-Sauf que là on est dans un esprit plutôt #NoBuild
-
-Ou, du moins, #OnlyAddWhenNecessary
-
-
-Parce que JavaScript a également évolué
-Notes: Les classes ont permis l'émergence des WebComponents
-
-Les futures évolutions (private fields) permettront davantage d'isolation
-
-Reste le problème du typage mais Typescript ou JsDocs font le taf
-
-Cela dit, j'insiste #OnlyAddWhenNecessary
 
 
 
@@ -296,7 +264,7 @@ Notes: Lindy Effect
 ## En conclusion ?
 
 - Une critique assez forte du «Resume Driven Development»
-- Revenons à la simplicité: traitons le Métier avant de se faire plaisir avec de la technique
+- Revenons à la simplicité: traitons (et challegeons !) le Métier avant de se faire plaisir avec de la technique
 - L'importance des abstractions: HTML, CSS, JS, à chaque couche son objectif
 
 
@@ -313,6 +281,11 @@ Donc on en rajoute, là où on devrait plutôt enlever
 et se concentrer sur les problèmes et les solutions qu'on peut apporter.
 
 On n'est pas là pour pousser du JS à tout prix, seulement quand c'est nécessaire.
+
+
+
+Car sinon on subit le principe du Marteau de Maslow:
+> « If the only tool you have is a hammer, it is tempting to treat everything as if it were a nail. »
 
 
 
