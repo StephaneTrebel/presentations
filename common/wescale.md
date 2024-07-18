@@ -6,19 +6,18 @@
 Notes: Consultant Technique chez WeScale depuis début 2023
 
 
-<!-- .slide: data-background-image="common/assets/wescale-cloud-advisor.png" data-background-size="contain" data-background-color="white" -->
-Une ESN française de la Tech <!-- .element: class="stroke" -->
-Notes:Une ESN française de la Tech, dont les missions sont principalement le
-conseil sur les sujets de Cloud, d'orchestration de DevOps et de passage
-à l'échelle
+<!-- .slide: data-background-image="common/assets/wescale-worldwide.png" -->
+**DEPUIS 2015**
 
+**70** **PASSIONNÉ-ES**
 
-<!-- .slide: data-background-image="common/assets/wescale-nous-rejoindre.png" data-background-size="contain" data-background-color="white" -->
-+ de 70 expert(e)s dans ces domaines <!-- .element: class="stroke" -->
-Notes: Nous sommes + de 70 expert(e)s dans ces domaines, et nous cultivons
-régulièrement notre expertise avec des contributions internes comme le Weshare
-mensuel, qui est notre journée de partage, ou encore notre blog et notre
-podcast, WeSpeakCloud, auquel je participe 😉
+**PARIS**
+
+**NANTES**
+
+**\+ DE 50 CLIENTS**
+
+**\+ DE 10M DE CA**
 
 
 <!-- .slide: data-background-image="common/assets/wescale-nous-contacter.png" data-background-size="contain" data-background-color="white" -->
