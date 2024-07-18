@@ -289,13 +289,21 @@ Car sinon on subit le principe du Marteau de Maslow:
 
 
 
-Retrouvez ce POC sur mon dépôt Github:
-
-<img
-    class="r-stretch"
-		src="assets/qr-code.gif"
-		style="width: 25rem; height: auto;"
-		alt="QR Code pointant vers le dépôt Github"
-/>
-
-https://github.com/StephaneTrebel/poc-htmx-rust
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+  <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center">
+    <span>Le POC 💪</span>
+    <img
+        src="assets/qr-code-github.png"
+        style="width: 40vw"
+        alt="QR Code pointant vers le dépôt Github"
+        />
+  </div>
+  <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center">
+    <span>Les feedbacks 💗</span>
+    <img
+        src="assets/feedback-sunnytech-2024.png"
+        style="width: 40vw"
+        alt="QR Code pointant vers l'Openfeedback de cette conférence"
+        />
+  </div>
+</div>
