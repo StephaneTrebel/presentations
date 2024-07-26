@@ -20,8 +20,15 @@ WeScale c'est une ESN spécialisée dans le conseil autour du Cloud, de l'Orches
 **\+ DE 50 CLIENTS**
 
 **\+ DE 10 M€ DE CA**
-Notes: Nous sommes 70 passionné(e)s qui échangeons régulièrement autour de sujets d'expertises au travers de nos WeShare —nos journées de partage mensuel, durant lesquelles on se fait des conférences entre nous —, de notre blog WeScale, ou encore de notre podcast WeSpeakCloud, dont j'ai le privilège d'être l'hôte 😉
+Notes: Nous sommes 70 passionné(e)s répartis sur les agences de Paris, Nantes, et FullRemote
 
+
+<img class="r-stretch" src="common/assets/weshare.png" alt="Le WeShare, notre journée de partage">
+Notes:qui échangeons régulièrement autour de sujets d'expertises au travers de nos WeShare —nos journées de partage mensuel, durant lesquelles on se fait des conférences entre nous —, de notre blog WeScale, 
+
+
+<img class="r-stretch" src="common/assets/wespeakcloud.png" alt="WeSpeakCloud, le podcast de la Tech, du Cloud, et du DevOps">
+Notes: ou encore de notre podcast WeSpeakCloud, dont j'ai le privilège d'être l'hôte 😉
 
 
 <!-- .slide: data-background-image="common/assets/wescale-nous-contacter.png" data-background-size="contain" data-background-color="white" -->
