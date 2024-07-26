@@ -20,6 +20,18 @@ Mais à chaque éditeur il y avait toujours quelque chose qui me gênait…
 - «Woah, le nouvel IDE à la mode ! VSCode, ça s'appelle ? C'est super, mais faut tout réapprendre 😫»
 
 
+<img class="r-stretch" src="assets/twitter-vscode-confusing.png" alt="Un tweet qui tacle la supposée simplicité de VSCode">
+Notes: En plus de tout ça, je commençais à pas mal fatiguer de la fameuse "simplicité" vantée par les Éditeurs de Texte dits "modernes" alors qu'ils ont beaucoup de mal à gérer ce qui arrive après eux…
+
+
+<img class="r-stretch" src="assets/vscode-slow.png" alt="La liste des issues VSCode pour le mot-clé 'slow'">
+Notes: Donc oui, tout ça à commencer à me lasser, d'autant que c'est censé être mon outil de travail…
+
+
+<img class="r-stretch" src="assets/killed-by-microsoft.png" alt="Le logo du site 'Killed By Microsoft'">
+Notes: Et pour finir, qui me garantit que mon éditeur va vivre sur des années et ne pas rejoindre la trop longue liste des outils et services abandonnés par leur éditeur, qui n'est après tout qu'une (petite) entreprise ?
+
+
 Et en parallèle, la découverte de mon véritable ennemi…
 
 
@@ -43,16 +55,6 @@ Je sais que ce sont des outils qui sont parfois le seul moyen d'interagir avec l
 Mais quand on a la maîtrise de ses dix doigts, quelle PURGE de devoir les soulever pour aller poser sa main sur cet instrument du démon !
 
 
-<img class="r-stretch" src="assets/twitter-vscode-confusing.png" alt="Un tweet qui tacle la supposée simplicité de VSCode">
-Notes: En plus de tout ça, je commençais à pas mal fatiguer de la fameuse "simplicité" vantée par les Éditeurs de Texte dits "modernes" alors qu'ils ont beaucoup de mal à gérer ce qui arrive après eux…
-
-
-<img class="r-stretch" src="assets/vscode-slow.png" alt="La liste des issues VSCode pour le mot-clé 'slow'">
-Notes: Donc oui, tout ça à commencer à me lasser, d'autant que c'est censé être mon outil de travail…
-
-
-<img class="r-stretch" src="assets/killed-by-microsoft.png" alt="Le logo du site 'Killed By Microsoft'">
-Notes: Et pour finir, qui me garantit que mon éditeur va vivre sur des années et ne pas rejoindre la trop longue liste des outils et services abandonnés par leur éditeur, qui n'est après tout qu'une (petite) entreprise ?
 
 
 <img class="r-stretch" src="assets/mon-vim-mentor.png" alt="Mon mentor sur Vim">
