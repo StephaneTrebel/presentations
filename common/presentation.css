@@ -1,3 +1,11 @@
+img.conf-logo {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 5rem;
+  max-height: 5rem;
+}
+
 .debug {
 	border: 2px solid red;
 }
@@ -30,4 +38,15 @@ li.profile > .image {
 	1px -1px 0 #000,
 	-1px 1px 0 #000,
 	1px 1px 0 #000;
+}
+
+ul.custom-list-types {
+  list-style-type: none;
+}
+ul.custom-list-types li::before {
+  content: attr(data-icon);
+  margin-right: 1rem;
+}
+ul.custom-list-types li {
+  margin-bottom: 1rem;
 }

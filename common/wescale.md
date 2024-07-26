@@ -5,6 +5,8 @@
 />
 Notes: Consultant Technique chez WeScale depuis début 2023
 
+WeScale c'est une ESN spécialisée dans le conseil autour du Cloud, de l'Orchestration, et du DevOps avec nos méthodes telles le ScaleVision ou la Fabrik, pour vous permettre une transformation vers le Cloud Native, ou tout simplement vous aider à passer à l'échelle.
+
 
 <!-- .slide: data-background-image="common/assets/wescale-worldwide.png" -->
 **DEPUIS 2015**
@@ -17,7 +19,9 @@ Notes: Consultant Technique chez WeScale depuis début 2023
 
 **\+ DE 50 CLIENTS**
 
-**\+ DE 10M DE CA**
+**\+ DE 10 M€ DE CA**
+Notes: Nous sommes 70 passionné(e)s qui échangeons régulièrement autour de sujets d'expertises au travers de nos WeShare —nos journées de partage mensuel, durant lesquelles on se fait des conférences entre nous —, de notre blog WeScale, ou encore de notre podcast WeSpeakCloud, dont j'ai le privilège d'être l'hôte 😉
+
 
 
 <!-- .slide: data-background-image="common/assets/wescale-nous-contacter.png" data-background-size="contain" data-background-color="white" -->

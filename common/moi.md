@@ -2,15 +2,15 @@
 <p>Salut, moi c'est Stéphane TRÉBEL 👋</p>
 <ul class="fragment flex-column" style="list-style-type: none">
     <li class="profile">
-        <img class="image" src="common/assets/ferris.png" alt="Ferris, la mascotte de Rust" />
-    </li>
-    <li class="profile">
         <img class="image"
             src="common/assets/www.png"
             alt="Un logo pour le World Wide Web"
         />
     </li>
     <li class="profile">
+        <img class="image" src="common/assets/ferris.png" alt="Ferris, la mascotte de Rust" />
+    </li>
+    <li class="profile flex-column">
         <img class="image" src="common/assets/tux.png" alt="Tux, la mascotte de Linux" />
     </li>
 </ul>
