@@ -84,7 +84,7 @@ gulp.task('js-es5', () => {
         cache.umd = bundle.cache;
         return bundle.write({
             name: 'Reveal',
-            file: './dist/reveal.js',
+            file: 'common/dist/reveal.js',
             format: 'umd',
             banner: banner,
             sourcemap: true
@@ -106,7 +106,7 @@ gulp.task('js-es6', () => {
     }).then( bundle => {
         cache.esm = bundle.cache;
         return bundle.write({
-            file: './dist/reveal.esm.js',
+            file: 'common/dist/reveal.esm.js',
             format: 'es',
             banner: banner,
             sourcemap: true
@@ -119,12 +119,12 @@ gulp.task('js', gulp.parallel('js-es5', 'js-es6'));
 // built-in plugins
 gulp.task('plugins', () => {
     return Promise.all([
-        { name: 'RevealHighlight', input: './plugin/highlight/plugin.js', output: './plugin/highlight/highlight' },
-        { name: 'RevealMarkdown', input: './plugin/markdown/plugin.js', output: './plugin/markdown/markdown' },
-        { name: 'RevealSearch', input: './plugin/search/plugin.js', output: './plugin/search/search' },
-        { name: 'RevealNotes', input: './plugin/notes/plugin.js', output: './plugin/notes/notes' },
-        { name: 'RevealZoom', input: './plugin/zoom/plugin.js', output: './plugin/zoom/zoom' },
-        { name: 'RevealMath', input: './plugin/math/plugin.js', output: './plugin/math/math' },
+        { name: 'RevealHighlight', input: 'common/plugin/highlight/plugincommonjs', output: 'common/plugin/highlight/highlight' },
+        { name: 'RevealMarkdown', input: 'common/plugin/markdown/plugincommonjs', output: 'common/plugin/markdown/markdown' },
+        { name: 'RevealSearch', input: 'common/plugin/search/plugincommonjs', output: 'common/plugin/search/search' },
+        { name: 'RevealNotes', input: 'common/plugin/notes/plugincommonjs', output: 'common/plugin/notes/notes' },
+        { name: 'RevealZoom', input: 'common/plugin/zoom/plugincommonjs', output: 'common/plugin/zoom/zoom' },
+        { name: 'RevealMath', input: 'common/plugin/math/plugincommonjs', output: 'common/plugin/math/math' },
     ].map( plugin => {
         return rollup({
                 cache: cache[plugin.input],
@@ -176,16 +176,16 @@ function compileSass() {
   });
 }
 
-gulp.task('css-themes', () => gulp.src(['./css/theme/source/*.{sass,scss}'])
+gulp.task('css-themes', () => gulp.src(['common/css/theme/source/*.{sass,scss}'])
         .pipe(compileSass())
-        .pipe(gulp.dest('./dist/theme')))
+        .pipe(gulp.dest('common/dist/theme')))
 
 gulp.task('css-core', () => gulp.src(['css/reveal.scss'])
     .pipe(compileSass())
     .pipe(autoprefixer())
     .pipe(minify({compatibility: 'ie9'}))
     .pipe(header(banner))
-    .pipe(gulp.dest('./dist')))
+    .pipe(gulp.dest('common/dist')))
 
 gulp.task('css', gulp.parallel('css-themes', 'css-core'))
 
@@ -271,10 +271,10 @@ gulp.task('package', gulp.series(() =>
     gulp.src(
         [
             './index.html',
-            './dist/**',
+            'common/dist/**',
             './lib/**',
             './images/**',
-            './plugin/**',
+            'common/plugin/**',
             './**/*.md'
         ],
         { base: './' }
@@ -304,16 +304,16 @@ gulp.task('serve', () => {
 
     gulp.watch(['js/**'], gulp.series('js', 'reload', 'eslint'))
 
-    gulp.watch(['plugin/**/plugin.js', 'plugin/**/*.html'], gulp.series('plugins', 'reload'))
+    gulp.watch(['common/plugin/**/plugin.js', 'common/plugin/**/*.html'], gulp.series('plugins', 'reload'))
 
     gulp.watch([
-        'css/theme/source/**/*.{sass,scss}',
-        'css/theme/template/*.{sass,scss}',
+        'common/css/theme/source/**/*.{sass,scss}',
+        'common/css/theme/template/*.{sass,scss}',
     ], gulp.series('css-themes', 'reload'))
 
     gulp.watch([
-        'css/*.scss',
-        'css/print/*.{sass,scss,css}'
+        'common/css/*.scss',
+        'common/css/print/*.{sass,scss,css}'
     ], gulp.series('css-core', 'reload'))
 
     gulp.watch(['test/*.html'], gulp.series('test'))

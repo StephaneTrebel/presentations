@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -19,8 +19,16 @@
   </head>
   <body>
     <div class="reveal">
+      <img class="conf-logo" src="common/assets/wescale.png" alt="Logo de la conférence">
       <div class="slides">
         <section>Bienvenue !</section>
+
+        <section
+          data-markdown="intro.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
 
         <section
           data-markdown="common/moi.md"
@@ -43,7 +51,29 @@
           data-separator-notes="^Notes:"
         ></section>
 
-        <section>Fin !</section>
+        <section>
+          <div class="flex-column">
+            <div class="flex-row">
+              <div class="flex-column">
+                <span>Le POC 💪</span>
+                <img
+                  src="assets/qr-code-github.png"
+                  style="width: 40vw"
+                  alt="QR Code pointant vers le dépôt Github"
+                />
+              </div>
+              <div class="flex-column">
+                <span>Les feedbacks 💗</span>
+                <img
+                  src="assets/feedback-placeholder.png"
+                  style="width: 40vw"
+                  alt="QR Code pointant vers l'Openfeedback de cette conférence"
+                />
+              </div>
+            </div>
+            <div>J'ai fini ! Des questions ? 🫣</div>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -58,6 +88,10 @@
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
+        progress: false,
+        controls: false,
+        showSlideNumber: 'speaker',
+        transition: 'none',
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, PdfExport],
