@@ -8,9 +8,11 @@ Notes:Laurie débarque fraîchement dans sa nouvelle boîte Metacortex. Un fleur
 
 
 <img class="r-stretch" src="assets/metacortex-manager.jpeg" alt="Le manager de Laurie, pas commode !">
-Notes: Et son manager la colle sur un projet en tant que "Développeuse Front sur la page Panier du site d'Ecommerce d'une grande marque". Elle aura en charge de contribuer à développer les fonctionnalités de cette page avec son équipe, et elle dépendra intégralement des autres équipes, que ce soit du Back pour récupérer les données du panier, ou encore des autres équipes Front pour récupérer les informations utilisateur.
+Notes: Et son manager la colle sur un projet en tant que "Développeuse Front sur la page Panier du site d'Ecommerce d'une grande marque".
 
-Laurie s'intérroge. Elle est developpeuse Web, elle pourrait tout à fait s'occuper du Front, et du Back. D'ailleurs elle a été formée à pouvoir traiter de toutes les couches, de la Conception à l'infrastructure, en passant bien sûr par le Front et le Back
+Elle aura en charge de contribuer à développer les fonctionnalités de cette page avec son équipe, et elle dépendra intégralement des autres équipes, que ce soit du Back pour récupérer les données du panier, ou encore des autres équipes Front pour récupérer les informations utilisateur.
+
+Laurie s'interroge. Elle est développeuse Web, elle pourrait tout à fait s'occuper du Front, et du Back. D'ailleurs elle a été formée à pouvoir traiter de toutes les couches, de la Conception à l'infrastructure, en passant bien sûr par le Front et le Back
 
 
 <img class="r-stretch" src="assets/new−agent-smith-matrix.jpg" alt="Un agent de la Matrice !">
@@ -34,7 +36,7 @@ Ce que ça veut dire concrètement pour vous, comme pour Laurie :
 </ul>
 Notes: Comme souci on peut tout simplement évoquer «Qui va être responsable de la fonctionnalité transverse: l'équipe A ou l'équipe B ?».
 
-On peut également parler des groupes (pour celles et ceux qui font du RBAC) et le problème d'attribution des gens à plusieurs groupes, et bien sûr la friction de gérer ça dans le temps.
+On peut également parler des équipes et le problème d'attribution des gens à plusieurs équipes, et bien sûr la friction de gérer ça dans le temps.
 
 
 Comment mitiger la Loi de Conway ?
@@ -45,14 +47,20 @@ Comment mitiger la Loi de Conway ?
 </ul>
 Notes: Par exemple utiliser des stack techniques dites "FullStack"
 Pour les RH, valoriser la pluridisciplinarité
-Pour notre histoire de groupes d'accès, envisager les modèles Attributes based qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
+Pour notre histoire d'attribution à des équipes, envisager plutôt les modèles "Attributes based" qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
 
 
 Bon c'est pas tout ça, revenons à Laurie.
 
 
 <img class="r-stretch" src="assets/laurie-strode-focused.jpg" alt="Laurie, concentrée comme jamais">
+
+« Et si je virais ce bout de code moche… »
 Notes: Notre Laurie s'attaque donc à la base de code de son équipe, d'ailleurs entièrement composée de juniors comme elle, et c'est un vrai plat de spaghetti ! Ardente et motivée elle commence à mettre de l'ordre là-dedans, pour vite se rendre compte que quoi qu'elle touche, une autre partie de la page se casse la figure...un vrai Mikado !
+
+
+<img class="r-stretch" src="assets/dawn-of-the-dead-1978-zombies.png" alt="Des collègues pas très ouverts d'esprits">
+Notes: Et elle se fait vite reprendre par ses collègues car tout le sprint en prend pour son grade avec ses bugs à répétition. Oui les boutons sont moches, oui il y a du contenu qui bouge au chargement, mais tout ça c'est pour corriger d'autres bugs bien plus gênants !
 
 
 La pauvre, la voilà au prise avec…
@@ -62,16 +70,15 @@ La pauvre, la voilà au prise avec…
 ### La Palissade de Chesterton
 
 > Tout changement ne devrait être réalisé que lorsque la raison derrière l'état actuel a été comprise.
-Notes: «Chesterton's Fence», car c'est basé sur expression de pensée autour d'une palissade, que quelqu'un envisage de détruire car il ne voit pas à quoi elle sert. Ce à quoi son compagnon non seulement lui interdit de la détruire, mais l'oblige à en déterminer la raison de l'existence de cette palissade AFIN de pouvoir comprendre pourquoi il faut la détruire.
+Notes: «Chesterton's Fence», car c'est basé sur expression de pensée autour d'une palissade, que quelqu'un envisage de détruire car il ne voit pas à quoi elle sert. Ce à quoi son compagnon non seulement lui interdit de la détruire, mais l'oblige en outre à déterminer la raison de l'existence de cette palissade AFIN de pouvoir comprendre pourquoi il faut la détruire.
 
 Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'aurez compris: toucher à une base de code sans savoir vraiment pourquoi les choses sont comme elles sont vous exposera à la plus sévère des punitions: corriger un bug de Prod en urgence un Vendredi à 18h30 !
 
 
-Et donc:
 <ul role="list" class="custom-list-types">
   <li data-icon="🧓">Le « Legacy », ça n'existe pas. Il n'y a que des projets nouveaux et des projets anciens</li>
   <li data-icon="💰">Les projets anciens sont ceux qui paient les factures, traitons-les avec respect !</li>
-  <li data-icon="😅">Le code est "moche" _parce que_ le métier est complexe. Simplifier impliquerait de simplifier le métier (bon courage !)</li>
+  <li data-icon="😅">Le code est "moche" <em>parce que</em> le métier est complexe. Simplifier impliquerait de simplifier le métier (bon courage !)</li>
 </ul>
 
 
@@ -87,8 +94,8 @@ Notes: Pas grand-chose à ajouter à tout ça. Mais vous pouvez déjà noter que
 Allez, on retourne voir comment va notre Laurie...
 
 
-<img class="r-stretch" src="assets/og_agent_smith.jpg" alt="Oulà, l'agent Smith originel, carrément !">
-Notes: La voilà aux prises d'un individu peu recommandable, qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise.
+<img class="r-stretch" src="assets/michael-myers-nonono.gif" alt="Le seul, l'unique, Michael Myers, ne valide pas ta PR">
+Notes: La voilà aux prises d'un individu peu recommandable, qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise, et donc que sa PR restera bloquée dans la CI, épissétou !
 
 
 <img class="r-stretch" src="assets/laurie_crying.jpeg" alt="Laurie pleure">
@@ -96,6 +103,7 @@ Notes: Stressée par l'envie de bien faire, elle devient un peu prête à tout, 
 
 
 Pas de bol pour Laurie, elle est tombée en plein dans...
+
 
 
 ### La cruelle Loi de Goodhart
@@ -123,13 +131,13 @@ Bon, comment elle va, Laurie ?
 Notes: Elle en marre de se faire marcher dessus, elle s'est (bon ici, un peu trop littéralement) armée de son expérience pour affronter les métas-lois. Elle est sûre d'elle, très sûre d'elle...trop sûre d'elle ?
 
 
+
 ### L'effet Dunning-Kruger
 
 > Les personnes ayant une compétence limitée dans un domaine surestiment souvent leurs capacités.
 
-Corrolaire:
+Corollaire:
 > Les gens performants ont tendance à sous-estimer leurs compétences dans un domaine d'expertise
-
 
 
 Reconnaître qu'il y a trois types d'informations:
@@ -140,26 +148,31 @@ Reconnaître qu'il y a trois types d'informations:
 </ul>
 Notes: Si vous pensez ne pas être affecté par l'effet Dunning-Kruger, vous êtes très probablement affecté par l'effet Dunning-Kruger :)
 
-Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans une surconfiance hasardeuse
+Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans un orgueil destructeur
 
 
 Pour mitiger, rien de plus simple:
 <ul role="list" class="custom-list-types">
-  <li data-icon="👂">Identifier et écouter ces "High Performers", qui ne sont pas celleux qui se vendent le mieux, loin de là !</li>
   <li data-icon="🏃">Se remettre en question continuellement</li>
+  <li data-icon="👂">Identifier et écouter ces "High Performers", qui ne sont pas celleux qui se vendent le mieux, loin de là !</li>
   <li data-icon="🧘">Attention au syndrome de l'imposteur: tenter et échouer, c'est aussi apprendre</li>
 </ul>
 
 
-Avec ça, Laurie peut repartir sur de bonnes bases 😌
+Avec ça, Laurie peut repartir sur des bases saines 😌
 
 
 <img class="r-stretch" src="assets/matrix_architect.jpg" alt="l'Architecte, le Garant du Système">
-Notes: Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte, car avec tout ça elle est à la bourre et c'est pas ce qu'il avait prévu dans son joli powerpoint. Et il s'est engagé auprès du client sur le fait que la page Panier serait capable de montrer des vidéos en 4K des produits réservés, donc ça va pas dut tout, ça !
 
-Aïe, oui, ça a pris plus de temps que prévu, car deux sœurs jumelles ourdissaient déjà dans le dos de Laurie...
+« Tout fonctionne sur mon Powerpoint, hein »
+Notes: Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte, car elle avait dit que son dev prendrait 3j et ça a fini par prendre trois semaines (merci Dunning-Kruger !) donc avec tout ça elle est à la bourre et c'est pas ce qu'il avait prévu dans son joli powerpoint. Et il s'est engagé auprès du client sur le fait que la page Panier serait capable de montrer des vidéos en 4K des produits réservés, donc ça va pas dut tout, ça !
+
+
+<img class="r-stretch" src="assets/the_shining-twins.jpg" alt="Les jumelles de The Shining">
+Notes: Aïe, oui, ça a pris plus de temps que prévu, car deux sœurs jumelles ourdissaient déjà dans le dos de Laurie...
 
 Qui ? Je veux bien sûr parler de...
+
 
 
 ### Loi de Hofstadter:
@@ -192,20 +205,21 @@ Notes: L'impredictibilité est un révélateur des inconnues inconnues (cf Dunni
 
 
 <img class="r-stretch" src="assets/boring-is-good.jpg" alt="Boring technologies are good">
-Notes: Un collègue Senior, d'une antique équipe chargée de maintenir un logiciel de comptabilité en COBOL, entend la question et décide d'intervenir.
+Notes: Un collègue Senior, d'une antique équipe chargée de maintenir un logiciel de comptabilité en COBOL, entend la question de Laurie et décide d'intervenir pour y répondre.
 
-« Les technologies dites "ennuyeuses", ou "anciennes" sont de bonnes technologies, car elles ont passé l'épreuve du temps »
+« En gros, les technologies dites "ennuyeuses", ou "anciennes" sont de bonnes technologies, car elles ont passé l'épreuve du temps »
+
 
 
 ### L'effet Lindy
 
-> Plus longtemps quelque chose de non-périssable existe ou est présentement utilisée, plus longtemps son espérance de vie s'allonge.
+> Plus longtemps quelque chose de non-périssable existe ou est actuellement utilisé, plus longtemps son espérance de vie s'allonge.
 Notes: Je vous laisse vous chauffer le ravioli avec ça deux secondes 😁
 
 
 <ul role="list" class="custom-list-types">
   <li data-icon="🗻">Ce qui dure a une raison de durer, et cette raison fait qu'il continuera à durer</li>
-  <li data-icon="👶">À l'inverse, ce qui est nouveau n'a pas encore suffisamment subi les foudres du monde Réel</li>
+  <li data-icon="👶">À l'inverse, ce qui est nouveau n'a pas encore suffisamment subi les foudres du monde réel</li>
   <li data-icon="🙏">La nouveauté doit redécouvrir ces principes…quitte à y laisser sa jeunesse !</li>
   <li data-icon="💡">Être moderne c'est simplement être contemporain, pas être "meilleur"</li>
 </ul>
@@ -215,177 +229,122 @@ Notes:
 - Bannir le « CV Driven Development ». Le monde ne tourne pas autour de votre CV. Les utilisateurs se contrefichent que ça aide votre carrière.
 
 
+<img class="r-stretch" src="assets/laurie-strode-at-last-senior.jpg" alt="Le poids des Méta-lois se voit sur son visage">
+Sur ces sages paroles, Laurie repart à l'assaut de sa page Panier
+Notes: Elle décide d'appliquer ce qu'elle a appris, et elle se rend compte qu'elle pourrait dramatiquement simplifier son code si elle affichait chaque produit dans une page dédiée: en effet elle pourrait réutiliser la page d'affichage des produits dans le catalogue ! Woah, pourquoi n'y a t'elle pas pensé avant ? En plus ça corrigerait pas mal de bugs qu'elle avait lorsqu'elle s'est prise la Palissade de Chesterton ! Coup double, donc ?
+
+
+<img class="r-stretch" src="assets/john-carpenters-the-thing-dog.png" alt="Un joli chien">
+
+C'est qui la belle complexité ? Oui c'est toi, oui c'est toi !
+
+Notes: Sauf que…Les utilisateurs se plaignent immédiatement d'un tel changement: plutôt que d'avoir toutes les informations sur la page Panier, v'la't'y pas qu'iels doivent maintenant ouvrir chaque produit dans un nouvel onglet pour en voir les détails ? Un scandale !
+
+La complexité, terrifiant, prend des formes multiples, et il faut savoir qui va l'assumer.
+
+Car on ne fait pas ce qu'on veut avec la complexité, à cause de...
+
+
 
 ### L'implacable loi de Tesler
 
-« An application inherent complexity can never be removed, nor hidden, only dealt with trade-offs. »
-
-- Elle envoie au tapis toutes les promesses de simplification, mais on peut jouer avec. Un peu
-- Là encore un constat d'impuissance qu'il faut accepter: les applications sont _complexes_
-- La question est de savoir _comment_ on va traiter cette complexité
-- Non on ne peut pas «tout bourrer côté client», «tout gérer par le backend», «tout faire en no-code» (lol)
+> La complexité inhérente d'une application ne peut jamais être totalement retirée, ou cachée. On ne peut que la traiter à travers des compromis.
 
 
-Pour mitiger il va falloir donc faire quelque chose qu'on aime rarement faire:
-- Accepter la complexité et la placer à l'endroit où elle sera le plus facilement gérable
-- Refuser la complexité dans toutes les autres couches (et donc refuser le complexité pour la complexité)
-- Nécessite un réel contrat entre le Métier et la Technique car (Chesterton oblige), c'est du Métier que vient la complexité
-- Votre application n'est-elle finalement qu'un formulaire très complexe ? Un algorithme alambiqué ? Une interface d'API glorifiée ? Acceptez-le, et faites en fonction.
+<ul role="list" class="custom-list-types">
+  <li data-icon="😅">Il y aura toujours de la complexité dans votre application</li>
+  <li data-icon="💵">Est-elle est dans votre code (coût) ou dans son utilisation (engagement)</li>
+  <li data-icon="⚖">Trouver le bon équilibre, et se concentrer sur vos forces</li>
+</ul>
+Notes: Il y a la "bonne" et la "mauvaise" complexité quoi.
+
+Par ex: Une application web interne qui fait du CRUD pour 10 personnes a-t-elle besoin de Kubernetes, ou de Microfrontend ? C'est là une complexité qu'il faut être capable de justifier, car le cœur de l'application n'est pas sa scalabilité, ni l'agnosticité du déploiement, c'est de faire du CRUD ! Donc ptet pas justifié
+
+En revanche si votre application contient de l'algorithmique complexe pour éviter à vos utilisateurs d'avoir à jongler entre deux écrans, la question peut se poser. Le jeu peut en valoir la chandelle, mais là-aussi il faut être conscient du coût (et pas que financier, la santé mentale de la maintenance aussi c'est un coût)
+
+On en revient à nos différentes technologies, à la veille, etc. Améliorer son discernement pour comprendre la valeur ajoutée de l'application (ou de la couche sur laquelle vous bossez) et qui JUSTIFIE sa complexité. Le reste c'est de la littérature.
+
+
+<img class="r-stretch" src="assets/young-laurie-strode-smiling.jpg" alt="Laurie a enfin trouvé un truc utile à faire">
+
+Bon, c'est pas tout ça mais Laurie se concentre sur la complexité de son application...
+Notes: Et elle voit un truc qui est très débile: quand le Panier est vide, il y a quand même un article, mais avec une quantité à 0 et un prix à 0€. Elle recroise avec sa PO (éviter le Chesterton) qui lui dit que c'est effectivement un vieux bug, mais qu'on s'en fiche car la page Panier n'est pas affichable si le total est nul.
+
+Elle supprime, confiante que ça n'a aucun sens, et en plus ça simplifie son code...
+
+
+💥...Bug en production ! Le total de la commande dans le header indique `undefined` 😱
+Notes: C'est ballot, hein. Voilà que son pire cauchemar se produit...elle est pourtant sûre que ce comportement n'a aucun sens. Il n'est d'ailleurs même pas documenté. Comment est-ce possible que ça serve à quelqu'un un truc pareil ?
+
+
+<img class="r-stretch" src="assets/a-nightmare-on-elm-street.jpg" alt="Fredundefined trouvera toujours moyen de vous retrouver">
+Et oui, les pires cauchemars c'est sa spécialité. Je veux bien sûr parler de...
 
 
 
 ### La loi d'Hyrum, ou le Contrat Involontaire
 
-« With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody. »
+> Dès que vous atteignez un certain nombre d'utilisateurs de votre API, votre contrat ne sert plus à rien: Tous les comportements de votre système seront utilisés tels quels par quelqu'un
+Notes:
+Et oui, ça pique.
 
-- Plutôt applicable au code exposé publiquement, mais peut tout à fait arriver en code interne d'entreprise
-- Incite à réfléchir à vos API *quelles qu'elles soient*. Si c'est "public" quelqu'un s'en servira
+
+<img class="r-stretch" src="assets/xkcd-workflow.png" alt="Le fameux XKCD 'Workflow' qui parle de ça">
+Notes: There's always an XKCD for that :D
 
 
 Par conséquent c'est assez facile à mitiger sur le papier:
-- N'exposer que ce qui doit l'être. Le reste *DOIT* fonctionner en boîte noire
-- Communiquer sur les changements (duh !)
-- Accepter que toute mise à jour (oui, même un patch) peut être un Breaking Change.
-- _Semver is a LIE_
+<ul role="list" class="custom-list-types">
+  <li data-icon="😅">N'exposez que ce qui doit l'être</li>
+  <li data-icon="📣">Communiquez largement les changements</li>
+  <li data-icon="🤓">Semver est un <em>mensonge</em></li>
+  <li data-icon="😤">Testez, testez, testez</li>
+</ul>
+Notes: Il faut arrêter de se cacher derrière son petit doigt et accepter que toute mise à jour (oui, même un patch) peut être un Breaking Change.
 
+Et, pour les briques qui sont utilisées par des clients internes, rappelez que le client est tout autant responsable de ce qu'il accepte que vous êtes responsables de ce que vous livrez: iels ont le droit, et l'obligation morale, de faire des tests, non mais !
 
 
+<img class="r-stretch" src="assets/photo-de-groupe.jpg" alt="Tous les méchants de film d'horreur sont là">
 
+Il y aurait encore beaucoup à dire sur les Meta-lois...
+Notes: Mais je vais commencer à manquer de temps, c'est d'ailleurs pour ça qu'il y a quelques temps j'ai décidé de répertorier dans un dépôt Git celles qui s'appliquent plus ou moins à notre métier.
 
+Et sachez qu'il n'y a pas que l'informatique qui a des Méta-lois, il y a une page Wikipédia qui essaie de toutes les répertorier ! Je la cite dans mon repo donc vous verrez ça vous même.
 
-== The list
 
-=== Betteridge's Law
+<img class="r-stretch" src="assets/laurie-strode-smiling.jpg" alt="À la fin, Laurie sourit enfin">
+Notes: Ça y est, Laurie est désormais un peu mieux armée pour survivre dans le monde merveilleux du développement logiciel. On le voit pas à sa tête ? Oui bon elle a pris un coup de vieux, hein, ça nous arrive à tous et à toutes 😅
 
-https://en.wikipedia.org/wiki/Betteridge%27s_law_of_headlines[Betteridge's Law]
 
-[sidebar]
-Any headline that ends in a question mark can be answered by the word no.
+<img class="r-stretch" src="assets/laurie-strode-au-pe-pom.jpg" alt="Laurie y va au pe-pom, carrément">
+Notes: La raison pour laquelle j'ai décidé de vous parler de ce sujet qui continue de beaucoup m'intéresser encore aujourd'hui, c'est afin de pouvoir mettre des mots sur des situations plus ou moins malheureuses qu'on a tous et toutes rencontrés à un moment.
 
-=== Brandolini's Law
+Et mon idée est de vous donner des outils afin de vous permettre d'identifier, puis de combattre efficacement les méta-lois.
 
-https://en.wikipedia.org/wiki/Brandolini%27s_law[Brandolini's Law]
+Car sinon vous risquez de subir...
 
-[sidebar]
-The amount of energy needed to refute bullshit is an order of magnitude bigger than that needed to produce it.
 
-=== Carlson's Law
 
-https://drvidyahattangadi.com/what-is-carlsons-law/[Carlson's Law]
+### Le marteau de Maslow 🔨
 
-[sidebar]
-Interrupted work will be less effective and will take more time than if it would completed in a continuous manner.
+> Si le seul outil que vous avez est un marteau, tout finit par ressembler à un clou.
+Notes: Appelée aussi la loi du marteau en or, on encore la Loi de l'instrument
 
-=== Chesterton's Fence
+C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
 
-https://en.wikipedia.org/wiki/G._K._Chesterton#Chesterton's_fence[Chesterton's Fence]
+J'ai un autre talk autour d'HTMX qui parle un peu plus de ça si ça vous intéresse (rendez-vous à Bordeaux pour la BDX I/O en novembre 😉)
 
-[sidebar]
-Reforms should not be made until the reasoning behind the existing state of affairs is understood.
 
-=== Conway's Law
+Bon j'ai une dernière question pour vous...
 
-https://en.wikipedia.org/wiki/Conway%27s_law[Conway's Law]
 
-[sidebar]
-Any organization that designs a system will produce a design whose structure is a copy of the organization's communication structure.
+Est-ce que cette histoire vous a plu ?
+Non, ne répondez pas tout de suite 😅, car ici peut s'appliquer...
 
-=== Dunning-Kruger Effect
 
-https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect[Dunning-Kruger Effect]
 
-[sidebar]
-People with limited competence in a particular domain overestimate their abilities. Corrolary: High performers have a tendency to underestimate their skills in their domain of expertise.
+### La loi de Betteridge's
 
-=== Goodhart's Law
-
-https://en.wikipedia.org/wiki/Goodhart%27s_law[Goodhart's Law]
-
-[sidebar]
-When a measure becomes a target, it ceases to be a good measure.
-
-=== Hanlon's Razor
-
-https://en.wikipedia.org/wiki/Hanlon%27s_razor[Hanlon's Razor]
-
-[sidebar]
-Never attribute to malice that which is adequately explained by stupidity.
-
-=== Hawthorne Effect
-
-https://en.wikipedia.org/wiki/Hawthorne_effect[Hawthorne Effect]
-
-[sidebar]
-Individuals can modify an aspect of their behavior in response to their awareness of being observed.
-
-=== Hofstadter's Law
-
-https://en.wikipedia.org/wiki/Hofstadter's_law[Hofstadter's Law]
-
-[sidebar]
-It always takes longer than you expect, even when you take into account Hofstadter's Law.
-
-=== Hyrum's Law
-
-https://www.hyrumslaw.com[Hyrum's Law]
-
-[sidebar]
-With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody.
-
-=== Lindy Effect
-
-https://en.wikipedia.org/wiki/Lindy_effect[Lindy Effect]
-
-[sidebar]
-The longer a period something non-perishable has survived to exist or be used in the present, the longer its remaining life expectancy.
-
-=== Maslow's Hammer
-
-https://en.m.wikipedia.org/wiki/Law_of_the_instrument[Maslow's Hammer]
-
-
-[sidebar]
-If the only tool you have is a hammer, it is tempting to treat everything as if it were a nail..
-
-=== Murphy's Law
-
-https://en.wikipedia.org/wiki/Murphy's_law[Murphy's Law]
-
-[sidebar]
-Anything that can go wrong will go wrong.
-
-=== Parkinson's Law
-
-https://en.wikipedia.org/wiki/Parkinson%27s_law[Parkinson's Law]
-
-[sidebar]
-The duration of work expands to fill its allotted time span, regardless of the amount of work to be done.
-
-=== Peter Principle
-
-https://en.wikipedia.org/wiki/Peter_principle[Peter Principle]
-
-[sidebar]
-In a hierarchy, every employee tends to rise to his level of incompetence.
-
-=== Shirky Principle
-
-https://en.wikipedia.org/wiki/Clay_Shirky#Shirky_principle[Shirky Principle]
-
-[sidebar]
-Institutions will try to preserve the problem to which they are the solution.
-
-=== Tesler's Law
-
-https://en.wikipedia.org/wiki/Law_of_conservation_of_complexity[Tesler's Law]
-
-[sidebar]
-An application inherent complexity can never be removed, nor hidden, only dealt with trade-offs.
-
-=== Wirth's Law
-
-https://en.wikipedia.org/wiki/Wirth%27s_law[Wirth's Law]
-
-
-[sidebar]
-Software is getting slower more rapidly than hardware is becoming faster.
+> Toute question dans un titre éditorialisé a vraisemblablement pour réponse "Non"
+Notes: Ah. Tant pis pour moi alors :D
