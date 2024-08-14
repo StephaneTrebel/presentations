@@ -1,8 +1,3 @@
-<!-- .slide: data-background="#ff0000" -->
-FIX LES QR CODES
-
-
-
 <img class="r-stretch" src="assets/laurie-strode.gif" alt="Laurie Strode, notre héroïne">
 Notes: Elle, c'est Laurie.
 

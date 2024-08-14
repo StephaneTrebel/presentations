@@ -46,8 +46,10 @@ Comment mitiger la Loi de Conway ?
   <li data-icon="🦄">Adopter des modèles d'organisation qui permettent de contourner le problème</li>
 </ul>
 Notes: Par exemple utiliser des stack techniques dites "FullStack"
-Pour les RH, valoriser la pluridisciplinarité
-Pour notre histoire d'attribution à des équipes, envisager plutôt les modèles "Attributes based" qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
+
+Pour les RH, valoriser la pluridisciplinarité (création de TASK FORCES)
+
+Pour éviter les pyramides et ces notions d'appartenance, envisager plutôt les modèles "Attributes based" qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
 
 
 Bon c'est pas tout ça, revenons à Laurie.
@@ -70,7 +72,7 @@ La pauvre, la voilà au prise avec…
 ### La Palissade de Chesterton
 
 > Tout changement ne devrait être réalisé que lorsque la raison derrière l'état actuel a été comprise.
-Notes: «Chesterton's Fence», car c'est basé sur expression de pensée autour d'une palissade, que quelqu'un envisage de détruire car il ne voit pas à quoi elle sert. Ce à quoi son compagnon non seulement lui interdit de la détruire, mais l'oblige en outre à déterminer la raison de l'existence de cette palissade AFIN de pouvoir comprendre pourquoi il faut la détruire.
+Notes: «Chesterton's Fence», car c'est basé sur un exercice de pensée autour d'une palissade, que quelqu'un envisage de détruire car il ne voit pas à quoi elle sert. Ce à quoi son compagnon non seulement lui interdit de la détruire, mais l'oblige en outre à déterminer la raison de l'existence de cette palissade AFIN de pouvoir comprendre pourquoi il faut la détruire.
 
 Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'aurez compris: toucher à une base de code sans savoir vraiment pourquoi les choses sont comme elles sont vous exposera à la plus sévère des punitions: corriger un bug de Prod en urgence un Vendredi à 18h30 !
 
@@ -95,11 +97,13 @@ Allez, on retourne voir comment va notre Laurie...
 
 
 <img class="r-stretch" src="assets/michael-myers-nonono.gif" alt="Le seul, l'unique, Michael Myers, ne valide pas ta PR">
-Notes: La voilà aux prises d'un individu peu recommandable, qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise, et donc que sa PR restera bloquée dans la CI, épissétou !
+Notes: La voilà aux prises d'un individu peu recommandable, un Team Lead nommé "Michael", qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise, et donc que sa PR restera bloquée dans la CI, épissétou !
 
 
 <img class="r-stretch" src="assets/laurie_crying.jpeg" alt="Laurie pleure">
-Notes: Stressée par l'envie de bien faire, elle devient un peu prête à tout, quitte à écrire des tests unitaires juste pour faire remonter le taux de couverture de code au-dessus des 80%, et ainsi éviter les foudres de Sonarqube
+Notes: Stressée par l'envie de bien faire, elle devient un peu prête à tout, quitte à écrire des tests unitaires juste pour faire remonter le taux de couverture de code au-dessus des 80%, et ainsi éviter les foudres de Sonarqube.
+
+Il faut qu'elle passe la Quality Gate, coûte que coûte !
 
 
 Pas de bol pour Laurie, elle est tombée en plein dans...
@@ -108,7 +112,7 @@ Pas de bol pour Laurie, elle est tombée en plein dans...
 
 ### La cruelle Loi de Goodhart
 
-> Lorsqu'une mesure devient une cible, elle cesse d'être une bonne mesure.
+> Lorsqu'une mesure devient une cible à absolument atteindre, elle cesse d'être une bonne mesure.
 Notes: Les humains sont prédictibles: iels cherchent la voie du moindre effort surtout en situation de stress.
 
 Si vous leur mettez la pression à un sujet, leur énergie sera dépensée non pour atteindre les objectifs,
@@ -165,7 +169,7 @@ Avec ça, Laurie peut repartir sur des bases saines 😌
 <img class="r-stretch" src="assets/matrix_architect.jpg" alt="l'Architecte, le Garant du Système">
 
 « Tout fonctionne sur mon Powerpoint, hein »
-Notes: Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte, car elle avait dit que son dev prendrait 3j et ça a fini par prendre trois semaines (merci Dunning-Kruger !) donc avec tout ça elle est à la bourre et c'est pas ce qu'il avait prévu dans son joli powerpoint. Et il s'est engagé auprès du client sur le fait que la page Panier serait capable de montrer des vidéos en 4K des produits réservés, donc ça va pas dut tout, ça !
+Notes: Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte, car elle avait dit que son dev prendrait 3j et ça a fini par prendre trois semaines (merci Dunning-Kruger !) donc avec tout ça elle est à la bourre et c'est pas ce qu'il avait prévu dans son joli powerpoint. Et il s'est engagé auprès du client sur le fait que la page Panier serait capable de montrer des vidéos en 4K des produits réservés, donc ça va pas du tout, ça !
 
 
 <img class="r-stretch" src="assets/the_shining-twins.jpg" alt="Les jumelles de The Shining">
@@ -182,7 +186,10 @@ Qui ? Je veux bien sûr parler de...
 > Quel que soit le travail à faire, la durée d'une tâche s'étirera pour remplir le temps qui lui est alloué.
 Notes: Ou pourquoi les estimations c'est de la daube 🙄
 
-Les humains sont *catastrophiquement* mauvais dans leurs estimations.
+Les humains sont *catastrophiquement* mauvais dans leurs estimations:
+
+Soit on sous-estime parce que Dunning Kruger, Chesterton, Conway, etc.
+Soit on sur-estime parce que bon, on a dit qu'on s'occupait de trois tickets dans le sprint donc on ne pas s'en rajouter plus que ça, hein les gens ! 😉
 
 
 Ben kékonfait alors ?
@@ -193,13 +200,15 @@ Ben kékonfait alors ?
 </ul>
 
 On en revient à la <strong>bienveillance</strong>.
-Notes: L'impredictibilité est un révélateur des inconnues inconnues (cf Dunning-Kruger, qui affecte donc les organisations autant que les humains).
+Notes: Ne pas estimer ça se fait: OpenSource, par exemple.
+
 - Limiter le Domaine métier limite la complexité attendue (cf Chesterton)
 - La formation est également un facteur clé: Si vous ne savez rien faire correctement, comment savoir combien de temps vous prendra n'importe quoi ?
 - Utiliser des «Boring Technologies» (cf L'Effet Lindy) permet de limiter la charge de maintenance purement technique
 
 
 <img class="r-stretch" src="assets/laurie_wondering.jpeg" alt="Laurie va encore découvrir un truc">
+Notes: En m'entendant parler (oui après tout y a pas que Deadpool qui a le droit de casser le 4e mur), Laurie s'interroge à haute voix:
 
 « Attends, il a dit quoi, là ? C'est quoi, ça, l'Effet Lindy ? »
 
@@ -288,6 +297,10 @@ Et oui, les pires cauchemars c'est sa spécialité. Je veux bien sûr parler de.
 Notes:
 Et oui, ça pique.
 
+Ce qu'il s'est passé c'est que l'équipe qui est en charge du header se servait de ce comportement pour afficher le total de la commande, et comme maintenant il n'y a plus d'article dans le panier, ben ça devient undefined.
+
+Et en plus ce code tout pourri ils ne vont pas le changer parce que tu comprends Laurie y a un NOUVEAU HEADER qui va arriver et remplacer ce header Legacy tout pourri donc…rollback stp !
+
 
 <img class="r-stretch" src="assets/xkcd-workflow.png" alt="Le fameux XKCD 'Workflow' qui parle de ça">
 Notes: There's always an XKCD for that :D
@@ -302,7 +315,16 @@ Par conséquent c'est assez facile à mitiger sur le papier:
 </ul>
 Notes: Il faut arrêter de se cacher derrière son petit doigt et accepter que toute mise à jour (oui, même un patch) peut être un Breaking Change.
 
-Et, pour les briques qui sont utilisées par des clients internes, rappelez que le client est tout autant responsable de ce qu'il accepte que vous êtes responsables de ce que vous livrez: iels ont le droit, et l'obligation morale, de faire des tests, non mais !
+Et, pour les briques qui sont utilisées par des clients internes, rappelez que le client est tout autant responsable de ce qu'il accepte que vous êtes responsables de ce que vous livrez: ils ont le droit, et l'obligation morale, de faire des tests, non mais !
+
+
+<img class="r-stretch" src="assets/linus-was-right.png" alt="Linus a toujours raison">
+Notes: Rappelez vous Linus Torvalds: WE DO NOT BREAK USERSPACE!
+
+
+
+------------------------------AJOUTS ICI
+
 
 
 <img class="r-stretch" src="assets/photo-de-groupe.jpg" alt="Tous les méchants de film d'horreur sont là">
@@ -344,7 +366,7 @@ Non, ne répondez pas tout de suite 😅, car ici peut s'appliquer...
 
 
 
-### La loi de Betteridge's
+### La loi de Betteridge
 
 > Toute question dans un titre éditorialisé a vraisemblablement pour réponse "Non"
 Notes: Ah. Tant pis pour moi alors :D
