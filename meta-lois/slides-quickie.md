@@ -4,52 +4,34 @@ Hmm...Revenons à notre protagoniste, Laurie
 
 
 <img class="r-stretch" src="assets/metacortex.jpeg" alt="Metacortex">
-Notes:Laurie débarque fraîchement dans sa nouvelle boîte Metacortex. Un fleuron de l'industrie du numérique qui recrute dès la sortie d'école pour offrir un avenir radieux dans le développement logiciel !
+Notes:Laurie débarque fraîchement dans sa nouvelle boîte Metacortex. Une grosse ESN !
 
 
 <img class="r-stretch" src="assets/metacortex-manager.jpeg" alt="Le manager de Laurie, pas commode !">
 Notes: Et son manager la colle sur un projet en tant que "Développeuse Front sur la page Panier du site d'Ecommerce d'une grande marque".
 
-Elle aura en charge de contribuer à développer les fonctionnalités de cette page avec son équipe, et elle dépendra intégralement des autres équipes, que ce soit du Back pour récupérer les données du panier, ou encore des autres équipes Front pour récupérer les informations utilisateur.
-
-Laurie s'interroge. Elle est développeuse Web, elle pourrait tout à fait s'occuper du Front, et du Back. D'ailleurs elle a été formée à pouvoir traiter de toutes les couches, de la Conception à l'infrastructure, en passant bien sûr par le Front et le Back
+Laurie s'interroge. Elle est développeuse Web, elle pourrait tout à fait s'occuper du Front, et du Back.
 
 
 <img class="r-stretch" src="assets/new−agent-smith-matrix.jpg" alt="Un agent de la Matrice !">
 Notes: Et là son manager lui dit:
-"Non nous on ne fait que du Front, et encore sur la page Panier. Écoute, tu viens d'arriver, tu es jeune, tu ne sais pas comment ça se passe dans le monde des adultes. Ici chez Metacortex on est très très sérieux et on utilise des méthodes de pointe comme SCRUM, etc. Toi tu t'adaptes. T'es ici pour faire du Front, et uniquement du Front."
+"Non nous on ne fait que du Front, et encore sur la page Panier. Écoute, tu viens d'arriver, tu es jeune, tu ne sais pas comment ça se passe dans le monde des adultes. Ici chez Metacortex on est très très sérieux et on utilise des méthodes de pointe comme SCRUM, etc. Toi tu t'adaptes. T'es ici pour faire du Front, et uniquement du Front. Sur la page Panier"
 
-Laurie vient de découvrir…
+Laurie vient de découvrir, malgré elle…
 
 
 
 ### La Loi de Conway
 
 > Toute organisation qui conçoit un système produira un système dont la structure est une copie de la structure de communication de l'organisation
-
-
-Ce que ça veut dire concrètement pour vous, comme pour Laurie :
-<ul role="list" class="custom-list-types">
-  <li data-icon="🛑">Votre architecture est déjà décidée d'avance: Vos interfaces sont les équipes de l'entreprise.</li>
-  <li data-icon="🙅">Si vous allez à l'encontre de cette Loi, vous allez avoir des soucis</li>
-  <li data-icon="🥲">C'est de loin la plus connue et pour une bonne raison: Elle. est. OMNIPRÉSENTE.</li>
-</ul>
-Notes: Comme souci on peut tout simplement évoquer «Qui va être responsable de la fonctionnalité transverse: l'équipe A ou l'équipe B ?».
-
-On peut également parler des équipes et le problème d'attribution des gens à plusieurs équipes, et bien sûr la friction de gérer ça dans le temps.
-
+Notes: Votre architecture est déjà décidée d'avance: Vos interfaces sont les équipes de l'entreprise.
+Si vous allez à l'encontre de cette Loi, vous allez avoir des soucis
+C'est de loin la plus connue et pour une bonne raison: Elle. Est. OMNIPRÉSENTE.
 
 Comment mitiger la Loi de Conway ?
-<ul role="list" class="custom-list-types">
-  <li data-icon="🙈">« That's the neat thing: You don't. »</li>
-  <li data-icon="😫">Changer l'organisation _permettrait_ de changer l'architecture, mais c'est dur</li>
-  <li data-icon="🦄">Adopter des modèles d'organisation qui permettent de contourner le problème</li>
-</ul>
-Notes: Par exemple utiliser des stack techniques dites "FullStack"
+« That's the neat thing: You don't. » Changer l'organisation _permettrait_ de changer l'architecture, mais c'est dur
 
-Pour les RH, valoriser la pluridisciplinarité (création de TASK FORCES)
-
-Pour éviter les pyramides et ces notions d'appartenance, envisager plutôt les modèles "Attributes based" qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
+Adopter des modèles d'organisation qui permettent de contourner le problème Par exemple utiliser des stack techniques dites "FullStack"
 
 
 Bon c'est pas tout ça, revenons à Laurie.
@@ -59,10 +41,6 @@ Bon c'est pas tout ça, revenons à Laurie.
 
 « Et si je virais ce bout de code moche… »
 Notes: Notre Laurie s'attaque donc à la base de code de son équipe, d'ailleurs entièrement composée de juniors comme elle, et c'est un vrai plat de spaghetti ! Ardente et motivée elle commence à mettre de l'ordre là-dedans, pour vite se rendre compte que quoi qu'elle touche, une autre partie de la page se casse la figure...un vrai Mikado !
-
-
-<img class="r-stretch" src="assets/dawn-of-the-dead-1978-zombies.png" alt="Des collègues pas très ouverts d'esprits">
-Notes: Et elle se fait vite reprendre par ses collègues car tout le sprint en prend pour son grade avec ses bugs à répétition. Oui les boutons sont moches, oui il y a du contenu qui bouge au chargement, mais tout ça c'est pour corriger d'autres bugs bien plus gênants !
 
 
 La pauvre, la voilà au prise avec…
@@ -204,130 +182,32 @@ Ben kékonfait alors ?
 </ul>
 
 On en revient à la <strong>bienveillance</strong>.
-Notes: Ne pas estimer ça se fait: OpenSource, par exemple.
-
-- Limiter le Domaine métier limite la complexité attendue (cf Chesterton)
-- La formation est également un facteur clé: Si vous ne savez rien faire correctement, comment savoir combien de temps vous prendra n'importe quoi ?
-- Utiliser des «Boring Technologies» (cf L'Effet Lindy) permet de limiter la charge de maintenance purement technique
 
 
 <img class="r-stretch" src="assets/laurie_wondering.jpeg" alt="Laurie va encore découvrir un truc">
-Notes: En m'entendant parler (oui après tout y a pas que Deadpool qui a le droit de casser le 4e mur), Laurie s'interroge à haute voix:
 
-« Attends, il a dit quoi, là ? C'est quoi, ça, l'Effet Lindy ? »
+« Mais c'est fatiguant tout ça, j'en ai marre de naviguer à vue… Comment on peut faire ? »
+Notes: En m'entendant parler (oui après tout y a pas que Deadpool qui a le droit de casser le 4e mur), Laurie se désespère:
 
 
 <img class="r-stretch" src="assets/boring-is-good.jpg" alt="Boring technologies are good">
 Notes: Un collègue Senior, d'une antique équipe chargée de maintenir un logiciel de comptabilité en COBOL, entend la question de Laurie et décide d'intervenir pour y répondre.
 
-« En gros, les technologies dites "ennuyeuses", ou "anciennes" sont de bonnes technologies, car elles ont passé l'épreuve du temps »
+« Utilise une stack qui tient la route dans le temps ! Moi je pense que les technologies dites "ennuyeuses", ou "anciennes" sont de bonnes technologies, car elles ont passé l'épreuve du temps »
+
+C'est ce qu'on appelle…
 
 
 
 ### L'effet Lindy
 
 > Plus longtemps quelque chose de non-périssable existe ou est actuellement utilisé, plus longtemps son espérance de vie s'allonge.
-Notes: Je vous laisse vous chauffer le ravioli avec ça deux secondes 😁
 
 
 <ul role="list" class="custom-list-types">
   <li data-icon="🗻">Ce qui dure a une raison de durer, et cette raison fait qu'il continuera à durer</li>
-  <li data-icon="👶">À l'inverse, ce qui est nouveau n'a pas encore suffisamment subi les foudres du monde réel</li>
-  <li data-icon="🙏">La nouveauté doit redécouvrir ces principes…quitte à y laisser sa jeunesse !</li>
   <li data-icon="💡">Être moderne c'est simplement être contemporain, pas être "meilleur"</li>
 </ul>
-Notes:
-- Le statu quo est cette fois votre allié: se concentrer sur la maintenabilité de ce qui est existe coûte beaucoup moins cher que de faire fonctionner le dernier truc à la mode qui vient de sortir et qui sera probablement has-been dans un an, ou cinq.
-- Faire sa veille mais ne pas en faire sa boussole
-- Bannir le « CV Driven Development ». Le monde ne tourne pas autour de votre CV. Les utilisateurs se contrefichent que ça aide votre carrière.
-
-
-<img class="r-stretch" src="assets/laurie-strode-at-last-senior.jpg" alt="Le poids des Méta-lois se voit sur son visage">
-Sur ces sages paroles, Laurie repart à l'assaut de sa page Panier
-Notes: Elle décide d'appliquer ce qu'elle a appris, et elle se rend compte qu'elle pourrait dramatiquement simplifier son code si elle affichait chaque produit dans une page dédiée: en effet elle pourrait réutiliser la page d'affichage des produits dans le catalogue ! Woah, pourquoi n'y a t'elle pas pensé avant ? En plus ça corrigerait pas mal de bugs qu'elle avait lorsqu'elle s'est prise la Palissade de Chesterton ! Coup double, donc ?
-
-
-<img class="r-stretch" src="assets/john-carpenters-the-thing-dog.png" alt="Un joli chien">
-
-C'est qui la belle complexité ? Oui c'est toi, oui c'est toi !
-
-Notes: Sauf que…Les utilisateurs se plaignent immédiatement d'un tel changement: plutôt que d'avoir toutes les informations sur la page Panier, v'la't'y pas qu'iels doivent maintenant ouvrir chaque produit dans un nouvel onglet pour en voir les détails ? Un scandale !
-
-La complexité, terrifiant, prend des formes multiples, et il faut savoir qui va l'assumer.
-
-Car on ne fait pas ce qu'on veut avec la complexité, à cause de...
-
-
-
-### L'implacable loi de Tesler
-
-> La complexité inhérente d'une application ne peut jamais être totalement retirée, ou cachée. On ne peut que la traiter à travers des compromis.
-
-
-<ul role="list" class="custom-list-types">
-  <li data-icon="😅">Il y aura toujours de la complexité dans votre application</li>
-  <li data-icon="💵">Est-elle est dans votre code (coût) ou dans son utilisation (engagement)</li>
-  <li data-icon="⚖">Trouver le bon équilibre, et se concentrer sur vos forces</li>
-</ul>
-Notes: Il y a la "bonne" et la "mauvaise" complexité quoi.
-
-Par ex: Une application web interne qui fait du CRUD pour 10 personnes a-t-elle besoin de Kubernetes, ou de Microfrontend ? C'est là une complexité qu'il faut être capable de justifier, car le cœur de l'application n'est pas sa scalabilité, ni l'agnosticité du déploiement, c'est de faire du CRUD ! Donc ptet pas justifié
-
-En revanche si votre application contient de l'algorithmique complexe pour éviter à vos utilisateurs d'avoir à jongler entre deux écrans, la question peut se poser. Le jeu peut en valoir la chandelle, mais là-aussi il faut être conscient du coût (et pas que financier, la santé mentale de la maintenance aussi c'est un coût)
-
-On en revient à nos différentes technologies, à la veille, etc. Améliorer son discernement pour comprendre la valeur ajoutée de l'application (ou de la couche sur laquelle vous bossez) et qui JUSTIFIE sa complexité. Le reste c'est de la littérature.
-
-
-<img class="r-stretch" src="assets/young-laurie-strode-smiling.jpg" alt="Laurie a enfin trouvé un truc utile à faire">
-
-Bon, c'est pas tout ça mais Laurie se concentre sur la complexité de son application...
-Notes: Et elle voit un truc qui est très débile: quand le Panier est vide, il y a quand même un article, mais avec une quantité à 0 et un prix à 0€. Elle recroise avec sa PO (éviter le Chesterton) qui lui dit que c'est effectivement un vieux bug, mais qu'on s'en fiche car la page Panier n'est pas affichable si le total est nul.
-
-Elle supprime, confiante que ça n'a aucun sens, et en plus ça simplifie son code...
-
-
-💥...Bug en production ! Le total de la commande dans le header indique `undefined` 😱
-Notes: C'est ballot, hein. Voilà que son pire cauchemar se produit...elle est pourtant sûre que ce comportement n'a aucun sens. Il n'est d'ailleurs même pas documenté. Comment est-ce possible que ça serve à quelqu'un un truc pareil ?
-
-
-<img class="r-stretch" src="assets/a-nightmare-on-elm-street.jpg" alt="Fredundefined trouvera toujours moyen de vous retrouver">
-Et oui, les pires cauchemars c'est sa spécialité. Je veux bien sûr parler de...
-
-
-
-### La loi d'Hyrum, ou le Contrat Involontaire
-
-> Dès que vous atteignez un certain nombre d'utilisateurs de votre API, votre contrat ne sert plus à rien: Tous les comportements de votre système seront utilisés tels quels par quelqu'un
-Notes:
-Et oui, ça pique.
-
-Ce qu'il s'est passé c'est que l'équipe qui est en charge du header se servait de ce comportement pour afficher le total de la commande, et comme maintenant il n'y a plus d'article dans le panier, ben ça devient undefined.
-
-Et en plus ce code tout pourri ils ne vont pas le changer parce que tu comprends Laurie y a un NOUVEAU HEADER qui va arriver et remplacer ce header Legacy tout pourri donc…rollback stp !
-
-
-<img class="r-stretch" src="assets/xkcd-workflow.png" alt="Le fameux XKCD 'Workflow' qui parle de ça">
-Notes: There's always an XKCD for that :D
-
-
-Par conséquent c'est assez facile à mitiger sur le papier:
-<ul role="list" class="custom-list-types">
-  <li data-icon="😅">N'exposez que ce qui doit l'être</li>
-  <li data-icon="📣">Communiquez largement les changements</li>
-  <li data-icon="🤓">Semver est un <em>mensonge</em></li>
-  <li data-icon="😤">Testez, testez, testez</li>
-</ul>
-Notes: Il faut arrêter de se cacher derrière son petit doigt et accepter que toute mise à jour (oui, même un patch) peut être un Breaking Change.
-
-Et, pour les briques qui sont utilisées par des clients internes, rappelez que le client est tout autant responsable de ce qu'il accepte que vous êtes responsables de ce que vous livrez: ils ont le droit, et l'obligation morale, de faire des tests, non mais !
-
-
-<img class="r-stretch" src="assets/linus-was-right.png" alt="Linus a toujours raison">
-Notes: Rappelez vous Linus Torvalds: WE DO NOT BREAK USERSPACE!
-
-
-
-------------------------------AJOUTS ICI
 
 
 
@@ -337,10 +217,6 @@ Il y aurait encore beaucoup à dire sur les Meta-lois...
 Notes: Mais je vais commencer à manquer de temps, c'est d'ailleurs pour ça qu'il y a quelques temps j'ai décidé de répertorier dans un dépôt Git celles qui s'appliquent plus ou moins à notre métier.
 
 Et sachez qu'il n'y a pas que l'informatique qui a des Méta-lois, il y a une page Wikipédia qui essaie de toutes les répertorier ! Je la cite dans mon repo donc vous verrez ça vous même.
-
-
-<img class="r-stretch" src="assets/laurie-strode-smiling.jpg" alt="À la fin, Laurie sourit enfin">
-Notes: Ça y est, Laurie est désormais un peu mieux armée pour survivre dans le monde merveilleux du développement logiciel. On le voit pas à sa tête ? Oui bon elle a pris un coup de vieux, hein, ça nous arrive à tous et à toutes 😅
 
 
 <img class="r-stretch" src="assets/laurie-strode-au-pe-pom.jpg" alt="Laurie y va au pe-pom, carrément">
@@ -360,17 +236,3 @@ Notes: Appelée aussi la loi du marteau en or, on encore la Loi de l'instrument
 C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
 
 J'ai un autre talk autour d'HTMX qui parle un peu plus de ça si ça vous intéresse (rendez-vous à Bordeaux pour la BDX I/O en novembre 😉)
-
-
-Bon j'ai une dernière question pour vous...
-
-
-Est-ce que cette histoire vous a plu ?
-Non, ne répondez pas tout de suite 😅, car ici peut s'appliquer...
-
-
-
-### La loi de Betteridge
-
-> Toute question dans un titre éditorialisé a vraisemblablement pour réponse "Non"
-Notes: Ah. Tant pis pour moi alors :D
