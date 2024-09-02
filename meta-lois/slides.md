@@ -192,6 +192,10 @@ Soit on sous-estime parce que Dunning Kruger, Chesterton, Conway, etc.
 Soit on sur-estime parce que bon, on a dit qu'on s'occupait de trois tickets dans le sprint donc on ne pas s'en rajouter plus que ça, hein les gens ! 😉
 
 
+<img class="r-stretch" src="assets/dhh-software-estimates-never-worked.png" alt="Article de DHH: Software estimates have never worked and never will">
+Notes: Et ça reste un sujet qui fait régulièrement l'actualité !
+
+
 Ben kékonfait alors ?
 <ul role="list" class="custom-list-types">
   <li data-icon="👂">Ne pas estimer ? Tentant ! Mais difficile à vendre !</li>
