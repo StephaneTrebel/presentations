@@ -25,7 +25,6 @@ Laurie vient de découvrir, malgré elle…
 
 > Toute organisation qui conçoit un système produira un système dont la structure est une copie de la structure de communication de l'organisation
 Notes: Votre architecture est déjà décidée d'avance: Vos interfaces sont les équipes de l'entreprise.
-Si vous allez à l'encontre de cette Loi, vous allez avoir des soucis
 C'est de loin la plus connue et pour une bonne raison: Elle. Est. OMNIPRÉSENTE.
 
 Comment mitiger la Loi de Conway ?
@@ -91,7 +90,7 @@ Pas de bol pour Laurie, elle est tombée en plein dans...
 ### La cruelle Loi de Goodhart
 
 > Lorsqu'une mesure devient une cible à absolument atteindre, elle cesse d'être une bonne mesure.
-Notes: Les humains sont prédictibles: iels cherchent la voie du moindre effort surtout en situation de stress.
+Notes: Les humains sont prédictibles: ils cherchent la voie du moindre effort surtout en situation de stress.
 
 Si vous leur mettez la pression à un sujet, leur énergie sera dépensée non pour atteindre les objectifs,
 mais pour pervertir le thermomètre à moindre effort.
@@ -130,8 +129,6 @@ Reconnaître qu'il y a trois types d'informations:
 </ul>
 Notes: Si vous pensez ne pas être affecté par l'effet Dunning-Kruger, vous êtes très probablement affecté par l'effet Dunning-Kruger :)
 
-Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans un orgueil destructeur
-
 
 Pour mitiger, rien de plus simple:
 <ul role="list" class="custom-list-types">
@@ -147,7 +144,7 @@ Avec ça, Laurie peut repartir sur des bases saines 😌
 <img class="r-stretch" src="assets/matrix_architect.jpg" alt="l'Architecte, le Garant du Système">
 
 « Tout fonctionne sur mon Powerpoint, hein »
-Notes: Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte, car elle avait dit que son dev prendrait 3j et ça a fini par prendre trois semaines (merci Dunning-Kruger !) donc avec tout ça elle est à la bourre et c'est pas ce qu'il avait prévu dans son joli powerpoint. Et il s'est engagé auprès du client sur le fait que la page Panier serait capable de montrer des vidéos en 4K des produits réservés, donc ça va pas du tout, ça !
+Notes: Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte, car elle avait dit que son dev prendrait 3j et ça a fini par prendre trois semaines (merci Dunning-Kruger !) donc avec tout ça elle est à la bourre et c'est pas ce qu'il avait prévu dans son joli powerpoint.
 
 
 <img class="r-stretch" src="assets/the_shining-twins.jpg" alt="Les jumelles de The Shining">
@@ -233,6 +230,6 @@ Car sinon vous risquez de subir...
 > Si le seul outil que vous avez est un marteau, tout finit par ressembler à un clou.
 Notes: Appelée aussi la loi du marteau en or, on encore la Loi de l'instrument
 
-C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
+Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
 
 J'ai un autre talk autour d'HTMX qui parle un peu plus de ça si ça vous intéresse (rendez-vous à Bordeaux pour la BDX I/O en novembre 😉)
