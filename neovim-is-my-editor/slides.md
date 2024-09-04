@@ -74,13 +74,13 @@ Assez causé, ptite démo !
 
 <img class="r-stretch" src="assets/dora.png" alt="Dora l'exploratrice">
 Notes: À montrer
-- Plusieurs modes (Normal, Insert, Command, Visual)
-- Les "mouvements", composables, permettent les actions
+- Les modes (Normal, Insert, Command, Visual)
+- Les "mouvements", comme b/w/t/T/f, mais aussi leur composition avec les modes ("ciw" par exemple)
 - Les commandes (s// g//, etc.)
-- Les plugins (LSP, l'IA, etc.)
-- Les configs
-- Et tout le reste (la leader key, les buffers, les macros, etc.)
-
+- les alias (comme img+r qui devient <img >)
+- Les plugins (LSP, l'IA, etc.). Penser à Emmet pour l'écriture de HTML par exemple, ou les émojis
+- Les configs (init.vim)
+- La LEADER key
 
 
 C'était bien, hein ? 😌
@@ -90,6 +90,7 @@ On récapitule:
 - Plusieurs modes (Normal, Insert, Command, Visual)
 - Les "mouvements", composables, permettent les actions
 - Les commandes (s// g//, etc.)
+- Les 26 registres !
 - Les plugins (LSP, etc.)
 - Les configs
 - Et tout le reste (la leader key, les buffers, les macros, etc.)
@@ -104,6 +105,11 @@ C'est fun, c'est de la muscle memory (et donc de la charge cognitive en moins)
 On a un canal slack:  #vim
 
 Recommandations: Articles de blog mouselessdev
+
+
+<img class="r-stretch" src="assets/vim-configs.png" alt="Les différentes configs Vim clés-en-main (Astro, NvChad, Lazyvim, etc.)">
+
+Et si vous voulez commencer gentiment, il y ce qu'il faut !
 
 
 « Ok, ok, mais ça n'en fait pas un IDE ! »
@@ -125,7 +131,7 @@ Un gestionnaire de session superchargé à l'efficacité:
 - Des "fenêtres"
 - Des "panneaux"
 - Une leader key (tiens, tiens !)
-- Et des plugins (très peu mais bien utiles !)
+- Et des plugins (très peu mais bien utiles !), comme tmux-resurrect
 
 
 What time is it ? It is Dora time !
