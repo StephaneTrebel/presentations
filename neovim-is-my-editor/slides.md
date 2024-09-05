@@ -199,6 +199,9 @@ P'tet ben qu'oui, p'tet ben qu'non
 <img class="r-stretch" src="assets/my-neovim.png" alt="Mon repo neovim sur Github">
 
 Mais c'est <em>mon</em> "IDE"
-
-
 Et c'est ça qui compte 💗
+
+
+<img class="r-stretch" src="assets/sway.png" alt="Sway, un 'tilling window manager'">
+
+Et pour le futur, tout gérer avec mon clavier, y compris…la partie GUI !
