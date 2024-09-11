@@ -203,7 +203,7 @@ C'est ce qu'on appelle…
 
 <ul role="list" class="custom-list-types">
   <li data-icon="🗻">Ce qui dure a une raison de durer, et cette raison fait qu'il continuera à durer</li>
-  <li data-icon="💡">Être moderne c'est simplement être contemporain, pas être "meilleur"</li>
+  <li data-icon="💡">Être moderne c'est simplement être contemporain, pas forcément être "meilleur"</li>
 </ul>
 
 
