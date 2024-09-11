@@ -1,8 +1,3 @@
-<!-- .slide: data-background="#ff0000" -->
-FIX LES QR CODES
-
-
-
 "Attends, Stéphane, tu utilises VIM pour coder ? T'es cinglé ?"
 Notes: Je suis là pour une seule raison: Parce que j'ai entendu cette phrase une fois de trop.
 
