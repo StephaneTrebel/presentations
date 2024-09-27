@@ -1,0 +1,66 @@
+div {
+  /* border: 1px solid blue; */
+}
+
+img.conf-logo {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 5rem;
+  max-height: 5rem;
+}
+
+.debug {
+	border: 2px solid red;
+}
+
+.vertical-bar {
+  background-color: gray;
+  height: 10rem;
+  width: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.flex-row {
+	display: flex;
+  flex-direction: row;
+	align-items: center;
+  justify-content: space-around;
+
+  width: 100%
+}
+
+.flex-column {
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
+li.profile > .image {
+	max-height: 50px;
+	max-width: 50px;
+	margin: 0.5rem;
+}
+
+.stroke {
+	color: white;
+	-webkit-text-stroke: 0.5px black;
+	text-shadow: 3px 3px 0 #000,
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+}
+
+ul.custom-list-types {
+  list-style-type: none;
+}
+ul.custom-list-types li::before {
+  content: attr(data-icon);
+  margin-right: 1rem;
+}
+ul.custom-list-types li {
+  margin-bottom: 1rem;
+}

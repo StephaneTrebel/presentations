@@ -1,5 +1,5 @@
-<img src="common/assets/profil-steph.png" alt="Ma photo de profil" />
-<p>Salut, moi c'est Stéphane TRÉBEL 👋</p>
+<img src="common/assets/profil-steph.png" alt="Ma photo de profil" style="clip-path: circle(8rem at center);" />
+<p>Salut 👋</p>
 <ul class="fragment flex-column" style="list-style-type: none">
     <li class="profile">
         <img class="image"

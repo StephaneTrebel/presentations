@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="common/dist/reset.css" />
     <link rel="stylesheet" href="common/dist/reveal.css" />
     <link rel="stylesheet" href="common/dist/theme/black.css" />
-    <link rel="stylesheet" href="common/presentation.css" />
+    <link rel="stylesheet" href="./presentation.css" />
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="common/plugin/highlight/monokai.css" />
@@ -55,12 +55,12 @@
 
         <section>
           <div class="flex-column">
-            <div class="flex-row">
+            <div class="flex-row" style="margin: 20px;">
               <div class="flex-column">
                 <span>Mon dépôt Git</span>
                 <img
                   src="assets/qr-code-github.svg"
-                  style="width: 80vw"
+                  style="width: 20vw"
                   alt="QR Code pointant vers le dépôt Github"
                 />
               </div>
@@ -68,12 +68,29 @@
                 <span>Vos feedbacks</span>
                 <img
                   src="assets/qr-code-ofb-devfest-nantes.svg"
-                  style="width: 80vw"
+                  style="width: 20vw"
                   alt="QR Code pointant vers l'Openfeedback de cette conférence"
                 />
               </div>
             </div>
-            <div>J'ai fini ! Des questions ? 🫣</div>
+
+            <div class="flex-row">
+              <div class="flex-column" style="margin: 30px;">
+                <img
+                  src="../common/assets/profil-steph.png"
+                  alt="Moi <3"
+                  style="max-width: 10rem; clip-path: circle(5rem at center);"
+                >
+                <span style="font-size: 60%;">@StephaneTrebel</span>
+              </div>
+              <div class="vertical-bar"></div>
+              <div class="flex-column">
+                <div>
+                  <em>Les Méta-Lois existent, elles ne vous veulent pas du bien, mais elles sont gérables</em> 😉
+                </div>
+              </div>
+            </div>
+
           </div>
           <aside class="notes">À gauche mon dépôt Git sur les méta-lois, à droite le lien vers Voxxrin pour les feedbacks</aside>
         </section>
