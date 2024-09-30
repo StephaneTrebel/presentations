@@ -335,8 +335,70 @@ Et, pour les briques qui sont utilisées par des clients internes, rappelez que 
 Notes: Rappelez vous Linus Torvalds: WE DO NOT BREAK USERSPACE!
 
 
+<img class="r-stretch" src="assets/laurie-au-telephone.jpg" alt="Laurie au téléphone">
 
-------------------------------AJOUTS ICI
+« Bonjour la Guilde, j'ai fait une PR pour mettre à jour le framework maison »
+
+Notes: Laurie, voulant bien faire, va faire une modification (pour une fois) bien appropriée dans l'un des nombreux repos du projet, pour sa page panier. Car bien sûr que même sur sa page de prédilection, elle doit quand même aller demander le droit d'aller modifier des choses car c'est """transverse""".
+
+
+<img class="r-stretch" src="assets/dracula.jpeg" alt="Dracula, de Francis Ford Coppola">
+
+
+En voilà un personnage qui illustre magnifiquement…
+
+
+
+### Le Principe de Shirky
+
+> Institutions will try to preserve the problem to which they are the solution.
+Notes: La siloisation n'a jamais de limite. Elle s'insinue, puis elle se bureaucratise (ticketing), et ensuite vous ne pouvez. plus. l'extirper.
+
+Comme toujours ce genre d'initiative part d'une bonne intention: on veut rationaliser les efforts, on veut éviter que "ça dérive", on veut garder le contrôle, parce que les devs, forcément, ils sont pas doués.
+
+Mais la faute à qui ? En infantilisant les devs on n'arrive seulement qu'à verrouiller la créativité. Et on se retrouve avec les bons qui s'en vont ailleurs, où ils et elles peuvent travailler, et les autres…
+
+
+<ul role="list" class="custom-list-types">
+  <li data-icon="🛑">Les "guildes", "Design Authorities", et autres qui gardent les droits d'approbation de PR/MR</li>
+  <li data-icon="🔒">Les Équipes de Production qui rejettent le DevOps</li>
+  <li data-icon="👮">La Cybersécurité qui impose des règles sans prendre en compte la DX</li>
+  <li data-icon="🙄">« C'est pas nous, c'est l'Équipe Support XYZ qui nous bloque ! »</li>
+</ul>
+Notes: L'Enfer est pavé de bonnes intentions. Vraiment, je vais le répéter. L'Enfer est PAVÉ DE BONNES INTENTIONS.
+
+Les services "Support" doivent intégrer leur nom: ce sont des services qui sont censés "supporter" le développement des fonctionnalités. Ça peut bien évidemment être des "lignes de défenses", car il y a tout un tas de domaines où les devs ne peuvent être experts, bien sûr.
+
+Mais à partir du moment où on monte dans sa tour d'Ivoire et qu'on a jeté la clé, c'est terminé. Vous n'êtes plus un service support mais un service "chien de garde".
+
+(dernier item) Et c'est bien pratique pour certaines équipes de Dev qui fuient leur responsabilités, hein. Tout le monde est concerné par cette histoire !
+
+
+Alors soyons un peu positifs:
+<ul role="list" class="custom-list-types">
+  <li data-icon="😌">Le point de départ doit être la Developer Experience</li>
+  <li data-icon="👮">« Rendre impossible à représenter les états invalides »</li>
+  <li data-icon="🎭">Stop au "Théâtre de la Sécurité"</li>
+  <li data-icon="🤗">La <em>bienveillance</em>, encore et toujours</li>
+</ul>
+Notes: Ce que je veux dire par « Rendre impossible à représenter les états invalides », c'est de faire en sorte que vos devs ne peuvent _physiquement_ pas se retrouver dans une situation qui serait inadmissible. Un moyen pour la partie Ops, par exemple c'est d'envisager du Platform Engineering de manière à proposer en self-service des capacités de déploiement aux Devs pour éviter qu'ils vous montent un cluster k8s n'importe comment dans un coin parce que Dudule il l'a fait en bootcamp.
+
+Le Théâtre de la Sécurité, plus largement, c'est cette apparence de "la sécurité pour valider des audits" qui n'apporte aucune sécurité, mais qui valide que vous avez bien faite le webinaire de 2h en temps et en heure. C'est un peu comme le Sentiment d'Insécurité, comme on peut difficilement lui coller un KPI (rappelez-vous Goodhart !), on trouve un peu n'importe quoi histoire d'avoir une courbe qui monte ou qui descende en fonction du gain politique.
+
+La réalité, elle, on s'en moque. Même si la Réalité, elle, continue son petit bout de chemin malgré tout ça.
+
+L'idée, en somme c'est d'arriver à ça:
+
+
+<img class="r-stretch" src="assets/help-me-help-you-copy.jpg" alt="Help me help you !">
+
+Mon service support préféré 💗
+Notes: Et c'est pas être une diva que de demander ça. Parce que ça c'est ce qu'on attend que les Devs disent aux clients
+
+(et je me tue à le dire à mes clients d'ailleurs)
+
+Bref, disruptez, bousculez, interagissez, remettez en question, piratez vos organisations ! :V
+Vos clients internes et externes vous en seront reconnaissants (et envoyez-moi les récalcitrants...)
 
 
 
