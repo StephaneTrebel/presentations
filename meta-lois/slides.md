@@ -144,6 +144,11 @@ Corollaire:
 > Les gens performants ont tendance à sous-estimer leurs compétences dans un domaine d'expertise
 
 
+<img class="r-stretch" src="assets/dunning-kruger.png" alt="Un graphe tiré de l'étude de Dunning et Kruger">
+Notes: Voilà le graph originel de l'étude.
+Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans un orgueil destructeur
+
+
 Reconnaître qu'il y a trois types d'informations:
 <ul role="list" class="custom-list-types">
   <li data-icon="😌">Ce qu'on sait</li>
@@ -151,8 +156,6 @@ Reconnaître qu'il y a trois types d'informations:
   <li data-icon="🤯">Ce qu'on ne sait pas qu'on ne sait pas</li>
 </ul>
 Notes: Si vous pensez ne pas être affecté par l'effet Dunning-Kruger, vous êtes très probablement affecté par l'effet Dunning-Kruger :)
-
-Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans un orgueil destructeur
 
 
 Pour mitiger, rien de plus simple:
@@ -186,7 +189,7 @@ Qui ? Je veux bien sûr parler de...
 > Quel que soit le travail à faire, la durée d'une tâche s'étirera pour remplir le temps qui lui est alloué.
 Notes: Ou pourquoi les estimations c'est de la daube 🙄
 
-Les humains sont *catastrophiquement* mauvais dans leurs estimations:
+On va commencer par Hofstadter: Les humains sont *catastrophiquement* mauvais dans leurs estimations:
 
 Soit on sous-estime parce que Dunning Kruger, Chesterton, Conway, etc.
 Soit on sur-estime parce que bon, on a dit qu'on s'occupait de trois tickets dans le sprint donc on ne pas s'en rajouter plus que ça, hein les gens ! 😉
@@ -196,19 +199,25 @@ Soit on sur-estime parce que bon, on a dit qu'on s'occupait de trois tickets dan
 Notes: Et ça reste un sujet qui fait régulièrement l'actualité !
 
 
+<img src="assets/yo-dawg.jpg" alt="I heard you like meetings so I scheduled a meeting to talk about meetings">
+Notes: Et la Loi de Parkinson, elle, est particulièrement pernicieuse car on va avoir tendance à prendre "la place disponible" dans notre emploi du temps, alors que si on avait rationalisé le temps on aurait pu faire plus de choses.
+
+Et vous savez ce qui me gonfle ? C'est que la Loi de Parkinson s'applique à tout le monde, et donc aux managers de tout poil. Aux SCRUMMasters. Aux POs. Et tout ce monde là va "occuper la place disponible" avec des réunions, à tel point que des fois on se demande si on travaille encore, ou bien si notre travail est devenu, juste, de la réunionnite.
+
+
 Ben kékonfait alors ?
 <ul role="list" class="custom-list-types">
   <li data-icon="👂">Ne pas estimer ? Tentant ! Mais difficile à vendre !</li>
   <li data-icon="🏋️‍♂️">Admettre que dans MVP, le "M" veut dire "Minimum": Itérez, itérez, itérez !</li>
-  <li data-icon="🕵️‍♂️">Être transparent et sincère. Anticiper les zones de faible maîtrise (technique ou fonctionnel)</li>
+  <li data-icon="🐷">Délimitez les tâches, soyez francs avec les ROTIs, privilégiez l'asynchrone</li>
 </ul>
 
 On en revient à la <strong>bienveillance</strong>.
 Notes: Ne pas estimer ça se fait: OpenSource, par exemple.
 
-- Limiter le Domaine métier limite la complexité attendue (cf Chesterton)
-- La formation est également un facteur clé: Si vous ne savez rien faire correctement, comment savoir combien de temps vous prendra n'importe quoi ?
-- Utiliser des «Boring Technologies» (cf L'Effet Lindy) permet de limiter la charge de maintenance purement technique
+Et ne pas avoir de réunions, ça se fait aussi, hein. Comme tout il faut mesurer le ROI, remettre en question, etc.
+
+Et, pour aider à la prédictibilité des tâches, on peut par exemple utiliser des «Boring Technologies» (cf L'Effet Lindy).
 
 
 <img class="r-stretch" src="assets/laurie_wondering.jpeg" alt="Laurie va encore découvrir un truc">
