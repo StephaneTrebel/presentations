@@ -86,7 +86,7 @@ Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'
 
 Comment mitiger la Palissade de Chesterton ?
 <ul role="list" class="custom-list-types">
-  <li data-icon="🤔">Prendre le temps *comprendre* le Domaine (pas réservé aux POs !)</li>
+  <li data-icon="🤔">Prendre le temps de *comprendre* le Domaine (pas réservé aux POs !)</li>
   <li data-icon="📝">Documenter les règles de gestion, d'où elles viennent et leur raison d'être</li>
   <li data-icon="💪">Écrire des tests E2E. Oui c'est cher, mais ce sont vos invariants au niveau le plus haut !</li>
 </ul>
@@ -300,7 +300,7 @@ Notes: C'est ballot, hein. Voilà que son pire cauchemar se produit...elle est p
 
 
 <img class="r-stretch" src="assets/a-nightmare-on-elm-street.jpg" alt="Fredundefined trouvera toujours moyen de vous retrouver">
-Et oui, les pires cauchemars c'est sa spécialité. Je veux bien sûr parler de...
+Hé oui, les pires cauchemars c'est sa spécialité. Je veux bien sûr parler de...
 
 
 
@@ -343,6 +343,9 @@ Notes: Laurie, voulant bien faire, va faire une modification (pour une fois) bie
 
 
 <img class="r-stretch" src="assets/dracula.jpeg" alt="Dracula, de Francis Ford Coppola">
+Notes: Sauf que bon, elle n'a aucune idée que sa PR, son besoin, est le cadet des soucis de la Guilde, qui a des choses beaucoup plus importantes à faire, comme débattre de la plus belle manière d'arranger des ternaires avec Prettier...
+
+Elle n'a qu'à ouvrir un ticket et on lui répondra un jour, peut-être, si on a du temps et l'envie de le faire.
 
 
 En voilà un personnage qui illustre magnifiquement…
@@ -351,7 +354,7 @@ En voilà un personnage qui illustre magnifiquement…
 
 ### Le Principe de Shirky
 
-> Institutions will try to preserve the problem to which they are the solution.
+> Toute institution essaiera inconsciemment de préserver le problème qu'elle est sensée résoudre.
 Notes: La siloisation n'a jamais de limite. Elle s'insinue, puis elle se bureaucratise (ticketing), et ensuite vous ne pouvez. plus. l'extirper.
 
 Comme toujours ce genre d'initiative part d'une bonne intention: on veut rationaliser les efforts, on veut éviter que "ça dérive", on veut garder le contrôle, parce que les devs, forcément, ils sont pas doués.
@@ -433,7 +436,7 @@ C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un lan
 J'ai un autre talk autour d'HTMX qui parle un peu plus de ça si ça vous intéresse (rendez-vous à Bordeaux pour la BDX I/O en novembre 😉)
 
 
-Bon j'ai une dernière question pour vous...
+Bon, j'ai une question pour vous...
 
 
 Est-ce que cette histoire vous a plu ?
