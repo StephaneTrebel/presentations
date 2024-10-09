@@ -1,4 +1,4 @@
-Mais «qu'est-ce que les Méta-lois ?», vous demandez-vous ?
+«C'est quoi une Méta-Loi ?», vous demandez-vous ?
 
 Hmm...Revenons à notre protagoniste, Laurie
 
@@ -25,14 +25,13 @@ Laurie vient de découvrir…
 
 ### La Loi de Conway
 
-> Toute organisation qui conçoit un système produira un système dont la structure est une copie de la structure de communication de l'organisation
+> Toute organisation qui conçoit un système, produira un système dont la structure est une copie de la structure de communication de l'organisation
 
 
-Ce que ça veut dire concrètement pour vous, comme pour Laurie :
 <ul role="list" class="custom-list-types">
-  <li data-icon="🛑">Votre architecture est déjà décidée d'avance: Vos interfaces sont les équipes de l'entreprise.</li>
-  <li data-icon="🙅">Si vous allez à l'encontre de cette Loi, vous allez avoir des soucis</li>
-  <li data-icon="🥲">C'est de loin la plus connue et pour une bonne raison: Elle. est. OMNIPRÉSENTE.</li>
+  <li data-icon="🛑">Votre architecture est déjà décidée d'avance: Ce sont les équipes de l'entreprise.</li>
+  <li data-icon="🙅">Chaque équipe a ses habitudes, son périmètre</li>
+  <li data-icon="🥲">C'est de loin la plus connue et pour une bonne raison: Elle. Est. OMNIPRÉSENTE.</li>
 </ul>
 Notes: Comme souci on peut tout simplement évoquer «Qui va être responsable de la fonctionnalité transverse: l'équipe A ou l'équipe B ?».
 
@@ -42,7 +41,7 @@ On peut également parler des équipes et le problème d'attribution des gens à
 Comment mitiger la Loi de Conway ?
 <ul role="list" class="custom-list-types">
   <li data-icon="🙈">« That's the neat thing: You don't. »</li>
-  <li data-icon="😫">Changer l'organisation _permettrait_ de changer l'architecture, mais c'est dur</li>
+  <li data-icon="😫">Changer l'organisation permettrait de changer l'architecture, mais c'est difficile</li>
   <li data-icon="🦄">Adopter des modèles d'organisation qui permettent de contourner le problème</li>
 </ul>
 Notes: Par exemple utiliser des stack techniques dites "FullStack"
@@ -52,12 +51,12 @@ Pour les RH, valoriser la pluridisciplinarité (création de TASK FORCES)
 Pour éviter les pyramides et ces notions d'appartenance, envisager plutôt les modèles "Attributes based" qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
 
 
-Bon c'est pas tout ça, revenons à Laurie.
+Bon, c'est pas tout ça, revenons à Laurie
 
 
 <img class="r-stretch" src="assets/laurie-strode-focused.jpg" alt="Laurie, concentrée comme jamais">
 
-« Et si je virais ce bout de code moche… »
+« Et si je virais ce bout de code qui m'a l'air sacrément gratiné… »
 Notes: Notre Laurie s'attaque donc à la base de code de son équipe, d'ailleurs entièrement composée de juniors comme elle, et c'est un vrai plat de spaghetti ! Ardente et motivée elle commence à mettre de l'ordre là-dedans, pour vite se rendre compte que quoi qu'elle touche, une autre partie de la page se casse la figure...un vrai Mikado !
 
 
@@ -65,7 +64,7 @@ Notes: Notre Laurie s'attaque donc à la base de code de son équipe, d'ailleurs
 Notes: Et elle se fait vite reprendre par ses collègues car tout le sprint en prend pour son grade avec ses bugs à répétition. Oui les boutons sont moches, oui il y a du contenu qui bouge au chargement, mais tout ça c'est pour corriger d'autres bugs bien plus gênants !
 
 
-La pauvre, la voilà au prise avec…
+La pauvre, la voilà aux prises avec…
 
 
 
@@ -78,22 +77,33 @@ Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'
 
 
 <ul role="list" class="custom-list-types">
-  <li data-icon="🧓">Le « Legacy », ça n'existe pas. Il n'y a que des projets nouveaux et des projets anciens</li>
-  <li data-icon="💰">Les projets anciens sont ceux qui paient les factures, traitons-les avec respect !</li>
-  <li data-icon="😅">Le code est "moche" <em>parce que</em> le métier est complexe. Simplifier impliquerait de simplifier le métier (bon courage !)</li>
+  <li data-icon="💰">Les projets "anciens" sont ceux qui paient les factures. Traitons-les avec respect !</li>
+  <li data-icon="🧓">Le "Legacy" commence dès le commit. Sa maintenance est une vertu</li>
+  <li data-icon="😅">Le code est "gratiné" à cause du poids de l'histoire</li>
 </ul>
+Notes:
+Les projets "anciens" sont en Prod
+
+Vouloir réécrire à côté c'est prendre un gros risque (+ Effet Lindy)
+
+Le fameux "On". Pourquoi on a fait ça ? "On m'a dit", etc.
 
 
 Comment mitiger la Palissade de Chesterton ?
 <ul role="list" class="custom-list-types">
-  <li data-icon="🤔">Prendre le temps de *comprendre* le Domaine (pas réservé aux POs !)</li>
-  <li data-icon="📝">Documenter les règles de gestion, d'où elles viennent et leur raison d'être</li>
-  <li data-icon="💪">Écrire des tests E2E. Oui c'est cher, mais ce sont vos invariants au niveau le plus haut !</li>
+  <li data-icon="🤔"><strong>Bon</strong>: Prendre le temps de *comprendre* le Domaine (DDD, par ex.)</li>
+  <li data-icon="📝"><strong>Mieux</strong>: Documenter soi-même les règles de gestion</li>
+  <li data-icon="💪"><strong>Meilleur</strong>: Écrire des tests auto. Ce sont vos invariants !</li>
 </ul>
-Notes: Pas grand-chose à ajouter à tout ça. Mais vous pouvez déjà noter que la Loi de Conway n'incite pas à ce genre de travaux. On a toujours des "équipes dédiées", d'ailleurs toujours surchargées, qui sont censées s'occuper de tout ça, mais bon, investir dans votre compréhension des choses devrait être une évidence 😉
+Notes:
+pas réservé aux POs, archis, etc. !
+
+Loi de Conway n'incite pas à ce genre de réflexion. On a toujours des "équipes dédiées", d'ailleurs toujours surchargées, qui sont censées s'occuper de tout ça
+
+Investir dans votre compréhension des choses devrait être une évidence 😉
 
 
-Allez, on retourne voir comment va notre Laurie...
+Allez, on retourne voir comment va Laurie...
 
 
 <img class="r-stretch" src="assets/michael-myers-nonono.gif" alt="Le seul, l'unique, Michael Myers, ne valide pas ta PR">
@@ -119,13 +129,24 @@ Si vous leur mettez la pression à un sujet, leur énergie sera dépensée non p
 mais pour pervertir le thermomètre à moindre effort.
 
 
-Comment mitiger cette stratégie de dévitalisation systématique ?
+Comment éviter de casser le thermomètre ?
 <ul role="list" class="custom-list-types">
-  <li data-icon="🤨">Arrêter le "Un problème est survenu; vite, un KPI !"</li>
-  <li data-icon="🦾">Délimitez un ensemble <em>limité</em> de SLO/SLA/SLI attribuables à <em>l'Équipe</em> sur un périmètre qu'elle <em>maîtrise</em></li>
-  <li data-icon="🫂">Suivre avec <strong>bienveillance</strong>. Un SLI mauvais est simplement une opportunité de s'améliorer</li>
+  <li data-icon="🤨">Arrêtons le "Un problème est survenu; vite, un indicateur !"</li>
+  <li data-icon="🦾">Établissons un ensemble <em>limité</em> d'indicateurs de l'équipe sur un périmètre qu'elle <em>maîtrise</em></li>
+  <li data-icon="🫂">Suivons avec <em>bienveillance</em>. Un indicateur est simplement une opportunité de s'améliorer</li>
 </ul>
 Notes: SLO/A/I: Service Level Objective/Agreement/Indicators
+
+
+<img class="r-stretch" src="assets/teletubbies.jpg" alt="La bienveillance, c'est un bien grand mot">
+Notes:
+Quand je parle de bienveillance, je ne parle pas des babyfoots, des happenings, etc.
+
+Je parle de ce qui est le plus dur à maintenir dans la durée: un écosystème qui permette à chacun de travailler dans de bonnes conditions, d'avoir la possibilité de donner le meilleur de soi-même, bref d'avoir du sens et de l'autonomie.
+
+Moi, je suis particulièrement concerné, entre Linux et Neovim.
+
+Arrêter de subir constamment, d'avoir à se justifier pour des choses hors de notre contrôle, et de ne pas maîtriser son destin...
 
 
 Bon, comment elle va, Laurie ?
@@ -141,7 +162,7 @@ Notes: Elle en marre de se faire marcher dessus, elle s'est (bon ici, un peu tro
 > Les personnes ayant une compétence limitée dans un domaine surestiment souvent leurs capacités.
 
 Corollaire:
-> Les gens performants ont tendance à sous-estimer leurs compétences dans un domaine d'expertise
+> Les gens performants ont tendance à sous-estimer leurs compétences dans leur domaine d'expertise
 
 
 <img class="r-stretch" src="assets/dunning-kruger.png" alt="Un graphe tiré de l'étude de Dunning et Kruger">
@@ -149,10 +170,10 @@ Notes: Voilà le graph originel de l'étude.
 Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans un orgueil destructeur
 
 
-Reconnaître qu'il y a trois types d'informations:
+Il y a trois types d'informations:
 <ul role="list" class="custom-list-types">
   <li data-icon="😌">Ce qu'on sait</li>
-  <li data-icon="😨">Ce qu'on sait qu'on ne sait pas</li>
+  <li data-icon="🤔">Ce qu'on sait qu'on ne sait pas</li>
   <li data-icon="🤯">Ce qu'on ne sait pas qu'on ne sait pas</li>
 </ul>
 Notes: Si vous pensez ne pas être affecté par l'effet Dunning-Kruger, vous êtes très probablement affecté par l'effet Dunning-Kruger :)
@@ -160,9 +181,9 @@ Notes: Si vous pensez ne pas être affecté par l'effet Dunning-Kruger, vous êt
 
 Pour mitiger, rien de plus simple:
 <ul role="list" class="custom-list-types">
-  <li data-icon="🏃">Se remettre en question continuellement</li>
-  <li data-icon="👂">Identifier et écouter ces "High Performers", qui ne sont pas celleux qui se vendent le mieux, loin de là !</li>
-  <li data-icon="🧘">Attention au syndrome de l'imposteur: tenter et échouer, c'est aussi apprendre</li>
+  <li data-icon="🏃">Se remettre en question, continuellement</li>
+  <li data-icon="👂">Identifier les gens compétents qui se sous-estiment un peu trop</li>
+  <li data-icon="🧘">Attention au Syndrome de l'Imposteur: tenter et échouer, c'est aussi apprendre</li>
 </ul>
 
 
@@ -207,13 +228,15 @@ Et vous savez ce qui me gonfle ? C'est que la Loi de Parkinson s'applique à tou
 
 Ben kékonfait alors ?
 <ul role="list" class="custom-list-types">
-  <li data-icon="👂">Ne pas estimer ? Tentant ! Mais difficile à vendre !</li>
-  <li data-icon="🏋️‍♂️">Admettre que dans MVP, le "M" veut dire "Minimum": Itérez, itérez, itérez !</li>
-  <li data-icon="🐷">Délimitez les tâches, soyez francs avec les ROTIs, privilégiez l'asynchrone</li>
+  <li data-icon="👂">Ne pas estimer ? Tentant ! Mais difficile à vendre</li>
+  <li data-icon="🏋️‍♂️">Admettre que dans MVP, le "M" veut dire "Minimum": Itérez, itérez, itérez</li>
+  <li data-icon="🐷">Soyez francs avec les ROTIs et surtout privilégiez l'asynchrone</li>
 </ul>
 
-On en revient à la <strong>bienveillance</strong>.
-Notes: Ne pas estimer ça se fait: OpenSource, par exemple.
+Notes:
+Faire tout ça avec Bienveillance, toujours.
+
+Ne pas estimer ça se fait: l'OpenSource, par exemple.
 
 Et ne pas avoir de réunions, ça se fait aussi, hein. Comme tout il faut mesurer le ROI, remettre en question, etc.
 
@@ -235,15 +258,15 @@ Notes: Un collègue Senior, d'une antique équipe chargée de maintenir un logic
 
 ### L'effet Lindy
 
-> Plus longtemps quelque chose de non-périssable existe ou est actuellement utilisé, plus longtemps son espérance de vie s'allonge.
+> Plus longtemps quelque chose de non-périssable existe ou bien est actuellement utilisé, plus longtemps son espérance de vie s'allonge.
 Notes: Je vous laisse vous chauffer le ravioli avec ça deux secondes 😁
 
 
 <ul role="list" class="custom-list-types">
-  <li data-icon="🗻">Ce qui dure a une raison de durer, et cette raison fait qu'il continuera à durer</li>
-  <li data-icon="👶">À l'inverse, ce qui est nouveau n'a pas encore suffisamment subi les foudres du monde réel</li>
-  <li data-icon="🙏">La nouveauté doit redécouvrir ces principes…quitte à y laisser sa jeunesse !</li>
-  <li data-icon="💡">Être moderne c'est simplement être contemporain, pas être "meilleur"</li>
+  <li data-icon="🗻">Ce qui dure a une raison de durer, et cette raison fait que ça continuera à durer</li>
+  <li data-icon="👶">Ce qui est nouveau n'a pas encore subi les foudres du réel</li>
+  <li data-icon="🙏">La nouveauté doit devenir pragmatique…quitte à y laisser sa jeunesse !</li>
+  <li data-icon="💡">Être moderne c'est être contemporain, pas forcément être "meilleur"</li>
 </ul>
 Notes:
 - Le statu quo est cette fois votre allié: se concentrer sur la maintenabilité de ce qui est existe coûte beaucoup moins cher que de faire fonctionner le dernier truc à la mode qui vient de sortir et qui sera probablement has-been dans un an, ou cinq.
@@ -270,12 +293,12 @@ Car on ne fait pas ce qu'on veut avec la complexité, à cause de...
 
 ### L'implacable loi de Tesler
 
-> La complexité inhérente d'une application ne peut jamais être totalement retirée, ou cachée. On ne peut que la traiter à travers des compromis.
+> La complexité inhérente d'une application ne peut jamais être totalement retirée, ou cachée. On ne peut que la déplacer avec des compromis.
 
 
 <ul role="list" class="custom-list-types">
   <li data-icon="😅">Il y aura toujours de la complexité dans votre application</li>
-  <li data-icon="💵">Est-elle est dans votre code (coût) ou dans son utilisation (engagement)</li>
+  <li data-icon="💵">Elle est dans votre code (coût DX) ou dans son utilisation (coût UX)</li>
   <li data-icon="⚖">Trouver le bon équilibre, et se concentrer sur vos forces</li>
 </ul>
 Notes: Il y a la "bonne" et la "mauvaise" complexité quoi.
@@ -319,7 +342,7 @@ Et en plus ce code tout pourri ils ne vont pas le changer parce que tu comprends
 Notes: There's always an XKCD for that :D
 
 
-Par conséquent c'est assez facile à mitiger sur le papier:
+Ça paraît assez facile à mitiger, sur le papier:
 <ul role="list" class="custom-list-types">
   <li data-icon="😅">N'exposez que ce qui doit l'être</li>
   <li data-icon="📣">Communiquez largement les changements</li>
@@ -333,6 +356,10 @@ Et, pour les briques qui sont utilisées par des clients internes, rappelez que 
 
 <img class="r-stretch" src="assets/linus-was-right.png" alt="Linus a toujours raison">
 Notes: Rappelez vous Linus Torvalds: WE DO NOT BREAK USERSPACE!
+
+D'ailleurs, en passant, on pourrait légitimement me faire remarquer que Linus est à la bienveillance ce que l'acide sulfurique est à la Gastronomie, mais au-delà de la forme, son message est un message de bienveillance à l'égard de _ses_ utilisateurs. S'il pète un câble, c'est bien parce que l'un des mainteneurs du noyau a décider de privilégier son Experience aux dépends de celle de ces utilisateurs. C'est là qu'est le drame !
+
+Notez d'ailleurs qu'il attaque le code, la solution, mais pas la personne. C'est ça de la bienveillance. On a le droit de se tromper. On n'a pas le droit de ne pas le reconnaître. Bon il aurait pu y aller moins fort, mais est-ce qu'on s'en serait souvenu ?
 
 
 <img class="r-stretch" src="assets/laurie-au-telephone.jpg" alt="Laurie au téléphone">
@@ -354,7 +381,7 @@ En voilà un personnage qui illustre magnifiquement…
 
 ### Le Principe de Shirky
 
-> Toute institution essaiera inconsciemment de préserver le problème qu'elle est sensée résoudre.
+> Toute institution essaiera inconsciemment de préserver le problème qu'elle est censée résoudre.
 Notes: La siloisation n'a jamais de limite. Elle s'insinue, puis elle se bureaucratise (ticketing), et ensuite vous ne pouvez. plus. l'extirper.
 
 Comme toujours ce genre d'initiative part d'une bonne intention: on veut rationaliser les efforts, on veut éviter que "ça dérive", on veut garder le contrôle, parce que les devs, forcément, ils sont pas doués.
@@ -363,9 +390,8 @@ Mais la faute à qui ? En infantilisant les devs on n'arrive seulement qu'à ver
 
 
 <ul role="list" class="custom-list-types">
-  <li data-icon="🛑">Les "guildes", "Design Authorities", et autres qui gardent les droits d'approbation de PR/MR</li>
-  <li data-icon="🔒">Les Équipes de Production qui rejettent le DevOps</li>
-  <li data-icon="👮">La Cybersécurité qui impose des règles sans prendre en compte la DX</li>
+  <li data-icon="🛑">Les "Guildes", "Design Authority", et autres services "Support" qui verrouillent tout</li>
+  <li data-icon="🔒">Les écosystèmes incompatibles avec le DevOps (merci Conway !)</li>
   <li data-icon="🙄">« C'est pas nous, c'est l'Équipe Support XYZ qui nous bloque ! »</li>
 </ul>
 Notes: L'Enfer est pavé de bonnes intentions. Vraiment, je vais le répéter. L'Enfer est PAVÉ DE BONNES INTENTIONS.
@@ -379,10 +405,9 @@ Mais à partir du moment où on monte dans sa tour d'Ivoire et qu'on a jeté la 
 
 Alors soyons un peu positifs:
 <ul role="list" class="custom-list-types">
-  <li data-icon="😌">Le point de départ doit être la Developer Experience</li>
+  <li data-icon="😌">Le point de départ doit être l'"Utilisateur"</li>
   <li data-icon="👮">« Rendre impossible à représenter les états invalides »</li>
   <li data-icon="🎭">Stop au "Théâtre de la Sécurité"</li>
-  <li data-icon="🤗">La <em>bienveillance</em>, encore et toujours</li>
 </ul>
 Notes: Ce que je veux dire par « Rendre impossible à représenter les états invalides », c'est de faire en sorte que vos devs ne peuvent _physiquement_ pas se retrouver dans une situation qui serait inadmissible. Un moyen pour la partie Ops, par exemple c'est d'envisager du Platform Engineering de manière à proposer en self-service des capacités de déploiement aux Devs pour éviter qu'ils vous montent un cluster k8s n'importe comment dans un coin parce que Dudule il l'a fait en bootcamp.
 
@@ -407,7 +432,7 @@ Vos clients internes et externes vous en seront reconnaissants (et envoyez-moi l
 
 <img class="r-stretch" src="assets/photo-de-groupe.jpg" alt="Tous les méchants de film d'horreur sont là">
 
-Il y aurait encore beaucoup à dire sur les Meta-lois...
+Il y aurait encore beaucoup à dire sur les Meta-Lois...
 Notes: Mais je vais commencer à manquer de temps, c'est d'ailleurs pour ça qu'il y a quelques temps j'ai décidé de répertorier dans un dépôt Git celles qui s'appliquent plus ou moins à notre métier.
 
 Et sachez qu'il n'y a pas que l'informatique qui a des Méta-lois, il y a une page Wikipédia qui essaie de toutes les répertorier ! Je la cite dans mon repo donc vous verrez ça vous même.
@@ -440,6 +465,7 @@ Bon, j'ai une question pour vous...
 
 
 Est-ce que cette histoire vous a plu ?
+
 Non, ne répondez pas tout de suite 😅, car ici peut s'appliquer...
 
 
@@ -448,3 +474,5 @@ Non, ne répondez pas tout de suite 😅, car ici peut s'appliquer...
 
 > Toute question dans un titre éditorialisé a vraisemblablement pour réponse "Non"
 Notes: Ah. Tant pis pour moi alors :D
+
+Pensez-y quand vous regarder des articles sur le Net, d'ailleurs ;)
