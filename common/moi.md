@@ -1,20 +1,21 @@
 <img src="common/assets/profil-steph.png" alt="Ma photo de profil" style="clip-path: circle(8rem at center);" />
 <p>Salut 👋</p>
-<ul class="fragment flex-column" style="list-style-type: none">
+<ul class="fragment flex-column" style="list-style-type: none; margin-left: 1rem;">
     <li class="profile">
         <img class="image"
-            src="common/assets/www.png"
-            alt="Un logo pour le World Wide Web"
+            src="common/assets/necktie.jpg"
+            style="background-color: white; clip-path: circle(1.5rem at center);"
+            alt="Le symbole honni de la cravate"
         />
+    </li>
+    <li class="profile">
+        <img class="image" src="common/assets/www.png" alt="Un logo du World Wide Web" />
     </li>
     <li class="profile">
         <img class="image" src="common/assets/ferris.png" alt="Ferris, la mascotte de Rust" />
     </li>
-    <li class="profile flex-column">
-        <img class="image" src="common/assets/tux.png" alt="Tux, la mascotte de Linux" />
-    </li>
 </ul>
-<ul class="fragment flex-column" style="list-style-type: none">
+<ul class="fragment flex-column" style="list-style-type: none; margin-right: 1rem;">
     <li class="profile">
         <img class="image" src="common/assets/twitter.png" alt="Le logo du réseau X" />
     </li>
