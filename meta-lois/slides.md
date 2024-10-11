@@ -31,24 +31,24 @@ Laurie vient de découvrir…
 <ul role="list" class="custom-list-types">
   <li data-icon="🛑">Votre architecture est déjà décidée d'avance: Ce sont les équipes de l'entreprise.</li>
   <li data-icon="🙅">Chaque équipe a ses habitudes, son périmètre</li>
-  <li data-icon="🥲">C'est de loin la plus connue et pour une bonne raison: Elle. Est. OMNIPRÉSENTE.</li>
+  <li data-icon="🍪">« Culture eats Strategy for breakfast. »</li>
 </ul>
-Notes: Comme souci on peut tout simplement évoquer «Qui va être responsable de la fonctionnalité transverse: l'équipe A ou l'équipe B ?».
+Notes: Comme souci on peut tout simplement évoquer «Qui va être responsable de la fonctionnalité transverse: l'équipe A ou l'équipe B ?» => Ptet même une nouvelle équipe C
 
-On peut également parler des équipes et le problème d'attribution des gens à plusieurs équipes, et bien sûr la friction de gérer ça dans le temps.
+Conséquences à la fois sur les API mais aussi sur l'organisation du travail (ticketing) et les dépendances que ça va créer dans les équipes ("on ne sait plus qui fait quoi").
+
+Le lien avec le métier est difficile car le métier évolue sans que les équipes évoluent forcément
 
 
 Comment mitiger la Loi de Conway ?
 <ul role="list" class="custom-list-types">
-  <li data-icon="🙈">« That's the neat thing: You don't. »</li>
-  <li data-icon="😫">Changer l'organisation permettrait de changer l'architecture, mais c'est difficile</li>
-  <li data-icon="🦄">Adopter des modèles d'organisation qui permettent de contourner le problème</li>
+  <li data-icon="👷">Intégrer verticalement les équipes (DevOps, FullStack, etc.)</li>
+  <li data-icon="🏴‍☠️">Les Mercatos pour mélanger les équipes et diffuser les bonnes pratiques</li>
+  <li data-icon="🦄">Valoriser la pluridisciplinarité (Task forces)</li>
 </ul>
-Notes: Par exemple utiliser des stack techniques dites "FullStack"
+Notes: Citation de Peter Ferdinand Drucker, un consultant en management
 
-Pour les RH, valoriser la pluridisciplinarité (création de TASK FORCES)
-
-Pour éviter les pyramides et ces notions d'appartenance, envisager plutôt les modèles "Attributes based" qui permettent de la Composition de droits et pas de l'héritage (L'héritage c'est mal tfaçon 😝)
+- 
 
 
 Bon, c'est pas tout ça, revenons à Laurie
@@ -92,15 +92,15 @@ Le fameux "On". Pourquoi on a fait ça ? "On m'a dit", etc.
 Comment mitiger la Palissade de Chesterton ?
 <ul role="list" class="custom-list-types">
   <li data-icon="🤔"><strong>Bon</strong>: Prendre le temps de *comprendre* le Domaine (DDD, par ex.)</li>
-  <li data-icon="📝"><strong>Mieux</strong>: Documenter soi-même les règles de gestion</li>
-  <li data-icon="💪"><strong>Meilleur</strong>: Écrire des tests auto. Ce sont vos invariants !</li>
+  <li data-icon="📝"><strong>Mieux</strong>: Documenter soi-même les règles de gestion (les tests autos !)</li>
+  <li data-icon="💪"><strong>Meilleur</strong>: Faire évoluer le "Legacy"</li>
 </ul>
 Notes:
 pas réservé aux POs, archis, etc. !
 
 Loi de Conway n'incite pas à ce genre de réflexion. On a toujours des "équipes dédiées", d'ailleurs toujours surchargées, qui sont censées s'occuper de tout ça
 
-Investir dans votre compréhension des choses devrait être une évidence 😉
+Règle scout: toujours laisser l'endroit plus propre qu'on l'a trouvé
 
 
 Allez, on retourne voir comment va Laurie...
