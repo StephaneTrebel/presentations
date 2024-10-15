@@ -33,9 +33,9 @@ Laurie vient de découvrir…
   <li data-icon="🙅">Chaque équipe a ses habitudes, son périmètre</li>
   <li data-icon="🍪">« Culture eats Strategy for breakfast. »</li>
 </ul>
-Notes: Comme souci on peut tout simplement évoquer «Qui va être responsable de la fonctionnalité transverse: l'équipe A ou l'équipe B ?» => Ptet même une nouvelle équipe C
+Notes: Souci des modifications transverses
 
-Conséquences à la fois sur les API mais aussi sur l'organisation du travail (ticketing) et les dépendances que ça va créer dans les équipes ("on ne sait plus qui fait quoi").
+Conséquences à la fois sur les API et aussi sur l'organisation du travail (ticketing) et les dépendances que ça va créer dans les équipes ("on ne sait plus qui fait quoi").
 
 Le lien avec le métier est difficile car le métier évolue sans que les équipes évoluent forcément
 
@@ -47,8 +47,6 @@ Comment mitiger la Loi de Conway ?
   <li data-icon="🦄">Valoriser la pluridisciplinarité (Task forces)</li>
 </ul>
 Notes: Citation de Peter Ferdinand Drucker, un consultant en management
-
-- 
 
 
 Bon, c'est pas tout ça, revenons à Laurie
@@ -145,8 +143,6 @@ Quand je parle de bienveillance, je ne parle pas des babyfoots, des happenings, 
 Je parle de ce qui est le plus dur à maintenir dans la durée: un écosystème qui permette à chacun de travailler dans de bonnes conditions, d'avoir la possibilité de donner le meilleur de soi-même, bref d'avoir du sens et de l'autonomie.
 
 Moi, je suis particulièrement concerné, entre Linux et Neovim.
-
-Arrêter de subir constamment, d'avoir à se justifier pour des choses hors de notre contrôle, et de ne pas maîtriser son destin...
 
 
 Bon, comment elle va, Laurie ?
@@ -386,8 +382,6 @@ Notes: La siloisation n'a jamais de limite. Elle s'insinue, puis elle se bureauc
 
 Comme toujours ce genre d'initiative part d'une bonne intention: on veut rationaliser les efforts, on veut éviter que "ça dérive", on veut garder le contrôle, parce que les devs, forcément, ils sont pas doués.
 
-Mais la faute à qui ? En infantilisant les devs on n'arrive seulement qu'à verrouiller la créativité. Et on se retrouve avec les bons qui s'en vont ailleurs, où ils et elles peuvent travailler, et les autres…
-
 
 <ul role="list" class="custom-list-types">
   <li data-icon="🛑">Les "Guildes", "Design Authority", et autres services "Support" qui verrouillent tout</li>
@@ -459,20 +453,3 @@ Notes: Appelée aussi la loi du marteau en or, on encore la Loi de l'instrument
 C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
 
 J'ai un autre talk autour d'HTMX qui parle un peu plus de ça si ça vous intéresse (rendez-vous à Bordeaux pour la BDX I/O en novembre 😉)
-
-
-Bon, j'ai une question pour vous...
-
-
-Est-ce que cette histoire vous a plu ?
-
-Non, ne répondez pas tout de suite 😅, car ici peut s'appliquer...
-
-
-
-### La loi de Betteridge
-
-> Toute question dans un titre éditorialisé a vraisemblablement pour réponse "Non"
-Notes: Ah. Tant pis pour moi alors :D
-
-Pensez-y quand vous regarder des articles sur le Net, d'ailleurs ;)
