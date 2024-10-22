@@ -33,7 +33,9 @@ Laurie vient de découvrir…
   <li data-icon="🙅">Chaque équipe a ses habitudes, son périmètre</li>
   <li data-icon="🍪">« Culture eats Strategy for breakfast. »</li>
 </ul>
-Notes: Souci des modifications transverses
+Notes: Citation de Peter Ferdinand Drucker, un consultant en management
+
+Souci des modifications transverses
 
 Conséquences à la fois sur les API et aussi sur l'organisation du travail (ticketing) et les dépendances que ça va créer dans les équipes ("on ne sait plus qui fait quoi").
 
@@ -46,7 +48,7 @@ Comment mitiger la Loi de Conway ?
   <li data-icon="🏴‍☠️">Les Mercatos pour mélanger les équipes et diffuser les bonnes pratiques</li>
   <li data-icon="🦄">Valoriser la pluridisciplinarité (Task forces)</li>
 </ul>
-Notes: Citation de Peter Ferdinand Drucker, un consultant en management
+Notes: Rien à redire
 
 
 Bon, c'est pas tout ça, revenons à Laurie
