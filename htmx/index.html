@@ -19,8 +19,14 @@
   </head>
   <body>
     <div class="reveal">
+      <img class="conf-logo" src="assets/logo-bdx-io.png" alt="Logo de la conférence">
       <div class="slides">
-        <section>Bienvenue !</section>
+        <section
+          data-markdown="intro.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
 
         <section
           data-markdown="common/moi.md"
@@ -37,16 +43,52 @@
         ></section>
 
         <section
-          data-markdown="slides-quickie.md"
+          data-markdown="slides.md"
           data-separator="^\n\n\n"
           data-separator-vertical="^\n\n"
           data-separator-notes="^Notes:"
         ></section>
 
         <section>
-          J'ai fini !
-          <br><br>
-          Des questions ? 🫣
+          <div class="flex-column">
+            <div class="flex-row">
+              <div class="flex-column">
+                <span>Mon dépôt Git</span>
+                <img
+                  src="assets/qr-code-github.svg"
+                  style="width: 20vw"
+                  alt="QR Code pointant vers le dépôt Github"
+                />
+              </div>
+              <div class="flex-column">
+                <span>Vos feedbacks</span>
+                <img
+                  src="assets/qr-code-feedbacks.svg"
+                  style="width: 20vw"
+                  alt="QR Code pointant vers l'Openfeedback de cette conférence"
+                />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-column" style="margin: 30px;">
+                <img
+                  src="../common/assets/profil-steph.png"
+                  alt="Moi <3"
+                  style="max-width: 10rem; clip-path: circle(5rem at center);"
+                >
+                <span style="font-size: 60%;">@StephaneTrebel</span>
+              </div>
+              <div class="vertical-bar"></div>
+              <div class="flex-column">
+                <div>
+                  <em>HTMX est un retour aux sources du Web, de ce qui le rendait fun, et il est prêt pour le futur !</em> 😉
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <aside class="notes">À gauche mon dépôt Git, à droite le lien vers pour les feedbacks</aside>
         </section>
       </div>
     </div>
@@ -63,6 +105,7 @@
       Reveal.initialize({
         hash: true,
         progress: false,
+        controls: false,
         showSlideNumber: "speaker",
         transition: "none",
 
