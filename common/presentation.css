@@ -1,3 +1,7 @@
+div {
+  /* border: 1px solid blue; */
+}
+
 img.conf-logo {
   position: absolute;
   bottom: 2rem;
@@ -10,11 +14,21 @@ img.conf-logo {
 	border: 2px solid red;
 }
 
+.vertical-bar {
+  background-color: gray;
+  height: 10rem;
+  width: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .flex-row {
 	display: flex;
   flex-direction: row;
 	align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
+  width: 100%
 }
 
 .flex-column {
@@ -25,8 +39,8 @@ img.conf-logo {
 }
 
 li.profile > .image {
-	max-height: 50px;
-	max-width: 50px;
+	height: 50px;
+	width: 50px;
 	margin: 0.5rem;
 }
 

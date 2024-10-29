@@ -453,16 +453,3 @@ Donc on en rajoute, là où on devrait plutôt enlever
 et se concentrer sur les problèmes et les solutions qu'on peut apporter.
 
 On n'est pas là pour pousser du JS à tout prix, seulement quand c'est nécessaire.
-
-
-
-Retrouvez ce POC sur mon dépôt Github:
-
-<img
-    class="r-stretch"
-		src="assets/qr-code.gif"
-		style="width: 25rem; height: auto;"
-		alt="QR Code pointant vers le dépôt Github"
-/>
-
-https://github.com/StephaneTrebel/poc-htmx-rust
