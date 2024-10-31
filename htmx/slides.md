@@ -10,8 +10,6 @@ d'expérience dans le domaine, et de ce que j'ai pu lire et voir autour du
 sujet. Ce n'est donc ni impartial ni objectif, mais je vais tenter d'être le
 plus équitable possible (même si j'ai mon opinion, donc).
 
-AUTRE NOTE: Je compte bien donner cette conf à l'extérieur donc DES FEEDBACKS PLZ
-
 
 
 ## Les limites du «Toujours plus de JS !!!»
@@ -120,6 +118,10 @@ Principe Unix: "Do one thing and do it well"
 Mais dont le pitch est simple: vous avez déjà un framework pour faire du Web (HTTP, HTML, CSS et JS)
 
 
+<img class="r-stretch" src="assets/htmx-over-time.png" alt="La librairie qui monte, qui monte">
+Notes: Rappeler que c'est peanuts comparé à React, bien évidemment.
+
+
 HATEOAS et AJAX
 
 <img class="r-stretch" data-src="assets/htmx-club.jpg" >
@@ -217,7 +219,7 @@ C'est tout. <!-- .element: class="fragment" -->
 Le reste, c'est votre boulot. <!-- .element: class="fragment" -->
 Notes: On s'impose ni SPA, ni MPA (ça peut même être hybride, osef)
 
-WYSIWYG, et c'est ça, finalement la révolution
+WYSIWYG, et c'est ça, finalement la "révolution"
 
 Pas de minification ou d'obfuscation abusive, la compression et mise en cache se font avec HTTP
 
@@ -229,33 +231,22 @@ Notes: Mais tout n'est pas perdu !
 
 
 
-## Pourquoi HTMX en 2024 ?
+## Pourquoi HTMX en 202x ?
 
 
-Parce que les WebComponents sont (enfin) matures
-Notes: Énormément de chemin parcouru
-
+<ul role="list" class="custom-list-types">
+  <li data-icon="💪">WebComponents sont (enfin) matures</li>
+  <li data-icon="🖌">CSS a beaucoup évolué</li>
+  <li data-icon="🌠">Javascript a également évolué</li>
+</ul>
+Notes: Énormément de chemin parcouru sur les WebC. Libraires notamment
 La moitié de la proposition de valeur des frameworks web part en fumée
-
 Encore des choses à voir (Shadow DOM) mais ça progresse
 
-
-Parce que CSS a beaucoup évolué
-Notes: et s'embarque très bien dans les WebComponents
-
-Variables, règles, display, etc.
-
-Mais vous pouvez coller du Tailwind si vous vous voulez, hein !
+Vous pouvez coller du Tailwind si vous vous voulez, hein !
 Sauf que là on est dans un esprit plutôt #NoBuild
 
-Ou, du moins, #OnlyAddWhenNecessary
-
-
-Parce que Javascript a également évolué
-Notes: Les classes ont permis l'émergence des WebComponents
-
-Les futures évolutions (private fields) permettront davantage d'isolation
-
+Les classes ont permis l'émergence des WebComponents.
 Reste le problème du typage mais Typescript ou JsDocs font le taf
 
 Cela dit, j'insiste #OnlyAddWhenNecessary
@@ -266,20 +257,15 @@ Cela dit, j'insiste #OnlyAddWhenNecessary
 <img class="r-stretch" data-src="assets/backend-dev.jpeg" >
 
 
-Front en HTML (incluant des WebComponents), du CSS, et...HTMX !
-
-
-Juste du JS dans les WebComponents pour leur cycle de vie
-
-
-Un backend en...Rust !
-Notes: Alors c'est juste pour mon plaisir personnel
-
+<ul role="list" class="custom-list-types">
+  <li data-icon="🎨">Front en HTML (incluant des WebComponents), du CSS, et...HTMX !</li>
+  <li data-icon="⌛">Juste du JS dans les WebComponents pour leur cycle de vie </li>
+  <li data-icon="🦀">Un backend en...Rust !</li>
+</ul>
+Notes: Rust c'est juste pour mon plaisir personnel.
 D'autres ont de très bons retours avec Go + Templ
 
-L'important c'est la facilité de renvoyer du HTML
-
-Pas besoin d'être une experte sur le sujet, vous allez vite vous y retrouver
+L'important c'est la facilité de renvoyer du HTML, et de gérer le state côté backend, uniquement
 
 
 C'est parti !
@@ -395,49 +381,19 @@ Et les fossoyeurs de nous vendre les pelles (Bundling, API Management, GraphQL, 
 
 
 
-## la siloisation des équipes et leur ultra-spécialisation
+## Pour aller plus loin
 
 
-Plus de devs c'est bien, ne pas les former c'est mal
-Notes: Tout le monde exposé au Web à partir de 2010
-
-Attraction énorme, visibilité du code grâce à l'OpenSource
-
-Bootcamps, filières de reconversion, crise économique de 2008-2010
-
-Mais pas vraiment d'encadrement technique, et encore moins d'excellence
-
-Javascript est simple à apprendre, HTML et CSS beaucoup moins -> Faisons du JS !
-
-Et donc JS Front et Back, et donc du Node.js, et en passant aux orties la qualité
-
-
-La responsabilité collective
-Notes: Gros engouement autour de Javascript nourrit les flammes de l'ambition
-
-Les entreprises veulent se rajeunir avec de l'Angular, React, etc.
-
-Syndrome de la Silicon Valley
-
-Transition des applis lourdes vers le Web faites au forceps
-
-
-Un situation contemporaine ubuesque
-Notes: Des frameworks qui DOIVENT s'adapter pour survivre ("nouveaux paradigmes")
-
-Marketing à donf'
-
-Les nouveautés corrigent des problèmes, et créent leur lot de nouveau problèmes, etc.
-
-Les stacks se complexifient car on se segmente, et donc on doit justifier cette segmentation
-
+<img class="r-stretch" src="assets/hyperscript.png" alt="Hyperscript, un nouveau pseudo-code pour un meilleur Web">
 
 
 ## En conclusion ?
 
-- Une critique assez forte du «Resume Driven Development»
-- Revenons à la simplicité: traitons du métier avant de se faire plaisir avec de la technique
-- L'importance des abstractions: HTML, CSS, JS, à chaque couche son objectif
+<ul role="list" class="custom-list-types">
+  <li data-icon="🛑">Une critique assez forte du «Javascript EVERYWHERE»</li>
+  <li data-icon="🙅">Gérons le métier avant de se faire plaisir avec de la technique</li>
+  <li data-icon="🍰">À chaque couche (HTML, CSS, JS, ) son objectif, ses affordances, etc.</li>
+</ul>
 
 
 Vous n'êtes pas Dev X/Y/Z.
@@ -448,8 +404,6 @@ Notes: Être un dev ne suffirait apparemment pas, il faut être un Dev "React", 
 
 Et donc croître, croître, et justifier cette croissance.
 
-Donc on en rajoute, là où on devrait plutôt enlever
-
-et se concentrer sur les problèmes et les solutions qu'on peut apporter.
+Donc on en rajoute, là où on devrait plutôt enlever et se concentrer sur les problèmes et les solutions qu'on peut apporter.
 
 On n'est pas là pour pousser du JS à tout prix, seulement quand c'est nécessaire.
