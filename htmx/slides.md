@@ -87,6 +87,13 @@ On fait plus compliqué, alors qu'on devrait faire plus simple
 Surtout sur du CRUD
 
 
+<img class="r-stretch" src="assets/eroom-law.png" alt="La loi d'EROOM">
+Notes: Et il y a d'autres tendances qui viennent alourdir encore le constat.
+Comme les sujets de GreenIT, lesquels viennent régulièrement nous rappeler que l'exigence de performance, et d'accessibilité, sont au cœur des enjeux de demain.
+
+Imaginez, comme le conceptualise Tristan Nitot, qu'on vous donne un seul terminal à utiliser toute votre vie !
+
+
 Un autre monde est possible !
 Notes: Un monde où les standards ne changent pas radicalement chaque année
 
