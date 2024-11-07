@@ -1,9 +1,8 @@
-## Sommaire
-
-- Un constat sur le dev Web "moderne"
-- HTMX, un retour aux sources
-- Alors, Révolution ou pas Révolution ?
-
+<ul role="list" class="custom-list-types">
+  <li data-icon="😫">Un constat sur le dev Web "moderne"</li>
+  <li data-icon="🧓">HTMX, un retour aux sources</li>
+  <li data-icon="✊">Alors, Révolution ou pas Révolution ?</li>
+</ul>
 Notes: On va préfacer tout de suite: cette présentation est très "opiniated".
 Elle se base sur ce que j'ai pu vivre au cours de ma désormais dizaine d'années
 d'expérience dans le domaine, et de ce que j'ai pu lire et voir autour du
@@ -12,7 +11,7 @@ plus équitable possible (même si j'ai mon opinion, donc).
 
 
 
-## Les limites du «Toujours plus de JS !!!»
+## Les limites du « Toujours plus de JS ! »
 
 
 <img class="r-stretch" data-src="assets/im-the-captain.jpeg" >
@@ -38,8 +37,6 @@ d'autorisation, etc.).
 
 Que se passe-t-il quand on fait F5 ? JS++
 
-Que se passe-t-il s'il faut révoquer un accès ? JS++
-
 Le SEO ? Problème auto-imposé, et donc JS++
 
 Le SSR, l'hydration ? JS++
@@ -48,26 +45,24 @@ CSS ? Non, JS++
 
 
 <img class="r-stretch" data-src="assets/goldblum-quote.jpeg" >
-De la soupe de JSON.
+Au milieu, de la soupe de JSON.
 Notes: "View as a function of State" promulgué par React, bonne idée ! Mais
 dans les faits c'est surtout "as a function of JSON"
 
 Une industrie entière basée sur un format parce qu'on a voulu séparer les Fronteux des Backeux (OpenAPI, GraphQL, zod, et pareil côté Backend)
 
-Perversion des principes du Web pour certaines raisons (cf chapitre dédié)
+Perversion des principes du Web pour certaines raisons
 
 
 <img class="r-stretch" data-src="assets/never-full-react.jpeg" >
 
-Javascript fatigue...
-Notes: Maintenir tout ça
+La fameuse "Javascript fatigue"...
+Notes: Il faut maintenir tout ça
 
-Passer sur la nouvelle version du framework, des dépendances
-
+Passer sur la nouvelle version du framework, des dépendances, etc.
 Gérer les vulnérabilités, faire de la veille, appréhender la suite
 
 Passer sur un nouveau framework...pour quel ROI ? Pour le fun ? Le CV ?
-
 Réinventer la roue c'est cher: on prend celle des voisins (left-pad, isEven, etc.)
 
 Rocher de Sisyphe, quoi.
@@ -94,16 +89,14 @@ Comme les sujets de GreenIT, lesquels viennent régulièrement nous rappeler que
 Imaginez, comme le conceptualise Tristan Nitot, qu'on vous donne un seul terminal à utiliser toute votre vie !
 
 
-Un autre monde est possible !
+Un autre monde est possible 🤩
 Notes: Un monde où les standards ne changent pas radicalement chaque année
 
 Et sont même là depuis des dizaines d'années
 
-Lindy Effect
-
 Où les briques sont backward-compatibles
 
-Où l'onboarding des nouveaux facilité
+Où l'onboarding des nouveaux est facilité
 
 Le vendor lock-in limité à ce que vous y mettez
 
@@ -112,17 +105,17 @@ Le vendor lock-in limité à ce que vous y mettez
 ## Parlons donc d'HTMX
 Notes: C'est quoi donc ?
 
+Une librairie. Créée par Carson Gross, le créateur d'intercooler.js, l'ancêtre de HTMX
 
-Une librairie.
 
 <img class="r-stretch" data-src="assets/no-bundler.jpg" >
 Notes: Juste une librairie, car le reste existe déjà
 
-Dérivée d'Intercooler.js
-
 Principe Unix: "Do one thing and do it well"
 
 Mais dont le pitch est simple: vous avez déjà un framework pour faire du Web (HTTP, HTML, CSS et JS)
+
+Et donc vous n'avez pas (forcément) besoin de toute la sauce des frameworks #NoBuild
 
 
 <img class="r-stretch" src="assets/htmx-over-time.png" alt="La librairie qui monte, qui monte">
@@ -134,21 +127,13 @@ HATEOAS et AJAX
 <img class="r-stretch" data-src="assets/htmx-club.jpg" >
 
 (non ce ne sont pas des héros grecs)
-Notes: Hypermedia As The Engine Of Application State
-
-Asynchronous Javascript and XML, le très mal nommé
+Notes: Hypermedia As The Engine Of Application State et Asynchronous Javascript and XML, le très mal nommé
 
 HATEOAS: C'est l'Hypermedia (HTML) qui porte l'application.
 HTML est structuré, accessible, compressible, découvrable, etc.
-Les entêtes sont extrêmement important en HATEOAS (Redirections, Liens vers d'autres ressources, etc.)
+Les entêtes HTTP sont extrêmement important en HATEOAS (Redirections, Liens vers d'autres ressources, etc.)
 
-On se repose donc lourdement sur HTTP
-
-CSS décore, comme d'hab'
-
-HTMX porte les interactions avec son JS
-
-On ne fait donc du JS que pour des besoins très précis: Là un langage léger est pertinent !
+HTMX porte les interactions avec son JS. On ne fait donc du JS que pour des besoins très précis: Là un langage léger est pertinent !
 
 
 ```html
@@ -215,50 +200,6 @@ Sans observable, sans signaux, sans hooks.
 Get rekt.
 
 
-Résumé
-- Front + Back sont l'«application» Web
-- HTML d'abord
-- CSS pour décorer
-- JS *uniquement* quand c'est nécessaire
-
-C'est tout. <!-- .element: class="fragment" -->
-
-Le reste, c'est votre boulot. <!-- .element: class="fragment" -->
-Notes: On s'impose ni SPA, ni MPA (ça peut même être hybride, osef)
-
-WYSIWYG, et c'est ça, finalement la "révolution"
-
-Pas de minification ou d'obfuscation abusive, la compression et mise en cache se font avec HTTP
-
-C'est trop simple pour être vrai, hein ?
-
-
-HTMX est ce que le HTML aurait dû devenir avant qu'on bascule dans le «tout Javascript»
-Notes: Mais tout n'est pas perdu !
-
-
-
-## Pourquoi HTMX en 202x ?
-
-
-<ul role="list" class="custom-list-types">
-  <li data-icon="💪">WebComponents sont (enfin) matures</li>
-  <li data-icon="🖌">CSS a beaucoup évolué</li>
-  <li data-icon="🌠">Javascript a également évolué</li>
-</ul>
-Notes: Énormément de chemin parcouru sur les WebC. Libraires notamment
-La moitié de la proposition de valeur des frameworks web part en fumée
-Encore des choses à voir (Shadow DOM) mais ça progresse
-
-Vous pouvez coller du Tailwind si vous vous voulez, hein !
-Sauf que là on est dans un esprit plutôt #NoBuild
-
-Les classes ont permis l'émergence des WebComponents.
-Reste le problème du typage mais Typescript ou JsDocs font le taf
-
-Cela dit, j'insiste #OnlyAddWhenNecessary
-
-
 
 ## Un ch'ti PoC
 <img class="r-stretch" data-src="assets/backend-dev.jpeg" >
@@ -312,11 +253,8 @@ Notes: Lindy Effect
 Vous êtes des devs, vous apportez une solution
 Notes: Vous n'êtes pas juste là pour "clore du ticket JIRA"
 
-
 L'approche Produit est forcément globale
-Notes: Des fois il y aura un peu de Front, d'autre fois beaucoup
-
-Pareil côté Back
+Des fois il y aura un peu de Front, d'autre fois beaucoup. Pareil côté Back
 
 
 « Front+Back y a trop de choses à savoir ! »
@@ -327,65 +265,55 @@ S'il y a trop c'est qu'il y a beaucoup à dégager, justement.
 Revenir à quelque chose de simple, fonctionnel, "MVP"
 
 
+En résumé:
+- Front + Back sont l'«application» Web
+- HTML d'abord
+- CSS pour décorer
+- JS *uniquement* quand c'est nécessaire
+
+C'est tout. <!-- .element: class="fragment" -->
+
+Le reste, c'est votre boulot. <!-- .element: class="fragment" -->
+Notes: On s'impose ni SPA, ni MPA (ça peut même être hybride, osef)
+
+WYSIWYG, et c'est ça, finalement la "révolution"
+
+Pas de minification ou d'obfuscation abusive, la compression et mise en cache se font avec HTTP
+
+C'est trop simple pour être vrai, hein ?
+
+
+HTMX est ce que le HTML aurait dû devenir avant qu'on bascule dans le «tout Javascript»
+Notes: Mais tout n'est pas perdu !
+
+
+
+## Pourquoi HTMX en 2024 ?
+
+
+<ul role="list" class="custom-list-types">
+  <li data-icon="💪">WebComponents sont (enfin) matures</li>
+  <li data-icon="🖌">CSS a beaucoup évolué</li>
+  <li data-icon="🌠">Javascript a également évolué</li>
+</ul>
+Notes: Énormément de chemin parcouru sur les WebC. Libraires notamment
+La moitié de la proposition de valeur des frameworks web part en fumée
+Encore des choses à voir (Shadow DOM) mais ça progresse
+
+Vous pouvez coller du Tailwind si vous vous voulez, hein !
+Sauf que là on est dans un esprit plutôt #NoBuild
+
+Les classes ont permis l'émergence des WebComponents.
+Reste le problème du typage mais Typescript ou JsDocs font le taf
+
+Cela dit, j'insiste #OnlyAddWhenNecessary
+
+
+
 > “Il ne faut toucher à l'architecture que d'une main tremblante.”
 >
 > *Montesquieu contemporain*
-
-
-
-## Le «XY problem» qui nous a conduit à vouloir tout résoudre avec du JS
-Notes:
-Définir le XY problem
-
-
-HTML et CSS ont évolué mais pas assez vite pour le "Web 2.0"
-Notes: Web au début des années "10" (Internet Explorer, Google Chrome, Iphone, No React, Angular.js débute)
-
-Beaucoup de monde déployait encore en prod avec un simple SSH.
-
-Plateforme de distribution de documents -> On veut distribution d'Applications
-
-Sauf que le Web n'est pas fait pour les applications (par de libQt, VisualStudio, etc.)
-
-HTML , CSS , et le Javascript qui est capable, avec du code exécutable, d'interagir avec le DOM.
-
-Problématiques: composants réutilisables (WebComponents n'existent pas encore), scoping CSS (et sa non-programmatisation)
-
-Reste un truc intéressant pour le dev applicatif: Javascript
-
-
-Javascript est un langage très facile à apprendre (mais très difficile à maîtriser)
-
-Notes: Simple à apprendre, nativement supporté dans les navigateurs, et sa légèreté versus les environnements de développement propriétaires (moi je viens de ERP).
-
-En revanche on a clairement sous-estimé son plafond (prototypes, callbacks anyone ?)
-
-Et bam, le ver était dans le fruit: Puisqu'on peut modifier le DOM avec le Javacript, on VA modifier le DOM avec le Javascript.
-
-Routage qui nous fait perdre le fil de notre javascript ? SPA !
-
-Faire des allers-retours avec les backends ? État local !
-
-Le mobile et les progressive web apps émergent, et tout ça demande beaucoup de Javascript ! Ça par contre, ça a été assez vite douché, pour le meilleur et pour le pire, côté Mobile.
-
-
-Le "problème" Node.js
-Notes: Domestiqué le Front avec le Javascript -> Maintenant le Back
-
-Node.js est une pure merveille de technologie: V8 côté serveur ! Event Loop ! Branchements C++ !
-
-Mais attention au principe du Marteau.
-
-Node.js s'aborde simplement mais il y a un plafond de skill très haut (Buffers, Streaming, etc.)
-
-Combiné à la souplesse permissive de Javascript…aïe aïe aïe !
-
-Compétences Front ne sont pas équivalentes en Back (BDD, réseau, sécurité, etc.).
-
-Javascript en Front, en Back, et au milieu ? De la Soupe de JSON.
-
-Et les fossoyeurs de nous vendre les pelles (Bundling, API Management, GraphQL, Typescript, etc.).
-
+Notes: Avoir constamment une réflexion sur 1/Le prochain MVP 2/La prochaine itération MINIMALE
 
 
 ## Pour aller plus loin
@@ -393,8 +321,6 @@ Et les fossoyeurs de nous vendre les pelles (Bundling, API Management, GraphQL, 
 
 <img class="r-stretch" src="assets/hyperscript.png" alt="Hyperscript, un nouveau pseudo-code pour un meilleur Web">
 
-
-## En conclusion ?
 
 <ul role="list" class="custom-list-types">
   <li data-icon="🛑">Une critique assez forte du «Javascript EVERYWHERE»</li>
@@ -408,8 +334,6 @@ Vous n'êtes pas Dev X/Y/Z.
 
 Vous êtes un Dev —tout court— <!-- .element: class="fragment" -->
 Notes: Être un dev ne suffirait apparemment pas, il faut être un Dev "React", "Java", etc.
-
-Et donc croître, croître, et justifier cette croissance.
 
 Donc on en rajoute, là où on devrait plutôt enlever et se concentrer sur les problèmes et les solutions qu'on peut apporter.
 
