@@ -1,5 +1,5 @@
 <img src="common/assets/profil-steph.png" alt="Ma photo de profil" style="clip-path: circle(8rem at center);" />
-<p>Salut 👋</p>
+<p>Qui suis-je ? 🫣</p>
 <ul class="fragment flex-column" style="list-style-type: none; margin-left: 1rem;">
     <li class="profile">
         <img class="image"
@@ -35,3 +35,7 @@
         </svg>
     </li>
 </ul>
+
+
+<!-- .slide: data-background-color="white" -->
+<img class="r-stretch" src="assets/twitch+youtube.png" alt="Logo Twitch et Youtube mélangés">
