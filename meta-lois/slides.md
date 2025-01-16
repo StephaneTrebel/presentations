@@ -1,6 +1,7 @@
 «C'est quoi une Méta-Loi ?», vous demandez-vous ?
 
-Hmm...Revenons à notre protagoniste, Laurie
+Hmm... Revenons à notre protagoniste, Laurie
+Notes: N'inspire pas comme Dark Vador, prends ton temps pour inspirer
 
 
 <img class="r-stretch" src="assets/metacortex.jpeg" alt="Metacortex">
@@ -26,6 +27,7 @@ Laurie vient de découvrir…
 ### La Loi de Conway
 
 > Toute organisation qui conçoit un système, produira un système dont la structure est une copie de la structure de communication de l'organisation
+Notes: Faire un sondage à main levée pour voir qui connaît
 
 
 <ul role="list" class="custom-list-types">
@@ -35,11 +37,11 @@ Laurie vient de découvrir…
 </ul>
 Notes: Citation de Peter Ferdinand Drucker, un consultant en management
 
-Souci des modifications transverses
+Souci des modifications transverses.
 
 Conséquences à la fois sur les API et aussi sur l'organisation du travail (ticketing) et les dépendances que ça va créer dans les équipes ("on ne sait plus qui fait quoi").
 
-Le lien avec le métier est difficile car le métier évolue sans que les équipes évoluent forcément
+Le lien avec le métier est difficile, car le métier évolue sans que les équipes évoluent forcément
 
 
 Comment mitiger la Loi de Conway ?
@@ -48,7 +50,9 @@ Comment mitiger la Loi de Conway ?
   <li data-icon="🏴‍☠️">Les Mercatos pour mélanger les équipes et diffuser les bonnes pratiques</li>
   <li data-icon="🦄">Valoriser la pluridisciplinarité (Task forces)</li>
 </ul>
-Notes: Rien à redire
+Notes: Ce ne sont pas les gens qui sont DevOps, ce sont les projets.
+
+Task forces: couper à travers les pyramides managériales.
 
 
 Bon, c'est pas tout ça, revenons à Laurie
@@ -71,9 +75,11 @@ La pauvre, la voilà aux prises avec…
 ### La Palissade de Chesterton
 
 > Tout changement ne devrait être réalisé que lorsque la raison derrière l'état actuel a été comprise.
-Notes: «Chesterton's Fence», car c'est basé sur un exercice de pensée autour d'une palissade, que quelqu'un envisage de détruire car il ne voit pas à quoi elle sert. Ce à quoi son compagnon non seulement lui interdit de la détruire, mais l'oblige en outre à déterminer la raison de l'existence de cette palissade AFIN de pouvoir comprendre pourquoi il faut la détruire.
+Notes: Timing: 5:40
 
-Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'aurez compris: toucher à une base de code sans savoir vraiment pourquoi les choses sont comme elles sont vous exposera à la plus sévère des punitions: corriger un bug de Prod en urgence un Vendredi à 18h30 !
+«Chesterton's Fence», car c'est basé sur un exercice de pensée autour d'une palissade, que quelqu'un envisage de détruire car il ne voit pas à quoi elle sert. Ce à quoi son compagnon non seulement lui interdit de la détruire, mais l'oblige en outre à déterminer la raison de l'existence de cette palissade AFIN de pouvoir comprendre pourquoi il faut la détruire.
+
+Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'aurez compris: toucher à une base de code sans savoir vraiment pourquoi les choses sont comme elles sont vous exposera à la plus sévère des punitions: corriger un bug de Prod en urgence un vendredi à 18 h 30 !
 
 
 <ul role="list" class="custom-list-types">
@@ -81,10 +87,10 @@ Pas vraiment besoin de vous détailler le lien avec cette naïve Laurie, vous l'
   <li data-icon="🧓">Le "Legacy" commence dès le commit. Sa maintenance est une vertu</li>
   <li data-icon="😅">Le code est "gratiné" à cause du poids de l'histoire</li>
 </ul>
-Notes:
-Les projets "anciens" sont en Prod
+Notes: Marre du Legacy, qui est souvent un tapis sous lequel on met les "vieux" projets.
+Oui, sauf que les projets "anciens" sont en Prod, eux.
 
-Vouloir réécrire à côté c'est prendre un gros risque (+ Effet Lindy)
+Vouloir réécrire à côté c'est prendre un gros risque
 
 Le fameux "On". Pourquoi on a fait ça ? "On m'a dit", etc.
 
@@ -96,9 +102,9 @@ Comment mitiger la Palissade de Chesterton ?
   <li data-icon="💪"><strong>Meilleur</strong>: Faire évoluer le "Legacy"</li>
 </ul>
 Notes:
-pas réservé aux POs, archis, etc. !
+pas réservé aux POs, archis, etc. ! Notre métier est LITTERAIRE (lire de la doc, écrire de la doc, des ADRs, des messages de commits, etc.)
 
-Loi de Conway n'incite pas à ce genre de réflexion. On a toujours des "équipes dédiées", d'ailleurs toujours surchargées, qui sont censées s'occuper de tout ça
+Loi de Conway n'incite pas à ce genre de réflexion -> "équipes dédiées", d'ailleurs toujours surchargées, qui sont censées s'occuper de tout ça
 
 Règle scout: toujours laisser l'endroit plus propre qu'on l'a trouvé
 
@@ -107,13 +113,13 @@ Allez, on retourne voir comment va Laurie...
 
 
 <img class="r-stretch" src="assets/michael-myers-nonono.gif" alt="Le seul, l'unique, Michael Myers, ne valide pas ta PR">
-Notes: La voilà aux prises d'un individu peu recommandable, un Team Lead nommé "Michael", qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise, et donc que sa PR restera bloquée dans la CI, épissétou !
+Notes: La voilà aux prises d'un individu peu recommandable, un Tech Lead nommé "Michael", qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise, et donc que sa PR restera bloquée dans la CI, épissétou !
 
 
 <img class="r-stretch" src="assets/laurie_crying.jpeg" alt="Laurie pleure">
 Notes: Stressée par l'envie de bien faire, elle devient un peu prête à tout, quitte à écrire des tests unitaires juste pour faire remonter le taux de couverture de code au-dessus des 80%, et ainsi éviter les foudres de Sonarqube.
 
-Il faut qu'elle passe la Quality Gate, coûte que coûte !
+Il faut qu'elle passe la Quality Gate, quoi qu'il en coûte (comme dirait l'autre) !
 
 
 Pas de bol pour Laurie, elle est tombée en plein dans...
@@ -123,7 +129,9 @@ Pas de bol pour Laurie, elle est tombée en plein dans...
 ### La cruelle Loi de Goodhart
 
 > Lorsqu'une mesure devient une cible à absolument atteindre, elle cesse d'être une bonne mesure.
-Notes: Les humains sont prédictibles: iels cherchent la voie du moindre effort surtout en situation de stress.
+Notes: Timing: 9:24.
+
+Les humains sont prédictibles: iels cherchent la voie du moindre effort surtout en situation de stress.
 
 Si vous leur mettez la pression à un sujet, leur énergie sera dépensée non pour atteindre les objectifs,
 mais pour pervertir le thermomètre à moindre effort.
@@ -135,16 +143,24 @@ Comment éviter de casser le thermomètre ?
   <li data-icon="🦾">Établissons un ensemble <em>limité</em> d'indicateurs de l'équipe sur un périmètre qu'elle <em>maîtrise</em></li>
   <li data-icon="🫂">Suivons avec <em>bienveillance</em>. Un indicateur est simplement une opportunité de s'améliorer</li>
 </ul>
-Notes: SLO/A/I: Service Level Objective/Agreement/Indicators
+Notes: «Un fait divers, une loi»
+
+L'équipe doit être maîtresse de son destin.
+
+Moi je m'impose 115% :D
+
+SLO/A/I: Service Level Objective/Agreement/Indicators
 
 
-<img class="r-stretch" src="assets/teletubbies.jpg" alt="La bienveillance, c'est un bien grand mot">
+<img class="r-stretch" src="assets/teletubbies.jpg" alt="La Bienveillance, c'est un bien grand mot">
 Notes:
-Quand je parle de bienveillance, je ne parle pas des babyfoots, des happenings, etc.
+Quand je parle de Bienveillance, je ne parle pas des babyfoots, des happenings, etc.
 
 Je parle de ce qui est le plus dur à maintenir dans la durée: un écosystème qui permette à chacun de travailler dans de bonnes conditions, d'avoir la possibilité de donner le meilleur de soi-même, bref d'avoir du sens et de l'autonomie.
 
-Moi, je suis particulièrement concerné, entre Linux et Neovim.
+Exiger la bienveillance. On est intraitables avec le code tout en étant adorable avec les gens 🤗
+
+Moi, je suis particulièrement concerné, entre le Full Remote, Linux, et Neovim, car c'est pas évident...
 
 
 Bon, comment elle va, Laurie ?
@@ -161,11 +177,14 @@ Notes: Elle en marre de se faire marcher dessus, elle s'est (bon ici, un peu tro
 
 Corollaire:
 > Les gens performants ont tendance à sous-estimer leurs compétences dans leur domaine d'expertise
+Notes: Timing: 12:24
 
 
 <img class="r-stretch" src="assets/dunning-kruger.png" alt="Un graphe tiré de l'étude de Dunning et Kruger">
 Notes: Voilà le graph originel de l'étude.
-Alors celui-là est assez controversé car il a été souvent mal compris, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça. Il reste que c'est quand même assez logique dans les grandes lignes à cause du fameux "Ce qu'on sait pas qu'on ne sait pas", cher à Donald Rumsfeld. C'est le fait de ne pas prêter attention à ça qui vous fait facilement basculer dans un orgueil destructeur
+Alors on a dit beaucoup de bêtises sur DK, notamment dans le cadre de l'étude de la porosité des gens à la désinformation. Il y a d'ailleurs apparemment des différences culturelles qui tempéreraient tout ça.
+
+Analyse des bottom performers et top performers
 
 
 Il y a trois types d'informations:
@@ -175,6 +194,8 @@ Il y a trois types d'informations:
   <li data-icon="🤯">Ce qu'on ne sait pas qu'on ne sait pas</li>
 </ul>
 Notes: Si vous pensez ne pas être affecté par l'effet Dunning-Kruger, vous êtes très probablement affecté par l'effet Dunning-Kruger :)
+
+Détailler, parler du champ des possibles. Illustrer avec les bottoms et top performers.
 
 
 Pour mitiger, rien de plus simple:
@@ -206,7 +227,9 @@ Qui ? Je veux bien sûr parler de...
 
 ### Loi de Parkinson:
 > Quel que soit le travail à faire, la durée d'une tâche s'étirera pour remplir le temps qui lui est alloué.
-Notes: Ou pourquoi les estimations c'est de la daube 🙄
+Notes: Timing: 15:115
+
+Ou pourquoi les estimations c'est de la daube 🙄
 
 On va commencer par Hofstadter: Les humains sont *catastrophiquement* mauvais dans leurs estimations:
 
@@ -217,26 +240,31 @@ Soit on sur-estime parce que bon, on a dit qu'on s'occupait de trois tickets dan
 <img class="r-stretch" src="assets/dhh-software-estimates-never-worked.png" alt="Article de DHH: Software estimates have never worked and never will">
 Notes: Et ça reste un sujet qui fait régulièrement l'actualité !
 
+On a beau faire des story points, des tailles de Tshirts, etc. ça fonctionne rarement.
+
 
 <img src="assets/yo-dawg.jpg" alt="I heard you like meetings so I scheduled a meeting to talk about meetings">
 Notes: Et la Loi de Parkinson, elle, est particulièrement pernicieuse car on va avoir tendance à prendre "la place disponible" dans notre emploi du temps, alors que si on avait rationalisé le temps on aurait pu faire plus de choses.
 
-Et vous savez ce qui me gonfle ? C'est que la Loi de Parkinson s'applique à tout le monde, et donc aux managers de tout poil. Aux SCRUMMasters. Aux POs. Et tout ce monde là va "occuper la place disponible" avec des réunions, à tel point que des fois on se demande si on travaille encore, ou bien si notre travail est devenu, juste, de la réunionnite.
+Et on adore ça les réunions, les rituels...vocabulaire de Religion ça, non ? C'est vous dire à quel point c'est compliqué de remettre ça en cause, on atteint le stade de la croyance. Même si les réunions pouvaient être remplacées par un simple mail, même si c'est devenu un motif pour revenir sur le télétravail, c'est pernicieux à ce point là.
+
+Et le pire ? C'est que Parkinson s'applique aussi aux managers de tout poil, aux SCRUMMasters, POs, etc. Et tout ce monde là va "occuper la place disponible" avec des réunions, à tel point que des fois on se demande si on travaille encore, ou bien si notre travail est devenu, juste, de la réunionnite.
 
 
 Ben kékonfait alors ?
 <ul role="list" class="custom-list-types">
   <li data-icon="👂">Ne pas estimer ? Tentant ! Mais difficile à vendre</li>
   <li data-icon="🏋️‍♂️">Admettre que dans MVP, le "M" veut dire "Minimum": Itérez, itérez, itérez</li>
-  <li data-icon="🐷">Soyez francs avec les ROTIs et surtout privilégiez l'asynchrone</li>
+  <li data-icon="🐷">Soyez francs avec les ROTIs (anonymes !) et privilégiez l'asynchrone</li>
 </ul>
 
 Notes:
-Faire tout ça avec Bienveillance, toujours.
+L'ancien monde et ses deadlines, diagrammes de GANTT, gestion de projet à l'ancienne (on ne fait pas des ponts…)
 
-Ne pas estimer ça se fait: l'OpenSource, par exemple.
+Trancher dans les MVP, et atteindre le cœur de l'itération.
 
-Et ne pas avoir de réunions, ça se fait aussi, hein. Comme tout il faut mesurer le ROI, remettre en question, etc.
+Concernant les réunions: faut mesurer le ROI, remettre en question l'ODJ, etc.
+Privilégier l'asynchrone: avez-vous besoin d'une réunion si la doc est écrite, et si elle est lue ? ADR, etc.
 
 Et, pour aider à la prédictibilité des tâches, on peut par exemple utiliser des «Boring Technologies» (cf L'Effet Lindy).
 
@@ -257,7 +285,9 @@ Notes: Un collègue Senior, d'une antique équipe chargée de maintenir un logic
 ### L'effet Lindy
 
 > Plus longtemps quelque chose de non-périssable existe ou bien est actuellement utilisé, plus longtemps son espérance de vie s'allonge.
-Notes: Je vous laisse vous chauffer le ravioli avec ça deux secondes 😁
+Notes: Timing: 20:17
+
+Je vous laisse vous chauffer le ravioli avec ça deux secondes 😁
 
 
 <ul role="list" class="custom-list-types">
@@ -292,20 +322,23 @@ Car on ne fait pas ce qu'on veut avec la complexité, à cause de...
 ### L'implacable loi de Tesler
 
 > La complexité inhérente d'une application ne peut jamais être totalement retirée, ou cachée. On ne peut que la déplacer avec des compromis.
+Notes: Timing: 23:33
 
 
 <ul role="list" class="custom-list-types">
   <li data-icon="😅">Il y aura toujours de la complexité dans votre application</li>
-  <li data-icon="💵">Elle est dans votre code (coût DX) ou dans son utilisation (coût UX)</li>
+  <li data-icon="💵">Elle est dans votre code (DX), son utilisation (UX), son coût (FinOps), etc.</li>
   <li data-icon="⚖">Trouver le bon équilibre, et se concentrer sur vos forces</li>
 </ul>
-Notes: Il y a la "bonne" et la "mauvaise" complexité quoi.
+Notes: Il y a la "bonne" et la "mauvaise" complexité quoi. C'est FORCÉMENT un compromis
 
-Par ex: Une application web interne qui fait du CRUD pour 10 personnes a-t-elle besoin de Kubernetes, ou de Microfrontend ? C'est là une complexité qu'il faut être capable de justifier, car le cœur de l'application n'est pas sa scalabilité, ni l'agnosticité du déploiement, c'est de faire du CRUD ! Donc ptet pas justifié
+Par ex: Une application web interne qui fait du CRUD pour 10 personnes a-t-elle besoin de Kubernetes, ou de Microfrontend ? Le cœur de l'application n'est pas sa scalabilité, ni l'agnosticité du déploiement ! Donc ptet pas justifié
 
-En revanche si votre application contient de l'algorithmique complexe pour éviter à vos utilisateurs d'avoir à jongler entre deux écrans, la question peut se poser. Le jeu peut en valoir la chandelle, mais là-aussi il faut être conscient du coût (et pas que financier, la santé mentale de la maintenance aussi c'est un coût)
+En revanche si votre application contient de l'algorithmique complexe pour éviter à vos utilisateurs d'avoir à jongler entre deux écrans, la question peut se poser. Mais là-aussi il faut être conscient du coût (et pas que financier, la santé mentale de la maintenance aussi c'est un coût)
 
-On en revient à nos différentes technologies, à la veille, etc. Améliorer son discernement pour comprendre la valeur ajoutée de l'application (ou de la couche sur laquelle vous bossez) et qui JUSTIFIE sa complexité. Le reste c'est de la littérature.
+On en revient à nos différentes technologies, à la veille, etc. Améliorer son discernement pour comprendre la valeur ajoutée de l'application (ou de la couche sur laquelle vous bossez) et qui JUSTIFIE sa complexité.
+
+On n'oppose pas les devs et les users !
 
 
 <img class="r-stretch" src="assets/young-laurie-strode-smiling.jpg" alt="Laurie a enfin trouvé un truc utile à faire">
@@ -328,8 +361,7 @@ Hé oui, les pires cauchemars c'est sa spécialité. Je veux bien sûr parler de
 ### La loi d'Hyrum, ou le Contrat Involontaire
 
 > Dès que vous atteignez un certain nombre d'utilisateurs de votre API, votre contrat ne sert plus à rien: Tous les comportements de votre système seront utilisés tels quels par quelqu'un
-Notes:
-Et oui, ça pique.
+Notes: Timing: 25:59
 
 Ce qu'il s'est passé c'est que l'équipe qui est en charge du header se servait de ce comportement pour afficher le total de la commande, et comme maintenant il n'y a plus d'article dans le panier, ben ça devient undefined.
 
@@ -349,26 +381,29 @@ Notes: There's always an XKCD for that :D
 </ul>
 Notes: Il faut arrêter de se cacher derrière son petit doigt et accepter que toute mise à jour (oui, même un patch) peut être un Breaking Change.
 
+Et même, documenter les changements c'est pas facile. Celleux qui ont déjà faite une CHANGELOG le savent.
+
 Et, pour les briques qui sont utilisées par des clients internes, rappelez que le client est tout autant responsable de ce qu'il accepte que vous êtes responsables de ce que vous livrez: ils ont le droit, et l'obligation morale, de faire des tests, non mais !
 
 
 <img class="r-stretch" src="assets/linus-was-right.png" alt="Linus a toujours raison">
 Notes: Rappelez vous Linus Torvalds: WE DO NOT BREAK USERSPACE!
 
-D'ailleurs, en passant, on pourrait légitimement me faire remarquer que Linus est à la bienveillance ce que l'acide sulfurique est à la Gastronomie, mais au-delà de la forme, son message est un message de bienveillance à l'égard de _ses_ utilisateurs. S'il pète un câble, c'est bien parce que l'un des mainteneurs du noyau a décider de privilégier son Experience aux dépends de celle de ces utilisateurs. C'est là qu'est le drame !
+D'ailleurs on pourrait légitimement me faire remarquer que Linus n'est pas très bienveillant, là, mais au-delà de la forme, son message est un message de bienveillance à l'égard de _ses_ utilisateurs. S'il pète un câble, c'est bien parce que l'un des mainteneurs du noyau a décidé de privilégier son expérience aux dépens de celle de ces utilisateurs. C'est là qu'est le drame !
 
-Notez d'ailleurs qu'il attaque le code, la solution, mais pas la personne. C'est ça de la bienveillance. On a le droit de se tromper. On n'a pas le droit de ne pas le reconnaître. Bon il aurait pu y aller moins fort, mais est-ce qu'on s'en serait souvenu ?
+Notez d'ailleurs qu'il attaque le code, la solution, mais pas la personne. C'est ça de la bienveillance. On a le droit de se tromper, mais on n'a pas le droit de ne pas le reconnaître. Bon il aurait pu y aller moins fort, mais est-ce qu'on s'en serait souvenu ?
+
+Il l'a fait là, contre nvidia, au sujet de l'intégration de Rust dans le Kernel, etc.
 
 
 <img class="r-stretch" src="assets/laurie-au-telephone.jpg" alt="Laurie au téléphone">
 
 « Bonjour la Guilde, j'ai fait une PR pour mettre à jour le framework maison »
-
-Notes: Laurie, voulant bien faire, va faire une modification (pour une fois) bien appropriée dans l'un des nombreux repos du projet, pour sa page panier. Car bien sûr que même sur sa page de prédilection, elle doit quand même aller demander le droit d'aller modifier des choses car c'est """transverse""".
+Notes: Laurie, voulant bien faire, va faire une modification (pour une fois) bien appropriée dans l'un des nombreux repos du projet, pour sa page panier. Car bien sûr que même sur sa page de prédilection, elle doit quand même aller demander le droit d'aller modifier des choses, car c'est """transverse""".
 
 
 <img class="r-stretch" src="assets/dracula.jpeg" alt="Dracula, de Francis Ford Coppola">
-Notes: Sauf que bon, elle n'a aucune idée que sa PR, son besoin, est le cadet des soucis de la Guilde, qui a des choses beaucoup plus importantes à faire, comme débattre de la plus belle manière d'arranger des ternaires avec Prettier...
+Notes: Sauf que bon, elle n'a aucune idée que sa PR, son besoin, est le cadet des soucis de la Guilde, qui a des choses beaucoup plus importantes à faire, comme débattre de la plus belle manière d'arranger des ternaires avec Prettier, ou encore si on change le % de couverture de code...
 
 Elle n'a qu'à ouvrir un ticket et on lui répondra un jour, peut-être, si on a du temps et l'envie de le faire.
 
@@ -380,9 +415,13 @@ En voilà un personnage qui illustre magnifiquement…
 ### Le Principe de Shirky
 
 > Toute institution essaiera inconsciemment de préserver le problème qu'elle est censée résoudre.
-Notes: La siloisation n'a jamais de limite. Elle s'insinue, puis elle se bureaucratise (ticketing), et ensuite vous ne pouvez. plus. l'extirper.
+Notes: Timing: 31:44
+
+La siloisation n'a jamais de limite. Elle s'insinue, puis elle se bureaucratise (ticketing), et ensuite vous ne pouvez. plus. l'extirper.
 
 Comme toujours ce genre d'initiative part d'une bonne intention: on veut rationaliser les efforts, on veut éviter que "ça dérive", on veut garder le contrôle, parce que les devs, forcément, ils sont pas doués.
+
+Et l'Enfer est pavé de bonnes intentions. Et vous risquez Goodhart, de la toxicité, etc. PÉDAGOGIE
 
 
 <ul role="list" class="custom-list-types">
@@ -429,7 +468,9 @@ Vos clients internes et externes vous en seront reconnaissants (et envoyez-moi l
 <img class="r-stretch" src="assets/photo-de-groupe.jpg" alt="Tous les méchants de film d'horreur sont là">
 
 Il y aurait encore beaucoup à dire sur les Meta-Lois...
-Notes: Mais je vais commencer à manquer de temps, c'est d'ailleurs pour ça qu'il y a quelques temps j'ai décidé de répertorier dans un dépôt Git celles qui s'appliquent plus ou moins à notre métier.
+Notes: Timing: 40:00
+
+Mais je vais commencer à manquer de temps, c'est d'ailleurs pour ça qu'il y a quelques temps j'ai décidé de répertorier dans un dépôt Git celles qui s'appliquent plus ou moins à notre métier.
 
 Et sachez qu'il n'y a pas que l'informatique qui a des Méta-lois, il y a une page Wikipédia qui essaie de toutes les répertorier ! Je la cite dans mon repo donc vous verrez ça vous même.
 
@@ -454,4 +495,4 @@ Notes: Appelée aussi la loi du marteau en or, on encore la Loi de l'instrument
 
 C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
 
-J'ai un autre talk autour d'HTMX qui parle un peu plus de ça si ça vous intéresse (rendez-vous à Bordeaux pour la BDX I/O en novembre 😉)
+J'ai un autre talk autour d'HTMX qui parle un peu plus de cette remise en question.
