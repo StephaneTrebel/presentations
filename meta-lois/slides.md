@@ -475,10 +475,6 @@ Mais je vais commencer à manquer de temps, c'est d'ailleurs pour ça qu'il y a 
 Et sachez qu'il n'y a pas que l'informatique qui a des Méta-lois, il y a une page Wikipédia qui essaie de toutes les répertorier ! Je la cite dans mon repo donc vous verrez ça vous même.
 
 
-<img class="r-stretch" src="assets/laurie-strode-smiling.jpg" alt="À la fin, Laurie sourit enfin">
-Notes: Ça y est, Laurie est désormais un peu mieux armée pour survivre dans le monde merveilleux du développement logiciel. On le voit pas à sa tête ? Oui bon elle a pris un coup de vieux, hein, ça nous arrive à tous et à toutes 😅
-
-
 <img class="r-stretch" src="assets/laurie-strode-au-pe-pom.jpg" alt="Laurie y va au pe-pom, carrément">
 Notes: La raison pour laquelle j'ai décidé de vous parler de ce sujet qui continue de beaucoup m'intéresser encore aujourd'hui, c'est afin de pouvoir mettre des mots sur des situations plus ou moins malheureuses qu'on a tous et toutes rencontrés à un moment.
 
@@ -496,3 +492,7 @@ Notes: Appelée aussi la loi du marteau en or, on encore la Loi de l'instrument
 C'est en particulier applicable aux hard-skills. Si vous ne connaissez qu'un langage, qu'un framework, qu'un paradigme (comme le FrontEnd), comment voulez-vous être utile dans la durée pour vos utilisateurs et vos utilisatrices ?
 
 J'ai un autre talk autour d'HTMX qui parle un peu plus de cette remise en question.
+
+
+<img class="r-stretch" src="assets/laurie-strode-smiling.jpg" alt="À la fin, Laurie sourit enfin">
+Notes: Ça y est, Laurie est désormais un peu mieux armée pour survivre dans le monde merveilleux du développement logiciel. On le voit pas à sa tête ? Oui bon elle a pris un coup de vieux, hein, ça nous arrive à tous et à toutes 😅
