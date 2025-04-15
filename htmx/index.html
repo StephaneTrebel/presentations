@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -19,10 +19,16 @@
   </head>
   <body>
     <div class="reveal">
-      <img class="conf-logo" src="assets/logo-bdx-io.webp" alt="Logo de la conférence">
+      <img
+        class="conf-logo"
+        style="max-width: 9rem; max-height: 9rem"
+        src="assets/logo-devoxxfrance.svg"
+        alt="Logo de la conférence"
+      />
+
       <div class="slides">
         <section
-          data-markdown="intro.md"
+          data-markdown="slides.md"
           data-separator="^\n\n\n"
           data-separator-vertical="^\n\n"
           data-separator-notes="^Notes:"
@@ -42,13 +48,6 @@
           data-separator-notes="^Notes:"
         ></section>
 
-        <section
-          data-markdown="slides.md"
-          data-separator="^\n\n\n"
-          data-separator-vertical="^\n\n"
-          data-separator-notes="^Notes:"
-        ></section>
-
         <section>
           <div class="flex-column">
             <div class="flex-row">
@@ -56,40 +55,48 @@
                 <span>Les liens</span>
                 <img
                   src="common/assets/qr-code-bento-moi.svg"
-                  style="width: 20vw"
+                  style="width: 17vw"
                   alt="Mon Bento qui regroupe tous les liens de cette conférence"
                 />
               </div>
               <div class="flex-column">
                 <span>Vos feedbacks</span>
                 <img
-                  src="assets/qr-code-bdx-io.svg"
-                  style="width: 20vw"
+                  src="assets/qr-code-devoxx-2025.svg"
+                  style="width: 17vw"
                   alt="QR Code pointant vers l'Openfeedback de cette conférence"
                 />
               </div>
             </div>
 
             <div class="flex-row">
-              <div class="flex-column" style="margin: 30px;">
+              <div class="flex-column" style="margin: 30px">
                 <img
                   src="../common/assets/profil-steph.png"
                   alt="Moi <3"
-                  style="max-width: 10rem; clip-path: circle(5rem at center);"
-                >
-                <span style="font-size: 60%;">@StephaneTrebel</span>
+                  style="max-width: 10rem; clip-path: circle(5rem at center)"
+                />
+                <span style="font-size: 60%">@StephaneTrebel</span>
               </div>
               <div class="vertical-bar"></div>
               <div class="flex-column">
                 <div>
-                  <em>HTMX est un retour aux sources du Web, de ce qui le rendait fun, et il est prêt pour le futur !</em> 😉
+                  <em
+                    >HTMX est un retour aux sources du Web, de ce qui le rendait
+                    fun, et il est prêt pour le futur !</em
+                  >
+                  😉
                 </div>
               </div>
             </div>
-
           </div>
-          <aside class="notes">À gauche mon dépôt Git, à droite le lien vers pour les feedbacks</aside>
+          <aside class="notes">
+            À gauche mon dépôt Git, à droite le lien vers pour les feedbacks
+          </aside>
         </section>
+
+        <section data-background-image="assets/okazou.png"></section>
+
       </div>
     </div>
 
@@ -106,8 +113,8 @@
         hash: true,
         progress: false,
         controls: false,
-        showSlideNumber: "speaker",
-        transition: "none",
+        showSlideNumber: 'speaker',
+        transition: 'none',
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, PdfExport],

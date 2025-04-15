@@ -10,7 +10,7 @@ WeScale c'est une ESN de conseil autour du Cloud, de l'Orchestration, du DevOps 
 
 
 
-<!-- .slide: data-background-image="common/assets/platform-conf-wescale.png" -->
+<!-- .slide: data-background-image="common/assets/platform-conf-wescale-preinscription.png" -->
 Notes: Grande annonce, la Platform Conf à Paris, en octobre 2025 !
 Oui, notre conf à nous !
 

@@ -18,4 +18,4 @@
 
 
 <!-- .slide: data-background-color="white" -->
-<img class="r-stretch" src="assets/twitch+youtube.png" alt="Logo Twitch et Youtube mélangés">
+<img class="r-stretch" src="common/assets/twitch+youtube.png" alt="Logo Twitch et Youtube mélangés">
