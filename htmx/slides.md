@@ -1,4 +1,4 @@
-<!-- .slide: data-background-image="assets/title-card-devoxx.png" -->
+Bienvenue ! 👋
 Notes: Bienvenue tout le monde !
 
 
