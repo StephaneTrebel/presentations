@@ -343,7 +343,7 @@ Notes: Avoir constamment une r√©flexion sur 1/Le prochain MVP 2/La prochaine it√
 ## Pour aller plus loin
 
 
-<img class="r-stretch" src="assets/hyperscript.png" alt="Hyperscript, un nouveau pseudo-code pour un meilleur Web">
+<img class="r-stretch" src="assets/htmx-10-tips-for-building-SSR-HDA-applications.png" alt="Hypermedia Driven Apps">
 
 
 <ul role="list" class="custom-list-types">
