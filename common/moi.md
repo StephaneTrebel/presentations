@@ -17,5 +17,5 @@
 </ul>
 
 
-<!-- .slide: data-background-color="white" -->
-<img class="r-stretch" src="common/assets/twitch+youtube.png" alt="Logo Twitch et Youtube mélangés">
+<!-- .slide: data-background-video="common/assets/combo-yt-twitch.webm" data-background-video-loop data-background-video-muted -->
+<div> </div>
