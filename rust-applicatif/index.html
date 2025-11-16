@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Présentation</title>
+
+    <link rel="stylesheet" href="common/dist/reset.css" />
+    <link rel="stylesheet" href="common/dist/reveal.css" />
+    <link rel="stylesheet" href="common/dist/theme/white.css" />
+    <link rel="stylesheet" href="common/presentation.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="common/plugin/highlight/zenburn.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <img
+        class="conf-logo"
+        style="max-width: 3rem; max-height: 3rem"
+        src="assets/jugsummercamp.jpg"
+        alt="Logo de la conférence"
+      />
+
+      <div class="slides">
+        <section
+          data-markdown="slides.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
+
+        <section
+          data-markdown="common/moi.md"
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Notes:"
+        ></section>
+
+        <section>
+          <div class="flex-column">
+            <div class="flex-row">
+              <div class="flex-column">
+                <span>Les liens</span>
+                <img
+                  src="common/assets/qr-code-bento-moi.svg"
+                  style="width: 17vw"
+                  alt="Mon Bento qui regroupe tous les liens de cette conférence"
+                />
+              </div>
+              <div class="flex-column">
+                <span>Vos feedbacks</span>
+                <img
+                  src="assets/qr-code-jugsummercamp-2025.svg"
+                  style="width: 17vw"
+                  alt="QR Code pointant vers l'Openfeedback de cette conférence"
+                />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-column" style="margin: 30px">
+                <img
+                  src="../common/assets/profil-steph.png"
+                  alt="Moi <3"
+                  style="max-width: 10rem; clip-path: circle(5rem at center)"
+                />
+                <span style="font-size: 60%">@StephaneTrebel</span>
+              </div>
+              <div class="vertical-bar"></div>
+              <div class="flex-column">
+                <div>
+                  <em
+                    >Rust 🦀 a désormais tout ce qu'il faut pour vous permettre
+                    de délivrer de la valeur. Aucune raison de ne pas s'y mettre
+                    !</em
+                  >
+                  😉
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="notes">
+            À gauche mon dépôt Git, à droite le lien vers pour les feedbacks
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <script src="common/dist/reveal.js"></script>
+    <script src="common/plugin/notes/notes.js"></script>
+    <script src="common/plugin/markdown/markdown.js"></script>
+    <script src="common/plugin/highlight/highlight.js"></script>
+    <script src="common/plugin/pdfexport/pdfexport.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        progress: false,
+        controls: false,
+        showSlideNumber: 'speaker',
+        transition: 'none',
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, PdfExport],
+      });
+    </script>
+  </body>
+</html>
