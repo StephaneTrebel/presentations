@@ -1,0 +1,1 @@
+{"rule":"FR_SPELLING_RULE","sentence":"^\\QSauf que LoginError n'est pas un type élémentaire...\\E$"}
