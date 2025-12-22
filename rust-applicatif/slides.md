@@ -33,11 +33,11 @@ Donc pas d'embarqué, pas vraiment de contraintes en dehors de ce qu'on connaît
 
 
 
-Un système typal expressif multiparadigmique
+Un système typal expressif et multi-paradigmes
 Notes : À vos souhaits. Promis je ne vais pas vous expliquer le Arc<Mutex>
 
 
-Structs, et "Newtypes"
+La base: Structs, et "Newtypes"
 
 
 Un cas ultra-classique:
@@ -61,7 +61,7 @@ Re-nul. "String", ça ne veut rien dire, on met un email dans une variable qui c
 Non mais allo, quoi !
 
 
-On peut, et on doit mieux faire:
+Encoder la logique métier, le rêve ! 😌
 ```rust
 use crate::domain::UserEmail;
 
@@ -75,7 +75,7 @@ Notes : Exemple canonique, on veut créer un utilisateur, on a besoin de son ema
 Ici, pas de String qui voudrait dire tout et n'importe quoi. On type tout fortement (sinon, ça va hurler à la compilation)
 
 
-On "impl"émente la logique, pour traiter le cas droit, et le cas d'erreur:
+On "impl"émente la logique pour traiter les cas :
 ```rust
 use validator::ValidateEmail;
 
@@ -93,12 +93,13 @@ impl UserEmail {
 }
 ```
 Notes : Un newtype va "emballer" un type (ici String)
+
 Très pratique car un UserEmail n'est pas un String, ni n'est équivalent à un autre NewType(String) -> compilateur pas content si on mélange -> pas de Duck Typing
 
 On délègue la validation elle-même à une "crate" (on reviendra là-dessus), un lib externe, quoi
 
 
-Comment on valide ça ?
+Comment on valide ça ? Avec des tests ! 🤩
 ```rust
 #[cfg(test)]
 mod tests {
@@ -116,6 +117,43 @@ mod tests {
 }
 ```
 Notes : On reviendra là-dessus, mais les tests sont colocalisés avec le code.
+
+
+💥 Un newtype n'est pas égal à un autre type !
+```rust
+pub struct Address(String);
+pub struct UserEmail(String);
+
+pub struct NewUser { pub email: UserEmail }
+
+let my_user = NewUser {
+  // Erreur ! Pas un UserEmail, mais un String !
+  email: "steph@mydomain.com"
+}
+
+let my_user = NewUser {
+  // Erreur ! Pas un UserEmail, mais un Address !
+  email: Address("steph@mydomain.com")
+}
+```
+Notes : Et c'est ce qu'on veut !
+
+
+Il faut utiliser le newtype prévu :
+```rust
+use crate::domain::UserEmail;
+
+pub struct NewUser {
+    // Attendez…c'est quoi ça ?
+    pub email: UserEmail,
+}
+
+let my_user = NewUser {
+  // Ok 👍
+  email: UserEmail::parse("steph@mydomain.com")?;
+}
+// Note: Pour l'instant le `?` c'est "magique" 🪄
+```
 
 
 <img class="r-stretch" src="assets/parse_dont_validate.png" alt="Parse, don't validate, d'Alexs King">
@@ -162,8 +200,8 @@ L'Α et l'Ω du Type Driven Development:
 Le Pattern Matching
 ```rust
 /// validate_credentials:
-///   (Credentials)-> Result<Uuid, AuthError>
-match validate_admin_credentials(credentials, &pool).await {
+///   (Credentials)-> Result<Uuid, AuthenticationError>
+match validate_credentials(credentials).await {
 }                       ╭Choose action ─────╮
                         │1. Fill match arms │
                         ╰─────────────────╯
@@ -172,7 +210,7 @@ match validate_admin_credentials(credentials, &pool).await {
 
 Et y a plus qu'à remplir !
 ```rust
-match validate_admin_credentials(credentials, &pool).await {
+match validate_credentials(credentials).await {
     Ok(_) => todo!("rajouter le cas où tout est ok"),
     Err(_) => todo!("rajouter la gestion d'erreur"),
 }
@@ -181,7 +219,7 @@ match validate_admin_credentials(credentials, &pool).await {
 
 Et ensuite, on met le code final:
 ```rust
-match validate_admin_credentials(credentials).await {
+match validate_credentials(credentials).await {
   Ok(user_id) => {
     return HttpResponse::SeeOther()
       .insert_header((LOCATION, "/admin/dashboard"))
@@ -213,19 +251,84 @@ Et même les plus gros se font avoir :
 <img class="r-stretch" src="assets/cloudflare-incident.png" alt="La fameuse erreur Cloudflare de novembre 2025">
 
 
+Moralité: Réservez `.unwrap` pour le code de test, et apprenez à propager/gérer les Results
+```rust
+fn my_function() -> Result<PortNumber, Error> {
+  /// In this case, we SHOULD have an IP address.
+  /// If not, bubble up the error upwards
+  let port = listener.local_addr()?.port();
+  return port;
+}
+```
+
+
+D'ailleurs, en parlant d'erreurs...
+
+
+`anyhow` et `thiserror`, les jumeaux surdoués de la gestion d'erreur.
+Notes : Si les erreurs sont relous à gérer, vous les gérerez mal, et c'est là qu'il y aura des bugs.
+Fort heureusement, la communauté Rust a tout prévu ^^
+
+
+`thiserror`, les erreurs faciles à décrire :
+```rust
+use thiserror::Error;
+#[derive(Error, Debug)]
+pub enum DataStoreError {
+  #[error("data store disconnected")]
+  Disconnect(#[from] io::Error),
+  #[error("the data for key `{0}` is not available")]
+  Redaction(String),
+  #[error("invalid ({expected:?}, found {found:?})")]
+  InvalidHeader {
+      expected: String,
+      found: String,
+  },
+  #[error("unknown data store error")]
+  Unknown }
+```
+Notes : thiserror va automatiquement faire le lien entre des erreurs et leur traduction (Display), juste avec des proc macros (donc zero cost abstraction).
+
+Ce code est tiré de la doc officielle de la crate.
+
+Notez d'ailleurs l'enum: toutes les erreurs sont exhaustivement décrites ici (permettant d'utiliser le pattern matching)
+
+
+`anyhow`, les erreurs faciles à créer et propager :
+```rust
+use anyhow::{Context, Result};
+
+// Le Result ne précise même plus le type d'erreur
+// car ce sera un `anyhow::Error` 👌
+fn main() -> Result<()> {
+
+  // .context permet d'emballer l'erreur avec…du contexte 😁
+  it.detach().context("Failed to detach the thing")?;
+
+  // L'utilisation de `?` veut simplement dire:
+  // Si c'est une `Err` alors on bubble up !
+  // Sinon on "ouvre" la boîte `Ok` et on prend son contenu
+  let content = std::fs::read(path)?;
+}
+```
+Notes : C'est plus simple quand on n'a plus à y penser.
+
+Ce code est tiré de la doc officielle de la crate.
+
+
 
 Traits, la POO turbo-chargée
 Notes : Pas d'héritage, pas de "abstract static final etc.". Une composition simple de méthodes
 
 
-Un exemple simple: J'ai une `LoginError`, et je veux la logger en Debug
+Un exemple simple: J'ai une `LoginError`, et je veux la déboguer
 Notes : Par exemple, j'ai un test qui plante et je veux comprendre pourquoi
 
 
 Une "fonction" super pratique: `dbg!(my_error)`
 ```rust
 let my_error = LoginError::AuthError("Oulà !");
-dbg!(my_error)
+dbg!(&my_error)
 ```
 
 
@@ -258,7 +361,20 @@ pub enum LoginError {
 ```
 
 
-Une autre solution, implémenter explicitement le trait `Debug`
+Ok pour les cas de base, mais implémenter explicitement `Debug` (ou autre trait) ?
+
+
+Encore une fois, le LSP est là pour nous aider 😍
+
+<img class="r-stretch" src="assets/impl-debug.png">
+
+
+On obtient une implémentation "par defaut", qu'on peut customiser 🤤
+
+<img class="r-stretch" src="assets/impl-debug-full.png">
+
+
+Et on obtient alors le code final :
 ```rust
 impl std::fmt::Debug for LoginError {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
@@ -274,7 +390,7 @@ impl std::fmt::Debug for LoginError {
 ```
 
 
-On obtient alors quelque chose de plus clair
+Ce qui nous permet d'avoir un détail de l'erreur bien plus clair :
 ```rust
 Failed to log in user.
 Caused by:
@@ -292,16 +408,20 @@ La "blanket implementation"
 Notes : L'art d'implémenter des méthodes pour d'autres types.
 
 
-"Améliorer" le type `String` :
+Ça serait pas mal de "convertir" un type en un autre 🤔
 ```rust
-let FormData {
+struct FormData {
     key: String,
-} = form;
-let key: SecurityKey = key.try_into().map_err(error_400)?;
+}
+
+let secure_key: SecurityKey = form.key
+  .try_into()
+  .map_err(error_400)?;
 ```
+Notes : Et s'éviter ainsi d'avoir à appeller le .parse() qu'on a écrit
 
 
-`SecurityKey` a une _blanket implementation_ pour le type `String`
+`SecurityKey` a une _blanket implementation_ pour le type `String` 💡
 ```rust
 impl TryFrom<String> for SecurityKey {
 type Error = anyhow::Error;
@@ -320,10 +440,30 @@ fn try_from(s: String) -> Result<Self, Self::Error> {
 Notes : Suffit d'importer `SecurityKey` et cet `impl` et le tour est joué !
 
 
-Des Architecture Hexagonale
+
+Architecture Hexagonale
+Notes : Le mot est lâché !
 
 
-Domain Driven Design
+Rappel à toutes fins utiles:
+
+<img class="r-stretch" src="assets/hexagonal-architecture-diagram.jpg">
+
+
+Donc, si vous avez bien suivi…
+
+<img class="r-stretch" src="assets/hexagonal-architecture-diagram-in-rust.png">
+
+
+Mais, en vrai…
+
+<img class="r-stretch" src="assets/hexagonal-architecture-diagram-in-TRUE-rust.png">
+
+
+
+Domain Driven Design + Rust = 💓
+
+<img class="r-stretch" src="assets/master-hexa-architecture-in-rust.png">
 
 
 
