@@ -19,3 +19,7 @@
 
 <!-- .slide: data-background-video="common/assets/combo-yt-twitch.webm" data-background-video-loop data-background-video-muted -->
 <div> </div>
+
+
+<!-- .slide: data-background-image="common/assets/permacodeur-aoc2025.png" data-background-size="contain" -->
+<div> </div>

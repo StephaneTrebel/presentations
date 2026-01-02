@@ -23,7 +23,7 @@ Notes : Mind blown sur le Arc<Box<Dyn<Mutex<UltraInstinct<SSJ4<String>>>>>>
 Et si je vous disais que tout ceci est probablement vrai, mais que ce n'est pas pour ça que Rust m'intéresse ?
 
 <img src="assets/bernie_rust.jpeg" alt="I am once again asking you to try Rust">
-Notes : C'est vrai, en plus 
+Notes : C'est vrai, en plus
 
 
 🦀Rust, pour des applications métiers 🦀
@@ -42,11 +42,11 @@ La base: Structs, et "Newtypes"
 
 Un cas ultra-classique:
 ```rust
-pub struct NewUser {
+pub struct User {
     pub email: String,
 }
 
-fn ma_fonction(user: NewUser) {
+fn ma_fonction(user: User) {
   if !user.email.contains("@") {
      // Gestion de l'erreur, etc.
   }
@@ -65,7 +65,7 @@ Encoder la logique métier, le rêve ! 😌
 ```rust
 use crate::domain::UserEmail;
 
-pub struct NewUser {
+pub struct User {
     // Attendez…c'est quoi ça ?
     pub email: UserEmail,
 }
@@ -124,14 +124,14 @@ Notes : On reviendra là-dessus, mais les tests sont colocalisés avec le code.
 pub struct Address(String);
 pub struct UserEmail(String);
 
-pub struct NewUser { pub email: UserEmail }
+pub struct User { pub email: UserEmail }
 
-let my_user = NewUser {
+let my_user = User {
   // Erreur ! Pas un UserEmail, mais un String !
   email: "steph@mydomain.com"
 }
 
-let my_user = NewUser {
+let my_user = User {
   // Erreur ! Pas un UserEmail, mais un Address !
   email: Address("steph@mydomain.com")
 }
@@ -143,12 +143,11 @@ Il faut utiliser le newtype prévu :
 ```rust
 use crate::domain::UserEmail;
 
-pub struct NewUser {
-    // Attendez…c'est quoi ça ?
+pub struct User {
     pub email: UserEmail,
 }
 
-let my_user = NewUser {
+let my_user = User {
   // Ok 👍
   email: UserEmail::parse("steph@mydomain.com")?;
 }
@@ -161,6 +160,53 @@ Notes : Un principe fondamental en Rust.
 Lié à la philosophie Impureim: on veut au plus possible travailler dans un univers "pur", sans effects secondaires, qu'on maîtrise.
 
 On _encode notre logique_ -> Type Driven Development.
+
+
+<img class="r-stretch" src="assets/impureim-sandwich.png" alt="Impureim Sandwich, de Mark Seeman">
+
+
+
+L'Α et l'Ω du Type Driven Development:
+
+Le Pattern Matching
+
+
+Exemple avec un enum (tout bête) :
+
+<img class="r-stretch" src="assets/enum-example.png">
+
+
+Si on veut pouvoir l'utiliser, on peut s'aider de `match`
+
+<img class="r-stretch" src="assets/pattern-matching-enum.png">
+
+
+Fort heureusement on a ce qu'il faut avec le LSP de Rust 😌
+
+<img class="r-stretch" src="assets/pattern-matching-fill-match-arms.png">
+
+
+Et y a plus qu'à remplir !
+
+<img class="r-stretch" src="assets/pattern-matching-filled-match-arms.png">
+
+
+<!-- .slide: data-background-image="assets/pattern-matching-filled-match-arms-with-if.png" data-background-size="contain" -->
+
+
+Et on peut aller très très loin !
+<img class="r-stretch" src="assets/pattern-matching-advanced.png">
+
+
+<!-- .slide: data-background-image="assets/pattern-matching-advanced-with-error.png" data-background-size="contain" -->
+
+
+Finalement, tout s'arrange 😉
+<img class="r-stretch" src="assets/pattern-matching-advanced-without-error.png">
+
+
+
+Les "Boîtes" de Rust
 
 
 "Mais, attends, c'est quoi Result, Ok, et Err ?"
@@ -195,12 +241,14 @@ Notes : Dont Javascript, et c'est la raison pour laquelle Microsoft dépense une
 Notes : En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
 
 
-L'Α et l'Ω du Type Driven Development:
+<img class="r-stretch" src="assets/result.png" alt="Result<> dans Rust">
+Notes : Either Monad, mon amour
 
-Le Pattern Matching
+
+Un Result étant un Enum (`Ok` ou `Err`), on peut le `match`
 ```rust
 /// validate_credentials:
-///   (Credentials)-> Result<Uuid, AuthenticationError>
+///   (Credentials)-> Result<Uuid, LoginError>
 match validate_credentials(credentials).await {
 }                       ╭Choose action ─────╮
                         │1. Fill match arms │
@@ -217,7 +265,7 @@ match validate_credentials(credentials).await {
 ```
 
 
-Et ensuite, on met le code final:
+Finalement, on met le code final:
 ```rust
 match validate_credentials(credentials).await {
   Ok(user_id) => {
@@ -233,17 +281,17 @@ match validate_credentials(credentials).await {
 
 
 "On est obligés de gérer à chaque fois `Ok` et `Err` ?"
-Non.
+Non, y a `.unwrap()` pour ça
 ```rust
 /// In this case, we ALWAYS have an IP Address
 let port = listener.local_addr().unwrap().port();
 ```
 
 
-Mais pourquoi qu'on s'inflige ça, alors ?
-Parce que l'alternative est... pire.
+Mais pourquoi qu'on s'inflige le `match`, alors ?
 
-<img src="assets/unwrap-me-i-double-dare-you.jpg" alt=".unwrap() me, I double dare you !">
+Parce que l'alternative est... pire.
+<img class="r-stretch" src="assets/unwrap-me-i-double-dare-you.jpg" alt=".unwrap() me, I double dare you !">
 
 
 Et même les plus gros se font avoir :
@@ -251,7 +299,7 @@ Et même les plus gros se font avoir :
 <img class="r-stretch" src="assets/cloudflare-incident.png" alt="La fameuse erreur Cloudflare de novembre 2025">
 
 
-Moralité: Réservez `.unwrap` pour le code de test, et apprenez à propager/gérer les Results
+Réservez `.unwrap()` pour le code de test et apprenez à propager ou gérer les `Result`
 ```rust
 fn my_function() -> Result<PortNumber, Error> {
   /// In this case, we SHOULD have an IP address.
@@ -321,6 +369,20 @@ Traits, la POO turbo-chargée
 Notes : Pas d'héritage, pas de "abstract static final etc.". Une composition simple de méthodes
 
 
+<!-- .slide: data-background-image="assets/traits-in-one-picture.png" data-background-size="contain" -->
+
+
+Comme pour les enums, on peut utiliser le puissant LSP de Rust
+
+<img class="r-stretch" src="assets/trait-implement-missing-members.png">
+
+
+<!-- .slide: data-background-image="assets/trait-implemented-missing-members.png" data-background-size="contain" -->
+
+
+Les traits "standards"
+
+
 Un exemple simple: J'ai une `LoginError`, et je veux la déboguer
 Notes : Par exemple, j'ai un test qui plante et je veux comprendre pourquoi
 
@@ -365,16 +427,39 @@ Ok pour les cas de base, mais implémenter explicitement `Debug` (ou autre trait
 
 
 Encore une fois, le LSP est là pour nous aider 😍
+```rust
+pub enum LoginError {
+    AuthError(String),
+    UnexpectedError(String),
+}
 
-<img class="r-stretch" src="assets/impl-debug.png">
+impl std::fmt::Debug for LoginError {}
+              ╭Choose action ─────────────╮
+              │1. Implement missing members │
+              ╰─────────────────────────╯
+```
 
 
 On obtient une implémentation "par defaut", qu'on peut customiser 🤤
 
-<img class="r-stretch" src="assets/impl-debug-full.png">
+```rust
+impl std::fmt::Debug for LoginError {
+  fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+    match self {
+      Self::AuthError(arg0) =>
+          f.debug_tuple("AuthError").field(arg0).finish(),
+      Self::UnexpectedError(arg0) =>
+          f.debug_tuple("UnexpectedError").field(arg0).finish(),
+    }
+  }
+}
+```
 
 
-Et on obtient alors le code final :
+Et on y met ce qu'on veut
+
+(tant qu'on respecte le Trait, bien sûr)
+
 ```rust
 impl std::fmt::Debug for LoginError {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
@@ -388,9 +473,10 @@ impl std::fmt::Debug for LoginError {
     }
 }
 ```
+Notes : Ici j'utilise .source() pour remonter la chaîne d'erreurs
 
 
-Ce qui nous permet d'avoir un détail de l'erreur bien plus clair :
+Ce qui nous permet d'avoir un détail de l'erreur bien plus clair en debug :
 ```rust
 Failed to log in user.
 Caused by:
@@ -402,13 +488,13 @@ Caused by:
 ```
 
 
-La "blanket implementation"
+La "blanket implementation" d'un Trait pour un Type
 
 <img class="r-stretch" src="assets/cozy-pepe.png" alt="Pepe sait être cosy sous son plaid">
 Notes : L'art d'implémenter des méthodes pour d'autres types.
 
 
-Ça serait pas mal de "convertir" un type en un autre 🤔
+Idée: Ça serait pas mal de facilement "convertir" un type en un autre 🤔
 ```rust
 struct FormData {
     key: String,
@@ -440,6 +526,12 @@ fn try_from(s: String) -> Result<Self, Self::Error> {
 Notes : Suffit d'importer `SecurityKey` et cet `impl` et le tour est joué !
 
 
+Et des types/traits/boîtes comme ça, vous en avez PLEIN, dans Rust 🤩
+- `Option` (`Some<…>` ou `None`)
+- `Debug` vs `Display`
+- `Deref`
+- `Drop`
+
 
 Architecture Hexagonale
 Notes : Le mot est lâché !
@@ -460,38 +552,68 @@ Mais, en vrai…
 <img class="r-stretch" src="assets/hexagonal-architecture-diagram-in-TRUE-rust.png">
 
 
+Et c'est ok !
+```rust
+fn process_data<F, B>(foo: F, bar: B) -> String
+where
+    F: Clone + Debug,
+    B: Display + PartialEq,
+{
+    // Function implementation
+    format!("{:?} - {}", foo, bar)
+}
+```
 
-Domain Driven Design + Rust = 💓
+
+⬢ + 🦀 = 💓
 
 <img class="r-stretch" src="assets/master-hexa-architecture-in-rust.png">
 
 
 
 Un écosystème de librairies applicatives solide, complet, et agréablement documenté
-(ou: Cargo, mon amour 💓)
+
+(« Cargo, mon amour 💓 »)
 
 
-Les vénérables librairies axum, actix-web
+Les vénérables librairies axum et actix-web
+Notes : Ont popularisé d'autres crates à travers elles, et cette autre façon de faire du Rust Applicatif
 
 
-Les furieux frameworks dioxus, leptos
+Axum
+
+<img class="r-stretch" src="assets/axum.png" alt="Axum">
+Notes : Mon premier, très simple (type Express), qui a bien évolué depuis
+
+
+Actix-web
+
+<img class="r-stretch" src="assets/actix-json.png" alt="L'extracteur JSON dans Actix-Web">
+Notes : Les extracteurs Actix c'est une tuerie, et vous pouvez faire les votres (par ex, un extrateur de Cookie de Session)
+
+
+Dioxus, le framework isomorphique qui monte !
+
+<img class="r-stretch" src="assets/dioxus-intro.png" alt="L'introduction de Dioxus, et son fameux RSX">
+
+
+<!-- .slide: data-background-image="assets/dioxus-montage.png" data-background-size="contain" -->
 
 
 Il faut qu'on parle de `sqlx`
 
 
-Les autres poids lourds : serde, tera
+<!-- .slide: data-background-image="assets/sqlx-simple.png" data-background-size="contain" -->
+
+
+<!-- .slide: data-background-image="assets/sqlx-complex.png" data-background-size="contain" -->
+
+
+Les autres poids lourds : serde, tera, chrono, et bien d'autres !
 
 
 
-La Documentation en Rust
-
-
-
-Une manière de tester les applications qui n'a pas son pareil,
-
-
-Test unitaires colocalisés avec le code
+Une manière de tester les applications qui n'a pas son pareil
 
 
 On peut même tester…sa doc 🤯
@@ -503,10 +625,11 @@ Tests d'Intégration
 Mocks (wiremocks)
 
 
-Property Testing
+<!-- .slide: data-background-image="assets/wiremock-idempotence.png" data-background-size="contain" -->
 
 
 Aller plus loin...
+Notes : Property testing, optimisations diverses, hyperfine, et bien d'autres !
 
 
-Zero2Production in Rust !
+<img class="r-stretch" src="assets/z2p-book.png" alt="Zero2Production in Rust, le livre qui a changé ma vie">
