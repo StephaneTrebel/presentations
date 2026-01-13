@@ -4,25 +4,25 @@ Notes : Bienvenue tout le monde !
 
 Rust 🦀 est connu pour être un langage qui favoriserait le "bas-niveau"...
 
-<img src="assets/embedded_rust_example.png" alt="Os court !">
+<img src="assets/embedded_rust_example.png">
 Notes : Ajouter une image d'exemple "embedded"
 
 
 Pour des masochistes férus d'optimisations mémoire...
 
-<img src="assets/borrow_checker_meme.jpeg" alt="Cosplay de policier">
+<img src="assets/borrow_checker_meme.jpeg">
 Notes : Meme borrow checker
 
 
 À la syntaxe souvent qualifiée d'exigeante, quand ce n'est pas carrément "cryptique"... 🤯
 
-<img src="assets/coerce_what_now.png" alt="Coercing Arc<Mutex<Option<Box<MyStruct>>>>> to Arc<Mutex<Option<Box<dyn Trait>>>>> won't work">
+<img src="assets/coerce_what_now.png">
 Notes : Mind blown sur le Arc<Box<Dyn<Mutex<UltraInstinct<SSJ4<String>>>>>>
 
 
 Et si je vous disais que tout ceci est probablement vrai, mais que ce n'est pas pour ça que Rust m'intéresse ?
 
-<img src="assets/bernie_rust.jpeg" alt="I am once again asking you to try Rust">
+<img src="assets/bernie_rust.jpeg">
 Notes : C'est vrai, en plus
 
 
@@ -155,14 +155,14 @@ let my_user = User {
 ```
 
 
-<img class="r-stretch" src="assets/parse_dont_validate.png" alt="Parse, don't validate, d'Alexs King">
+<img class="r-stretch" src="assets/parse_dont_validate.png">
 Notes : Un principe fondamental en Rust.
 Lié à la philosophie Impureim: on veut au plus possible travailler dans un univers "pur", sans effects secondaires, qu'on maîtrise.
 
 On _encode notre logique_ -> Type Driven Development.
 
 
-<img class="r-stretch" src="assets/impureim-sandwich.png" alt="Impureim Sandwich, de Mark Seeman">
+<img class="r-stretch" src="assets/impureim-sandwich.png">
 
 
 
@@ -232,16 +232,16 @@ impl UserEmail {
 Notes : Toutes les réponses sont valables, mais une l'est historiquement
 
 
-<img class="r-stretch" src="assets/billion_dollar_mistake.png" alt="Tony Hoare Wikipedia">
+<img class="r-stretch" src="assets/billion_dollar_mistake.png">
 L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languages qui l'ont suivi
 Notes : Dont Javascript, et c'est la raison pour laquelle Microsoft dépense une fortune dans mon linter préféré (TypeScript)
 
 
-<img class="r-stretch" src="assets/nilnilnil.jpeg" alt="Mohg est innocent !">
+<img class="r-stretch" src="assets/nilnilnil.jpeg">
 Notes : En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
 
 
-<img class="r-stretch" src="assets/result.png" alt="Result<> dans Rust">
+<img class="r-stretch" src="assets/result.png"> dans Rust">
 Notes : Either Monad, mon amour
 
 
@@ -291,12 +291,12 @@ let port = listener.local_addr().unwrap().port();
 Mais pourquoi qu'on s'inflige le `match`, alors ?
 
 Parce que l'alternative est... pire.
-<img class="r-stretch" src="assets/unwrap-me-i-double-dare-you.jpg" alt=".unwrap() me, I double dare you !">
+<img class="r-stretch" src="assets/unwrap-me-i-double-dare-you.jpg">
 
 
 Et même les plus gros se font avoir :
 
-<img class="r-stretch" src="assets/cloudflare-incident.png" alt="La fameuse erreur Cloudflare de novembre 2025">
+<img class="r-stretch" src="assets/cloudflare-incident.png">
 
 
 Réservez `.unwrap()` pour le code de test et apprenez à propager ou gérer les `Result`
@@ -490,7 +490,7 @@ Caused by:
 
 La "blanket implementation" d'un Trait pour un Type
 
-<img class="r-stretch" src="assets/cozy-pepe.png" alt="Pepe sait être cosy sous son plaid">
+<img class="r-stretch" src="assets/cozy-pepe.png">
 Notes : L'art d'implémenter des méthodes pour d'autres types.
 
 
@@ -573,32 +573,6 @@ where
 
 Un écosystème de librairies applicatives solide, complet, et agréablement documenté
 
-(« Cargo, mon amour 💓 »)
-
-
-Les vénérables librairies axum et actix-web
-Notes : Ont popularisé d'autres crates à travers elles, et cette autre façon de faire du Rust Applicatif
-
-
-Axum
-
-<img class="r-stretch" src="assets/axum.png" alt="Axum">
-Notes : Mon premier, très simple (type Express), qui a bien évolué depuis
-
-
-Actix-web
-
-<img class="r-stretch" src="assets/actix-json.png" alt="L'extracteur JSON dans Actix-Web">
-Notes : Les extracteurs Actix c'est une tuerie, et vous pouvez faire les votres (par ex, un extrateur de Cookie de Session)
-
-
-Dioxus, le framework isomorphique qui monte !
-
-<img class="r-stretch" src="assets/dioxus-intro.png" alt="L'introduction de Dioxus, et son fameux RSX">
-
-
-<!-- .slide: data-background-image="assets/dioxus-montage.png" data-background-size="contain" -->
-
 
 Il faut qu'on parle de `sqlx`
 
@@ -613,23 +587,103 @@ Les autres poids lourds : serde, tera, chrono, et bien d'autres !
 
 
 
+Les Frameworks haut-niveau de Rust 🦀
+
+
+Les vénérables axum et actix-web
+Notes : Ont popularisé d'autres crates à travers elles, et cette autre façon de faire du Rust Applicatif
+
+
+Axum
+
+<img class="r-stretch" src="assets/axum.png">
+Notes : Mon premier, très simple (type Express), qui a bien évolué depuis
+
+
+Actix-web
+
+<img class="r-stretch" src="assets/actix-json.png">
+Notes : Les extracteurs Actix c'est une tuerie, et vous pouvez faire les votres (par ex, un extrateur de Cookie de Session)
+
+
+Mais le monde des (c)rustacés va vite, très vite…
+
+
+Dioxus, le framework isomorphique qui monte !
+
+<img class="r-stretch" src="assets/dioxus-intro.png">
+
+
+<!-- .slide: data-background-image="assets/dioxus-montage.png" data-background-size="contain" -->
+
+
+Vous venez plutôt de Rails et RoR ? No problemo…
+
+
+<!-- .slide: data-background-image="assets/loco-rs-montage.png" data-background-size="contain" -->
+
+
+
 Une manière de tester les applications qui n'a pas son pareil
 
 
-On peut même tester…sa doc 🤯
+<!-- .slide: data-background-image="assets/cargo-test-colocalized.png" data-background-size="contain" -->
 
 
-Tests d'Intégration
+La doc des projets Rust est… \*chef kiss\* 🤌
 
 
-Mocks (wiremocks)
+<img class="r-stretch" src="assets/adder-doc.png">
+
+
+<!-- .slide: data-background-image="assets/rust-doc-as-code.png" data-background-size="contain" -->
+**TOUT EST « AS CODE »**
+Notes : Plus vous mettez d'info dans le code, plus ça renvoie de la valeur.
+
+Et les LLMs adoooorent ça
+
+
+`cargo doc` , tout simplement
+
+<img class="r-stretch" src="assets/cargo-doc-tests.png">
+
+
+Oh, et ils sont *par défaut* testé par `cargo test` 😎
+
+<img class="r-stretch" src="assets/cargo-doc-passing-test.png">
+
+
+Votre doc contribue ne fait pas que décrire vos invariants,
+elle les contrôle ! 💪
+
+<img class="r-stretch" src="assets/cargo-doc-failing-test.png">
+
+
+Tests d'Intégration ?
+
+Facile ! On les met dans `/tests` (avec du code de setup si besoin)
+
+<img class="r-stretch" src="assets/integration_test.png">
+
+
+D'ailleurs… Il faut qu'on parle de Wiremocks 🤩
+
+
+Un cas difficile à tester : L'idempotence
+
+<img class="r-stretch" src="assets/idempotency.gif">
 
 
 <!-- .slide: data-background-image="assets/wiremock-idempotence.png" data-background-size="contain" -->
 
 
-Aller plus loin...
+Si vous voulez aller plus loin...
+
+(parce qu'il y en a encore plein, des dingueries comme ça 😅, dans Rust)
 Notes : Property testing, optimisations diverses, hyperfine, et bien d'autres !
 
 
-<img class="r-stretch" src="assets/z2p-book.png" alt="Zero2Production in Rust, le livre qui a changé ma vie">
+<img class="r-stretch" src="assets/z2p-book.png">
+
+
+<img class="r-stretch" src="assets/learn-rust-with-linked-lists.png">

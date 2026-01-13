@@ -23,3 +23,7 @@
 
 <!-- .slide: data-background-image="common/assets/permacodeur-aoc2025.png" data-background-size="contain" -->
 <div> </div>
+
+
+<!-- .slide: data-background-image="common/assets/permacodeur-commentaire-articles.png" data-background-size="contain" -->
+<div> </div>
