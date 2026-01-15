@@ -241,7 +241,7 @@ Notes : Dont Javascript, et c'est la raison pour laquelle Microsoft dépense une
 Notes : En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
 
 
-<img class="r-stretch" src="assets/result.png"> dans Rust">
+<img class="r-stretch" src="assets/result.png">
 Notes : Either Monad, mon amour
 
 
@@ -653,7 +653,7 @@ Oh, et ils sont *par défaut* testé par `cargo test` 😎
 <img class="r-stretch" src="assets/cargo-doc-passing-test.png">
 
 
-Votre doc contribue ne fait pas que décrire vos invariants,
+Votre doc ne fait pas que décrire vos invariants,
 elle les contrôle ! 💪
 
 <img class="r-stretch" src="assets/cargo-doc-failing-test.png">
