@@ -677,6 +677,7 @@ Un cas difficile à tester : L'idempotence
 <!-- .slide: data-background-image="assets/wiremock-idempotence.png" data-background-size="contain" -->
 
 
+
 Si vous voulez aller plus loin...
 
 (parce qu'il y en a encore plein, des dingueries comme ça 😅, dans Rust)
@@ -687,3 +688,6 @@ Notes : Property testing, optimisations diverses, hyperfine, et bien d'autres !
 
 
 <img class="r-stretch" src="assets/learn-rust-with-linked-lists.png">
+
+
+<!-- .slide: data-background-image="assets/lets-get-rusty.png" data-background-size="contain" -->
