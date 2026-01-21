@@ -1,0 +1,7 @@
+/::
+add_styles: assets/theme.css
+::/
+
+# Rust 🦀, pour des applications métier haut-niveau !
+
+!include(slides)
