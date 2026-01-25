@@ -1,0 +1,31 @@
+:root {
+    --sd-background-color: #fff;
+    --sd-heading-color: #222333;
+    --sd-text-color: #222333;
+    --sd-primary-color: #6abfad;
+}
+
+.sd-slide::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(logo_tnt.svg);
+    background-position: right 2vw bottom 2vh;
+    background-repeat: no-repeat;
+    background-size: 10vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.25;
+    z-index: -1;
+}
+
+.cover {
+    background-color: var(--sd-primary-color);
+
+    h1,
+    h2 {
+        color: var(--sd-background-color);
+    }
+}
