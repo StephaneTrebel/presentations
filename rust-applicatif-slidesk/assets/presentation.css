@@ -1,0 +1,24 @@
+.vertical-bar {
+  background-color: gray;
+  height: 10rem;
+  width: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.flex-row {
+	display: flex;
+  flex-direction: row;
+	align-items: center;
+  justify-content: space-around;
+
+  width: 100%
+}
+
+.flex-column {
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+

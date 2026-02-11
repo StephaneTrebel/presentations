@@ -1,5 +1,6 @@
 /::
 add_styles: assets/theme.css
+add_styles: assets/presentation.css
 ::/
 
 !include(slides)

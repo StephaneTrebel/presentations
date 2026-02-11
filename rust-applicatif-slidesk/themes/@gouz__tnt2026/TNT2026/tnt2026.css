@@ -1,8 +1,8 @@
 :root {
     --sd-background-color: #fff;
-    --sd-heading-color: #222333;
+    --sd-heading-color: #6abfad;
     --sd-text-color: #222333;
-    --sd-primary-color: #6abfad;
+    --sd-primary-color: #222333;
 }
 
 .sd-slide::after {

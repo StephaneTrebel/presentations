@@ -1,10 +1,66 @@
-## Stéphane TREBEL .[speaker]
+## Stéphane TRÉBEL .[speaker]
+# Le Permacodeur
 
-!image(assets/profil.jpg,avatar,150)
+!image(assets/profil.jpg,avatar,250)
+<br>
+<br>
+
+### ERP 👔
+### Web 🌍
+### Rust 🦀
 
 
-- ERP 👔
+## .[full-image]
 
-- Web 🌍
+<video autoplay loop src="common/assets/combo-yt-twitch.webm"></video>
 
-- Rust 🦀
+## .[full-image]
+!image(common/assets/permacodeur-aoc2025.png,,1800)
+
+
+## .[full-image]
+!image(common/assets/permacodeur-commentaire-articles.png,,1800)
+
+## .[full-image]
+<div class="flex-column">
+  <div class="flex-row">
+    <div class="flex-column">
+      <span>Les liens 🤓</span>
+      <img
+        src="common/assets/qr-code-linktree-moi.svg"
+        style="width: 13vw"
+        alt="Mon Linktree qui regroupe tous les liens de cette conférence"
+      />
+    </div>
+    <div class="flex-column">
+      <span>Vos feedbacks 🫶</span>
+      <img
+        src="assets/qr-code-snowcamp-2026.svg"
+        style="width: 13vw"
+        alt="QR Code pointant vers l'Openfeedback de cette conférence"
+      />
+    </div>
+  </div>
+
+  <div class="flex-row" style="margin-top: 10rem">
+    <div class="flex-column" style="margin: 30px">
+      <img
+        src="assets/profil.jpg"
+        alt="Moi <3"
+        style="max-width: 10rem; clip-path: circle(5rem at center)"
+      />
+    </div>
+    <div class="vertical-bar"></div>
+      <div>
+        <em>
+          Rust 🦀 a désormais tout ce qu'il faut pour délivrer de la valeur<br>
+          pour vos applications métier. Jetez-y un œil !
+        </em>
+        👀
+      </div>
+    </div>
+  </div>
+</div>
+/*
+  À gauche mon dépôt Git, à droite le lien vers pour les feedbacks
+*/

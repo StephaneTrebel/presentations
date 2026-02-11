@@ -38,7 +38,7 @@
 */
 
 
-## Des outils et des crabes .[chapter]
+## Des crabes et des hommes .[chapter]
 # 🦀Rust🦀
 # pour des applications métiers
 
@@ -153,7 +153,7 @@ mod tests {
 */
 
 
-## Un newtype n'est pas égal à un autre type !
+## Un newtype n'est pas égal à un autre newtype !
 
 ```rust
 pub struct Address(String);
@@ -286,7 +286,7 @@ fn my_function(e: LoginError) {
     match e {
         LoginError::AuthenticationError(_) => todo!("Ah, pas cool 😱"),
         LoginError::SSOErrorCode(_) => todo!("Oulà ! Encore moins cool 😓"),
-        LoginError::UnexpectedError(_) => todo!("Alors là jsp moi… 😅"),
+        LoginError::UnexpectedError(_) => todo!("Alors là jpp, moi… 😅"),
     }
 }
 ```
@@ -302,7 +302,7 @@ fn my_function(e: LoginError) {
         LoginError::SSOErrorCode(c)
           if c > 42 && c < 1337 => todo!("Oulà ! Encore moins cool 😓"),
         LoginError::UnexpectedError(error)
-          if error.is_empty() => todo!("Alors là jsp moi… 😅"),
+          if error.is_empty() => todo!("Alors là jpp, moi… 😅"),
     }
 }
 ```
@@ -397,11 +397,13 @@ pub fn move_player((&x, &y): Coordinates, direction: &Direction) {
 ```
 
 
-## Le moment où ça a fait '💡' dans ma tête .[chapter]
+## .[chapter]
 # Les "Boîtes" de Rust
 
+!image(assets/whats-in-the-box.jpeg)
 
-## "Mais, attends, c'est quoi Result, Ok, et Err ?"
+
+## Revenons à notre `UserEmail`
 
 ```rust
 use validator::ValidateEmail;
@@ -427,7 +429,7 @@ impl UserEmail {               +-------------------------+
 
 ## Moment Kahoot !
 
-!image(assets/kahoot_billion_dollar_mistake.jpg)
+!image(assets/kahoot_billion_dollar_mistake.jpg,,1800)
 
 /*
  Toutes les réponses sont valables, mais une l'est historiquement
@@ -436,7 +438,7 @@ impl UserEmail {               +-------------------------+
 
 ## Hé oui, c'est bien Null:
 
-!image(assets/billion_dollar_mistake.png)
+!image(assets/billion_dollar_mistake.png,,1800)
 
 /*
 L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languages qui l'ont suivi
@@ -451,7 +453,7 @@ L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languag
  En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
 */
 
-## Bienvenue dans le multivers !
+## D'autres, comme Rust, plongent dans le multivers !
 
 !image(assets/result.png)
 
@@ -464,7 +466,9 @@ L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languag
 
 ```rust
 // validate_credentials:
-//   (Credentials) -> Result<Uuid, LoginError>
+//
+//   Credentials -> Result<Uuid, LoginError>
+//
 match validate_credentials(credentials).await {
 }                       +Choose action -----+
                         |1. Fill match arms |
@@ -476,10 +480,15 @@ match validate_credentials(credentials).await {
 
 ```rust
 // validate_credentials:
-//   (Credentials) -> Result<Uuid, LoginError>
+//
+//   Credentials -> Result<Uuid, LoginError>
+//
 match validate_credentials(credentials).await {
+
     Ok(_) => todo!("rajouter le cas où tout est ok"),
+
     Err(_) => todo!("rajouter la gestion d'erreur"),
+
 }
 ```
 
@@ -499,10 +508,10 @@ match validate_credentials(credentials).await {
 }
 ```
 
-## "On est obligés de matcher à chaque fois un Result ?"
+## "On est obligés de `match` à chaque fois un Result ?"
 
 
-## Non, on peut utiliser par ex. `.unwrap()` pour ça
+## Non, on peut utiliser (entre autres) `.unwrap()`, pour ça
 
 ```rust
 // Dans ce cas-ci, on est persuadés qu'on
@@ -511,7 +520,7 @@ let port = listener.local_addr().unwrap().port();
 ```
 
 
-## Mais pourquoi qu'on s'inflige `match`, alors ?
+## Mais pourquoi on s'inflige `match`, alors ?
 
 !image(assets/unwrap-me-i-double-dare-you.jpg)
 
@@ -536,11 +545,39 @@ fn my_function() -> Result<PortNumber, Error> {
 ## D'ailleurs, en parlant d'erreurs...
 
 
-## `anyhow` et `thiserror`, les jumeaux surdoués de la gestion d'erreur.
+## Les jumeaux surdoués de la gestion d'erreur .[chapter]
+# `anyhow` et `thiserror`
+
+!image(assets/captain-tsubasa-twn-shot.webp,,1100)
 
 /*
 Si les erreurs sont relous à gérer, vous les gérerez mal, et c'est là qu'il y aura des bugs.
 Fort heureusement, la communauté Rust a tout prévu ^^
+*/
+
+
+## `anyhow`, les erreurs faciles à créer :
+
+```rust
+use anyhow::{Context, Result};
+
+/*  Le Result ne précise même plus le type d'erreur */
+/*  car ce sera un `anyhow::Error` 👌 */
+fn main() -> Result<()> {
+
+  /*  .context permet d'emballer l'erreur avec…du contexte 😁 */
+  it.detach().context("Failed to detach the thing")?;
+
+  /*  L'utilisation de `?` veut simplement dire: */
+  /*  Si c'est une `Err` alors on bubble up ! */
+  /*  Sinon on "ouvre" la boîte `Ok` et on prend son contenu */
+  let content = std::fs::read(path)?;
+}
+```
+
+/*
+C'est plus simple quand on n'a plus à y penser.
+Note: Ce code est tiré de la doc officielle de la crate.
 */
 
 
@@ -570,33 +607,12 @@ Ce code est tiré de la doc officielle de la crate.
 Notez d'ailleurs l'enum: toutes les erreurs sont exhaustivement décrites ici (permettant d'utiliser le pattern matching)
 */
 
-## `anyhow`, les erreurs faciles à créer :
-
-```rust
-use anyhow::{Context, Result};
-
-/*  Le Result ne précise même plus le type d'erreur */
-/*  car ce sera un `anyhow::Error` 👌 */
-fn main() -> Result<()> {
-
-  /*  .context permet d'emballer l'erreur avec…du contexte 😁 */
-  it.detach().context("Failed to detach the thing")?;
-
-  /*  L'utilisation de `?` veut simplement dire: */
-  /*  Si c'est une `Err` alors on bubble up ! */
-  /*  Sinon on "ouvre" la boîte `Ok` et on prend son contenu */
-  let content = std::fs::read(path)?;
-}
-```
-
-/*
-C'est plus simple quand on n'a plus à y penser.
-Note: Ce code est tiré de la doc officielle de la crate.
-*/
 
 
-## « Là où on va, il n'y a pas d'abstract public void final static … » .[chapter]
-# Traits, la POO turbo-chargée 
+## .[chapter]
+# Traits, la POO turbo-chargée
+
+!image(assets/where-we-re-going-we-dont-need-classes.jpeg,,1300)
 
 /*
  Pas d'héritage, pas de "abstract static final etc.". Une composition simple de méthodes
@@ -674,15 +690,14 @@ impl PaymentProcessor for MyPaymentProcessor {
 
 
 ## Les traits "standards"
-
-## Un exemple simple: J'ai une `LoginError`, et je veux la déboguer
+#### Un exemple simple: J'ai une `LoginError`, et je veux la déboguer
 
 /*
  Par exemple, j'ai un test qui plante et je veux comprendre pourquoi
 */
 
 
-## Une "fonction" super pratique: `dbg!(my_error)`
+## Une "fonction" super pratique: `dbg!`
 
 ```rust
 let my_error = LoginError::AuthError("Oulà !");
@@ -791,61 +806,81 @@ Caused by:
 
 ## La "blanket implementation" d'un Trait pour un Type
 
-!image(assets/cozy-pepe.png)
+!image(assets/cozy-pepe.png,,800)
 
 /*
- L'art d'implémenter des méthodes pour d'autres types.
+ L'art d'automatiquement implémenter des méthodes pour d'autres types.
 */
 
 
-## Idée: Ça serait pas mal de facilement "convertir" un type en un autre 🤔
+## Idée: je veux logger correctement des trucs 🤔
 
 ```rust
-struct FormData {
-    key: String,
+trait Loggable { fn log(&self); }
+
+pub struct Cat { pub name: String, }
+
+fn main() {
+    let numbers = vec![1, 2, 3];
+    numbers.log(); // Erreur ! 💥
+    // Ah, mais oui ! Faut que j'implément Loggable pour u64 😫
+
+    let s = String::from("Blanket");
+    s.log(); // Erreur ! 💥
+    // Ah, mais oui ! Faut que j'implément Loggable pour String 😫
+
+    let c = Cat { name: "Astra".to_string(), };
+    c.log(); // Erreur ! 💥
+    // Ah, mais oui ! Faut que j'implément Loggable pour Cat 😫
+}
+```
+
+/*
+ Ça serait pas mal d'avoir à manuellement impl à chaque fois
+*/
+
+
+## `impl<T>`, parce que nous le valons bien 💇
+
+```rust
+trait Loggable { fn log(&self); }
+
+// Tout ce qui impl Debug va désormais automatiquement impl Loggable ! 🤩
+impl<T> Loggable for T
+where T: Debug {
+    fn log(&self) { println!("[log] {:?}", self); }
 }
 
-let secure_key: SecurityKey = form.key
-  .try_into()
-  .map_err(error_400)?;
+#[derive(Debug)]
+pub struct Cat { pub name: String, }
+
+fn main() {
+    let numbers = vec![1, 2, 3];
+    numbers.log(); // Vec<i32> impl nativement Debug, et donc Loggable ! 😌
+
+    let s = String::from("Blanket");
+    s.log(); // String impl nativement Debug, et donc Loggable ! 😌
+
+    let c = Cat { name: "Astra".to_string(), };
+    c.log(); // Cat impl Debug (via derive), et donc Loggable ! 😌
+}
 ```
 
-/*
- Et s'éviter ainsi d'avoir à appeller le .parse() qu'on a écrit
-*/
 
+## Et des types/traits/impl comme ça, vous en avez PLEIN, dans Rust 🤩
 
-## `SecurityKey` a une _blanket implementation_ pour le type `String` 💡
-
-```rust
-impl TryFrom<String> for SecurityKey {
-type Error = anyhow::Error;
-fn try_from(s: String) -> Result<Self, Self::Error> {
-    if s.is_empty() {
-        anyhow::bail!("The security key cannot be empty.")
-    }
-    let min_length = 50;
-    if s.len() < min_length {
-        anyhow::bail!(r#"The security key must be
-        longer that {min_length} characters"#)
-    }
-    Ok(Self(s))
-}}
 ```
-
-/*
- Suffit d'importer `SecurityKey` et cet `impl` et le tour est joué !
-*/
-
-
-## Et des types/traits/boîtes comme ça, vous en avez PLEIN, dans Rust 🤩
 - `Option` (`Some<…>` ou `None`)
 - `Debug` vs `Display`
 - `Deref`
 - `Drop`
+- ...et plein d'autres (sans compter ceux de la communauté 💓)
+```
 
 
 ## Architecture Hexagonale
+
+!image(assets/all-knowing-hexagon.jpeg,,800)
 
 /*
  Le mot est lâché !
@@ -884,7 +919,61 @@ where
 
 !image(assets/master-hexa-architecture-in-rust.png)
 
-## Un écosystème de librairies applicatives solide, complet, et agréablement documenté
+
+## .[chapter]
+# Tester dans Rust
+
+!image(assets/mike-tyson.jpg)
+
+
+## .[full-image]
+!image(assets/cargo-test-colocalized.png)
+
+## La doc des projets Rust est… *chef kiss* 🤌
+
+!image(assets/adder-doc.png)
+
+## TOUT est "as code":
+!image(assets/rust-doc-as-code.png,,2000)
+
+/*
+Plus vous mettez d'info dans le code, plus ça renvoie de la valeur.
+Et les LLMs adoooorent ça
+*/
+
+## `cargo doc` , tout simplement
+
+!image(assets/cargo-doc-tests.png)
+
+
+## Oh, et ils sont *par défaut* testés par `cargo test` 😎
+
+!image(assets/cargo-doc-passing-test.png)
+
+
+## Votre doc ne fait donc pas que décrire vos invariants, elle les contrôle ! 💪
+
+!image(assets/cargo-doc-failing-test.png)
+
+
+## Tests d'Intégration ?
+Facile ! On les met dans `/tests` (avec du code de setup si besoin)
+
+!image(assets/integration_test.png)
+
+## D'ailleurs… Il faut qu'on parle de Wiremocks 🤩
+
+## Un cas difficile à tester : L'idempotence
+
+!image(assets/idempotency.gif)
+
+## Résultat, avec Wiremocks:
+
+!image(assets/wiremock-idempotence.png)
+
+
+## Ça, c'est le moment où j'ai décidé de me carciniser 🦀 .[chapter]
+# Un écosystème complet
 
 ## Il faut qu'on parle de `sqlx`
 
@@ -897,8 +986,6 @@ where
 ## Les autres poids lourds : serde, tera, chrono, et bien d'autres !
 
 ## Les Frameworks haut-niveau de Rust 🦀
-
-## Les vénérables axum et actix-web
 
 /*
  Ont popularisé d'autres crates à travers elles, et cette autre façon de faire du Rust Applicatif
@@ -923,65 +1010,20 @@ where
 */
 
 
-## Mais le monde des (c)rustacés va vite, très vite…
+## Mais le monde des Rustacé-es(c) va vite, très vite…
 
 ## Dioxus, le framework isomorphique qui monte !
 
-!image(assets/dioxus-intro.png)
+!image(assets/dioxus-intro.png,,1300)
 
 ## On peut littéralement tout faire avec 🤯
 
-!image(assets/dioxus-montage.png)
+!image(assets/dioxus-montage.png,,1600)
 
-## Vous venez plutôt de Rails et RoR ? No problemo…
+## Vous venez plutôt de Rails et RoR ? No problemo…y a Loco 🚆
 
-!image(assets/loco-rs-montage.png)
+!image(assets/loco-rs-montage.png,,1600)
 
-## Une manière de tester les applications qui n'a pas son pareil
-
-!image(assets/cargo-test-colocalized.png)
-
-## La doc des projets Rust est… *chef kiss* 🤌
-
-!image(assets/adder-doc.png)
-
-## TOUT est "as code":
-!image(assets/rust-doc-as-code.png)
-
-/*
-Plus vous mettez d'info dans le code, plus ça renvoie de la valeur.
-Et les LLMs adoooorent ça
-*/
-
-## `cargo doc` , tout simplement
-
-!image(assets/cargo-doc-tests.png)
-
-
-## Oh, et ils sont *par défaut* testé par `cargo test` 😎
-
-!image(assets/cargo-doc-passing-test.png)
-
-
-## Votre doc ne fait pas que décrire vos invariants, elle les contrôle ! 💪
-
-!image(assets/cargo-doc-failing-test.png)
-
-
-## Tests d'Intégration ?
-Facile ! On les met dans `/tests` (avec du code de setup si besoin)
-
-!image(assets/integration_test.png)
-
-## D'ailleurs… Il faut qu'on parle de Wiremocks 🤩
-
-## Un cas difficile à tester : L'idempotence
-
-!image(assets/idempotency.gif)
-
-## Résultat, avec Wiremocks:
-
-!image(assets/wiremock-idempotence.png)
 
 ## Si vous voulez aller plus loin...
 
@@ -992,13 +1034,15 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 */
 
 
-## Zero2Production in Rust 🤩
+## .[full-image]
 
-!image(assets/z2p-book.png)
+!image(assets/z2p-book.png,,900)
 
-## Learn Rust with linked lists
 
-!image(assets/learn-rust-with-linked-lists.png)
+## .[full-image]
+
+!image(assets/learn-rust-with-linked-lists.png,,1100)
+
 
 ## YouTube: Let's Get Rusty !
 
