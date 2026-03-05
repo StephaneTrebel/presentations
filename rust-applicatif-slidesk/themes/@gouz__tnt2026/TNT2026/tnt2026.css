@@ -29,3 +29,8 @@
         color: var(--sd-background-color);
     }
 }
+
+.chapter > h2 {
+    color: var(--sd-primary-color);
+}
+

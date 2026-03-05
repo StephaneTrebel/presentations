@@ -11,8 +11,7 @@
 
 
 ## .[full-image]
-
-<video autoplay loop src="common/assets/combo-yt-twitch.webm"></video>
+!image(common/assets/combo-yt-twitch.png,,1800)
 
 ## .[full-image]
 !image(common/assets/permacodeur-aoc2025.png,,1800)
@@ -35,7 +34,7 @@
     <div class="flex-column">
       <span>Vos feedbacks 🫶</span>
       <img
-        src="assets/qr-code-snowcamp-2026.svg"
+        src="assets/qr-code-tnt-2026.svg"
         style="width: 13vw"
         alt="QR Code pointant vers l'Openfeedback de cette conférence"
       />

@@ -55,7 +55,7 @@ Donc pas d'embarqué, pas vraiment de contraintes en dehors de ce qu'on connaît
 */
 
 
-## La base: Structs, et "Newtypes" .[chapter]
+## La base: Structs, et "Newtypes"
 
 
 ## Un cas ultra-classique:
@@ -200,18 +200,16 @@ let my_user = User {
 /*
 Un principe fondamental en Rust.
 Lié à la philosophie Impureim: on veut au plus possible travailler dans un univers "pur", sans effects secondaires, qu'on maîtrise.
-On _encode notre logique_ -> Type Driven Development.
+On _encode notre logique_ -> Type Driven Dev.
 */
 
 
 ## Une autre manière de le voir:
 
-!image(assets/impureim-sandwich.png)
+!image(assets/impureim-sandwich.png,,1000)
 
 
-## L'Α et l'Ω du Type Driven Development… .[chapter]
-
-
+## L'Α et l'Ω du Type Driven Dev… .[chapter]
 # Le Pattern Matching
 
 
@@ -292,7 +290,7 @@ fn my_function(e: LoginError) {
 ```
 
 
-## On peut être arbitrairement complexe
+## On peut être arbitrairement complexe dans le matching
 
 ```rust
 fn my_function(e: LoginError) {
@@ -530,7 +528,7 @@ let port = listener.local_addr().unwrap().port();
 !image(assets/cloudflare-incident.png)
 
 
-## Réservez `.unwrap()` pour le code de test et apprenez à propager ou gérer les `Result`
+## Réservez `.unwrap()` pour le code de test et apprenez à propager ou gérer correctement les `Result`
 
 ```rust
 fn my_function() -> Result<PortNumber, Error> {
@@ -692,6 +690,13 @@ impl PaymentProcessor for MyPaymentProcessor {
 ## Les traits "standards"
 #### Un exemple simple: J'ai une `LoginError`, et je veux la déboguer
 
+```rust
+pub enum LoginError {
+    AuthenticationError(String),
+    UnexpectedError(String),
+}
+```
+
 /*
  Par exemple, j'ai un test qui plante et je veux comprendre pourquoi
 */
@@ -813,7 +818,7 @@ Caused by:
 */
 
 
-## Idée: je veux logger correctement des trucs 🤔
+## Idée: je veux customiser la manière de loguer de mes variables 🤔
 
 ```rust
 trait Loggable { fn log(&self); }
@@ -825,11 +830,11 @@ fn main() {
     numbers.log(); // Erreur ! 💥
     // Ah, mais oui ! Faut que j'implément Loggable pour u64 😫
 
-    let s = String::from("Blanket");
+    let s = String::from("Blanquette de Veau");
     s.log(); // Erreur ! 💥
     // Ah, mais oui ! Faut que j'implément Loggable pour String 😫
 
-    let c = Cat { name: "Astra".to_string(), };
+    let c = Cat { name: "Mimouchka".to_string(), };
     c.log(); // Erreur ! 💥
     // Ah, mais oui ! Faut que j'implément Loggable pour Cat 😫
 }

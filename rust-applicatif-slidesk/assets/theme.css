@@ -3,7 +3,7 @@
   --sd-heading1-line-height: 1;
   --sd-heading2-size: 3vw;
   --sd-heading2-line-height: 1;
-  --sd-text-size: 1.5vw;
+  --sd-text-size: 1.3vw;
   --sd-text-line-height: 1.2;
   --sd-caption-font-size: 1vw;
   --sd-caption-line-height: 1;
@@ -30,8 +30,27 @@
   }
 }
 
-.chapter {
-  h2 {
-    color: var(--sd-primary-color);
-  }
+.vertical-bar {
+  background-color: gray;
+  height: 10rem;
+  width: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
+
+.flex-row {
+	display: flex;
+  flex-direction: row;
+	align-items: center;
+  justify-content: space-around;
+
+  width: 100%
+}
+
+.flex-column {
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
