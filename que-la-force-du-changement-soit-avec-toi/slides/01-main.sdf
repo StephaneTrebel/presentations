@@ -1,0 +1,22 @@
+## Chapitre .[chapter]
+# Bienvenue ! 👋
+
+/*
+ Bienvenue tout le monde !
+*/
+
+## Titre de diapo
+
+!image(assets/mon_image.jpeg,,1000)
+
+/*
+ Ajouter une image d'exemple de 1000px de large
+*/
+
+## .[full-image]
+
+!image(assets/parse_dont_validate.png)
+
+/*
+ Une image qui prend tout l'écran
+*/
