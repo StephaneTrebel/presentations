@@ -1,3 +1,7 @@
+<!-- .slide: data-background-image="assets/slide-sponsors-agi-lille-2026.png" data-background-size="contain" -->
+<div> </div>
+
+
 <img class="r-stretch" src="assets/laurie-strode.gif" alt="Laurie Strode, notre héroïne">
 Notes: Elle, c'est Laurie.
 
