@@ -47,7 +47,7 @@
     <div class="flex-column">
       <h2>Vos feedbacks 🫶</h2>
       <img
-        src="assets/qr-code-breizhcamp-2026.svg"
+        src="assets/qr-code-sunnytech-2026.svg"
         style="width: 13vw"
         alt="QR Code pointant vers l'Openfeedback de cette conférence"
       />

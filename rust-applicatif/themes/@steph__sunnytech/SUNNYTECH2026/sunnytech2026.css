@@ -1,0 +1,118 @@
+:root {
+  --white: #fafafa;
+  --grey-3: #bdbdbd;
+  --grey-5: #212121;
+  --pink-2: #d63f49;
+
+  --sd-background-color: var(--white);
+  --sd-heading-color: var(--pink-2);
+  --sd-text-color: var(--grey-5);
+  --sd-primary-color: var(--grey-5);
+
+  --sd-heading1-size: 7vw;
+  --sd-heading1-line-height: 1;
+  --sd-heading2-size: 3vw;
+  --sd-heading2-line-height: 1;
+  --sd-text-size: 1.3vw;
+  --sd-text-line-height: 1.2;
+  --sd-caption-font-size: 1vw;
+  --sd-caption-line-height: 1;
+
+  /* SpeakerView */
+  --sd-sv-timer-size: 80px;
+  --sd-sv-text-size: 40px;
+  --sd-sv-text-line-height: 1.2;
+  --sd-sv-background-color: var(--grey-5);
+  --sd-sv-text-color: var(--white);
+}
+
+h1 {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -220deg,
+    color-mix(in hsl, var(--sd-heading-color) 80%, var(--sd-primary-color) 20%) 0%,
+    color-mix(in hsl, var(--sd-heading-color) 50%, var(--sd-primary-color) 50%) 29%,
+    color-mix(in hsl, var(--sd-heading-color) 20%, var(--sd-primary-color) 80%) 67%,
+    var(--sd-primary-color) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: var(--white);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 150px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+h2 {
+  color: color-mix(in lch decreasing hue, var(--sd-heading-color) 30%, var(--sd-primary-color) 70%) !important;
+}
+
+.chapter > h2 {
+  color: var(--sd-primary-color);
+}
+
+.speaker {
+  img {
+    border: 2px solid var(--sd-primary-color);
+    border-radius: 100%;
+  }
+}
+
+.vertical-bar {
+  background-color: gray;
+  height: 10rem;
+  width: 5px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.flex-row {
+	display: flex;
+  flex-direction: row;
+	align-items: center;
+  justify-content: space-around;
+
+  width: 100%
+}
+
+.flex-column {
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  justify-content: center;
+}
+
+.sd-slide::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(logo_sunnytech.svg);
+  background-position: right 2vw bottom 2vh;
+  background-repeat: no-repeat;
+  background-size: 10vw;
+  background-color: var(--white);
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.cover {
+  background-color: var(--sd-primary-color);
+
+  h1,
+  h2 {
+    color: var(--sd-background-color);
+  }
+}
