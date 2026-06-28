@@ -13,7 +13,7 @@
 !image(assets/embedded_rust_example.png)
 
 /*
- Ajouter une image d'exemple "embedded"
+ Un domaine qui m'est totalement étranger !
 */
 
 
@@ -78,7 +78,7 @@ fn ma_fonction(user: User) {
 
 /*
 
-Nul. On va devoir multiplier les types partout.
+Nul. On va devoir multiplier les "if" partout.
 Re-nul. "String", ça ne veut rien dire, on met un email dans une variable qui contient une ville ?
 Non mais allo, quoi !
 
@@ -401,7 +401,96 @@ pub fn move_player((&x, &y): Coordinates, direction: &Direction) {
 !image(assets/whats-in-the-box.jpeg)
 
 
-## Revenons à notre `UserEmail`
+## Moment Kahoot !
+
+!image(assets/kahoot_billion_dollar_mistake.jpg,,1500)
+
+/*
+ Toutes les réponses sont valables, mais une l'est historiquement
+*/
+
+
+## Hé oui, c'est bien Null:
+
+!image(assets/billion_dollar_mistake.png,,1500)
+
+/*
+L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languages qui l'ont suivi
+ Dont Javascript, et c'est la raison pour laquelle Microsoft dépense une fortune dans mon linter préféré (TypeScript)
+*/
+
+
+## En Javascript (et autres...):
+
+!image(assets/the-square-hole-square-hole.gif,,800)
+
+/*
+  On ne doit pas faire entrer "un rond dans un carré" !
+*/
+
+
+## En Rust, plus de doute !
+
+```rust
+// get_user_by_email:
+//
+//   UserEmail -> Option<User>
+//
+match get_user_by_email(user_email).await {
+
+    Some(user) => todo!("rajouter le cas où l'utilisateur existe"),
+
+    None => todo!("créer le user ? retourner une erreur ? vous décidez !"),
+
+}
+```
+
+/*
+  En Rust, il ne peut y avoir ce genre de doute: on doit être en capacité, le + possible
+  de valider tous les types. Se trimballer un None permet de matérialiser ça.
+
+  Dit autrement: Un Some n'est pas un None. L'un ne peut se substituer à l'autre.
+
+  Maybe Monad, mon amour
+*/
+
+## Moment Kahoot 2 (Le Retour !)
+
+!image(assets/kahoot_deuxieme_billion_dollar_mistake.jpg,,1500)
+
+/*
+ Toutes les réponses sont encore valables, mais une l'est historiquement
+*/
+
+## .[full-image]
+
+!image(assets/why-is-try-catch-evil.png,,1500)
+
+/*
+  Le problème avec la gestion des exceptions c'est qu'on ne sait pas vraiment ce qu'est
+  une "exception". Est que c'est une erreur ? Faut-il la re-throw ? La manger ?
+
+  Beaucoup de maux de tête pour un problème à la base simple...
+*/
+
+## Certains langages font ce qu'ils peuvent… 😅
+
+!image(assets/nilnilnil.jpeg)
+
+/*
+ En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
+*/
+
+## D'autres, comme Rust, plongent dans le multivers ! 💪
+
+!image(assets/result.png)
+
+/*
+ Either Monad, mon amour
+*/
+
+
+## Rappelez-vous `UserEmail` ! 🤓
 
 ```rust
 use validator::ValidateEmail;
@@ -425,42 +514,8 @@ impl UserEmail {               +-------------------------+
 }
 ```
 
-## Moment Kahoot !
 
-!image(assets/kahoot_billion_dollar_mistake.jpg,,1800)
-
-/*
- Toutes les réponses sont valables, mais une l'est historiquement
-*/
-
-
-## Hé oui, c'est bien Null:
-
-!image(assets/billion_dollar_mistake.png,,1800)
-
-/*
-L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languages qui l'ont suivi
- Dont Javascript, et c'est la raison pour laquelle Microsoft dépense une fortune dans mon linter préféré (TypeScript)
-*/
-
-## Certains langages font ce qu'ils peuvent…
-
-!image(assets/nilnilnil.jpeg)
-
-/*
- En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
-*/
-
-## D'autres, comme Rust, plongent dans le multivers !
-
-!image(assets/result.png)
-
-/*
- Either Monad, mon amour
-*/
-
-
-## Un Result étant un Enum (`Ok`|`Err`), on peut le `match`
+## De plus, Un Result étant un Enum, on peut le `match` 🤩
 
 ```rust
 // validate_credentials:
@@ -474,7 +529,7 @@ match validate_credentials(credentials).await {
 ```
 
 
-## Et y a plus qu'à remplir, ou à `todo!`
+## Et y a plus qu'à remplir, ou à `todo!` 🤷
 
 ```rust
 // validate_credentials:
@@ -506,10 +561,10 @@ match validate_credentials(credentials).await {
 }
 ```
 
-## "On est obligés de `match` à chaque fois un Result ?"
+## "On est obligés de `match` à chaque fois un Result ?" 🤔
 
 
-## Non, on peut utiliser (entre autres) `.unwrap()`, pour ça
+## Non, on peut utiliser (entre autres) `.unwrap()`, pour ça:
 
 ```rust
 // Dans ce cas-ci, on est persuadés qu'on
@@ -518,12 +573,12 @@ let port = listener.local_addr().unwrap().port();
 ```
 
 
-## Mais pourquoi on s'inflige `match`, alors ?
+## Mais pourquoi on s'inflige `match`, alors ? ☝🤓
 
 !image(assets/unwrap-me-i-double-dare-you.jpg)
 
 
-## Et même les plus gros se font avoir :
+## ...et même les plus gros se font avoir 💥
 
 !image(assets/cloudflare-incident.png)
 
@@ -982,7 +1037,7 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## Il faut qu'on parle de `sqlx`
 
-!image(assets/sqlx-simple.png)
+!image(assets/sqlx-simple.png,,1500)
 
 ## Et ça peut même être très complexe !
 
