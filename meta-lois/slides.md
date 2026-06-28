@@ -137,6 +137,9 @@ Si vous leur mettez la pression à un sujet, leur énergie sera dépensée non p
 mais pour pervertir le thermomètre à moindre effort.
 
 
+<img class="r-stretch" src="assets/meta-lois-goodhart.png" alt="Ah, tous ces KPIs éclatés au sol">
+
+
 Comment éviter de casser le thermomètre ?
 <ul role="list" class="custom-list-types">
   <li data-icon="🤨">Arrêtons le "Un problème est survenu; vite, un indicateur !"</li>
