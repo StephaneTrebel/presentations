@@ -1,5 +1,5 @@
-## .[chapter]
-# Bienvenue ! 👋
+## SunnyTech 2026 .[chapter]
+# Bienvenue !
 
 /*
  Bienvenue tout le monde !
@@ -67,7 +67,7 @@ Mais, dans ce fatras qu'est la Tech, dans cette culture mondialisée, qui se gar
 Et bah oui. Sinon je n'aurais pas écrit un résumé de conf qui aura suscité l'intérêt d'un comité d'appel à proposition de conférence, n'est-ce pas ?
 */
 
-## Notre Monomythe, c'est le Changement
+## Notre Monomythe à nous, c'est le Changement
 🏃💨
 
 /*
@@ -92,6 +92,9 @@ Après ça reste un prétexte narratif car s'il n'y a pas de départ, il n'y a p
 ## Le Départ
 # L'Appel de l'Aventure
 
+## .[full-image]
+
+!image(assets/gov-needotron.png,,1000)
 
 /*
 The hero begins in a situation of normality from which some information is received that acts as a call to head off into the unknown.
@@ -105,6 +108,9 @@ Il faut bien comprendre que si, dans la mythologie, les contes, etc., le héros 
 ## Le Départ
 # Le Refus de l'Appel
 
+## .[full-image]
+
+!image(assets/bugs-bunny-no.jpg,,1000)
 
 /*
 Often when the call is given, the future hero first refuses to heed it. This may be from a sense of duty or obligation, fear, insecurity, a sense of inadequacy, or any of a range of reasons that work to hold the person in his current circumstances
@@ -113,6 +119,23 @@ Et ça c'est…courant ? C'est à dire que ça me paraît évident qu'on ne va p
 
 Pondérer ces éléments c'est probablement se paralyser, et ne rien faire, et c'est ok. Du moins, tant que le statu quo reste supportable...
 */
+
+## .[full-image]
+
+!image(assets/knight-capital-failure.png,,1500)
+
+/*
+Des fois, il ne l'est pas. Du tout.
+*/
+
+## « Piscis primum a capite foetet » 🐟
+
+/*
+  « Un poisson pourrit par la tête », 3197e adage d'Erasme.
+
+  Oui, c'est bien le rétroacronyme d'ERASMUS !
+*/
+
 
 ## Le Départ
 # L'Aide Extérieure
@@ -125,6 +148,15 @@ Forcément on ne part pas de zéro. Personne ne se lève de sa chaise en se disa
 Bref, faut un coup de main.
 */
 
+## .[full-image]
+
+!image(assets/todd-park-et-obama.png,,1500)
+
+## .[full-image]
+
+!image(assets/todd-park-healthcare.png,,1500)
+
+
 ## Le Départ
 # Franchir le premier Seuil
 
@@ -133,6 +165,11 @@ This is the point where the hero actually crosses into the field of adventure, l
 
 Ok, donc on est parti: on a un point de départ, un point de douleur qui doit changer, on a un mentor/sponsor/conseil, Y a plus qu'à. C'est le point traditionnel où le Monomythe commence. C'est le départ de Tatooine, de la vallée des hobbits, du chateau d'Arendell, etc.
 */
+
+
+## .[full-image]
+
+!image(assets/my-child-oh-my-child.gif,,1000)
 
 ## Le Départ
 # Le ventre de la Baleine
@@ -145,6 +182,16 @@ C'est là qu'on rentre un peu plus dans les caractéristiques du Monomythe. Le v
 La première des difficultés, pour vous qui cherchez à Conduire un Changement, c'est donc d'accepter de changer vous-même. Mettre en exergue les points qui posent problème chez vous, dans ce que vous voulez changer, avant d'aller tenter quoi que c e soit ailleurs !
 */
 
+## .[full-image]
+
+!image(assets/i-know-kung-fu.jpeg,,1000)
+
+
+## .[full-image]
+
+!image(assets/the-mythical-man-month.jpg,,600)
+
+
 ## .[chapter]
 # Chapitre 2 - L'Initiation
 
@@ -154,6 +201,11 @@ Ok donc deuxième grande partie. L'Initiation. On a vu que pour pouvoir provoque
 
 ## L'Initiation
 # La Route des Épreuves
+
+
+## .[full-image]
+
+!image(assets/YOU-DIED.jpg,,1500)
 
 
 /*
@@ -169,6 +221,12 @@ Pour revenir à notre Conduite du Changement, il y a deux axes à prendre en com
 ## L'Initiation
 # La Rencontre avec les "Dieux"
 
+
+## .[full-image]
+
+!image(assets/karate-kid.jpg,,1000)
+
+
 /*
 This is where the hero gains items given to him that will help him in the future.
 
@@ -176,6 +234,11 @@ Ahh, les Dieux, balayés par les Monothéismes, ils étaient pourtant bien prati
 
 Véritables Prométhées, ces personnes écrivent des articles de blog, tournent des vidéos, produisent des livres. Ce n'est pas sale de se cultiver, et longtemps la Connaissance a été gardée comme un secret. Grâce à Internet, ce n'est plus le cas, même s'il désormais se battre contre de nouveaux démons: la Censure, le Fracture d'Internet, le rapport Signal-Bruit, autant d'embûches sur notre chemin.
 */
+
+## .[full-image]
+
+!image(assets/tech-leaders.png,,800)
+
 
 ## L'Initiation
 # La Tentation du Cynisme
@@ -191,6 +254,11 @@ Avec cette manière de voir les choses, il n'y a plus de Changement possible, ca
 Un gros risque, non ?
 */
 
+## .[full-image]
+
+!image(assets/du-cynisme.png,,800)
+
+
 ## L'Initiation
 # Le Conflit
 
@@ -205,9 +273,18 @@ Et vous savez quoi ? Vous allez perdre. Souvent. Parfois d'une manière spectacu
 Ça, ça ne s'apprend dans aucun livre.
 */
 
+## .[full-image]
+
+!image(assets/the-risk-i-took.jpg,,1000)
+
+
+## .[full-image]
+
+!image(assets/audit-verify.png,,1000)
+
+
 ## L'Initiation
 # L'Apothéose
-
 
 /*
 This is the point of realization in which a greater understanding is achieved. Armed with this new knowledge and perception, the hero is resolved and ready for the more difficult part of the adventure.
@@ -217,18 +294,28 @@ Et une fois que vous l'avez provoqué/subi/géré une fois, le Conflit, c'est l�
 C'est le moment où Néo arrête les balles, bien sûr. C'est celui où Marty comprend l'enchaînement d'actions qui vont provoquer la fin de sa famille dans BTTF, c'est Luke qui sait discerner le côté Oscur du côté clair de la Force, etc.
 */
 
+## .[full-image]
+
+!image(assets/i-can-do-this-all-day.png,,1000)
+
+
 ## L'Initiation
 # Le Super-pouvoir
 
+/*
  The ultimate boon is the achievement of the goal of the quest. It is what the hero went on the journey to get. All the previous steps serve to prepare and purify the hero for this step since in many myths the boon is something transcendent like the elixir of life itself, or a plant that supplies immortality, or the holy grail.
- /*
+
 C'est le moment le plus fun des histoires, celui où le héro ou l'héroïne obtient ce qui lui permettra de triompher. C'est le Grâal, d'une certaine manière.
 
 Personnellement, j'aime à penser que ce fameux superpouvoir c'est ce qui nous transforme nous. Et le meilleur moyen de s'en rendre compte, c'est de justement en voir le reflet dans les yeux des autres. Quand on y réfléchit les héros sont très rarement seuls, c'est en le replaçant dans un groupe qu'on voit à la fois la transformation, mais également la manière dont la transformation va aussi changer les autres. Les inspirer, les effrayer, les radicaliser, bref.
- */
+*/
+
+## .[full-image]
+
+!image(assets/indiana_jones_with_the_holy_grail_in_last_crusade.avif,,1000)
 
 ## .[chapter]
-# Le Retour
+# Chapitre 3 - Le Retour
 
 /*
 Ça y est. Vous avez déclenché le Changement, vous avez progressé, combattu parfois, et vous avez obtenu ce que vous vouliez. Une information capitale, l'approbation de la hiérarchie, la mise en place d'une bien meilleure stack technologique.
@@ -251,6 +338,11 @@ Vous avez la connaissance de la Magie, mais vous refusez de revenir au niveau de
 Sans compter qu'il devient alors très facile de devenir irremplaçable. Être la personne pivot d'un projet de changement c'est la garantie d'un aller simple vers le burn-out: vous êtes vous-même responsables de la prison dans laquelle vous vous êtes enfermés.
 */
 
+## .[full-image]
+
+!image(assets/ackchyually.webp,,1000)
+
+
 ## Le Retour
 # L'Envolée Magique
 
@@ -264,6 +356,24 @@ Et des fois, ça arrivera, ça, dans notre métier. Car voyez-vous les entrepris
 Dans ces circonstances, être dans une démarche de conduite du changement peut s'avérer désastreuses pour certains projets, qui ne doivent pas être dévoilés: licenciement, déménagement, réorganisation sont autant de bâtons dans les roues d'un projets de Changement. À vous alors de décider de dire la vérité aux autres, quitte à mettre un sacré bazar (et accessoirement vous faire virer), ou bien si vous choisissez l'obéissance (et donc vous exposer à devenir une pire version de vous-mêmes)
 */
 
+## Charity Majors 💓
+
+<div class="flex-row">
+    <div class="flex-column">
+      <img
+        src="assets/charity-1.png"
+        style="width: 100%"
+      />
+    </div>
+    <div class="flex-column">
+      <img
+        src="assets/charity-2.png"
+        style="width: 100%"
+      />
+    </div>
+</div>
+
+
 ## Le Retour
 # Se Sauver de l'Absence
 
@@ -275,14 +385,23 @@ Un des moyens d'arriver à garder la tête sur les épaules et d'éviter de fair
 Ce n'est que parce que vous produisez un Changement qui va avoir des conséquences pour des personnes concrètes que vous le faites, sinon c'est juste de la masturbation. C'est l'acte qui est vu, autant que l'Acte lui-même, qui est le Changement. Il faut qu'il soit observable.
 */
 
+## .[full-image]
+
+!image(assets/you-do-see-its-worse.jpg,,1000)
+
+
 ## Le Retour
 # Le Franchissement du Seuil du Retour
 
 /*
-Campbell says in The Hero with a Thousand Faces that "The returning hero, to complete his adventure, must survive the impact of the world."[38] The goal of the return is to retain the wisdom gained on the quest and to integrate it into society.
+Campbell says in The Hero with a Thousand Faces that "The returning hero, to complete his adventure, must survive the impact of the world." The goal of the return is to retain the wisdom gained on the quest and to integrate it into society.
 
 Et c'est pour ça que la Sagesse, la Connaissance que vous avez obtenu ne peut servir que lorsque vous revenez, en tenant compte du contexte, vers celles et ceux que c'est censé servir. Décider dans son coin de ce qui est meilleur, pour ensuite en faire quelque chose de complètement abscons, MÊME SI ÇA A L'AIR D'ÊTRE OBJECTIVEMENT UNE BONNE IDÉE, va avoir des effets délétères. Le Changement implique un partage, sinon c'est un égo-trip (bien trop nombreux en entreprise)
 */
+
+## .[full-image]
+
+!image(assets/Bear-Grylls-Improvise-Adapt-Overcome-meme-1.jpg,,1000)
 
 ## Le Retour
 # Maître des Deux Mondes
@@ -294,6 +413,10 @@ C'est l'état de plénitude: Veni, Vidi, Vici et Revenu. Vous savez parler le la
 
 On vous fait confiance, à raison. Ça ne dure pas longtemps, donc il faudra en profiter !
 */
+
+## .[full-image]
+
+!image(assets/egoless-development.png,,1000)
 
 ## Le Retour
 # La Liberté de Vivre
@@ -308,6 +431,10 @@ Il y a désormais d'autres Changements à effectuer, parfois plus ambitieux, par
 La Conduite du Changement a ceci de particulier que, contrairement au cheminement du héros, elle n'est jamais terminée. Il y a toujours de nouveaux projets, de nouvelles équipes, de nouvelles opportunités. Donc j'ai presque envie de dire que si vous êtes dans un état qui est inconfortable et que le Changement vous paraît impossible, et bien peut-être que vous n'avez pas regardé assez précautionneusement 😉
 */
 
+## .[full-image]
+
+!image(assets/Lord-of-the-Rings-Bilbo-Baggins-There-And-Back-Again.jpg,,1000)
+
 ## Voilà. Fin de l'histoire
 ...ou pas ?
 
@@ -320,28 +447,10 @@ Mais il reste que ces récits sont constitutifs de la manière dont on fonctionn
 */
 
 ## Les Mythes sont universels
-que vous le vouliez ou non
+alors pourquoi ne pas s'en servir ?
 
 /*
 C'est leur grande force. Tout le monde a entendu parler d'un récit qui se rapproche peu ou prou de ce dont on a parlé. Vous-mêmes je suis sûr qu'il y a au moins un moment où vous vous êtes dit "ah mais oui ça me rappelle un truc sur un projet !".
 
 C'est logique, et c'est même normal. On aura beau déconstruire tout ce que vous voudrez déconstruire, il restera qu'être humain, c'est suivre, à un moment donné, d'une manière ou d'une autre, un chemin qui ressemblera de près ou de loin à celui du Monomythe.
-*/ 
-
-
-## Titre de diapo
-
-!image(assets/mon_image.jpeg,,1000)
-
-/*
- Ajouter une image d'exemple de 1000px de large
 */
-
-## .[full-image]
-
-!image(assets/parse_dont_validate.png)
-
-/*
- Une image qui prend tout l'écran
-*/
-
