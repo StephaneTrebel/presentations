@@ -8,6 +8,8 @@
 ## .[chapter]
 # 🏕️
 
+//@ < 02:00
+
 /*
 Vu que, si on en croit les vendeurs de pelles, il n'y a même plus besoin de coder de nos jours, je me suis dit que plutôt que de vous bassiner avec le dernier truc à la mode, j'allais plutôt... vous raconter une histoire.
 
@@ -19,6 +21,8 @@ Vu que, si on en croit les vendeurs de pelles, il n'y a même plus besoin de cod
 ## Le Monomythe de .[chapter]
 # Joseph Campbell
 
+//@ < 04:00
+
 /*
 Le Monomythe est terme issu de l'analyse de Joseph Campbell sur des milliers de mythes, contes, et histoires qui ont été racontés de par le monde. Des Mayas aux Grecs, des rites Aborigènes aux rituels Africains, c'est LA référence en matière d'étude de ce genre de récits.
 
@@ -28,20 +32,25 @@ Il en a tiré, entre autres, un livré séminal sur le sujet "Le Héros aux Mill
 ## .[chapter]
 # 🗣️
 
+//@ < 06:00
+
 /*
 On a donc des contes, des récits, de partout et de tous temps, qui ont les mêmes caractéristiques. Ces récits, d'ailleurs on continue de les raconter aujourd'hui.
 */
 
-## L'Odyssée
-(et une bonne partie de la Mythologie antique)
+## Une bonne partie de la Mythologie antique, dont…
+# L'Odyssée ⛵
 
-## Star Wars
+## Une bonne partie des films d'aventure, dont…
+# Star Wars ⭐
 (et tous ses dérivés, tels les superhéros-héroïnes)
 
-## Alice au Pays des Merveilles
+## Une bonne partie de la littérature "coming of age", dont…
+# Alice au Pays des Merveilles 🐰
 (et pléthore d'autres dessins animés "initiatiques")
 
-## The Matrix
+## Une bonne partie des trames de Jeux Vidéos, dont…
+# Zelda 🎣
 (vous en voulez d'autres ? Parce que j'en ai plein d'autres 😁)
 
 /*
@@ -51,13 +60,17 @@ On a donc des contes, des récits, de partout et de tous temps, qui ont les mêm
 ## Le rapport avec la Tech ?
 (j'y viens)
 
+//@ < 08:00
+
 /*
 
 En bon cinéphage, voire cinéphile, ça fait un bon moment que je connais le Monomythe. Oh pas dans le détail, bien sûr, mais suffisament pour en voir les traces dans la quantité phénoménale de PopCulture que je me suis farci. Cinéma, Séries, Jeux Vidéos, Bouquins (dont les Livres dont vous êtes le Héros)... je n'ai jamais été très loin du Monomythe, à vrai dire.
 */
 
 ## Et un jour ça a fait "tilt"
-💡
+# 💡
+
+//@ < 10:00
 
 /*
 Le taf, notre travail, dans la Tech, il me semble à la fois très éloigné de ce que vivait nos ancètres, et en même temps très proche. Depuis qu'on est passé de la subsistance aléatoire des chasseurs-cueilleurs à l'agriculture de subsistance, je n'ai pas vraiment l'impression qu'on a changé de paradime. Juste au lieu de faucher du blé on fix des MRs dependabot sur nos projets Node.js, quoi :D
@@ -68,7 +81,9 @@ Et bah oui. Sinon je n'aurais pas écrit un résumé de conf qui aura suscité l
 */
 
 ## Notre Monomythe à nous, c'est le Changement
-🏃💨
+# 🏃💨
+
+//@ < 12:00
 
 /*
 Laissez-vous porter, on va traverser les dix-sept étapes du Monomythe de Campbell au travers de la Conduite de Changement au sein de la Tech.
@@ -78,6 +93,8 @@ Je vais procéder comme Joseph Campbell, à savoir que je vais avoir une petite 
 
 ## .[chapter]
 # Chapitre 1 - Le Départ
+
+//@ < 14:00
 
 /*
 Car il faut bien commencer quelque part, n'est-ce pas ?
@@ -92,9 +109,7 @@ Après ça reste un prétexte narratif car s'il n'y a pas de départ, il n'y a p
 ## Le Départ
 # L'Appel de l'Aventure
 
-## .[full-image]
-
-!image(assets/gov-needotron.png,,1000)
+//@ < 15:00
 
 /*
 The hero begins in a situation of normality from which some information is received that acts as a call to head off into the unknown.
@@ -105,12 +120,15 @@ Il faut bien comprendre que si, dans la mythologie, les contes, etc., le héros 
 
 */
 
+## .[full-image]
+
+!image(assets/gov-needotron.png,,1000)
+
+
 ## Le Départ
 # Le Refus de l'Appel
 
-## .[full-image]
-
-!image(assets/bugs-bunny-no.jpg,,1000)
+//@ < 16:00
 
 /*
 Often when the call is given, the future hero first refuses to heed it. This may be from a sense of duty or obligation, fear, insecurity, a sense of inadequacy, or any of a range of reasons that work to hold the person in his current circumstances
@@ -119,6 +137,11 @@ Et ça c'est…courant ? C'est à dire que ça me paraît évident qu'on ne va p
 
 Pondérer ces éléments c'est probablement se paralyser, et ne rien faire, et c'est ok. Du moins, tant que le statu quo reste supportable...
 */
+
+## .[full-image]
+
+!image(assets/bugs-bunny-no.jpg,,1000)
+
 
 ## .[full-image]
 
@@ -140,6 +163,8 @@ Des fois, il ne l'est pas. Du tout.
 ## Le Départ
 # L'Aide Extérieure
 
+//@ < 17:00
+
 /*
 Once the hero has committed to the quest, consciously or unconsciously, their guide and magical helper appears or becomes known. More often than not, this supernatural mentor will present the hero with one or more talismans or artifacts that will aid them later in their quest
 
@@ -160,6 +185,8 @@ Bref, faut un coup de main.
 ## Le Départ
 # Franchir le premier Seuil
 
+//@ < 18:00
+
 /*
 This is the point where the hero actually crosses into the field of adventure, leaving the known limits of their world and venturing into an unknown and dangerous realm where the rules and limits are unknown
 
@@ -173,6 +200,8 @@ Ok, donc on est parti: on a un point de départ, un point de douleur qui doit ch
 
 ## Le Départ
 # Le ventre de la Baleine
+
+//@ < 18:00
 
 /*
 The belly of the whale represents the final separation from the hero's known world and self. By entering this stage, the person shows a willingness to undergo a metamorphosis. When first entering the stage the hero may encounter a minor danger or setback.
@@ -195,6 +224,8 @@ La première des difficultés, pour vous qui cherchez à Conduire un Changement,
 ## .[chapter]
 # Chapitre 2 - L'Initiation
 
+//@ < 18:00
+
 /*
 Ok donc deuxième grande partie. L'Initiation. On a vu que pour pouvoir provoquer le changement, il faut d'abord se transformer soi-même. Et si vous grattez les grandes histoires, les grandes aventures, vous verrez que l'histoire n'est qu'un prétexte à la transformation des personnages d'un état A à un état B. Un voyage interne, si vous préférez.
 */
@@ -202,6 +233,7 @@ Ok donc deuxième grande partie. L'Initiation. On a vu que pour pouvoir provoque
 ## L'Initiation
 # La Route des Épreuves
 
+//@ < 19:00
 
 ## .[full-image]
 
@@ -221,6 +253,7 @@ Pour revenir à notre Conduite du Changement, il y a deux axes à prendre en com
 ## L'Initiation
 # La Rencontre avec les "Dieux"
 
+//@ < 20:00
 
 ## .[full-image]
 
@@ -243,6 +276,8 @@ Véritables Prométhées, ces personnes écrivent des articles de blog, tournent
 ## L'Initiation
 # La Tentation du Cynisme
 
+//@ < 22:00
+
 
 /*
 In this step, the hero faces those temptations, often of a physical or pleasurable nature, that may lead them to abandon or stray from their quest, which does not necessarily have to be represented by a woman. A woman is a metaphor for the physical or material temptations of life since the hero-knight was often tempted by lust from his spiritual journey.
@@ -261,6 +296,8 @@ Un gros risque, non ?
 
 ## L'Initiation
 # Le Conflit
+
+//@ < 24:00
 
 
 /*
@@ -286,6 +323,8 @@ Et vous savez quoi ? Vous allez perdre. Souvent. Parfois d'une manière spectacu
 ## L'Initiation
 # L'Apothéose
 
+//@ < 26:00
+
 /*
 This is the point of realization in which a greater understanding is achieved. Armed with this new knowledge and perception, the hero is resolved and ready for the more difficult part of the adventure.
 
@@ -302,6 +341,8 @@ C'est le moment où Néo arrête les balles, bien sûr. C'est celui où Marty co
 ## L'Initiation
 # Le Super-pouvoir
 
+//@ < 28:00
+
 /*
  The ultimate boon is the achievement of the goal of the quest. It is what the hero went on the journey to get. All the previous steps serve to prepare and purify the hero for this step since in many myths the boon is something transcendent like the elixir of life itself, or a plant that supplies immortality, or the holy grail.
 
@@ -317,6 +358,8 @@ Personnellement, j'aime à penser que ce fameux superpouvoir c'est ce qui nous t
 ## .[chapter]
 # Chapitre 3 - Le Retour
 
+//@ < 30:00
+
 /*
 Ça y est. Vous avez déclenché le Changement, vous avez progressé, combattu parfois, et vous avez obtenu ce que vous vouliez. Une information capitale, l'approbation de la hiérarchie, la mise en place d'une bien meilleure stack technologique.
 
@@ -325,6 +368,8 @@ Personnellement, j'aime à penser que ce fameux superpouvoir c'est ce qui nous t
 
 ## Le Retour
 # Le Refus du Retour
+
+//@ < 32:00
 
 /*
 Having found bliss and enlightenment in the other world, the hero may not want to return to the ordinary world to bestow the boon onto their fellow beings.
@@ -345,6 +390,8 @@ Sans compter qu'il devient alors très facile de devenir irremplaçable. Être l
 
 ## Le Retour
 # L'Envolée Magique
+
+//@ < 34:00
 
 /*
 Sometimes the hero must escape with the boon if it is something that the gods have been jealously guarding. It can be just as adventurous and dangerous returning from the journey as it was to go on it
@@ -377,6 +424,8 @@ Dans ces circonstances, être dans une démarche de conduite du changement peut 
 ## Le Retour
 # Se Sauver de l'Absence
 
+//@ < 36:00
+
 /*
 Just as the hero may need guides and assistants to set out on the quest, often they must have powerful guides and rescuers to bring them back to everyday life, especially if the hero has been wounded or weakened by the experience.
 
@@ -393,6 +442,8 @@ Ce n'est que parce que vous produisez un Changement qui va avoir des conséquenc
 ## Le Retour
 # Le Franchissement du Seuil du Retour
 
+//@ < 38:00
+
 /*
 Campbell says in The Hero with a Thousand Faces that "The returning hero, to complete his adventure, must survive the impact of the world." The goal of the return is to retain the wisdom gained on the quest and to integrate it into society.
 
@@ -405,6 +456,8 @@ Et c'est pour ça que la Sagesse, la Connaissance que vous avez obtenu ne peut s
 
 ## Le Retour
 # Maître des Deux Mondes
+
+//@ < 40:00
 
 /*
 For a human hero, it may mean achieving a balance between the material and spiritual. The person has become comfortable and competent in both the inner and outer worlds
@@ -420,6 +473,8 @@ On vous fait confiance, à raison. Ça ne dure pas longtemps, donc il faudra en 
 
 ## Le Retour
 # La Liberté de Vivre
+
+//@ < 40:00
 
 /*
 In this step, mastery leads to freedom from the fear of death, which in turn is the freedom to live. This is sometimes referred to as living in the moment, neither anticipating the future nor regretting the past.
@@ -438,6 +493,8 @@ La Conduite du Changement a ceci de particulier que, contrairement au cheminemen
 ## Voilà. Fin de l'histoire
 ...ou pas ?
 
+//@ < 40:00
+
 /*
 Il y a beaucoup de critiques qu'on pourrait faire d'une telle lecture, et je suis persuadé qu'il y en a parmi vous qui se demande si -par exemple- tout le monde a la possibilité d'effectuer un tel parcours, un tel changement.
 
@@ -448,6 +505,8 @@ Mais il reste que ces récits sont constitutifs de la manière dont on fonctionn
 
 ## Les Mythes sont universels
 alors pourquoi ne pas s'en servir ?
+
+//@ < 40:00
 
 /*
 C'est leur grande force. Tout le monde a entendu parler d'un récit qui se rapproche peu ou prou de ce dont on a parlé. Vous-mêmes je suis sûr qu'il y a au moins un moment où vous vous êtes dit "ah mais oui ça me rappelle un truc sur un projet !".

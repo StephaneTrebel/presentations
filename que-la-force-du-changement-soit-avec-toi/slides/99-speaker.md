@@ -50,7 +50,7 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
     <div class="flex-column">
       <span>Vos feedbacks 🫶</span>
       <img
-        src="assets/qr-code-tnt-2026.svg"
+        src="assets/qr-code-sunnytech-2026.svg"
         style="width: 13vw"
         alt="QR Code pointant vers l'Openfeedback de cette conférence"
       />
