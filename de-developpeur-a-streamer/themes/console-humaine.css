@@ -8,29 +8,29 @@
   --sd-caption-font-size: 1vw;
   --sd-caption-line-height: 1;
 
-  --sd-background-color: #0b1020;
-  --sd-heading-color: #f4f7f5;
-  --sd-text-color: #c6d1d0;
-  --sd-primary-color: #72e6b1;
-  --sd-caption-color: #b5c1c0;
-  --sd-caption-bgcolor: #182235;
+  --sd-background-color: #fbfaf6;
+  --sd-heading-color: #182235;
+  --sd-text-color: #3d4651;
+  --sd-primary-color: #2a9d6f;
+  --sd-caption-color: #65717a;
+  --sd-caption-bgcolor: #eef1ed;
 
   --sd-sv-timer-size: 80px;
   --sd-sv-text-size: 40px;
   --sd-sv-text-line-height: 1.2;
-  --sd-sv-background-color: #070b15;
-  --sd-sv-text-color: #f4f7f5;
+  --sd-sv-background-color: #e8ece7;
+  --sd-sv-text-color: #182235;
 
-  --console-accent: #72e6b1;
-  --console-warm: #ffb86b;
-  --console-muted: #718096;
-  --console-panel: #121b2d;
-  --console-line: rgba(114, 230, 177, 0.28);
+  --console-accent: #2a9d6f;
+  --console-warm: #b76626;
+  --console-muted: #65717a;
+  --console-panel: #eef1ed;
+  --console-line: rgba(42, 157, 111, 0.28);
 }
 
 section {
   background:
-    linear-gradient(135deg, rgba(114, 230, 177, 0.035), transparent 38%),
+    linear-gradient(135deg, rgba(42, 157, 111, 0.07), transparent 38%),
     var(--sd-background-color);
   border-top: 1px solid var(--console-line);
 }
@@ -64,8 +64,8 @@ h2::before {
 
 .cover {
   background:
-    radial-gradient(circle at 82% 18%, rgba(255, 184, 107, 0.16), transparent 25%),
-    radial-gradient(circle at 12% 84%, rgba(114, 230, 177, 0.15), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(183, 102, 38, 0.12), transparent 25%),
+    radial-gradient(circle at 12% 84%, rgba(42, 157, 111, 0.12), transparent 28%),
     var(--sd-background-color);
 }
 
@@ -75,7 +75,7 @@ h2::before {
 
 .chapter {
   background:
-    linear-gradient(135deg, rgba(114, 230, 177, 0.12), transparent 55%),
+    linear-gradient(135deg, rgba(42, 157, 111, 0.08), transparent 55%),
     var(--sd-background-color);
 }
 
