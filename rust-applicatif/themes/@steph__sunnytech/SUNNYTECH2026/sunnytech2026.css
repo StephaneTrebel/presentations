@@ -27,7 +27,11 @@
 }
 
 h2 {
-  color: color-mix(in lch decreasing hue, var(--sd-heading-color) 30%, var(--sd-primary-color) 70%) !important;
+  color: color-mix(in oklch decreasing hue, var(--sd-heading-color) 30%, var(--sd-primary-color) 70%) !important;
+}
+
+h3 {
+  font-size: 3rem !important;
 }
 
 .chapter > h2 {

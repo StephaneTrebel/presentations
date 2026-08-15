@@ -29,6 +29,10 @@
 
 !image(assets/coerce_what_now.png)
 
+## .[full-image]
+
+!image(assets/chuis_pas_venue_ici_pour_souffrir.jpg,,1300)
+
 ## Tout ceci est p'tet vrai, mais que c'est pas pour ça que Rust m'intéresse
 
 !image(assets/bernie_rust.jpeg)
@@ -195,7 +199,7 @@ let my_user = User {
 
 ## .[full-image]
 
-!image(assets/parse_dont_validate.png)
+!image(assets/parse_dont_validate.png,https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/,1300,,,true)
 
 /*
 Un principe fondamental en Rust.
@@ -204,9 +208,9 @@ On _encode notre logique_ -> Type Driven Dev.
 */
 
 
-## Une autre manière de le voir:
+## .[full-image]
 
-!image(assets/impureim-sandwich.png,,1000)
+!image(assets/impureim-sandwich.png,https://blog.ploeh.dk/2020/03/02/impureim-sandwich/,900,,,true)
 
 
 ## L'Α et l'Ω du Type Driven Dev… .[chapter]
@@ -580,7 +584,7 @@ let port = listener.local_addr().unwrap().port();
 
 ## ...et même les plus gros se font avoir 💥
 
-!image(assets/cloudflare-incident.png)
+!image(assets/cloudflare-incident.png,https://blog.cloudflare.com/18-november-2025-outage/,1200,,,true)
 
 
 ## Réservez `.unwrap()` pour le code de test et apprenez à propager ou gérer correctement les `Result`
@@ -672,6 +676,38 @@ Notez d'ailleurs l'enum: toutes les erreurs sont exhaustivement décrites ici (p
 */
 
 
+## On définit ce qu'est un `PaymentProcessor`
+
+```rust
+pub struct RecipientEmail(pub String);
+pub struct SenderEmail(pub String);
+
+pub trait PaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error>;
+}
+```
+
+## On veut ensuite implémenter "notre" `PaymentProcessor`
+
+```rust
+pub struct RecipientEmail(pub String);
+pub struct SenderEmail(pub String);
+
+pub trait PaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error>;
+}
+
+pub struct MyPaymentProcessor {}
+
+impl PaymentProcessor for MyPaymentProcessor {}
+```
+
 ## .[full-image]
 
 ```rust
@@ -700,7 +736,6 @@ impl PaymentProcessor for MyPaymentProcessor {}
    |todo!() }`: `fn send_payment(_: &RecipientEmail, _: &SenderEmail) ->          |
    |std::result::Result<(), anyhow::Error> { todo!() }`                           |
    +------------------------------------------------------------------------------+
-
 ```
 
 
@@ -994,7 +1029,8 @@ where
 !image(assets/adder-doc.png)
 
 ## TOUT est "as code":
-!image(assets/rust-doc-as-code.png,,2000)
+
+!image(assets/rust-doc-as-code.png,,1600)
 
 /*
 Plus vous mettez d'info dans le code, plus ça renvoie de la valeur.
@@ -1003,7 +1039,7 @@ Et les LLMs adoooorent ça
 
 ## `cargo doc` , tout simplement
 
-!image(assets/cargo-doc-tests.png)
+!image(assets/cargo-doc-tests.png,,1200)
 
 
 ## Oh, et ils sont *par défaut* testés par `cargo test` 😎
@@ -1054,7 +1090,7 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## Axum
 
-!image(assets/axum.png)
+!image(assets/axum.png,,1300)
 
 /*
  Mon premier, très simple (type Express), qui a bien évolué depuis
@@ -1078,11 +1114,11 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## On peut littéralement tout faire avec 🤯
 
-!image(assets/dioxus-montage.png,,1600)
+!image(assets/dioxus-montage.png,,1500)
 
 ## Vous venez plutôt de Rails et RoR ? No problemo…y a Loco 🚆
 
-!image(assets/loco-rs-montage.png,,1600)
+!image(assets/loco-rs-montage.png,,1500)
 
 
 ## Si vous voulez aller plus loin...
@@ -1096,14 +1132,14 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## .[full-image]
 
-!image(assets/z2p-book.png,,900)
+!image(assets/z2p-book.png,,800)
 
 
 ## .[full-image]
 
-!image(assets/learn-rust-with-linked-lists.png,,1100)
+!image(assets/learn-rust-with-linked-lists.png,https://rust-unofficial.github.io/too-many-lists,1000,,,true)
 
 
 ## YouTube: Let's Get Rusty !
 
-!image(assets/lets-get-rusty.png)
+!image(assets/lets-get-rusty.png,,1000)
