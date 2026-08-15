@@ -1,0 +1,128 @@
+:root {
+  --sd-heading1-size: 6vw;
+  --sd-heading1-line-height: 0.98;
+  --sd-heading2-size: 2.8vw;
+  --sd-heading2-line-height: 1.05;
+  --sd-text-size: 1.35vw;
+  --sd-text-line-height: 1.25;
+  --sd-caption-font-size: 1vw;
+  --sd-caption-line-height: 1;
+
+  --sd-background-color: #0b1020;
+  --sd-heading-color: #f4f7f5;
+  --sd-text-color: #c6d1d0;
+  --sd-primary-color: #72e6b1;
+  --sd-caption-color: #b5c1c0;
+  --sd-caption-bgcolor: #182235;
+
+  --sd-sv-timer-size: 80px;
+  --sd-sv-text-size: 40px;
+  --sd-sv-text-line-height: 1.2;
+  --sd-sv-background-color: #070b15;
+  --sd-sv-text-color: #f4f7f5;
+
+  --console-accent: #72e6b1;
+  --console-warm: #ffb86b;
+  --console-muted: #718096;
+  --console-panel: #121b2d;
+  --console-line: rgba(114, 230, 177, 0.28);
+}
+
+section {
+  background:
+    linear-gradient(135deg, rgba(114, 230, 177, 0.035), transparent 38%),
+    var(--sd-background-color);
+  border-top: 1px solid var(--console-line);
+}
+
+h1,
+h2,
+h3,
+p,
+li {
+  text-wrap: balance;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+}
+
+h1::before,
+h2::before {
+  color: var(--console-accent);
+  content: "> ";
+  font-family: monospace;
+  font-weight: 400;
+}
+
+.cover {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 184, 107, 0.16), transparent 25%),
+    radial-gradient(circle at 12% 84%, rgba(114, 230, 177, 0.15), transparent 28%),
+    var(--sd-background-color);
+}
+
+.cover h1 {
+  max-width: 80%;
+}
+
+.chapter {
+  background:
+    linear-gradient(135deg, rgba(114, 230, 177, 0.12), transparent 55%),
+    var(--sd-background-color);
+}
+
+.prompt,
+.tag,
+.placeholder {
+  font-family: monospace;
+}
+
+.prompt {
+  color: var(--console-accent);
+  font-size: 1.2vw;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.prompt::before {
+  color: var(--console-warm);
+  content: "$ ";
+}
+
+.tag {
+  background: var(--console-panel);
+  border: 1px solid var(--console-line);
+  border-radius: 0.35rem;
+  color: var(--console-accent);
+  display: inline-block;
+  font-size: 1vw;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 0.8rem;
+  text-transform: uppercase;
+}
+
+.placeholder {
+  border-left: 4px solid var(--console-warm);
+  color: var(--console-warm);
+  font-size: 1.3vw;
+  margin-top: 2rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.speaker {
+  border-left: 4px solid var(--console-accent);
+  padding-left: 1.5rem;
+}
+
+.terminal-cursor {
+  color: var(--console-accent);
+  font-family: monospace;
+}
+
+.terminal-cursor::after {
+  color: var(--console-warm);
+  content: "_";
+}
