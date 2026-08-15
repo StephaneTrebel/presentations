@@ -49,7 +49,12 @@ h3 {
   letter-spacing: -0.03em;
 }
 
-h1::before,
+h1::before {
+  color: var(--console-accent);
+  font-family: monospace;
+  font-weight: 400;
+}
+
 h2::before {
   color: var(--console-accent);
   content: "> ";
