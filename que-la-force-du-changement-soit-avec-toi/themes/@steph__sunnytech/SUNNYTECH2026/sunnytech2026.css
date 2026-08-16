@@ -41,6 +41,7 @@ h2 {
   }
 }
 
+/* Final slide (with links) */
 .vertical-bar {
   background-color: gray;
   height: 10rem;
@@ -48,7 +49,6 @@ h2 {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
 .flex-row {
 	display: flex;
   flex-direction: row;
@@ -57,13 +57,13 @@ h2 {
 
   width: 100%
 }
-
 .flex-column {
 	display: flex;
   flex-direction: column;
 	align-items: center;
   justify-content: center;
 }
+/* Final slide (with links) */
 
 .sd-slide::after {
   content: '';
@@ -80,6 +80,7 @@ h2 {
   opacity: 0.25;
   z-index: -1;
 }
+
 
 .cover {
   background-color: var(--sd-primary-color);

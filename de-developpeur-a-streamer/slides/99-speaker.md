@@ -1,4 +1,5 @@
 ## Stéphane TRÉBEL .[speaker]
+
 # Le Permacodeur
 
 !image(common/assets/profil.jpg,avatar,250)
@@ -6,24 +7,29 @@
 <br>
 
 ### ERP 👔
+
 ### Web 🌍
+
 ### Rust 🦀
 
-
 ## .[full-image]
+
 !image(common/assets/combo-yt-twitch.png,,1800)
 
 ## .[full-image]
+
 !image(common/assets/permacodeur-aoc2025.png,,1800)
 
-
 ## .[full-image]
+
 !image(common/assets/permacodeur-commentaire-articles.png,,1800)
 
 ## .[full-image]
+
 !image(common/assets/gt-software.svg,,1800)
+
 /*
-J'ai co-créé récemment avec mon camarade Alexandre un BUREAU D'ÉTUDE D'INGÉNIERIE LOGICIELLE, afin d'accompagner les entreprises éloignées du monde de la Tech  dans leur TRANSFORMATION Numérique, afin qu'elles aussi bénéficient de tous ces formidables gains de productivité (que ce soit l'AUTOMATISATION DES PROCESS MÉTIER, les AVANTAGES DU CLOUD, les LLMs bien sûr, etc.)
+J'ai co-créé récemment avec mon camarade Alexandre un BUREAU D'ÉTUDE D'INGÉNIERIE LOGICIELLE, afin d'accompagner les entreprises éloignées du monde de la Tech dans leur TRANSFORMATION Numérique, afin qu'elles aussi bénéficient de tous ces formidables gains de productivité (que ce soit l'AUTOMATISATION DES PROCESS MÉTIER, les AVANTAGES DU CLOUD, les LLMs bien sûr, etc.)
 
 Pour cela, on utilisera des MANIÈRES D'ANALYSER LES PROBLÉMATIQUES (donc on va s'intéresser à ce que les gens font plutôt que de leur vendre le dernier truc à la mode),
 
@@ -37,21 +43,22 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
 */
 
 ## .[full-image]
-<div class="flex-column">
+
+<div class="final-slide flex-column">
   <div class="flex-row">
     <div class="flex-column">
       <span>Les liens 🤓</span>
       <img
+        class="qr-code"
         src="common/assets/qr-code-linktree-moi.svg"
-        style="width: 13vw"
         alt="Mon Linktree qui regroupe tous les liens de cette conférence"
       />
     </div>
     <div class="flex-column">
       <span>Vos feedbacks 🫶</span>
       <img
-        src="assets/qr-code-sunnytech-2026.svg"
-        style="width: 13vw"
+        class="qr-code"
+        src="assets/qr-jugsummercamp-2026.svg"
         alt="QR Code pointant vers l'Openfeedback de cette conférence"
       />
     </div>
@@ -68,14 +75,14 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
     <div class="vertical-bar"></div>
       <div>
         <em>
-          Rust 🦀 a désormais tout ce qu'il faut pour délivrer de la valeur<br>
-          pour vos applications métier. Jetez-y un œil !
+          Vous avez sûrement quelque chose à partager. Trouvez votre voix, et exprimez-vous !
         </em>
-        👀
+        😉
       </div>
     </div>
   </div>
 </div>
+
 /*
-  À gauche mon dépôt Git, à droite le lien vers pour les feedbacks
+  À gauche tous mes liens de rézosocios, à droite le lien vers pour les feedbacks
 */
