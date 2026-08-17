@@ -1,0 +1,239 @@
+## .[cover]
+<div class="prompt">bienvenue --tout-le-monde</div>
+
+## De développeur à streamer .[chapter]
+# Remettre de l'Humain dans le Dev
+
+/*
+Bienvenue dans ce petit quickie. On va passer un quart d'heure ensemble donc pas le temps de niaiser !
+*/
+
+## La prophécie
+# Le métier de Dev va disparaître ?
+
+<q>AI will replace software engineers in 12 months.</q>
+<cite>Dario Amodei, mars 2025</cite>
+
+/*
+ J'ai pas fini d'en rire, attendez
+*/
+
+
+## La réalité
+!image(assets/primeagen-tweet-ai-replacing-swe.png,https://x.com,1500,,,true)
+
+/*
+Bref, on a un peu de temps, peut-être beaucoup de temps
+*/
+
+## Ce qui a vraiment changé
+# On en sait un peu plus sur "les humains"
+
+/*
+En faisant produire du code (ou ce qui tourne autour du code) à des gens qui en faisait avant, on a —en quelque sorte— vu en accélérer ce qu'il s'est passé lorsqu'on est passé du Cheval à la Voiture, ou du Manuscrit à l'Impression de masse: une perte de de sens pour les maréchaux-ferrants ou les moines copistes, certes, mais une explosion de capacités.
+
+On a donc réalisé que ce qui était impossible avant (comme de faire Paris-Bretagne en quatre heures d'une traite, ou d'avoir un exemplaire de la Bible dans chaque maison), est devenu possible.
+
+Mais, en grande partie, les maréchaux-ferrants et les copistes ont disparu. Bon pas disparus-disparus, mais ils sont devenus autre chose. Aujourd'hui, je vous donne une piste de réflexion sur notre "autre chose" à nous.
+*/
+
+## Tout le monde ne sait pas composer une symphonie
+!image(assets/will-smith-i-robot-meme.jpg,https://imgflip.com/memegenerator (I Robot symphony meme),,,,true)
+
+/*
+Les IAs vont donner énormément de pouvoir à celles et ceux qui ne l'avaient pas, avec les avantages et les inconvénients que ça représente. Le truc, c'est que contrairement aux voitures et aux presses, les LLMs ne sont pas déterministiques. On va avoir besoin de continuellement savoir "comment ça marche" pour déterminer si, oui ou non, ces bestioles-là vont dans "le bon sens"
+*/
+
+## Pourquoi créer du contenu Tech en 2026 ?
+
+# Partager
+# Apprendre
+# Faire votre veille
+
+<q>Vous ne le savez pas encore, mais vous êtes déjà des Influenceurs.</q>
+<cite>Ken le Sur-streamant</cite>
+
+/*
+Voilà, on pourrait s'arrêter là. C'est la présentation. Merci à vous
+*/
+
+## Le vrai sujet
+
+# L'attention est un jeu à somme nulle
+
+/*
+Malgré ce que ma femme me répète régulièrement, on ne peut pas vraiment faire deux choses en même temps. Et des raisons de zapper, on en a pléthore. Je pense que l'un des meilleurs moyens de casser cette logique infernale qui consiste à alterner entre Netflix, le doomscrolling, et autres activités à relativement faible valeur ajoutée, c'est d'en prendre contrepied et de n'avoir pas d'autre choix que de produire du contenu. Car quand on produit, on ne consomme pas. Et plus on produit, plus différemment on consomme.
+*/
+
+## Transmettre
+# Quoi ?
+
+/*
+C'est là qu'il va vous falloir gamberger. Certains sont plus à l'aise à l'écrit, d'autres sont plus à l'aise à l'oral. Moi, j'ai envie de dire que ce n'est pas très important tant que vous trouvez un point de départ. Ça peut être des tweets, qui sont un médium en soit (même si on est limités à 140 caractères, ce que je regrette beaucoup). L'important c'est de tenter un médium pour déterminer ce que vous allez transmettre.
+*/
+
+## Transmettre
+# Les LLMs ne doivent pas faire ce taf ! ⚠️
+
+/*
+Faire de la recherche, générer du boostrap (c'est le cas de cette présentation), tester des trucs, oui, pas de problème. Mais ça doit rester votre voix. C'est pourquoi, comme pour le Dev, je pense que les humains doivent rester aux commandes du process, de ce qui va être montré aux autres (c'est le cas de cette présentation). C'est ce fameux "20%" du Pareto qui fait toute la différence. La quantité d'humidité dans l'air qui fait réussir les macarons
+*/
+
+## Transmettre
+# À Qui ?
+
+/*
+C'est une question qu'on va prolonger avec les formats ensuite car c'est très lié, mais il va falloir faire un choix. Moi j'ai choisi le streaming en format PC. Car ma cible, ce sont celles et ceux qu'on appelle les Mediors. Ils ne sont pas encore totalement brainrotté par TikTok, sont capables d'être attentif à plus ou moins une heure, et sont en recherche de contenu qui va au-delà des trucs basiques et bateau (je découvre git, c'est quoi le front-end, etc.) qui vont leur permettre de discuter un peu plus du fond (à quoi servent nos métiers, quels problèmatiques ils soulèvent, et comment on s'en sort avec ce qu'on a)
+*/
+
+## Les formats
+# Direct vs Postérité vs Instantané
+
+/*
+Le Direct c'est le streaming, c'est montrer des choses en quasi-temps réel. C'est réagir à un chat avec lequel on va intéragir. Bref, c'est un arbitrage vers l'échange, la discussion, la communauté. La barrière a l'entrée est relativement faible, mais ça nécessite une présence régulière et une organisation personnelle...militaire.
+
+La Postérité, c'est YouTube. C'est préparer en amont un contenu (d'où une relativement forte barrière à l'entrée, car montage, etc.), mais c'est s'assurer de toucher sur la durée une large part de gens, grâce au très saint Algorithme (on reviendra là-dessus). On n'en est pas au niveau de l'instantané pour ce qui est de l'invasion de l'IA mais ça commence à arriver. Le truc, c'est que ce genre de contenu se prête assez peu à l'automatisation, car ça viellit assez mal (on fait de mieux en mieux très régulièrement), et ça se noie assez vite dans la masse.
+
+L'Instantané, c'est TikTok/Instagram/etc. À la base on avait des clips de streams pour mettre en phase certains grands moments, mais ça a très vite dérivé en AI slop. Mais si, vous savez, c'est Peter de Family Gui qui explique PostgreSQL sur un fond de vidéo de Minecraft Jumping. Produit à la chaîne de manière totalement automatisée, en masse, et là pour grapiller les quelques secondes d'attention que vous leur accorder pendant votre doomscrolling. Vous n'apprenez rien de concret, ils reçoivent un million de fois un centime, le compte est bon.
+Certains contenus restent cependant très travaillés (pixel art, ou explications d'algorithmes par ex.), mais c'est très très variable.
+*/
+
+## L'Algorithme
+# Le faiseur de Rois et de Reines
+
+/*
+Je préfère être brutal: l'Algorithme, c'est-à-dire la formule secrète de chaque réseau social, est votre pire ennemi. Certains pensent maîtriser les aspects qui vont vous "faire gagner" des places dans le ranking, mais on est totalement dans la fumisterie, surtout depuis que les LLMs ont été incorporés (avec leur indéterminisme, donc) dans les formules. Si vous faites ça pour grapiller des vues, vous allez soit déprimer très vite, soit passer du côté obscur (acheter des views, des abonnements, etc.). J'ai envie de dire: "Au contraire" ! Faites votre contenu de niche, voyez quelle communauté peut se créer autour de ce qui vous intéresse car sinon…
+*/
+
+<q>Only 4% of influencers make USD 100,000 or more annually.</q>
+<cite>DemandSage Creator Economy Report 2026</cite>
+
+## .[full-image]
+!image(assets/slavery-rick-morty.gif,Rick and Morty - The Ricks Must Be Crazy - S02E06,,800,,true)
+
+## Produire des contenus
+# « Red. Green. Blue. »
+
+/*
+Il n'y a pas d'ingrédient secret. Trouver votre formule passe forcément par toutes ces expérimentations qui font le sel de la Vie. D'ailleurs c'est là que les LLMs peuvent vous aider (nouvelles idées, ce que font les autres etc.). J'ai beaucoup itéré dans mon format: des vidéos montées et travaillées en parallèle des streams ? un créneau par semaine puis un créneau pour chaque soir de semaine ?des projets sur la durée et des sujets d'un soir ? du gaming ou pas du gaming ? quand je dois supprimer un épisode je décale tout ou je fais comme s'il n'avait jamais eu lieu ? À chaque fois une expérimentation, à chaque fois un feedback honnête (ce qui me plaît versus ce qui fonctionne), et à chaque fois une décision.
+
+Étrangement, les gens aiment ce processus. Pas si étrange que ça, car il me correspond, à moi.
+*/
+
+## Produire des contenus
+# La barrière à l'entrée en 2026:
+
+!image(assets/limbo-dance.gif,Dance Limbo (anonyme),,800,true)
+
+/*
+Tout est possible en 2026. On a des webcams 1080p partout, on a la Fibre, on a OBS Studios et des tutos à ne plus savoir qu'en faire, on a DaVinci Resolve, on a les LLMs pour les transcriptions, les miniatures, et tout ce qui peut tourner autour. Bien évidemment si jamais vous arrivez à vous dégager un revenu, vous pouvez vous professionnaliser, vous pourrez payer un ou une monteuse etc.
+*/
+
+## L'identité
+
+# Le Permacodeur
+
+<q>À personnaliser avec le lien entre création de contenu, permaculture et développement.</div>
+
+/*
+To Be Defined
+*/
+
+## Le pas de côté
+
+# La Tech est faite pour des humains.
+
+<q>À remplacer par la conclusion, l'appel à l'action ou la question finale.</div>
+
+/*
+To Be Defined
+*/
+
+## Stéphane TRÉBEL .[speaker]
+
+# Le Permacodeur
+
+!image(common/assets/profil.jpg,avatar,250)
+<br>
+<br>
+
+### ERP 👔
+
+### Web 🌍
+
+### Rust 🦀
+
+## .[full-image]
+
+!image(common/assets/combo-yt-twitch.png,,1800)
+
+## .[full-image]
+
+!image(common/assets/permacodeur-aoc2025.png,,1800)
+
+## .[full-image]
+
+!image(common/assets/permacodeur-commentaire-articles.png,,1800)
+
+## .[full-image]
+
+!image(common/assets/gt-software.svg,,1800)
+
+/*
+J'ai co-créé récemment avec mon camarade Alexandre un BUREAU D'ÉTUDE D'INGÉNIERIE LOGICIELLE, afin d'accompagner les entreprises éloignées du monde de la Tech dans leur TRANSFORMATION Numérique, afin qu'elles aussi bénéficient de tous ces formidables gains de productivité (que ce soit l'AUTOMATISATION DES PROCESS MÉTIER, les AVANTAGES DU CLOUD, les LLMs bien sûr, etc.)
+
+Pour cela, on utilisera des MANIÈRES D'ANALYSER LES PROBLÉMATIQUES (donc on va s'intéresser à ce que les gens font plutôt que de leur vendre le dernier truc à la mode),
+
+des MÉTHODES DE FORMULATION DE SOLUTIONS (donc on va structurer nos analyses avec les bonnes pratiques qui ont fait leurs preuves),
+
+et pour finir des OUTILS DE CONCEPTION PLUS OU MOINS AUTOMATISÉS AVEC LES LLMs (on va itérer à tous les niveaux, pour clarifier le besoin et ensuite pour implémenter les solutions).
+
+Comme vous le voyez, on n'écarte absolument pas l'humain, bien au contraire ! On le remet au centre de la réflexion.
+
+Notre objectif, finalement, c'est de réaffirmer les standards industriels actuels concernant le développement logiciel et son exploitation. C'est une approche peut-être assez "old-school", structurée et procédurale, mais c'est une approche qui parle plus à nos clients. (Par exemple, on parlera plutôt de marge bénéficiaire et réglementation financière que des nouveaux langages et gestionnaires de paquets)
+*/
+
+## .[full-image]
+
+<div class="final-slide flex-column">
+  <div class="flex-row">
+    <div class="flex-column">
+      <span>Les liens 🤓</span>
+      <img
+        class="qr-code"
+        src="common/assets/qr-code-linktree-moi.svg"
+        alt="Mon Linktree qui regroupe tous les liens de cette conférence"
+      />
+    </div>
+    <div class="flex-column">
+      <span>Vos feedbacks 🫶</span>
+      <img
+        class="qr-code"
+        src="assets/qr-jugsummercamp-2026.svg"
+        alt="QR Code pointant vers l'Openfeedback de cette conférence"
+      />
+    </div>
+  </div>
+
+  <div class="flex-row" style="margin-top: 10rem">
+    <div class="flex-column" style="margin: 30px">
+      <img
+        src="common/assets/profil.jpg"
+        alt="Moi <3"
+        style="max-width: 10rem; clip-path: circle(5rem at center)"
+      />
+    </div>
+    <div class="vertical-bar"></div>
+      <div>
+        <em>
+          Vous avez sûrement quelque chose à partager. Trouvez votre voix, et exprimez-vous !
+        </em>
+        😉
+      </div>
+    </div>
+  </div>
+</div>
+
+/*
+  À gauche tous mes liens de rézosocios, à droite le lien vers pour les feedbacks
+*/
