@@ -1,5 +1,5 @@
-## .[cover]
-<div class="prompt">bienvenue --tout-le-monde</div>
+## .[full-image]
+!image(assets/jug-cover.png,,1800)
 
 ## De développeur à streamer .[chapter]
 # Remettre de l'Humain dans le Dev

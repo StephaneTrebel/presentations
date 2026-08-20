@@ -22,7 +22,7 @@
   --sd-sv-text-color: #182235;
 
   --console-accent: #2a9d6f;
-  --console-warm: #b76626;
+  --console-warm: #ea643a;
   --console-muted: #65717a;
   --console-panel: #eef1ed;
   --console-line: rgba(42, 157, 111, 0.28);
@@ -42,6 +42,11 @@ p,
 li {
   text-wrap: balance;
 }
+
+.sd-slide .sd-img {
+  max-width: 100% !important;
+}
+
 
 h1,
 h2,
@@ -147,7 +152,32 @@ q {
   content: "_";
 }
 
+/* Conference logo */
+.sd-slide::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(logo-jsc.png);
+  background-position: right 2vw bottom 2vh;
+  background-repeat: no-repeat;
+  background-size: 8vw;
+  background-color: var(--white);
+  opacity: 0.75;
+  z-index: -1;
+}
+
 /* Final slide (with links) */
+.final-slide {
+  font-size: 3rem;
+}
+
+.qr-code {
+  width: 20vw;
+}
+
 .vertical-bar {
   background-color: gray;
   height: 10rem;
@@ -156,17 +186,16 @@ q {
   margin-right: 1rem;
 }
 .flex-row {
-	display: flex;
+  display: flex;
   flex-direction: row;
-	align-items: center;
+  align-items: center;
   justify-content: space-around;
 
-  width: 100%
+  width: 100%;
 }
 .flex-column {
-	display: flex;
+  display: flex;
   flex-direction: column;
-	align-items: center;
+  align-items: center;
   justify-content: center;
 }
-/* Final slide (with links) */
