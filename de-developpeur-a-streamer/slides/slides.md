@@ -44,11 +44,26 @@ Mais, en grande partie, les maréchaux-ferrants et les copistes ont disparu. Bon
 Les IAs vont donner énormément de pouvoir à celles et ceux qui ne l'avaient pas, avec les avantages et les inconvénients que ça représente. Le truc, c'est que contrairement aux voitures et aux presses, les LLMs ne sont pas déterministiques. On va avoir besoin de continuellement savoir "comment ça marche" pour déterminer si, oui ou non, ces bestioles-là vont dans "le bon sens"
 */
 
+## Le sujet sociétal
+
+# L'attention est un jeu à somme nulle
+
+/*
+On ne peut pas vraiment faire deux choses en même temps. Et des raisons de zapper, on en a pléthore. Je pense que l'un des meilleurs moyens de casser cette logique infernale qui consiste à alterner entre Netflix, le doomscrolling, et autres activités à relativement faible valeur ajoutée, c'est d'en prendre contrepied et de n'avoir pas d'autre choix que de produire du contenu. Car quand on produit, on ne consomme pas. Et plus on produit, plus différemment on consomme.
+*/
+
+## Ma bascule mentale
+# "J'ai pas le temps" -> "Je ne prends pas le temps"
+
+/*
+Et la meilleure manière de prendre le temps, c'est de se forcer à le prendre, avec un ENGAGEMENT
+*/
+
 ## Pourquoi créer du contenu Tech en 2026 ?
 
+# Pratiquer
 # Partager
-# Apprendre
-# Faire votre veille
+# Découvrir
 
 <q>Vous ne le savez pas encore, mais vous êtes déjà des Influenceurs.</q>
 <cite>Ken le Sur-streamant</cite>
@@ -57,37 +72,23 @@ Les IAs vont donner énormément de pouvoir à celles et ceux qui ne l'avaient p
 Voilà, on pourrait s'arrêter là. C'est la présentation. Merci à vous
 */
 
-## Le vrai sujet
 
-# L'attention est un jeu à somme nulle
-
-/*
-Malgré ce que ma femme me répète régulièrement, on ne peut pas vraiment faire deux choses en même temps. Et des raisons de zapper, on en a pléthore. Je pense que l'un des meilleurs moyens de casser cette logique infernale qui consiste à alterner entre Netflix, le doomscrolling, et autres activités à relativement faible valeur ajoutée, c'est d'en prendre contrepied et de n'avoir pas d'autre choix que de produire du contenu. Car quand on produit, on ne consomme pas. Et plus on produit, plus différemment on consomme.
-*/
-
-## Transmettre
+## Pratiquer
 # Quoi ?
 
 /*
 C'est là qu'il va vous falloir gamberger. Certains sont plus à l'aise à l'écrit, d'autres sont plus à l'aise à l'oral. Moi, j'ai envie de dire que ce n'est pas très important tant que vous trouvez un point de départ. Ça peut être des tweets, qui sont un médium en soit (même si on est limités à 140 caractères, ce que je regrette beaucoup). L'important c'est de tenter un médium pour déterminer ce que vous allez transmettre.
 */
 
-## Transmettre
-# Les LLMs ne doivent pas faire ce taf ! ⚠️
+## Pratiquer
+# Pour Qui ?
 
 /*
-Faire de la recherche, générer du boostrap (c'est le cas de cette présentation), tester des trucs, oui, pas de problème. Mais ça doit rester votre voix. C'est pourquoi, comme pour le Dev, je pense que les humains doivent rester aux commandes du process, de ce qui va être montré aux autres (c'est le cas de cette présentation). C'est ce fameux "20%" du Pareto qui fait toute la différence. La quantité d'humidité dans l'air qui fait réussir les macarons
+C'est une question qu'on va prolonger avec les formats ensuite car c'est très lié, mais il va falloir faire un choix. Moi j'ai choisi le streaming en format paysage. Car ma cible, ce sont celles et ceux qu'on appelle les Mediors. Ils ne sont pas encore totalement brainrotté par TikTok, sont capables d'être attentif à plus ou moins une heure, et sont en recherche de contenu qui va au-delà des trucs basiques et bateau (je découvre git, c'est quoi le front-end, etc.) qui vont leur permettre de discuter un peu plus du fond (à quoi servent nos métiers, quels problèmatiques ils soulèvent, et comment on s'en sort avec ce qu'on a)
 */
 
-## Transmettre
-# À Qui ?
-
-/*
-C'est une question qu'on va prolonger avec les formats ensuite car c'est très lié, mais il va falloir faire un choix. Moi j'ai choisi le streaming en format PC. Car ma cible, ce sont celles et ceux qu'on appelle les Mediors. Ils ne sont pas encore totalement brainrotté par TikTok, sont capables d'être attentif à plus ou moins une heure, et sont en recherche de contenu qui va au-delà des trucs basiques et bateau (je découvre git, c'est quoi le front-end, etc.) qui vont leur permettre de discuter un peu plus du fond (à quoi servent nos métiers, quels problèmatiques ils soulèvent, et comment on s'en sort avec ce qu'on a)
-*/
-
-## Les formats
-# Direct vs Postérité vs Instantané
+## Pratiquer
+# Comment ?
 
 /*
 Le Direct c'est le streaming, c'est montrer des choses en quasi-temps réel. C'est réagir à un chat avec lequel on va intéragir. Bref, c'est un arbitrage vers l'échange, la discussion, la communauté. La barrière a l'entrée est relativement faible, mais ça nécessite une présence régulière et une organisation personnelle...militaire.
@@ -97,6 +98,14 @@ La Postérité, c'est YouTube. C'est préparer en amont un contenu (d'où une re
 L'Instantané, c'est TikTok/Instagram/etc. À la base on avait des clips de streams pour mettre en phase certains grands moments, mais ça a très vite dérivé en AI slop. Mais si, vous savez, c'est Peter de Family Gui qui explique PostgreSQL sur un fond de vidéo de Minecraft Jumping. Produit à la chaîne de manière totalement automatisée, en masse, et là pour grapiller les quelques secondes d'attention que vous leur accorder pendant votre doomscrolling. Vous n'apprenez rien de concret, ils reçoivent un million de fois un centime, le compte est bon.
 Certains contenus restent cependant très travaillés (pixel art, ou explications d'algorithmes par ex.), mais c'est très très variable.
 */
+
+## Pratiquer
+# ⚠️Les LLMs ne doivent pas faire (directement) le taf ⚠️
+
+/*
+Faire de la recherche, générer du boostrap (c'est le cas de cette présentation), tester des trucs, oui, pas de problème. Mais ça doit rester votre voix. C'est pourquoi, comme pour le Dev, je pense que les humains doivent rester aux commandes du process, de ce qui va être montré aux autres (c'est le cas de cette présentation). C'est ce fameux 20 du Pareto qui fait toute la différence. La quantité d'humidité dans l'air qui fait réussir les macarons.
+*/
+
 
 ## L'Algorithme
 # Le faiseur de Rois et de Reines
@@ -129,24 +138,41 @@ Il n'y a pas d'ingrédient secret. Trouver votre formule passe forcément par to
 Tout est possible en 2026. On a des webcams 1080p partout, on a la Fibre, on a OBS Studios et des tutos à ne plus savoir qu'en faire, on a DaVinci Resolve, on a les LLMs pour les transcriptions, les miniatures, et tout ce qui peut tourner autour. Bien évidemment si jamais vous arrivez à vous dégager un revenu, vous pouvez vous professionnaliser, vous pourrez payer un ou une monteuse etc.
 */
 
-## L'identité
+## Partager
+# Ils viennent...pour vous !
 
-# Le Permacodeur
-
-<q>À personnaliser avec le lien entre création de contenu, permaculture et développement.</div>
 
 /*
-To Be Defined
+J'entends souvent les aspirants-influenceurs me dire qu'ils ou elles ne se sentent pas légitimes à se lancer dans la création de contenu, qu'il y a déjà untel ou unetel qui fait déjà bien mieux...et c'est probablement vrai. Mais on s'en cogne: ce que j'ai compris c'est que les gens viennent par curiosité, et reste par OSMOSE: c'est comme ça que se créé une communauté. Par l'échange, le débat, les références, mais avant tout avec cette osmose qui font que des gens regardent ce que vout faites et disent "ah ouais mais c'est fun et ça me parle". Bref, plus vous serez vous-même, plus les gens que ça intéresse seront engagés
 */
 
-## Le pas de côté
-
-# La Tech est faite pour des humains.
-
-<q>À remplacer par la conclusion, l'appel à l'action ou la question finale.</div>
+## Partager
+# Ils viennent...pour vous corriger !
 
 /*
-To Be Defined
+Et c'est ok, j'ai mes backseaters adorés qui vont avoir leur point de vue et leur opinion (souvent très forte), et c'est de cette diversité dont on se nourrit. Certains seront des C#iens pur et dur, d'autres des Rustacés un peu trop enthousiastes, et c'est ok. Construire une communauté respectueuse et riche, ça prend du temps, parfois des coups de bâtons, mais ça vaut le coup sur la durée. Si tant est que vous engagiez la conversation, que vous deveniez non pas le bottleneck des échanges, mais le terreau sur lequel ça va se faire
+*/
+
+## Découvrir
+# Ils viennent...pour vous alimenter !
+
+La puissance des Discords et compagnie...
+
+/*
+Et ça, c'est le plus sympa: quand vous avez votre communauté qui a son rendez-vous avec votre contenu, quand vous avez vos réguliers qui vont porter l'image que vous voulez porter, et que vous lancez "Start Streaming", là vous commencer à vous marrer
+*/
+
+## Car après tout
+# Il faut vous AMUSER
+
+Sinon ça n'a aucun sens...
+
+## Bref...
+
+# La Tech sera toujours faite par, et pour les humains
+
+/*
+Et vous, qu'avez vous à dire ?
 */
 
 ## Stéphane TRÉBEL .[speaker]
@@ -226,7 +252,7 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
     <div class="vertical-bar"></div>
       <div>
         <em>
-          Vous avez sûrement quelque chose à partager. Trouvez votre voix, et exprimez-vous !
+          Vous avez sûrement quelque chose à partager. Trouvez votre voie/voix, et exprimez-vous !
         </em>
         😉
       </div>
