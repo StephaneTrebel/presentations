@@ -88,12 +88,29 @@ C'est une question qu'on va prolonger avec les formats ensuite car c'est très l
 */
 
 ## Pratiquer
-# Comment ?
+# Comment ? Le Direct
+
+!image(assets/exemple-streaming-permacodeur.png,@permacodeur,,800,,true)
 
 /*
 Le Direct c'est le streaming, c'est montrer des choses en quasi-temps réel. C'est réagir à un chat avec lequel on va intéragir. Bref, c'est un arbitrage vers l'échange, la discussion, la communauté. La barrière a l'entrée est relativement faible, mais ça nécessite une présence régulière et une organisation personnelle...militaire.
+*/
 
+## Pratiquer
+# Comment ? La Postérité
+
+!image(assets/exemple-youtube-letsgetrusty.png,@letsgetrusty,,800,,true)
+
+/*
 La Postérité, c'est YouTube. C'est préparer en amont un contenu (d'où une relativement forte barrière à l'entrée, car montage, etc.), mais c'est s'assurer de toucher sur la durée une large part de gens, grâce au très saint Algorithme (on reviendra là-dessus). On n'en est pas au niveau de l'instantané pour ce qui est de l'invasion de l'IA mais ça commence à arriver. Le truc, c'est que ce genre de contenu se prête assez peu à l'automatisation, car ça viellit assez mal (on fait de mieux en mieux très régulièrement), et ça se noie assez vite dans la masse.
+*/
+
+## Pratiquer
+# Comment ? Les Shorts
+
+!image(assets/exemple-shorts-primeagen.png,@primeagen,,800,,true)
+
+/*
 
 L'Instantané, c'est TikTok/Instagram/etc. À la base on avait des clips de streams pour mettre en phase certains grands moments, mais ça a très vite dérivé en AI slop. Mais si, vous savez, c'est Peter de Family Gui qui explique PostgreSQL sur un fond de vidéo de Minecraft Jumping. Produit à la chaîne de manière totalement automatisée, en masse, et là pour grapiller les quelques secondes d'attention que vous leur accorder pendant votre doomscrolling. Vous n'apprenez rien de concret, ils reçoivent un million de fois un centime, le compte est bon.
 Certains contenus restent cependant très travaillés (pixel art, ou explications d'algorithmes par ex.), mais c'est très très variable.
@@ -106,18 +123,22 @@ Certains contenus restent cependant très travaillés (pixel art, ou explication
 Faire de la recherche, générer du boostrap (c'est le cas de cette présentation), tester des trucs, oui, pas de problème. Mais ça doit rester votre voix. C'est pourquoi, comme pour le Dev, je pense que les humains doivent rester aux commandes du process, de ce qui va être montré aux autres (c'est le cas de cette présentation). C'est ce fameux 20 du Pareto qui fait toute la différence. La quantité d'humidité dans l'air qui fait réussir les macarons.
 */
 
-
 ## L'Algorithme
 # Le faiseur de Rois et de Reines
+
+!image(assets/youtube-algo.png,x.com,,800,,true)
 
 /*
 Je préfère être brutal: l'Algorithme, c'est-à-dire la formule secrète de chaque réseau social, est votre pire ennemi. Certains pensent maîtriser les aspects qui vont vous "faire gagner" des places dans le ranking, mais on est totalement dans la fumisterie, surtout depuis que les LLMs ont été incorporés (avec leur indéterminisme, donc) dans les formules. Si vous faites ça pour grapiller des vues, vous allez soit déprimer très vite, soit passer du côté obscur (acheter des views, des abonnements, etc.). J'ai envie de dire: "Au contraire" ! Faites votre contenu de niche, voyez quelle communauté peut se créer autour de ce qui vous intéresse car sinon…
 */
 
+## L'Algorithme
+# Ne faites pas ça pour l'argent 😅
+
 <q>Only 4% of influencers make USD 100,000 or more annually.</q>
 <cite>DemandSage Creator Economy Report 2026</cite>
 
-## .[full-image]
+## Sinon...
 !image(assets/slavery-rick-morty.gif,Rick and Morty - The Ricks Must Be Crazy - S02E06,,800,,true)
 
 ## Produire des contenus
