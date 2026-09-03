@@ -1,0 +1,7 @@
+.sbs .step {
+  opacity: 30%;
+}
+
+.sbs .step.step-shown {
+  opacity: 1;
+}

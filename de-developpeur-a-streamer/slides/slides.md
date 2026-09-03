@@ -83,12 +83,14 @@ C'est là qu'il va vous falloir gamberger. Certains sont plus à l'aise à l'éc
 ## Pratiquer
 # Pour Qui ?
 
+!image(assets/youtube-mes-stats.png,@permacodeur,,800,,true)
+
 /*
 C'est une question qu'on va prolonger avec les formats ensuite car c'est très lié, mais il va falloir faire un choix. Moi j'ai choisi le streaming en format paysage. Car ma cible, ce sont celles et ceux qu'on appelle les Mediors. Ils ne sont pas encore totalement brainrotté par TikTok, sont capables d'être attentif à plus ou moins une heure, et sont en recherche de contenu qui va au-delà des trucs basiques et bateau (je découvre git, c'est quoi le front-end, etc.) qui vont leur permettre de discuter un peu plus du fond (à quoi servent nos métiers, quels problèmatiques ils soulèvent, et comment on s'en sort avec ce qu'on a)
 */
 
 ## Pratiquer
-# Comment ? Le Direct
+# Quoi ? Le Direct
 
 !image(assets/exemple-streaming-permacodeur.png,@permacodeur,,800,,true)
 
@@ -97,7 +99,7 @@ Le Direct c'est le streaming, c'est montrer des choses en quasi-temps réel. C'e
 */
 
 ## Pratiquer
-# Comment ? La Postérité
+# Quoi ? La Postérité
 
 !image(assets/exemple-youtube-letsgetrusty.png,@letsgetrusty,,800,,true)
 
@@ -106,7 +108,7 @@ La Postérité, c'est YouTube. C'est préparer en amont un contenu (d'où une re
 */
 
 ## Pratiquer
-# Comment ? Les Shorts
+# Quoi ? Les Shorts
 
 !image(assets/exemple-shorts-primeagen.png,@primeagen,,800,,true)
 
@@ -142,15 +144,6 @@ Je préfère être brutal: l'Algorithme, c'est-à-dire la formule secrète de ch
 !image(assets/slavery-rick-morty.gif,Rick and Morty - The Ricks Must Be Crazy - S02E06,,800,,true)
 
 ## Produire des contenus
-# « Red. Green. Blue. »
-
-/*
-Il n'y a pas d'ingrédient secret. Trouver votre formule passe forcément par toutes ces expérimentations qui font le sel de la Vie. D'ailleurs c'est là que les LLMs peuvent vous aider (nouvelles idées, ce que font les autres etc.). J'ai beaucoup itéré dans mon format: des vidéos montées et travaillées en parallèle des streams ? un créneau par semaine puis un créneau pour chaque soir de semaine ?des projets sur la durée et des sujets d'un soir ? du gaming ou pas du gaming ? quand je dois supprimer un épisode je décale tout ou je fais comme s'il n'avait jamais eu lieu ? À chaque fois une expérimentation, à chaque fois un feedback honnête (ce qui me plaît versus ce qui fonctionne), et à chaque fois une décision.
-
-Étrangement, les gens aiment ce processus. Pas si étrange que ça, car il me correspond, à moi.
-*/
-
-## Produire des contenus
 # La barrière à l'entrée en 2026:
 
 !image(assets/limbo-dance.gif,Dance Limbo (anonyme),,800,true)
@@ -159,9 +152,37 @@ Il n'y a pas d'ingrédient secret. Trouver votre formule passe forcément par to
 Tout est possible en 2026. On a des webcams 1080p partout, on a la Fibre, on a OBS Studios et des tutos à ne plus savoir qu'en faire, on a DaVinci Resolve, on a les LLMs pour les transcriptions, les miniatures, et tout ce qui peut tourner autour. Bien évidemment si jamais vous arrivez à vous dégager un revenu, vous pouvez vous professionnaliser, vous pourrez payer un ou une monteuse etc.
 */
 
+## Produire des contenus .[#split]
+
+[[top]]
+
+<h1>« Red. Green. Blue. »</h1>
+<h3>Un an 1/2, et 200 vidéos, séparent ces deux captures 😁</h3>
+
+[[/top]]
+
+[[left]]
+
+!image(assets/le-tout-debut.png,Mon premier stream !,,500,true)
+
+[[/left]]
+
+[[right]]
+
+!image(assets/le-tout-dernier.png,Mon dernier stream !,,500,true)
+
+[[/right]]
+
+/*
+Il n'y a pas d'ingrédient secret. Trouver votre formule passe forcément par toutes ces expérimentations qui font le sel de la Vie. D'ailleurs c'est là que les LLMs peuvent vous aider (nouvelles idées, ce que font les autres etc.). J'ai beaucoup itéré dans mon format: des vidéos montées et travaillées en parallèle des streams ? un créneau par semaine puis un créneau pour chaque soir de semaine ?des projets sur la durée et des sujets d'un soir ? du gaming ou pas du gaming ? quand je dois supprimer un épisode je décale tout ou je fais comme s'il n'avait jamais eu lieu ? À chaque fois une expérimentation, à chaque fois un feedback honnête (ce qui me plaît versus ce qui fonctionne), et à chaque fois une décision.
+
+Étrangement, les gens aiment ce processus. Pas si étrange que ça, car il me correspond, à moi.
+*/
+
 ## Partager
 # Ils viennent...pour vous !
 
+!image(assets/youtube-remerciements.png,C'est trop choupi !,,500,true)
 
 /*
 J'entends souvent les aspirants-influenceurs me dire qu'ils ou elles ne se sentent pas légitimes à se lancer dans la création de contenu, qu'il y a déjà untel ou unetel qui fait déjà bien mieux...et c'est probablement vrai. Mais on s'en cogne: ce que j'ai compris c'est que les gens viennent par curiosité, et reste par OSMOSE: c'est comme ça que se créé une communauté. Par l'échange, le débat, les références, mais avant tout avec cette osmose qui font que des gens regardent ce que vout faites et disent "ah ouais mais c'est fun et ça me parle". Bref, plus vous serez vous-même, plus les gens que ça intéresse seront engagés
@@ -170,6 +191,8 @@ J'entends souvent les aspirants-influenceurs me dire qu'ils ou elles ne se sente
 ## Partager
 # Ils viennent...pour vous corriger !
 
+!image(assets/youtube-corrections.png,Y'en a des fois ils sont pas d'accord du tout,,500,true)
+
 /*
 Et c'est ok, j'ai mes backseaters adorés qui vont avoir leur point de vue et leur opinion (souvent très forte), et c'est de cette diversité dont on se nourrit. Certains seront des C#iens pur et dur, d'autres des Rustacés un peu trop enthousiastes, et c'est ok. Construire une communauté respectueuse et riche, ça prend du temps, parfois des coups de bâtons, mais ça vaut le coup sur la durée. Si tant est que vous engagiez la conversation, que vous deveniez non pas le bottleneck des échanges, mais le terreau sur lequel ça va se faire
 */
@@ -177,16 +200,18 @@ Et c'est ok, j'ai mes backseaters adorés qui vont avoir leur point de vue et le
 ## Découvrir
 # Ils viennent...pour vous alimenter !
 
-La puissance des Discords et compagnie...
+!image(assets/discord.png,Mon serveur Discord,,800,true)
 
 /*
 Et ça, c'est le plus sympa: quand vous avez votre communauté qui a son rendez-vous avec votre contenu, quand vous avez vos réguliers qui vont porter l'image que vous voulez porter, et que vous lancez "Start Streaming", là vous commencer à vous marrer
 */
 
 ## Car après tout
-# Il faut vous AMUSER
+# Il faut vous AMUSER 🤩
 
-Sinon ça n'a aucun sens...
+/*
+Rappel utile: les LLMs ne s'"amusent" pas ^^
+*/
 
 ## Bref...
 

@@ -1,0 +1,18 @@
+:root {
+  --animationSBSSteps: var(--animationTimer);
+}
+
+.sbs .step {
+  opacity: 0;
+  transition: opacity var(--animationSBSSteps);
+}
+
+.sbs .step.step-shown {
+  opacity: 1;
+}
+
+@media print {
+  .sbs .step {
+    opacity: 1;
+  }
+}
