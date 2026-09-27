@@ -206,7 +206,7 @@ rtk git commit -m "feat: jalonner les chapitres du monomythe" -m "Generated with
 Run:
 
 ```bash
-rtk python3 -c 'from pathlib import Path; text=Path("slides/01-main.md").read_text(); assert text.count("assets/monomythe-") == 7; assert text.index("Le Départ est franchi") < text.index("Chapitre 2 - L\u0027Initiation"); assert text.index("L\u0027Initiation est accomplie") < text.index("Chapitre 3 - Le Retour"); assert text.index("Le Retour est accompli") < text.index("Voilà. Fin de l\u0027histoire"); assert "## Rien n\u0027est jamais terminé" in text; print("7 références et ordre narratif valides")'
+rtk python3 -c 'from pathlib import Path; text=Path("slides/01-main.md").read_text(); assert text.count("assets/monomythe-") == 7; assert text.index("Le Départ est franchi") < text.index("Chapitre 2 - L\u0027Initiation"); assert text.index("L\u0027Initiation est accomplie") < text.index("Chapitre 3 - Le Retour"); assert text.index("Le Retour est accompli") < text.index("Voilà.\u00a0Fin de l\u0027histoire"); assert "## Rien n\u0027est jamais terminé" in text; print("7 références et ordre narratif valides")'
 ```
 
 Expected: `7 références et ordre narratif valides`.

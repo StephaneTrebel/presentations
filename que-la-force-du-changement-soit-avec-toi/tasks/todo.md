@@ -5,9 +5,11 @@
 - [x] Rédiger la spécification.
 - [x] Faire approuver la spécification.
 - [x] Écrire le plan d'implémentation.
-- [ ] Créer les SVG et intégrer les sept slides prévues.
-- [ ] Vérifier le deck et documenter la revue.
+- [x] Créer les SVG et intégrer les sept slides prévues.
+- [x] Vérifier le deck et documenter la revue.
 
 ## Revue
 
-En attente de l'approbation de la spécification et de l'implémentation.
+- SVG : 7 assets XML valides, représentant les 17 étapes en 5 / 6 / 6.
+- Slides : trois ouvertures enrichies, trois bilans et une synthèse finale ajoutés dans l'ordre narratif.
+- Validation SliDesk : les 32 erreurs structurelles préexistantes restent connues et hors périmètre ; aucune erreur n'est liée aux ajouts.
