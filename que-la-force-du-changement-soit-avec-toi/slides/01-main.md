@@ -101,6 +101,7 @@ Je vais procéder comme Joseph Campbell, à savoir que je vais avoir une petite 
 ## .[chapter]
 # Chapitre 1 - Le Départ
 
+!image(assets/monomythe-depart.svg,Les cinq étapes du Départ,1250)
 
 /*
 Car il faut bien commencer quelque part, n'est-ce pas ?
@@ -260,8 +261,19 @@ How does a project get to be a year behind schedule? One day at a time.
 */
 
 
+## Le Départ est franchi
+# Le premier pas transforme déjà la personne qui l'a fait.
+
+!image(assets/monomythe-depart-parcouru.svg,Les cinq étapes parcourues du Départ,1250)
+
+/*
+Vous n'avez pas encore changé le monde, mais vous avez changé de position : vous avez quitté le confort du statu quo. C'est cette première transformation qui rend le reste du voyage possible.
+*/
+
 ## .[chapter]
 # Chapitre 2 - L'Initiation
+
+!image(assets/monomythe-initiation.svg,Les six étapes de l'Initiation,1250)
 
 
 
@@ -399,8 +411,19 @@ Personnellement, j'aime à penser que ce fameux superpouvoir c'est ce qui nous t
 */
 
 
+## L'Initiation est accomplie
+# L'épreuve transforme l'intention en capacité d'agir.
+
+!image(assets/monomythe-initiation-parcouru.svg,Les onze étapes parcourues du Départ et de l'Initiation,1250)
+
+/*
+Les épreuves ne sont pas seulement des obstacles : elles ont modifié votre regard, vos réflexes et votre capacité à agir. Mais cette capacité doit désormais retourner vers le collectif.
+*/
+
 ## .[chapter]
 # Chapitre 3 - Le Retour
+
+!image(assets/monomythe-retour.svg,Les six étapes du Retour,1250)
 
 
 /*
@@ -541,6 +564,24 @@ Il y a désormais d'autres Changements à effectuer, parfois plus ambitieux, par
 ## .[full-image]
 
 !image(assets/Lord-of-the-Rings-Bilbo-Baggins-There-And-Back-Again.jpg,,1000)
+
+## Le Retour est accompli
+# Le changement n'existe que lorsqu'il circule.
+
+!image(assets/monomythe-retour-parcouru.svg,Les dix-sept étapes parcourues du Monomythe,1250)
+
+/*
+Le savoir ne transforme que lorsqu'il revient vers les autres et prend place dans leur réalité. Le parcours est accompli, mais ce n'est pas une fin.
+*/
+
+## Rien n'est jamais terminé
+# Transformé·e, on repart.
+
+!image(assets/monomythe-cycle-complet.svg,Le cycle complet des dix-sept étapes du Monomythe,1350)
+
+/*
+Le cercle se referme, et c'est précisément le propos : l'état atteint aujourd'hui devient la normalité depuis laquelle naîtra le prochain appel. Le Monomythe décrit une transformation, pas une ligne d'arrivée.
+*/
 
 ## Voilà. Fin de l'histoire
 ...ou pas ?
