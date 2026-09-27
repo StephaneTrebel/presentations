@@ -43,15 +43,16 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
       <span>Les liens 🤓</span>
       <img
         src="common/assets/qr-code-linktree-moi.svg"
-        style="width: 13vw"
+        style="width: 20vw"
         alt="Mon Linktree qui regroupe tous les liens de cette conférence"
       />
     </div>
+    <div style="width: 15vw"></div>
     <div class="flex-column">
       <span>Vos feedbacks 🫶</span>
       <img
         src="assets/qr-code-sunnytech-2026.svg"
-        style="width: 13vw"
+        style="width: 20vw"
         alt="QR Code pointant vers l'Openfeedback de cette conférence"
       />
     </div>
@@ -68,10 +69,9 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
     <div class="vertical-bar"></div>
       <div>
         <em>
-          Rust 🦀 a désormais tout ce qu'il faut pour délivrer de la valeur<br>
-          pour vos applications métier. Jetez-y un œil !
+          Quelque soit le chemin que vous arpentez, prenez-soin de vous !
         </em>
-        👀
+        🫂
       </div>
     </div>
   </div>
