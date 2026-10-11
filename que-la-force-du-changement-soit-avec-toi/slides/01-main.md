@@ -36,6 +36,7 @@ Vu que, si on en croit les vendeurs de pelles, il n'y a même plus besoin de cod
 ## Le Monomythe de .[chapter]
 # Joseph Campbell
 //@ < 02:00
+!image(assets/livre-Le-heros-aux-mille-et-un-visages.jpg,,400)
 
 /*
 Le Monomythe est terme issu de l'analyse de Joseph Campbell sur des milliers de mythes, contes, et histoires qui ont été racontés de par le monde. Des Mayas aux Grecs, des rites Aborigènes aux rituels Africains, c'est LA référence en matière d'étude de ce genre de récits.
@@ -59,13 +60,13 @@ On a donc des contes, des récits, de partout et de tous temps, qui ont les mêm
 
 ## Une bonne partie des films d'aventure, dont…
 # Star Wars ⭐
-(et tous ses dérivés, tels les superhéros-héroïnes)
+(et tous ses dérivés, films de superhéros-héroïnes, etc.)
 
 ## Une bonne partie de la littérature "coming of age", dont…
 # Alice au Pays des Merveilles 🐰
 (et pléthore d'autres dessins animés "initiatiques")
 
-## Une bonne partie des trames de Jeux Vidéos, dont…
+## Une bonne partie des scénarios de Jeux Vidéos, dont…
 # Zelda 🎣
 (vous en voulez d'autres ? Parce que j'en ai plein d'autres 😁)
 
@@ -73,7 +74,7 @@ On a donc des contes, des récits, de partout et de tous temps, qui ont les mêm
 ça embête beaucoup les scénaristes d'ailleurs, car on a souvent l'impression, à force que tous les récits se ressemblent. Et ce n'est pas tout à fait faux !
 */
 
-## Le rapport avec la Tech ?
+## Ok mais… Le rapport avec la Tech ?
 (j'y viens)
 //@ < 05:00
 
@@ -116,7 +117,7 @@ Je vais procéder comme Joseph Campbell, à savoir que je vais avoir une petite 
 
 /*
 Car il faut bien commencer quelque part, n'est-ce pas ?
-Tout récit commence par un point de départ. Ce point, c'est vous. À votre bureau, sous la douche, dans votre transport +/- en commun de prédilection. Mais à l'origine de tout, il y a un départ.
+Tout récit commence par un point de départ. Ce point, c'est **VOUS**. À votre bureau, sous la douche, dans votre transport +/- en commun de prédilection. Mais à l'origine de tout, il y a un départ.
 <br>
 <br>
 On ne dirait pas comme ça, mais c'est pareil pour le Changement. On n'arrive pas vraiment à le placer à un moment précis, mais ce point de départ existe bien. Il est souvent —je pense— longuement mûri (on y reviendra), mais d'une manière ou d'une autre, il survient. Parce qu'il nous "gratte".
@@ -130,13 +131,10 @@ Après ça reste un prétexte narratif car s'il n'y a pas de départ, il n'y a p
 //@ < 11:00
 
 /*
-Hé oui, on a donc notre sujet qui nous gratte et on va se lancer. Oh ça peut être plein de choses: un rapport d'étonnement, un bouleversement (changement d'équipe par exemple, ou nouvelle mission), ou encore tout simplement un ras-le-bol qui fait qu'on va, qu'on doit provoquer le changement, sinon l'alternative (ne pas changer, donc) sera pire.
+Hé oui, on a donc notre sujet qui nous gratte et on va se lancer. Oh ça peut être plein de choses: un rapport d'étonnement, un bouleversement (changement d'équipe par exemple, ou nouvelle mission), ou encore tout simplement un ras-le-bol qui fait qu'on va, qu'on doit provoquer le changement. Bref **ÇA VA PAS**
 <br>
 <br>
-Il faut bien comprendre que si, dans la mythologie, les contes, etc., le héros ou l'héroïne est poussée vers l'aventure, nous on n'a pas le luxe d'être le fils de tel Dieu ou le descendant de tel Bouddha. Faut se bouger, donc.
-<br>
-<br>
-Tout le monde n'est pas Mitchell Hashimoto 😅
+Inspirons nous de Mitchell Hashimoto 😅
 */
 
 ## .[full-image]
@@ -148,31 +146,27 @@ Tout le monde n'est pas Mitchell Hashimoto 😅
 # Le Refus de l'Appel
 //@ < 13:00
 
+!image(assets/bugs-bunny-no.jpg,,1000)
+
 /*
-Often when the call is given, the future hero first refuses to heed it. This may be from a sense of duty or obligation, fear, insecurity, a sense of inadequacy, or any of a range of reasons that work to hold the person in his current circumstances
-<br>
-<br>
 Et ça c'est…courant ? C'est à dire que ça me paraît évident qu'on ne va pas forcément tous et toutes se lancer dans un chantier de Conduite du Changement. Il y a beaucoup de choses nécessaires pour ne serait-ce que déclencher la chose. Il faut avoir un mandat (quitte à le saisir 🏴‍☠️), il faut avoir une certaine relativisation du Risque (Syndrôme de l'Imposteur = pas cool), et il faut aussi savoir un peu par quel bout prendre cet Appel, sinon on risque surtout d'échouer.
+<br>
+<br>
+**ON A TOUJOURS UNE BONNE RAISON DE NE PAS SE LANCER**
 <br>
 <br>
 Pondérer ces éléments c'est probablement se paralyser, et ne rien faire, et c'est ok. Du moins, tant que le statu quo reste supportable...
 */
 
-## .[full-image]
+## La fameuse attaque XZ
 
-!image(assets/bugs-bunny-no.jpg,,1000)
-
-
-## .[full-image]
-
-!image(assets/knight-capital-failure.png,,1500)
+!image(assets/xz-utils.jpg,,1500)
 
 /*
-Des fois, il ne l'est pas. Du tout.
+Parler de XZ
 */
 
-
-## .[full-image]
+## Même au niveau personnel…
 
 !image(assets/dirigeant-licencie.png,,1200)
 
@@ -194,17 +188,22 @@ du tout, du tout, du tout...
 //@ < 16:00
 
 /*
-Once the hero has committed to the quest, consciously or unconsciously, their guide and magical helper appears or becomes known. More often than not, this supernatural mentor will present the hero with one or more talismans or artifacts that will aid them later in their quest
+Forcément on ne part pas de zéro. Personne ne se lève de sa chaise en se disant qu'elle va tout changer et que ça va bien se passer. Non, bien sûr que non, personne ne se fait tout seul. Il y a, d'une manière ou d'une autre, une Aide Extérieure.
 <br>
 <br>
-Forcément on ne part pas de zéro. Personne ne se lève de sa chaise en se disant qu'elle va tout changer et que ça va bien se passer. Non, bien sûr que non, personne ne se fait tout seul. Il y a, d'une manière ou d'une autre, une Aide Extérieure. Ça peut être un collègue, vieux briscard qui connaît le métier. Ça peut être un Manager, qui va porter une partie du Risque, et servir de Sponsor. Ça peut encore être simplement une personne qui vous permettra de faire rebondir des idées, souvent en simplement les formulant, de manière à les voir sous un nouveau jour.
-
-Bref, faut un coup de main.
+Ça peut être un collègue, vieux briscard qui connaît le métier. Ça peut être un Manager, qui va porter une partie du Risque, et servir de Sponsor. Ça peut encore être simplement une personne qui vous permettra de faire rebondir des idées, souvent en simplement les formulant, de manière à les voir sous un nouveau jour.
+<br>
+<br>
+Bref, **faut un coup de main**.
 */
 
-## .[full-image]
+## Todd Park
 
-!image(assets/todd-park-bio.png,,1500)
+!image(assets/Todd_Park.jpeg,,500)
+
+/*
+Faut qu'on cause de Todd Park
+*/
 
 ## La refonte de HealthCare.gov
 
@@ -219,25 +218,18 @@ Bref, faut un coup de main.
 //@ < 18:00
 
 /*
-This is the point where the hero actually crosses into the field of adventure, leaving the known limits of their world and venturing into an unknown and dangerous realm where the rules and limits are unknown
-<br>
-<br>
 Ok, donc on est parti: on a un point de départ, un point de douleur qui doit changer, on a un mentor/sponsor/conseil, Y a plus qu'à. C'est le point traditionnel où le Monomythe commence. C'est le départ de Tatooine, de la vallée des hobbits, du chateau d'Arendell, etc.
 */
-
 
 ## .[full-image]
 
 !image(assets/my-child-oh-my-child.gif,,1000)
 
 ## Le Départ
-# Le ventre de la Baleine
+# Le Ventre de la Baleine
 //@ < 18:00
 
 /*
-The belly of the whale represents the final separation from the hero's known world and self. By entering this stage, the person shows a willingness to undergo a metamorphosis. When first entering the stage the hero may encounter a minor danger or setback.
-<br>
-<br>
 C'est là qu'on rentre un peu plus dans les caractéristiques du Monomythe. Le ventre de la Baleine c'est l'endroit où on va nous-même se transformer. Car provoquer un changement implique d'abord de NOUS changer. C'est peut-être la plus grande révélation des contes et histoires. Néo se change avant de changer la Matrice, Furiosa abandonne son espoir de liberté pour devenir un Imperator, Grace accepte d'être le dernier humain qui peut changer le monde avant de pouvoir le sauver.
 <br>
 <br>
@@ -372,7 +364,7 @@ Et vous savez quoi ? Vous allez perdre. Souvent. Parfois d'une manière spectacu
 
 
 
-## .[full-image]
+## Le REX de Verify
 
 !image(assets/audit-verify.png,,1000)
 
@@ -461,24 +453,14 @@ Sans compter qu'il devient alors très facile de devenir irremplaçable. Être l
 ## Le Retour
 # L'Envolée Magique
 
+## Frances Haugen
 
-## Charity Majors 💓
-//@ < 34:00
+!image(assets/frances_haugen.jpg,,700)
 
-<div class="flex-row">
-    <div class="flex-column">
-      <img
-        src="assets/charity-1.png"
-        style="width: 100%"
-      />
-    </div>
-    <div class="flex-column">
-      <img
-        src="assets/charity-2.png"
-        style="width: 100%"
-      />
-    </div>
-</div>
+## .[full-image]
+
+!image(assets/frances_haugen_testimony.png,,1000)
+
 
 /*
 <br>
@@ -507,14 +489,23 @@ Un des moyens d'arriver à garder la tête sur les épaules et d'éviter de fair
 Ce n'est que parce que vous produisez un Changement qui va avoir des conséquences pour des personnes concrètes que vous le faites, sinon c'est juste de la masturbation. C'est l'acte qui est vu, autant que l'Acte lui-même, qui est le Changement. Il faut qu'il soit observable.
 */
 
+## Charity Majors 💓
+//@ < 34:00
 
-## La fameuse attaque XZ
-
-!image(assets/xz-utils.jpg,,1500)
-
-/*
-Parler de XZ
-*/
+<div class="flex-row">
+    <div class="flex-column">
+      <img
+        src="assets/charity-1.png"
+        style="width: 100%"
+      />
+    </div>
+    <div class="flex-column">
+      <img
+        src="assets/charity-2.png"
+        style="width: 100%"
+      />
+    </div>
+</div>
 
 
 ## Le Retour

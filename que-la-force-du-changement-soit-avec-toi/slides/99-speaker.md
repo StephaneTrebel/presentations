@@ -40,13 +40,14 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
 <div class="flex-column">
   <div class="flex-row">
     <div class="flex-column">
-      <span style="font-size: 3rem">Les liens 🤓</span>
+      <span style="font-size: 3rem">Les liens ✍️</span>
       <img
         src="common/assets/qr-code-linktree-moi.svg"
         style="width: 20vw"
         alt="Mon Linktree qui regroupe tous les liens de cette conférence"
       />
     </div>
+    <div style="width: 20vw"></div>
     <div class="flex-column">
       <span style="font-size: 3rem">Vos feedbacks 🫶</span>
       <img
@@ -57,7 +58,7 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
     </div>
   </div>
 
-  <div class="flex-row" style="margin-top: 10rem">
+  <div class="flex-row" style="margin-top: 10rem; justify-content: left; ">
     <div class="flex-column" style="margin: 30px">
       <img
         src="common/assets/profil.jpg"
@@ -65,10 +66,12 @@ Notre objectif, finalement, c'est de réaffirmer les standards industriels actue
         style="max-width: 10rem; clip-path: circle(5rem at center)"
       />
     </div>
-    <div class="vertical-bar"></div>
+    <div class="vertical-bar" style="margin-right: 3vw"></div>
       <div style="font-size: 3rem">
         <em>
-          Quelque soit le chemin que vous arpentez, prenez-soin de vous !
+          Prenez soin de vous,<br>
+          Quel que soit votre chemin,<br>
+          Et pensez aux autres !
         </em>
         🫂
       </div>
