@@ -225,7 +225,7 @@ Ok, donc on est parti: on a un point de départ, un point de douleur qui doit ch
 
 !image(assets/my-child-oh-my-child.gif,,1000)
 
-## Le Départ
+## Le Départ -> L'Initiation
 # Le Ventre de la Baleine
 //@ < 18:00
 
