@@ -88,6 +88,23 @@ h2 {
 }
 
 
+/* SliDesk writes screen-sized pixel dimensions on figures and images.
+   Constrain both for paper, without changing the screen presentation. */
+@media print {
+  .sd-img {
+    max-width: 90vw;
+    height: auto !important;
+  }
+
+  .sd-img img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    /* Leave room for the slide title and captions. */
+    max-height: 80vh;
+  }
+}
+
 .cover {
   background-color: var(--sd-primary-color);
 
