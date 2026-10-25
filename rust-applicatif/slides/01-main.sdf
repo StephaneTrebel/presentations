@@ -1,5 +1,5 @@
-## SunnyTech 2026 .[chapter]
-# Bienvenue !
+## .[full-image]
+!image(assets/slide-titre-bdxio-2026.png,,1800)
 
 /*
  Bienvenue tout le monde !
@@ -10,7 +10,7 @@
 
 ## Rust 🦀 est connu pour être un langage qui favoriserait le "bas-niveau"...
 
-!image(assets/embedded_rust_example.png)
+!image(assets/embedded_rust_example.png,,1700)
 
 /*
  Un domaine qui m'est totalement étranger !
@@ -19,7 +19,7 @@
 
 ## Pour des masochistes férus d'optimisations mémoire...
 
-!image(assets/borrow_checker_meme.jpeg)
+!image(assets/borrow_checker_meme.jpeg,,500)
 
 /*
  Meme borrow checker
@@ -27,15 +27,15 @@
 
 ## À la syntaxe souvent qualifiée d'exigeante, voire de "cryptique"... 🤯
 
-!image(assets/coerce_what_now.png)
+!image(assets/coerce_what_now.png,,1800)
 
 ## .[full-image]
 
-!image(assets/chuis_pas_venue_ici_pour_souffrir.jpg,,1300)
+!image(assets/chuis_pas_venue_ici_pour_souffrir.jpg,,1500)
 
 ## Tout ceci est p'tet vrai, mais que c'est pas pour ça que Rust m'intéresse
 
-!image(assets/bernie_rust.jpeg)
+!image(assets/bernie_rust.jpeg,,1000)
 
 /*
  C'est vrai, en plus
@@ -199,7 +199,7 @@ let my_user = User {
 
 ## .[full-image]
 
-!image(assets/parse_dont_validate.png,https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/,1300,,,true)
+!image(assets/parse_dont_validate.png,https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/,1500,,,true)
 
 /*
 Un principe fondamental en Rust.
@@ -207,10 +207,19 @@ Lié à la philosophie Impureim: on veut au plus possible travailler dans un uni
 On _encode notre logique_ -> Type Driven Dev.
 */
 
+## .[full-image]
+
+!image(assets/parse_dont_validate-study-1.png,Functional State Machines in Rust: Typestate and Newtype Patterns,1500,,,true)
+
 
 ## .[full-image]
 
-!image(assets/impureim-sandwich.png,https://blog.ploeh.dk/2020/03/02/impureim-sandwich/,900,,,true)
+!image(assets/parse_dont_validate-study-2.png,Functional State Machines in Rust: Typestate and Newtype Patterns,1000,,,true)
+
+
+## .[full-image]
+
+!image(assets/impureim-sandwich.png,https://blog.ploeh.dk/2020/03/02/impureim-sandwich/,1100,,,true)
 
 
 ## L'Α et l'Ω du Type Driven Dev… .[chapter]
@@ -468,7 +477,7 @@ match get_user_by_email(user_email).await {
 
 ## .[full-image]
 
-!image(assets/why-is-try-catch-evil.png,,1500)
+!image(assets/why-is-try-catch-evil.png,,1800)
 
 /*
   Le problème avec la gestion des exceptions c'est qu'on ne sait pas vraiment ce qu'est
@@ -598,6 +607,10 @@ fn my_function() -> Result<PortNumber, Error> {
 }
 ```
 
+## Rappel que Clippy est votre ami
+
+!image(assets/clippy-est-ton-ami.png,,1800)
+
 
 ## D'ailleurs, en parlant d'erreurs...
 
@@ -664,7 +677,56 @@ Ce code est tiré de la doc officielle de la crate.
 Notez d'ailleurs l'enum: toutes les erreurs sont exhaustivement décrites ici (permettant d'utiliser le pattern matching)
 */
 
+## `thiserror` pour tous les types ? `derive_more` !
 
+```rust
+use derive_more::{Add, Display, From, Into};
+
+#[derive(PartialEq, From, Add)]
+struct MyInt(i32);
+
+#[derive(PartialEq, From, Into)]
+struct Point2D {
+    x: i32,
+    y: i32,
+}
+
+#[derive(PartialEq, From, Add, Display)]
+enum MyEnum {
+    #[display("int: {_0}")]
+    Int(i32),
+    Uint(u32),
+    #[display("nothing")]
+    Nothing,
+}
+```
+
+/*
+Vous importez les traits que vous voulez, et grâce à la magie de Rust que je vais démystifier bientôt, ça fonctionne tout seul !
+*/
+
+## Vous trouvez ça lourd de devoir déclarer un enum ? `eros` !
+
+```rust
+use eros::IntoUnion;
+use std::{io, num::ParseIntError};
+
+fn load_port(path: &str) -> eros::Result<u16, (io::Error, ParseIntError)> {
+    let contents = std::fs::read_to_string(path).union()?;
+    contents.trim().parse().union()
+}
+
+fn port_or_default(path: &str) -> eros::Result<u16, (ParseIntError,)> {
+    load_port(path).recover::<io::Error, _>(|error| {
+        eprintln!("{error:?}; using port 8080");
+        8080
+    })
+}
+```
+
+/*
+Le principe d'eros c'est de ne pas nous forcer à gérer exhaustivement les erreurs avec des types. On peut utiliser des N-uplets pour simplement COMPOSER les possibles cas d'erreur d'un Result.
+*/
 
 ## .[chapter]
 # Traits, la POO turbo-chargée
@@ -975,7 +1037,7 @@ fn main() {
 
 ## Architecture Hexagonale
 
-!image(assets/all-knowing-hexagon.jpeg,,800)
+!image(assets/all-knowing-hexagon.jpeg,,1100)
 
 /*
  Le mot est lâché !
@@ -984,17 +1046,17 @@ fn main() {
 
 ## Rappel à toutes fins utiles:
 
-!image(assets/hexagonal-architecture-diagram.jpg)
+!image(assets/hexagonal-architecture-diagram.jpg,,1500)
 
 
 ## Donc, si vous avez bien suivi…
 
-!image(assets/hexagonal-architecture-diagram-in-rust.png)
+!image(assets/hexagonal-architecture-diagram-in-rust.png,,1500)
 
 
 ## Mais, en vrai…
 
-!image(assets/hexagonal-architecture-diagram-in-TRUE-rust.png)
+!image(assets/hexagonal-architecture-diagram-in-TRUE-rust.png,,1500)
 
 
 ## Et c'est ok !
@@ -1012,25 +1074,25 @@ where
 
 ## ⬢ + 🦀 = 💓
 
-!image(assets/master-hexa-architecture-in-rust.png)
+!image(assets/master-hexa-architecture-in-rust.png,,1800)
 
 
 ## .[chapter]
 # Tester dans Rust
 
-!image(assets/mike-tyson.jpg)
+!image(assets/mike-tyson.jpg,,1300)
 
 
 ## .[full-image]
-!image(assets/cargo-test-colocalized.png)
+!image(assets/cargo-test-colocalized.png,,1300)
 
 ## La doc des projets Rust est… *chef kiss* 🤌
 
-!image(assets/adder-doc.png)
+!image(assets/adder-doc.png,,1300)
 
 ## TOUT est "as code":
 
-!image(assets/rust-doc-as-code.png,,1600)
+!image(assets/rust-doc-as-code.png,,1800)
 
 /*
 Plus vous mettez d'info dans le code, plus ça renvoie de la valeur.
@@ -1039,33 +1101,33 @@ Et les LLMs adoooorent ça
 
 ## `cargo doc` , tout simplement
 
-!image(assets/cargo-doc-tests.png,,1200)
+!image(assets/cargo-doc-tests.png,,1500)
 
 
 ## Oh, et ils sont *par défaut* testés par `cargo test` 😎
 
-!image(assets/cargo-doc-passing-test.png)
+!image(assets/cargo-doc-passing-test.png,,2000)
 
 
 ## Votre doc ne fait donc pas que décrire vos invariants, elle les contrôle ! 💪
 
-!image(assets/cargo-doc-failing-test.png)
+!image(assets/cargo-doc-failing-test.png,,2000)
 
 
 ## Tests d'Intégration ?
 Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
-!image(assets/integration_test.png)
+!image(assets/integration_test.png,,2000)
 
 ## D'ailleurs… Il faut qu'on parle de Wiremocks 🤩
 
 ## Un cas difficile à tester : L'idempotence
 
-!image(assets/idempotency.gif)
+!image(assets/idempotency.gif,,800)
 
 ## Résultat, avec Wiremocks:
 
-!image(assets/wiremock-idempotence.png)
+!image(assets/wiremock-idempotence.png,,1300)
 
 
 ## Ça, c'est le moment où j'ai décidé de me carciniser 🦀 .[chapter]
@@ -1073,15 +1135,21 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## Il faut qu'on parle de `sqlx`
 
-!image(assets/sqlx-simple.png,,1500)
+!image(assets/sqlx-simple.png,,1800)
 
 ## Et ça peut même être très complexe !
 
 !image(assets/sqlx-complex.png)
 
-## Les autres poids lourds : serde, tera, chrono, et bien d'autres !
+## Les autres poids lourds :
 
-## Les Frameworks haut-niveau de Rust 🦀
+- serde/deser (sé/désérialisation)
+- tera (templating HTML)
+- chrono/jiff (le temps !)
+- et bien, bien d'autres... 🤩
+
+## Montons encore d'un cran... .[chapter]
+# Les Frameworks haut-niveau de Rust 🦀
 
 /*
  Ont popularisé d'autres crates à travers elles, et cette autre façon de faire du Rust Applicatif
@@ -1090,7 +1158,32 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## Axum
 
-!image(assets/axum.png,,1300)
+```rust
+use axum::{ routing::{get, post}, http::StatusCode, Json, Router, };
+use serde::{Deserialize, Serialize};
+
+#[tokio::main]
+async fn main() {
+    tracing_subscriber::fmt::init(); // initialize tracing
+    let app = Router::new()
+        .route("/users", post(create_user)); // `POST /users` goes to `create_user`
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    axum::serve(listener, app).await;
+}
+
+#[derive(Deserialize)]
+struct CreateUser { username: String, }
+
+#[derive(Serialize)]
+struct User { id: u64, username: String, }
+
+async fn create_user(
+    Json(payload): Json<CreateUser>, // Parse the request body as JSON into a `CreateUser` type
+) -> (StatusCode, Json<User>) {
+    let user = User { id: 1337, username: payload.username, };
+    (StatusCode::CREATED, Json(user)) // Converts into a JSON response with 201 HTTP code
+}
+```
 
 /*
  Mon premier, très simple (type Express), qui a bien évolué depuis
@@ -1106,9 +1199,9 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 */
 
 
-## Mais le monde des Rustacé-es(c) va vite, très vite…
+## Et le monde des Rustacé-es(c) va vite, très vite… 🏃💨
 
-## Dioxus, le framework isomorphique qui monte !
+## Dioxus, le framework isomorphique !
 
 !image(assets/dioxus-intro.png,,1300)
 
@@ -1120,6 +1213,9 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 !image(assets/loco-rs-montage.png,,1500)
 
+## Il y en a pour tous les goûts ! 🐔
+
+!image(assets/cot-rs.png,,1000)
 
 ## Si vous voulez aller plus loin...
 
@@ -1134,11 +1230,13 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 !image(assets/z2p-book.png,,800)
 
+## .[full-image]
+
+!image(assets/learn-rust-with-linked-lists.png,https://rust-unofficial.github.io/too-many-lists,1000)
 
 ## .[full-image]
 
-!image(assets/learn-rust-with-linked-lists.png,https://rust-unofficial.github.io/too-many-lists,1000,,,true)
-
+!image(assets/hypermedia-rust.png,https://benjamingeer.eu/fr/post/hypermedia-rust,1500,,,true)
 
 ## YouTube: Let's Get Rusty !
 

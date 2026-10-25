@@ -1,13 +1,12 @@
 :root {
   --white: #fafafa;
-  --grey-3: #bdbdbd;
-  --grey-5: #212121;
-  --pink-2: #d63f49;
+  --dark-grey: #202020;
+  --orange: #ffa52a;
 
   --sd-background-color: var(--white);
-  --sd-heading-color: var(--pink-2);
-  --sd-text-color: var(--grey-5);
-  --sd-primary-color: var(--grey-5);
+  --sd-heading-color: var(--orange);
+  --sd-text-color: var(--dark-grey);
+  --sd-primary-color: var(--dark-grey);
 
   --sd-heading1-size: 7vw;
   --sd-heading1-line-height: 1;
@@ -22,16 +21,12 @@
   --sd-sv-timer-size: 80px;
   --sd-sv-text-size: 40px;
   --sd-sv-text-line-height: 1.2;
-  --sd-sv-background-color: var(--grey-5);
+  --sd-sv-background-color: var(--dark-grey);
   --sd-sv-text-color: var(--white);
 }
 
 h2 {
-  color: color-mix(in oklch decreasing hue, var(--sd-heading-color) 30%, var(--sd-primary-color) 70%) !important;
-}
-
-h3 {
-  font-size: 3rem !important;
+  color: color-mix(in lch decreasing hue, var(--sd-heading-color) 10%, var(--sd-primary-color) 90%) !important;
 }
 
 .chapter > h2 {
@@ -45,14 +40,14 @@ h3 {
   }
 }
 
+/* Final slide (with links) */
 .vertical-bar {
-  background-color: gray;
+  background-color: var(--dark-grey);
   height: 10rem;
   width: 5px;
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
 .flex-row {
 	display: flex;
   flex-direction: row;
@@ -61,12 +56,16 @@ h3 {
 
   width: 100%
 }
-
 .flex-column {
 	display: flex;
   flex-direction: column;
 	align-items: center;
   justify-content: center;
+}
+/* Final slide (with links) */
+
+.full-image.sd-slide::after {
+  display: none;
 }
 
 .sd-slide::after {
@@ -76,14 +75,15 @@ h3 {
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background-image: url(logo_sunnytech.svg);
+  background-image: url(logo.png);
   background-position: right 2vw bottom 2vh;
   background-repeat: no-repeat;
   background-size: 10vw;
   background-color: var(--white);
-  opacity: 0.25;
+  opacity: 1.0;
   z-index: -1;
 }
+
 
 .cover {
   background-color: var(--sd-primary-color);

@@ -1,3 +1,7 @@
+## Dennis Nedri dans Jurassic Park
+# Se sauver de l'absence
+
+
 ## TADx - 12 Octobre 2026 .[chapter]
 # Bienvenue !
 

@@ -1,0 +1,2 @@
+- Hypermedia + Rust: https://benjamingeer.eu/fr/post/hypermedia-rust/
+- axum, ne pas montrer une macro (cas de base ?)
