@@ -27,7 +27,7 @@
 
 ## À la syntaxe souvent qualifiée d'exigeante, voire de "cryptique"... 🤯
 
-!image(assets/coerce_what_now.png,,1800)
+!image(assets/coerce_what_now.png,,1700)
 
 ## .[full-image]
 
@@ -35,7 +35,7 @@
 
 ## Tout ceci est p'tet vrai, mais que c'est pas pour ça que Rust m'intéresse
 
-!image(assets/bernie_rust.jpeg,,1000)
+!image(assets/bernie_rust.jpeg,,800)
 
 /*
  C'est vrai, en plus
@@ -411,7 +411,7 @@ pub fn move_player((&x, &y): Coordinates, direction: &Direction) {
 ## .[chapter]
 # Les "Boîtes" de Rust
 
-!image(assets/whats-in-the-box.jpeg)
+!image(assets/whats-in-the-box.jpeg,,1200)
 
 
 ## Moment Kahoot !
@@ -425,7 +425,7 @@ pub fn move_player((&x, &y): Coordinates, direction: &Direction) {
 
 ## Hé oui, c'est bien Null:
 
-!image(assets/billion_dollar_mistake.png,,1500)
+!image(assets/billion_dollar_mistake.png,,1700)
 
 /*
 L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languages qui l'ont suivi
@@ -588,7 +588,7 @@ let port = listener.local_addr().unwrap().port();
 
 ## Mais pourquoi on s'inflige `match`, alors ? ☝🤓
 
-!image(assets/unwrap-me-i-double-dare-you.jpg)
+!image(assets/unwrap-me-i-double-dare-you.jpg,,800)
 
 
 ## ...et même les plus gros se font avoir 💥
@@ -609,7 +609,7 @@ fn my_function() -> Result<PortNumber, Error> {
 
 ## Rappel que Clippy est votre ami
 
-!image(assets/clippy-est-ton-ami.png,,1800)
+!image(assets/clippy-est-ton-ami.png,,1500)
 
 
 ## D'ailleurs, en parlant d'erreurs...
@@ -705,7 +705,7 @@ enum MyEnum {
 Vous importez les traits que vous voulez, et grâce à la magie de Rust que je vais démystifier bientôt, ça fonctionne tout seul !
 */
 
-## Vous trouvez ça lourd de devoir déclarer un enum ? `eros` !
+## Vous trouvez ça lourd de devoir déclarer un enum ?<br/>`eros` à la rescousse !
 
 ```rust
 use eros::IntoUnion;
@@ -980,15 +980,15 @@ pub struct Cat { pub name: String, }
 fn main() {
     let numbers = vec![1, 2, 3];
     numbers.log(); // Erreur ! 💥
-    // Ah, mais oui ! Faut que j'implément Loggable pour u64 😫
+    // Ah, mais oui ! Faut que j'implémente Loggable pour u64 😫
 
     let s = String::from("Blanquette de Veau");
     s.log(); // Erreur ! 💥
-    // Ah, mais oui ! Faut que j'implément Loggable pour String 😫
+    // Ah, mais oui ! Faut que j'implémente Loggable pour String 😫
 
     let c = Cat { name: "Mimouchka".to_string(), };
     c.log(); // Erreur ! 💥
-    // Ah, mais oui ! Faut que j'implément Loggable pour Cat 😫
+    // Ah, mais oui ! Faut que j'implémente Loggable pour Cat 😫
 }
 ```
 
@@ -1037,7 +1037,7 @@ fn main() {
 
 ## Architecture Hexagonale
 
-!image(assets/all-knowing-hexagon.jpeg,,1100)
+!image(assets/all-knowing-hexagon.jpeg,,900)
 
 /*
  Le mot est lâché !
@@ -1046,17 +1046,17 @@ fn main() {
 
 ## Rappel à toutes fins utiles:
 
-!image(assets/hexagonal-architecture-diagram.jpg,,1500)
+!image(assets/hexagonal-architecture-diagram.jpg,,1200)
 
 
 ## Donc, si vous avez bien suivi…
 
-!image(assets/hexagonal-architecture-diagram-in-rust.png,,1500)
+!image(assets/hexagonal-architecture-diagram-in-rust.png,,1200)
 
 
 ## Mais, en vrai…
 
-!image(assets/hexagonal-architecture-diagram-in-TRUE-rust.png,,1500)
+!image(assets/hexagonal-architecture-diagram-in-TRUE-rust.png,,1200)
 
 
 ## Et c'est ok !
@@ -1074,17 +1074,17 @@ where
 
 ## ⬢ + 🦀 = 💓
 
-!image(assets/master-hexa-architecture-in-rust.png,,1800)
+!image(assets/master-hexa-architecture-in-rust.png,,1600)
 
 
 ## .[chapter]
 # Tester dans Rust
 
-!image(assets/mike-tyson.jpg,,1300)
+!image(assets/mike-tyson.jpg,,1100)
 
 
-## .[full-image]
-!image(assets/cargo-test-colocalized.png,,1300)
+## Doc et tests colocalisés avec le code 💕
+!image(assets/cargo-test-colocalized.png,,1500)
 
 ## La doc des projets Rust est… *chef kiss* 🤌
 
@@ -1101,23 +1101,23 @@ Et les LLMs adoooorent ça
 
 ## `cargo doc` , tout simplement
 
-!image(assets/cargo-doc-tests.png,,1500)
+!image(assets/cargo-doc-tests.png,,1300)
 
 
 ## Oh, et ils sont *par défaut* testés par `cargo test` 😎
 
-!image(assets/cargo-doc-passing-test.png,,2000)
+!image(assets/cargo-doc-passing-test.png,,1600)
 
 
 ## Votre doc ne fait donc pas que décrire vos invariants, elle les contrôle ! 💪
 
-!image(assets/cargo-doc-failing-test.png,,2000)
+!image(assets/cargo-doc-failing-test.png,,1600)
 
 
 ## Tests d'Intégration ?
 Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
-!image(assets/integration_test.png,,2000)
+!image(assets/integration_test.png,,1600)
 
 ## D'ailleurs… Il faut qu'on parle de Wiremocks 🤩
 
@@ -1127,7 +1127,7 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## Résultat, avec Wiremocks:
 
-!image(assets/wiremock-idempotence.png,,1300)
+!image(assets/wiremock-idempotence.png,,1100)
 
 
 ## Ça, c'est le moment où j'ai décidé de me carciniser 🦀 .[chapter]
@@ -1135,7 +1135,7 @@ Facile ! On les met dans `/tests` (avec du code de setup si besoin)
 
 ## Il faut qu'on parle de `sqlx`
 
-!image(assets/sqlx-simple.png,,1800)
+!image(assets/sqlx-simple.png,,1600)
 
 ## Et ça peut même être très complexe !
 
