@@ -34,28 +34,38 @@
 */
 
 ## .[full-image]
+
 <div class="flex-column">
   <div class="flex-row">
     <div class="flex-column">
-      <h2>Mes liens 🤓</h2>
+      <span style="font-size: 3rem">Mes liens ✍️</span>
       <img
         src="common/assets/qr-code-linktree-moi.svg"
-        style="width: 30vw"
+        style="width: 20vw"
         alt="Mon Linktree qui regroupe tous les liens de cette conférence"
       />
     </div>
- </div>
+    <div style="width: 20vw"></div>
+    <div class="flex-column">
+      <span style="font-size: 3rem">Vos feedbacks 🫶</span>
+      <img
+        src="assets/qr-code-devoxx-morocco.svg"
+        style="width: 20vw"
+        alt="QR Code pointant vers l'Openfeedback de cette conférence"
+      />
+    </div>
+  </div>
 
-  <div class="flex-row" style="margin-top: 5rem">
+  <div class="flex-row" style="margin-top: 10rem; justify-content: left; width: 120vh;">
     <div class="flex-column" style="margin: 30px">
       <img
-        src="assets/profil.jpg"
+        src="common/assets/profil.jpg"
         alt="Moi <3"
         style="max-width: 10rem; clip-path: circle(5rem at center)"
       />
     </div>
-    <div class="vertical-bar"></div>
-      <div style="font-size: 3rem;">
+    <div class="vertical-bar" style="margin-right: 3vw"></div>
+      <div style="font-size: 3rem">
         <em>
           Rust 🦀 a désormais tout ce qu'il faut pour délivrer de la valeur<br>
           pour vos applications métier. Jetez-y un œil !
