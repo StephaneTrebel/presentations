@@ -1071,6 +1071,10 @@ where
 }
 ```
 
+## .[full-image]
+
+!image(assets/thinking-in-traits.png,,1000)
+
 ## ⬢ + 🦀 = 💓
 
 !image(assets/master-hexa-architecture-in-rust.png,,1600)

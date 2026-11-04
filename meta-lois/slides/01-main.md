@@ -401,6 +401,10 @@ On a beau faire des story points, des tailles de Tshirts, etc. ça fonctionne ra
 
 !image(assets/yo-dawg.jpg,I heard you like meetings so I scheduled a meeting to talk about meetings,1200)
 
+## .[full-image]
+
+!image(assets/eloge-de-la-simplicite.png,,1200)
+
 /*
 Et la Loi de Parkinson, elle, est particulièrement pernicieuse car on va avoir tendance à prendre "la place disponible" dans notre emploi du temps, alors que si on avait rationalisé le temps on aurait pu faire plus de choses.
 
