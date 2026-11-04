@@ -1,0 +1,1246 @@
+## Welcome! 👋
+
+/*
+ Bienvenue tout le monde !
+
+ Il y aura quelques QR-code d'articles donc tenez-vous prêt-es !
+*/
+
+
+## Rust 🦀 has a reputation for being a "low-level" language...
+
+!image(assets/embedded_rust_example.png,,1700)
+
+/*
+ Un domaine qui m'est totalement étranger !
+*/
+
+
+## ...for masochists who love memory optimizations...
+
+!image(assets/borrow_checker_meme.jpeg,,500)
+
+/*
+ Meme borrow checker
+*/
+
+## ...with syntax often called demanding, or even "cryptic"... 🤯
+
+!image(assets/coerce_what_now.png,,1700)
+
+## .[full-image]
+
+!image(assets/chuis_pas_venue_ici_pour_souffrir.jpg,,1500)
+
+## Maybe that's all true, but that's not why I'm into Rust
+
+!image(assets/bernie_rust.jpeg,,800)
+
+/*
+ C'est vrai, en plus
+*/
+
+
+## &nbsp; .[chapter]
+# 🦀Rust🦀
+# for high-level, business apps
+
+/*
+ "applications métiers", c'est à dire de bonnes vieilles applications qui ont pour objectif la modélisation de processus qui ont des conséquences sur la vie réelle, sans pour autant dépendre d'un matériel spécifique.
+Donc pas d'embarqué, pas vraiment de contraintes en dehors de ce qu'on connaît: des WebApps qui causent avec une base de données et 2/3 trucs autour (de l'IAM, par ex)
+*/
+
+
+## An expressive type system
+
+/*
+ À vos souhaits. Promis je ne vais pas vous expliquer le Arc ou le Mutex
+*/
+
+
+## The basics: structs and "newtypes"
+
+
+## A very familiar example:
+
+```rust
+pub struct User {
+    pub email: String,
+}
+
+fn my_function(user: User) {
+  if !user.email.contains("@") {
+     // Handle the error, etc.
+  }
+  // Moving on...
+
+  // Allowed, but not what we want -> Bug!
+  let city: String = user.email
+}
+```
+
+/*
+
+Nul. On va devoir multiplier les "if" partout.
+Re-nul. "String", ça ne veut rien dire, on met un email dans une variable qui contient une ville ?
+Non mais allo, quoi !
+
+*/
+
+
+## Business logic built into types. Living the dream! 😌
+
+```rust
+use crate::domain::UserEmail;
+
+pub struct User {
+    // Wait... what's that?
+    pub email: UserEmail,
+}
+```
+
+/*
+ Exemple canonique, on veut créer un utilisateur, on a besoin de son email.
+
+Ici, pas de String qui voudrait dire tout et n'importe quoi. On type tout fortement (sinon, ça va hurler à la compilation)
+*/
+
+## Let's "impl"ement the logic to handle each case:
+
+```rust
+use validator::ValidateEmail;
+
+#[derive(Debug)]
+pub struct UserEmail(String);
+
+impl UserEmail {
+    pub fn parse(s: String) -> Result<UserEmail, String> {
+        if s.validate_email() {
+            Ok(Self(s))
+        } else {
+            Err(format!("{} is not a valid user email", s))
+        }
+    }
+}
+```
+
+/*
+Un newtype va "emballer" un type (ici String)
+
+Très pratique car un UserEmail n'est pas un String, ni n'est équivalent à un autre NewType(String) -> compilateur pas content si on mélange -> pas de Duck Typing
+
+On délègue la validation elle-même à une "crate" (on reviendra là-dessus), un lib externe, quoi
+*/
+
+## How do we check this? With tests! 🤩
+
+```rust
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn email_missing_at_symbol_is_rejected() {
+        let email = "stephanedomain.com".to_string();
+        assert_err!(UserEmail::parse(email));
+    }
+
+    #[test]
+    fn email_missing_subject_is_rejected() {
+        let email = "@domain.com".to_string();
+        assert_err!(UserEmail::parse(email));
+    }
+}
+```
+
+/*
+ On reviendra là-dessus, mais les tests sont colocalisés avec le code.
+*/
+
+
+## One newtype is not the same as another!
+
+```rust
+pub struct Address(String);
+pub struct UserEmail(String);
+
+pub struct User { pub email: UserEmail }
+
+let my_user = User {
+  // 💥Error! That's a String, not a UserEmail!
+  email: "steph@mydomain.com"
+}
+
+let my_user = User {
+  // 💥Error! That's an Address, not a UserEmail!
+  email: Address("steph@mydomain.com")
+}
+```
+
+/*
+ Et c'est ce qu'on veut !
+*/
+
+
+## Use the right newtype for the job:
+
+```rust
+use crate::domain::UserEmail;
+
+pub struct User {
+    pub email: UserEmail,
+}
+
+let my_user = User {
+  // Ok 👍
+  email: UserEmail::parse("steph@mydomain.com")?;
+}
+// Note: for now, `?` is "magic" 🪄
+```
+
+## .[full-image]
+
+!image(assets/parse_dont_validate.png,https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/,1500,,,true)
+
+/*
+Un principe fondamental en Rust.
+Lié à la philosophie Impureim: on veut au plus possible travailler dans un univers "pur", sans effects secondaires, qu'on maîtrise.
+On _encode notre logique_ -> Type Driven Dev.
+*/
+
+## .[full-image]
+
+!image(assets/parse_dont_validate-study-1.png,Functional State Machines in Rust: Typestate and Newtype Patterns,1500,,,true)
+
+
+## .[full-image]
+
+!image(assets/parse_dont_validate-study-2.png,Functional State Machines in Rust: Typestate and Newtype Patterns,1000,,,true)
+
+
+## .[full-image]
+
+!image(assets/impureim-sandwich.png,https://blog.ploeh.dk/2020/03/02/impureim-sandwich/,1100,,,true)
+
+
+## The Α and Ω of Type-Driven Development… .[chapter]
+# Pattern Matching
+
+
+## Let's take a simple enum:
+
+```rust
+pub enum LoginError {
+    AuthenticationError(String),
+    SSOErrorCode(u32),
+    UnexpectedError(String),
+}
+```
+
+
+## The \``match`\` operator
+
+```rust
+fn my_function(e: LoginError) {
+    match e {}
+          +-----------------------------------------------------------------------------+
+}         |missing match arm: `AuthenticationError(_)`, `SSOErrorCode(_)` and           |
+          |`UnexpectedError(_)` not covered (rust-analyzer E0004)                       |
+          |-----------------------------------------------------------------------------|
+          |non-exhaustive patterns: `LoginError::AuthenticationError(_)`, `LoginError:: |
+          |SSOErrorCode(_)` and `LoginError::UnexpectedError(_)` not covered            |
+          |the matched value is of type `LoginError`                                    |
+          |                                                                             |
+          |Related information:                                                         |
+          |                                                                             |
+          |  * main.rs#463,10: `LoginError` defined here                                |
+          |  * main.rs#470,12: ensure that all possible cases are being handled by      |
+          |adding a match arm with a wildcard pattern, a match arm with multiple or-    |
+          |patterns as shown, or multiple match arms: ` {                               |
+          |        LoginError::AuthenticationError(_) | LoginError::SSOErrorCode(_) |   |
+          |LoginError::UnexpectedError(_) => todo!(),                                   |
+          |    }`                                                                       |
+          |                                                                             |
+          | (rustc E0004)                                                               |
+          |-----------------------------------------------------------------------------|
+          |https://doc.rust-lang.org/error-index.html#E0004                             |
+          +-----------------------------------------------------------------------------+
+```
+
+
+## Luckily, Rust's language server has our back 😌
+
+```rust
+fn my_function(e: LoginError) {
+    match e {}
+}            +Choose action------+
+             |1. Fill match arms |
+             +-------------------+
+```
+
+
+## Just fill in the blanks!
+
+```rust
+fn my_function(e: LoginError) {
+    match e {
+        LoginError::AuthenticationError(_) => todo!(),
+        LoginError::SSOErrorCode(_) => todo!(),
+        LoginError::UnexpectedError(_) => todo!(),
+    }
+}
+```
+
+## We can leave the real implementation for later
+
+```rust
+fn my_function(e: LoginError) {
+    match e {
+        LoginError::AuthenticationError(_) => todo!("Oh, not cool 😱"),
+        LoginError::SSOErrorCode(_) => todo!("Ouch! Even less cool 😓"),
+        LoginError::UnexpectedError(_) => todo!("I can't take this anymore… 😅"),
+    }
+}
+```
+
+
+## Matching can be as complex as we need
+
+```rust
+fn my_function(e: LoginError) {
+    match e {
+        LoginError::AuthenticationError(auth)
+          if auth.contains("network") => todo!("Oh, not cool 😱")
+        LoginError::SSOErrorCode(c)
+          if c > 42 && c < 1337 => todo!("Ouch! Even less cool 😓"),
+        LoginError::UnexpectedError(error)
+          if error.is_empty() => todo!("I can't take this anymore… 😅"),
+    }
+}
+```
+
+## But the compiler is watching...
+
+```rust
+fn my_function(e: LoginError) {
+    match e {
+          +------------------------------------------------------------------------------+
+        Lo|missing match arm: `AuthenticationError(_)` not covered (rust-analyzer E0004) |
+          |------------------------------------------------------------------------------|
+        } |non-exhaustive patterns: `LoginError::AuthenticationError(_)` not covered     |
+        Lo|the matched value is of type `LoginError`                                     |
+        Lo|                                                                              |
+    }     |Related information:                                                          |
+}         |                                                                              |
+          |  * main.rs#463,10: `LoginError` defined here                                 |
+          |  * main.rs#475,76: ensure that all possible cases are being handled by       |
+          |adding a match arm with a wildcard pattern or an explicit pattern as shown: `,|
+          |        LoginError::AuthenticationError(_) => todo!()`                        |
+          |                                                                              |
+          | (rustc E0004)                                                                |
+          |------------------------------------------------------------------------------|
+          |https://doc.rust-lang.org/error-index.html#E0004                              |
+          +------------------------------------------------------------------------------+
+```
+
+
+## Can you spot the problem here?
+
+```rust
+pub enum Direction {
+    North,
+    South,
+    East,
+    West,
+}
+type Coordinates<'a> = (&'a u32, &'a u32);
+
+pub fn move_player((&x, &y): Coordinates, direction: &Direction) {
+    match ((x, y), direction) {
+        ((0, 0), _) => todo!("At the origin, nothing to do"),
+        ((13, 10), Direction::South) => todo!("Nope, there's an ocean that way!"),
+    }
+}
+```
+
+
+## The compiler pays more attention than you do 😸
+
+```rust
+pub fn move_player((&x: u32, &y: u32): Coordinates, direction: &Direction) {
+    match ((x, y), direction) {
+          +-----------------------------------------------------------------------------+
+        ((|non-exhaustive patterns: `((1_u32..=12_u32, _), _)` and `((14_u32..=u32::MAX,|
+        ((|_), _)` not covered                                                          |
+    }     |the matched value is of type `((u32, u32), &Direction)`                      |
+}         |                                                                             |
+          |Related information:                                                         |
+          |                                                                             |
+          |  * main.rs#412,77: ensure that all possible cases are being handled by      |
+          |adding a match arm with a wildcard pattern, a match arm with multiple or-    |
+          |patterns as shown, or multiple match arms: `,                                |
+          |        ((1_u32..=12_u32, _), _) | ((14_u32..=u32::MAX, _), _) => todo!()`   |
+          |                                                                             |
+          | (rustc E0004)                                                               |
+          |-----------------------------------------------------------------------------|
+          |https://doc.rust-lang.org/error-index.html#E0004                             |
+          +-----------------------------------------------------------------------------+
+```
+
+
+## And in the end, it all works out 😉
+
+```rust
+pub enum Direction {
+    North,
+    South,
+    East,
+    West,
+}
+type Coordinates<'a> = (&'a u32, &'a u32);
+
+pub fn move_player((&x, &y): Coordinates, direction: &Direction) {
+    match ((x, y), direction) {
+        ((0, 0), _) => todo!("At the origin, nothing to do"),
+        ((13, 10), Direction::South) => todo!("Nope, there's an ocean that way!"),
+        ((_,_) , _) => todo!("Handle the other cases later")
+    }
+}
+```
+
+
+## .[chapter]
+# Rust's "Boxes"
+
+!image(assets/whats-in-the-box.png,,1200)
+
+
+## Kahoot time!
+
+!image(assets/kahoot_billion_dollar_mistake.png,,1500)
+
+/*
+ Toutes les réponses sont valables, mais une l'est historiquement
+*/
+
+
+## Yep, it's Null:
+
+!image(assets/billion_dollar_mistake.png,,1700)
+
+/*
+L'ajout de `null` à Algol W, et sa réplication dans (presque) tous les languages qui l'ont suivi
+ Dont Javascript, et c'est la raison pour laquelle Microsoft dépense une fortune dans mon linter préféré (TypeScript)
+*/
+
+
+## In JavaScript (and others...):
+
+!image(assets/the-square-hole-square-hole.gif,,800)
+
+/*
+  On ne doit pas faire entrer "un rond dans un carré" !
+*/
+
+
+## In Rust, no more guessing!
+
+```rust
+// get_user_by_email:
+//
+//   UserEmail -> Option<User>
+//
+match get_user_by_email(user_email).await {
+
+    Some(user) => todo!("handle the case where the user exists"),
+
+    None => todo!("create the user? return an error? you decide!"),
+
+}
+```
+
+/*
+  En Rust, il ne peut y avoir ce genre de doute: on doit être en capacité, le + possible
+  de valider tous les types. Se trimballer un None permet de matérialiser ça.
+
+  Dit autrement: Un Some n'est pas un None. L'un ne peut se substituer à l'autre.
+
+  Maybe Monad, mon amour
+*/
+
+## Kahoot (yes, again !)
+
+!image(assets/kahoot_deuxieme_billion_dollar_mistake.png,,1500)
+
+/*
+ Toutes les réponses sont encore valables, mais une l'est historiquement
+*/
+
+## .[full-image]
+
+!image(assets/why-is-try-catch-evil.png,,1800)
+
+/*
+  Le problème avec la gestion des exceptions c'est qu'on ne sait pas vraiment ce qu'est
+  une "exception". Est que c'est une erreur ? Faut-il la re-throw ? La manger ?
+
+  Beaucoup de maux de tête pour un problème à la base simple...
+*/
+
+## Some languages do their best… 😅
+
+!image(assets/nilnilnil.jpeg)
+
+/*
+ En Rust, pas de gestion de erreurs en tant qu'exceptions (Java/JS), ni en tant que valeur (Nil)
+*/
+
+## Others, like Rust, dive into the multiverse! 💪
+
+!image(assets/result.png)
+
+/*
+ Either Monad, mon amour
+*/
+
+
+## Remember `UserEmail`? 🤓
+
+```rust
+use validator::ValidateEmail;
+
+#[derive(Debug)]
+pub struct UserEmail(String);
+
+impl UserEmail {               +-------------------------+
+    pub fn parse(s: String) -> |Result<UserEmail, String>| {
+                               +-------------------------+
+        if s.validate_email() {
+           +-----------+
+           |Ok(Self(s))|
+           +-----------+
+        } else {
+           +-----------------------------------------------+
+           |Err(format!("{} is not a valid user email", s))|
+           +-----------------------------------------------+
+        }
+    }
+}
+```
+
+
+## And since Result is an enum, we can `match` it 🤩
+
+```rust
+// validate_credentials:
+//
+//   Credentials -> Result<Uuid, LoginError>
+//
+match validate_credentials(credentials).await {
+}                       +Choose action -----+
+                        |1. Fill match arms |
+                        +-------------------+
+```
+
+
+## Just fill in the blanks, or slap a `todo!` on it 🤷
+
+```rust
+// validate_credentials:
+//
+//   Credentials -> Result<Uuid, LoginError>
+//
+match validate_credentials(credentials).await {
+
+    Ok(_) => todo!("handle the case where everything is OK"),
+
+    Err(_) => todo!("add error handling"),
+
+}
+```
+
+
+## Finally, we add the real code:
+
+```rust
+match validate_credentials(credentials).await {
+  Ok(user_id) => {
+    return HttpResponse::SeeOther()
+      .insert_header((LOCATION, "/admin/dashboard"))
+      .finish());
+  }
+  Err(e) => {
+    return login_redirect(LoginError::AuthError(e));
+  }
+}
+```
+
+## "Do we have to `match` every Result?" 🤔
+
+
+## No, we can use `.unwrap()`, among other things:
+
+```rust
+// Here, we're convinced we'll
+// always have a port available
+let port = listener.local_addr().unwrap().port();
+```
+
+
+## So why put ourselves through `match`? ☝🤓
+
+!image(assets/unwrap-me-i-double-dare-you.jpg,,800)
+
+
+## ...even the big players get caught out 💥
+
+!image(assets/cloudflare-incident.png,https://blog.cloudflare.com/18-november-2025-outage/,1200,,,true)
+
+
+## Save `.unwrap()` for tests, and learn to propagate or handle `Result` properly
+
+```rust
+fn my_function() -> Result<PortNumber, Error> {
+  /* In this case, we SHOULD have an IP address. */
+  /* If not, bubble up the error upwards */
+  let port = listener.local_addr()?.port();
+  return port;
+}
+```
+
+## Remember: Clippy is your friend
+
+!image(assets/clippy-est-ton-ami.png,,1500)
+
+
+## Speaking of errors...
+
+
+## The wonder twins of error handling .[chapter]
+# `anyhow` and `thiserror`
+
+!image(assets/captain-tsubasa-twn-shot.webp,,1100)
+
+/*
+Si les erreurs sont relous à gérer, vous les gérerez mal, et c'est là qu'il y aura des bugs.
+Fort heureusement, la communauté Rust a tout prévu ^^
+*/
+
+
+## `anyhow`: errors made easy
+
+```rust
+use anyhow::{Context, Result};
+
+/*  Result doesn't even need an error type here */
+/*  because it will be an `anyhow::Error` 👌 */
+fn main() -> Result<()> {
+
+  /*  .context wraps the error with… context 😁 */
+  it.detach().context("Failed to detach the thing")?;
+
+  /*  Using `?` simply means: */
+  /*  If it's an `Err`, bubble it up! */
+  /*  Otherwise, "open" the `Ok` box and take what's inside */
+  let content = std::fs::read(path)?;
+}
+```
+
+/*
+C'est plus simple quand on n'a plus à y penser.
+Note: Ce code est tiré de la doc officielle de la crate.
+*/
+
+
+## `thiserror`: errors made easy to describe
+
+```rust
+use thiserror::Error;
+#[derive(Error, Debug)]
+pub enum DataStoreError {
+  #[error("data store disconnected")]
+  Disconnect(#[from] io::Error),
+  #[error("the data for key `{0}` is not available")]
+  Redaction(String),
+  #[error("invalid ({expected:?}, found {found:?})")]
+  InvalidHeader {
+      expected: String,
+      found: String,
+  },
+  #[error("unknown data store error")]
+  Unknown
+}
+```
+
+/*
+thiserror va automatiquement faire le lien entre des erreurs et leur traduction (Display), juste avec des proc macros (donc zero cost abstraction).
+Ce code est tiré de la doc officielle de la crate.
+Notez d'ailleurs l'enum: toutes les erreurs sont exhaustivement décrites ici (permettant d'utiliser le pattern matching)
+*/
+
+## `thiserror` for all types? `derive_more`!
+
+```rust
+use derive_more::{Add, Display, From, Into};
+
+#[derive(PartialEq, From, Add)]
+struct MyInt(i32);
+
+#[derive(PartialEq, From, Into)]
+struct Point2D {
+    x: i32,
+    y: i32,
+}
+
+#[derive(PartialEq, From, Add, Display)]
+enum MyEnum {
+    #[display("int: {_0}")]
+    Int(i32),
+    Uint(u32),
+    #[display("nothing")]
+    Nothing,
+}
+```
+
+/*
+Vous importez les traits que vous voulez, et grâce à la magie de Rust que je vais démystifier bientôt, ça fonctionne tout seul !
+*/
+
+## Declaring an enum feels like too much work?<br/>`eros` to the rescue!
+
+```rust
+use eros::IntoUnion;
+use std::{io, num::ParseIntError};
+
+fn load_port(path: &str) -> eros::Result<u16, (io::Error, ParseIntError)> {
+    let contents = std::fs::read_to_string(path).union()?;
+    contents.trim().parse().union()
+}
+
+fn port_or_default(path: &str) -> eros::Result<u16, (ParseIntError,)> {
+    load_port(path).recover::<io::Error, _>(|error| {
+        eprintln!("{error:?}; using port 8080");
+        8080
+    })
+}
+```
+
+/*
+Le principe d'eros c'est de ne pas nous forcer à gérer exhaustivement les erreurs avec des types. On peut utiliser des N-uplets pour simplement COMPOSER les possibles cas d'erreur d'un Result.
+*/
+
+## .[chapter]
+# Traits: turbocharged OOP
+
+!image(assets/where-we-re-going-we-dont-need-classes.png,,1300)
+
+/*
+ Pas d'héritage, pas de "abstract static final etc.". Une composition simple de méthodes
+*/
+
+
+## We define what a `PaymentProcessor` is
+
+```rust
+pub struct RecipientEmail(pub String);
+pub struct SenderEmail(pub String);
+
+pub trait PaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error>;
+}
+```
+
+## Then we implement "our own" `PaymentProcessor`
+
+```rust
+pub struct RecipientEmail(pub String);
+pub struct SenderEmail(pub String);
+
+pub trait PaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error>;
+}
+
+pub struct MyPaymentProcessor {}
+
+impl PaymentProcessor for MyPaymentProcessor {}
+```
+
+## .[full-image]
+
+```rust
+pub struct RecipientEmail(pub String);
+pub struct SenderEmail(pub String);
+
+pub trait PaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error>;
+}
+
+pub struct MyPaymentProcessor {}
+
+impl PaymentProcessor for MyPaymentProcessor {}
+   +------------------------------------------------------------------------------+
+   |not all trait items implemented, missing: `send_payment`                      |
+   |missing `send_payment` in implementation                                      |
+   |                                                                              |
+   |Related information:                                                          |
+   |                                                                              |
+   |  * main.rs#422,5: `send_payment` from trait                                  |
+   |  * main.rs#431,47: implement the missing item: `fn send_payment(_:           |
+   |&RecipientEmail, _: &SenderEmail) -> std::result::Result<(), anyhow::Error> { |
+   |todo!() }`: `fn send_payment(_: &RecipientEmail, _: &SenderEmail) ->          |
+   |std::result::Result<(), anyhow::Error> { todo!() }`                           |
+   +------------------------------------------------------------------------------+
+```
+
+
+## Just like with enums, Rust's powerful language server can help
+
+```rust
+pub struct MyPaymentProcessor {}
+
+impl PaymentProcessor for MyPaymentProcessor {}
+      +Choose action --------------+
+      |1. Implement missing members|
+      +----------------------------+
+```
+
+
+
+## Then we add whatever implementation we want:
+
+```rust
+pub struct RecipientEmail(pub String);
+pub struct SenderEmail(pub String);
+
+pub trait PaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error>;
+}
+
+pub struct MyPaymentProcessor {}
+impl PaymentProcessor for MyPaymentProcessor {
+    fn send_payment(
+        recipient: &RecipientEmail,
+        sender: &SenderEmail,
+    ) -> Result<(), anyhow::Error> {
+        todo!("Payment instructions from {sender} to {recipient} go here !")
+    }
+}
+```
+
+
+## The "standard" traits
+#### A simple example: I have a `LoginError` and I want to debug it
+
+```rust
+pub enum LoginError {
+    AuthenticationError(String),
+    UnexpectedError(String),
+}
+```
+
+/*
+ Par exemple, j'ai un test qui plante et je veux comprendre pourquoi
+*/
+
+
+## A super handy "function": `dbg!`
+
+```rust
+let my_error = LoginError::AuthError("Uh-oh!");
+dbg!(&my_error)
+```
+
+## Except LoginError isn't a primitive type...
+
+```rust
++---------------------------------------------------------+
+|`LoginError` doesn't implement `std::fmt::Debug`         |
+|add `#[derive(Debug)]` to `LoginError` or manually `impl |
+|std::fmt::Debug for LoginError`                          |
+|                                                         |
+|Related information:                                     |
+|                                                         |
+|  * error.rs#53,18: required by a bound in `Error`       |
+|  * post.rs#18,1: consider annotating `LoginError` with  |
+|    `#[derive(Debug)]`                                   |
+|                                                         |
+| (rustc E0277)                                           |
+|---------------------------------------------------------|
+|https://doc.rust-lang.org/error-index.html#E0277         |
++---------------------------------------------------------+
+```
+
+/*
+ Regardez la puissance du message d'erreur !
+*/
+
+
+## Deriving: simple and handy in 90% of cases
+
+```rust
+#[derive(Debug)]
+pub enum LoginError {
+    AuthError(Error),
+    UnexpectedError(Error),
+}
+```
+
+## Fine for simple cases, but how do we implement `Debug` ourselves?
+
+## Once again, the language server is here to help 😍
+
+```rust
+pub enum LoginError {
+    AuthError(String),
+    UnexpectedError(String),
+}
+
+impl std::fmt::Debug for LoginError {}
+              +Choose action --------------+
+              |1. Implement missing members|
+              +----------------------------+
+```
+
+## We get a "default" implementation we can customize 🤤
+
+```rust
+impl std::fmt::Debug for LoginError {
+  fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+    match self {
+      Self::AuthError(arg0) =>
+          f.debug_tuple("AuthError").field(arg0).finish(),
+      Self::UnexpectedError(arg0) =>
+          f.debug_tuple("UnexpectedError").field(arg0).finish(),
+    }
+  }
+}
+```
+
+## We can put anything in it (as long as we follow the trait)
+
+```rust
+impl std::fmt::Debug for LoginError {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
+        writeln!(f, "{}\n", e)?;
+        let mut current = e.source();
+        while let Some(cause) = current {
+            writeln!(f, "Caused by:\n\t{}", cause)?;
+            current = cause.source();
+        }
+        Ok(())
+    }
+}
+```
+
+/*
+ Ici j'utilise .source() pour remonter la chaîne d'erreurs
+*/
+
+
+## Now we get much clearer error details when debugging:
+
+```log
+Failed to log in user.
+Caused by:
+    Failed to retrieve user informations
+Caused by:
+    error returned from database
+Caused by:
+    table "user" does not exist
+```
+
+
+## A "blanket implementation" of one trait for all COMPATIBLE types
+
+!image(assets/cozy-pepe.png,,800)
+
+/*
+ L'art d'automatiquement implémenter des méthodes pour d'autres types.
+*/
+
+
+## Idea: I want to customize how my variables are logged 🤔
+
+```rust
+trait Loggable { fn log(&self); }
+
+pub struct Cat { pub name: String, }
+
+fn main() {
+    let numbers = vec![1, 2, 3];
+    numbers.log(); // Error! 💥
+    // Oh, right! I need to implement Loggable for u64 😫
+
+    let s = String::from("Comfy blanket");
+    s.log(); // Error! 💥
+    // Oh, right! I need to implement Loggable for String 😫
+
+    let c = Cat { name: "Mimouchka".to_string(), };
+    c.log(); // Error! 💥
+    // Oh, right! I need to implement Loggable for Cat 😫
+}
+```
+
+/*
+ Ça serait pas mal d'avoir à manuellement impl à chaque fois
+*/
+
+
+## `impl<T>`, because we're worth it 💇
+
+```rust
+trait Loggable { fn log(&self); }
+
+// Anything that implements Debug now implements Loggable automatically! 🤩
+impl<T> Loggable for T
+where T: Debug {
+    fn log(&self) { println!("[log] {:?}", self); }
+}
+
+#[derive(Debug)]
+pub struct Cat { pub name: String, }
+
+fn main() {
+    let numbers = vec![1, 2, 3];
+    numbers.log(); // Vec<i32> implements Debug out of the box, so Loggable too! 😌
+
+    let s = String::from("Comfy blanket");
+    s.log(); // String implements Debug out of the box, so Loggable too! 😌
+
+    let c = Cat { name: "Astra".to_string(), };
+    c.log(); // Cat implements Debug (via derive), so Loggable too! 😌
+}
+```
+
+
+## And Rust has TONS of types, traits and impls like these 🤩
+
+```
+- `Option` (`Some<…>` or `None`)
+- `Debug` vs `Display`
+- `Deref`
+- `Drop`
+- ...and many more (plus all the community ones 💓)
+```
+
+
+## Hexagonal Architecture
+
+!image(assets/all-knowing-hexagon.png,,900)
+
+/*
+ Le mot est lâché !
+*/
+
+
+## A quick reminder:
+
+!image(assets/hexagonal-architecture-diagram.jpg,,1200)
+
+
+## So, if you've been following along…
+
+!image(assets/hexagonal-architecture-diagram-in-rust.png,,1200)
+
+
+## But, in real life…
+
+!image(assets/hexagonal-architecture-diagram-in-TRUE-rust.png,,1200)
+
+
+## And that's OK!
+
+```rust
+fn process_data<F, B>(foo: F, bar: B) -> String
+where
+    F: Clone + Debug,
+    B: Display + PartialEq,
+{
+    // Function implementation
+    format!("{:?} - {}", foo, bar)
+}
+```
+
+## .[full-image]
+
+!image(assets/thinking-in-traits.png,,1000)
+
+## ⬢ + 🦀 = 💓
+
+!image(assets/master-hexa-architecture-in-rust.png,,1600)
+
+
+## .[chapter]
+# Testing in Rust
+
+!image(assets/mike-tyson.jpg,,1100)
+
+
+## Docs and tests live right next to the code 💕
+!image(assets/cargo-test-colocalized.png,,1500)
+
+## Rust project docs are… *chef's kiss* 🤌
+
+!image(assets/adder-doc.png,,1300)
+
+## EVERYTHING is "as code":
+
+!image(assets/rust-doc-as-code.png,,1800)
+
+/*
+Plus vous mettez d'info dans le code, plus ça renvoie de la valeur.
+Et les LLMs adoooorent ça
+*/
+
+## Just run `cargo doc`
+
+!image(assets/cargo-doc-tests.png,,1300)
+
+
+## Oh, and `cargo test` checks the doc examples *by default* 😎
+
+!image(assets/cargo-doc-passing-test.png,,1600)
+
+
+## Your docs don't just describe your invariants, they check them! 💪
+
+!image(assets/cargo-doc-failing-test.png,,1600)
+
+
+## Integration tests?
+Easy! Put them in `/tests` (with setup code if needed)
+
+!image(assets/integration_test.png,,1600)
+
+## By the way… We need to talk about Wiremocks 🤩
+
+## A tricky thing to test: idempotency
+
+!image(assets/idempotency.gif,,800)
+
+## The result, with Wiremocks:
+
+!image(assets/wiremock-idempotence.png,,1100)
+
+
+## This is when I decided to become a Rustacean 🦀 .[chapter]
+# A complete ecosystem
+
+## We need to talk about `sqlx`
+
+!image(assets/sqlx-simple.png,,1600)
+
+## It can handle really complex queries too!
+
+!image(assets/sqlx-complex.png)
+
+## The other heavyweights:
+
+- serde/deser (serialization/deserialization)
+- tera (HTML templates)
+- chrono/jiff (time!)
+- and many, many more... 🤩
+
+## Let's go one level higher... .[chapter]
+# Rust high-level frameworks 🦀
+
+/*
+ Ont popularisé d'autres crates à travers elles, et cette autre façon de faire du Rust Applicatif
+*/
+
+
+## Axum
+
+```rust
+use axum::{ routing::{get, post}, http::StatusCode, Json, Router, };
+use serde::{Deserialize, Serialize};
+
+#[tokio::main]
+async fn main() {
+    tracing_subscriber::fmt::init(); // initialize tracing
+    let app = Router::new()
+        .route("/users", post(create_user)); // `POST /users` goes to `create_user`
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    axum::serve(listener, app).await;
+}
+
+#[derive(Deserialize)]
+struct CreateUser { username: String, }
+
+#[derive(Serialize)]
+struct User { id: u64, username: String, }
+
+async fn create_user(
+    Json(payload): Json<CreateUser>, // Parse the request body as JSON into a `CreateUser` type
+) -> (StatusCode, Json<User>) {
+    let user = User { id: 1337, username: payload.username, };
+    (StatusCode::CREATED, Json(user)) // Converts into a JSON response with 201 HTTP code
+}
+```
+
+/*
+ Mon premier, très simple (type Express), qui a bien évolué depuis
+*/
+
+
+## Actix-web
+
+!image(assets/actix-json.png)
+
+/*
+ Les extracteurs Actix c'est une tuerie, et vous pouvez faire les votres (par ex, un extrateur de Cookie de Session)
+*/
+
+
+## And the Rustacean world moves fast. Really fast… 🏃💨
+
+## Dioxus: one framework, client and server!
+
+!image(assets/dioxus-intro.png,,1300)
+
+## You can literally build anything with it 🤯
+
+!image(assets/dioxus-montage.png,,1500)
+
+## Coming from Ruby on Rails? No problemo… there's Loco 🚆
+
+!image(assets/loco-rs-montage.png,,1500)
+
+## There's something for every taste! 🐔
+
+!image(assets/cot-rs.png,,1000)
+
+## Want to go further?
+
+(because Rust has plenty more wild stuff like this 😅)
+
+/*
+ Property testing, optimisations diverses, hyperfine, et bien d'autres !
+*/
+
+
+## .[full-image]
+
+!image(assets/z2p-book.png,,800)
+
+## .[full-image]
+
+!image(assets/learn-rust-with-linked-lists.png,https://rust-unofficial.github.io/too-many-lists,1000)
+
+## .[full-image]
+
+!image(assets/hypermedia-rust.png,https://benjamingeer.eu/fr/post/hypermedia-rust,1500,,,true)
+
+## YouTube: Let's Get Rusty !
+
+!image(assets/lets-get-rusty.png,,1000)
