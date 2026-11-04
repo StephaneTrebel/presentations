@@ -6,7 +6,7 @@ Merci pour l'invitation 💓
 
 ## .[full-image]
 
-!image(assets/laurie-strode.gif,Laurie Strode — our heroine,800)
+!image(assets/laurie-strode.gif,Laurie Strode — our heroine,1200)
 
 /*
 Elle, c'est Laurie.
@@ -16,7 +16,7 @@ Et c'est la protagoniste de notre histoire.
 
 ## .[full-image]
 
-!image(assets/totally.gif,'Totally',1000)
+!image(assets/totally.gif,'Totally',1200)
 
 /*
 Laurie est jeune, insouciante, et elle rêve d'une chose: travailler avec ses amies dans l'univers merveilleux du développement Web.
@@ -642,7 +642,7 @@ Laurie, voulant bien faire, va faire une modification (pour une fois) bien appro
 
 ## .[full-image]
 
-!image(assets/dracula.jpeg,Francis Ford Coppola's Dracula,1500)
+!image(assets/dracula.png,Francis Ford Coppola's Dracula,1500)
 
 /*
 Sauf que bon, elle n'a aucune idée que sa PR, son besoin, est le cadet des soucis de la Guilde, qui a des choses beaucoup plus importantes à faire, comme débattre de la plus belle manière d'arranger des ternaires avec Prettier, ou encore si on change le % de couverture de code...
