@@ -1,0 +1,5 @@
+/::
+add_styles: assets/theme.css
+::/
+
+!include(slides,md)
