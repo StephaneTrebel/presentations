@@ -52,17 +52,8 @@ To Be Defined
       <span style="font-size: 3rem">Mes liens ✍️</span>
       <img
         src="common/assets/qr-code-linktree-moi.svg"
-        style="width: 20vw"
+        style="width: 25vw"
         alt="Mon Linktree qui regroupe tous les liens de cette conférence"
-      />
-    </div>
-    <div style="width: 20vw"></div>
-    <div class="flex-column">
-      <span style="font-size: 3rem">Vos feedbacks 🫶</span>
-      <img
-        src="assets/qr-code-devoxx-morocco.svg"
-        style="width: 20vw"
-        alt="QR Code pointant vers l'Openfeedback de cette conférence"
       />
     </div>
   </div>

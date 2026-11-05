@@ -48,13 +48,17 @@ N'inspire pas comme Dark Vador, prends ton temps pour inspirer
 
 !image(assets/metacortex.jpeg,Metacortex,1200)
 
+##### C'est...mal barré ?
+
 /*
 Laurie débarque fraîchement dans sa nouvelle boîte Metacortex. Un fleuron de l'industrie du numérique qui recrute dès la sortie d'école pour offrir un avenir radieux dans le développement logiciel !
 */
 
 ## .[full-image]
 
-!image(assets/metacortex-manager.jpeg,Le manager de Laurie, pas commode !,1000)
+!image(assets/metacortex-manager.jpeg,Le manager de Laurie, pas commode !,800)
+
+##### "Notre taux de burn-out est seulement le troisième de l'entreprise, tu sais ?"
 
 /*
 Et son manager la colle sur un projet en tant que "Développeuse Front sur la page Panier du site d'Ecommerce d'une grande marque".
@@ -67,6 +71,8 @@ Laurie s'interroge. Elle est développeuse Web, elle pourrait tout à fait s'occ
 ## .[full-image]
 
 !image(assets/new-agent.jpeg,,1500)
+
+##### "Il faut que tu comprennes que tu es un Agent de la Matrice (Corporate), désormais"
 
 /*
 Et là son manager lui dit:
@@ -135,6 +141,8 @@ Notre Laurie s'attaque donc à la base de code de son équipe, d'ailleurs entiè
 
 !image(assets/dawn-of-the-dead-1978-zombies.png,Des collègues pas très ouverts d'esprits,1000)
 
+##### "Qu'est-ce que tu as faiiiiiiiis !?!"
+
 /*
 Et elle se fait vite reprendre par ses collègues car tout le sprint en prend pour son grade avec ses bugs à répétition. Oui les boutons sont moches, oui il y a du contenu qui bouge au chargement, mais tout ça c'est pour corriger d'autres bugs bien plus gênants !
 */
@@ -200,6 +208,8 @@ To Be Defined
 
 !image(assets/michael-myers-nonono.gif,Michael Myers ne valide pas ta PR,1200)
 
+##### "SonarQube a dit NOPE !"
+
 /*
 La voilà aux prises d'un individu peu recommandable, un Tech Lead nommé "Michael", qui lui dit qu'elle a intérêt à bosser car la couverture de code est passée en-dessous des 80%, ce qui est contraire à la politique de l'entreprise, et donc que sa PR restera bloquée dans la CI, épissétou !
 */
@@ -207,6 +217,8 @@ La voilà aux prises d'un individu peu recommandable, un Tech Lead nommé "Micha
 ## .[full-image]
 
 !image(assets/laurie_crying.jpeg,Laurie pleure,1500)
+
+##### "Faut que je passe cette satanée Quality Gate !"
 
 /*
 Stressée par l'envie de bien faire, elle devient un peu prête à tout, quitte à écrire des tests unitaires juste pour faire remonter le taux de couverture de code au-dessus des 80%, et ainsi éviter les foudres de Sonarqube.
@@ -263,6 +275,8 @@ SLO/A/I: Service Level Objective/Agreement/Indicators
 
 !image(assets/teletubbies.jpg,La Bienveillance c'est un bien grand mot,1500)
 
+##### "Viens, on fait du baby-foot! On a des viennoiseries ! Et du bore-out, aussi..."
+
 /*
 Quand je parle de Bienveillance, je ne parle pas des babyfoots, des happenings, etc.
 
@@ -282,6 +296,8 @@ To Be Defined
 ## .[full-image]
 
 !image(assets/laurie_armed_knife.jpg,Laurie armée d'un joli couteau,1200)
+
+##### "J'en ai marre de ces meta-lois dans cette meta-conférence !"
 
 /*
 Elle en marre de se faire marcher dessus, elle s'est (bon ici, un peu trop littéralement) armée de son expérience pour affronter les métas-lois. Elle est sûre d'elle, très sûre d'elle...trop sûre d'elle ?
@@ -359,6 +375,8 @@ Sauf qu'en rétrospective elle se fait un peu gentiment allumer par l'Architecte
 ## .[full-image]
 
 !image(assets/the_shining-twins.jpg,Les jumelles de The Shining,1000)
+
+##### "Viens avec nous réécrire ce Monolithe en Rust !"
 
 /*
 Aïe, oui, ça a pris plus de temps que prévu, car deux sœurs jumelles ourdissaient déjà dans le dos de Laurie...
@@ -690,7 +708,7 @@ L'idée, en somme c'est d'arriver à ça:
 
 ## .[full-image]
 
-!image(assets/help-me-help-you-copy.jpg,Help me help you !,1000)
+!image(assets/help-me-help-you-copy.jpg,Help me help you !,1300)
 
 ##### Mon service support préféré 💗
 
@@ -705,7 +723,7 @@ Vos clients internes et externes vous en seront reconnaissants (et envoyez-moi l
 
 ## .[full-image]
 
-!image(assets/photo-de-groupe.jpg,Tous les méchants de film d'horreur sont là,1000)
+!image(assets/photo-de-groupe.jpg,Tous les méchants de film d'horreur sont là,1700)
 
 ##### Il y aurait encore beaucoup à dire sur les Meta-Lois...
 
@@ -720,6 +738,8 @@ Et sachez qu'il n'y a pas que l'informatique qui a des Méta-lois, il y a une pa
 ## .[full-image]
 
 !image(assets/laurie-strode-au-pe-pom.jpg,Laurie y va au pe-pom carrément,1500)
+
+##### Oh non, je ne vais pas y aller, à ta réunion de 4h "Planning Agile de l'Incrément"
 
 /*
 La raison pour laquelle j'ai décidé de vous parler de ce sujet qui continue de beaucoup m'intéresser encore aujourd'hui, c'est afin de pouvoir mettre des mots sur des situations plus ou moins malheureuses qu'on a tous et toutes rencontrés à un moment.
@@ -744,7 +764,9 @@ J'ai un autre talk autour d'HTMX qui parle un peu plus de cette remise en questi
 
 ## .[full-image]
 
-!image(assets/laurie-strode-smiling.jpg,À la fin Laurie sourit enfin,1500)
+!image(assets/laurie-strode-smiling.jpg,À la fin Laurie sourit enfin,1300)
+
+##### La sérénité, mais avec un coût 😅
 
 /*
 Ça y est, Laurie est désormais un peu mieux armée pour survivre dans le monde merveilleux du développement logiciel. On le voit pas à sa tête ? Oui bon elle a pris un coup de vieux, hein, ça nous arrive à tous et à toutes 😅
