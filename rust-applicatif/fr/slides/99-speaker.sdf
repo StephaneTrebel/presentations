@@ -49,9 +49,9 @@
     <div class="flex-column">
       <span style="font-size: 3rem">Vos feedbacks 🫶</span>
       <img
-        src="assets/qr-code-devoxx-morocco.svg"
+        src="assets/qr-code-devfest-toulouse.svg"
         style="width: 20vw"
-        alt="QR Code pointant vers l'Openfeedback de cette conférence"
+        alt="QR Code pointant vers le feedback de cette conférence"
       />
     </div>
   </div>
@@ -67,7 +67,7 @@
     <div class="vertical-bar" style="margin-right: 3vw"></div>
       <div style="font-size: 3rem">
         <em>
-          Rust 🦀 a désormais tout ce qu'il faut pour délivrer de la valeur<br>
+          Rust 🦀 a désormais tout ce qu'il faut pour délivrer de la valeur
           pour vos applications métier. Jetez-y un œil !
         </em>
         👀
